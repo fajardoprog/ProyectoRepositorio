@@ -1,8 +1,0 @@
-parte Ismael:
-
--Login leaderBoard (Score de la gente)
-
--Banner pregunta
-
--modificacion de fichero con textarea
--------------------------------------------------------------------
