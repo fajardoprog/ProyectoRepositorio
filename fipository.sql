@@ -3,6 +3,7 @@ CREATE DATABASE IF NOT EXISTS Fipository;
 USE Fipository;
 
 -- Creación de la tabla Usuario
+
 CREATE TABLE Usuario (
     nombre VARCHAR(255) PRIMARY KEY,
     reputacion INT,
