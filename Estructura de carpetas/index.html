@@ -7,18 +7,31 @@
     <title>Document</title>
 
     <script src="https://kit.fontawesome.com/1a4372ea58.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <script src="js/bootstrap.js"></script> -->
     <link rel="stylesheet" href="css/indexStyle.css">
     <style>
-        /*
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
         body>header {
             display: flex;
             background-color: #4CAF50;
             align-items: center;
             justify-content: space-between;
             box-sizing: border-box;
-            padding: 1vmin;
+            padding: 2vmin;
+            color: white;
         }
 
         body>header img {
@@ -33,9 +46,7 @@
         }
 
         body>header div h3 {
-            margin: 0;
-            padding: 0;
-            font-size: 3vmin;
+            font-size: 3.5vmin;
         }
 
         body>header i {
@@ -43,6 +54,7 @@
             padding: 20px;
         }
 
+        /*Parte main*/
         main article div {
             display: flex;
 
@@ -50,17 +62,24 @@
 
         main {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main h2 {
+            font-size: 4vmin;
         }
 
         main form input {
-            padding: 5%;
+            padding: 2%;
         }
-        */
+
+        main article {}
     </style>
 </head>
 
 <body>
-    <header class="d-flex">
+    <header>
         <i class="fa-solid fa-bars"></i>
         <div>
             <img src="img/LogoFi.png" alt="">
@@ -81,7 +100,7 @@
 
     </main>
     <footer>
-
+        piue
     </footer>
 </body>
 
