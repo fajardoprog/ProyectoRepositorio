@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script src="https://kit.fontawesome.com/1a4372ea58.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/normalize.css">
     <!-- <script src="js/bootstrap.js"></script> -->
     <link rel="stylesheet" href="css/indexStyle.css">
@@ -15,10 +15,10 @@
         $(document).ready(function () {
 
             $("#menu").on("click", function () {
-                if ($(".navOculto").css("right") == "999px") {
+                if ($(".navOculto").css("right") == "4000px") {
                     $(".navOculto").css("right", "0px");
                 } else {
-                    $(".navOculto").css("right", "999px");
+                    $(".navOculto").css("right", "4000px");
                 }
             });
         });
@@ -49,10 +49,12 @@
             justify-content: space-between;
             box-sizing: border-box;
             color: white;
+            width: 100%;
         }
 
         header img {
             width: 10%;
+            margin-top: 5px;
         }
 
         header div {
@@ -66,11 +68,6 @@
             font-size: 3.5vmin;
         }
 
-        header i {
-            font-size: 6vmin;
-            padding: 4vmin;
-        }
-
         /*Parte navegador Oculto*/
         .navOculto {
             background-color: #4CAF50;
@@ -79,7 +76,7 @@
             position: absolute;
             color: white;
             width: 100vw;
-            right: 999px;
+            right: 4000px;
             transition: all .5s;
             align-self: flex-start;
         }
@@ -93,7 +90,30 @@
             list-style: none;
             padding: 5%;
             font-size: 5vmin;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
+
+        .navOculto ul li:hover {
+            background-color: #64B5F6;
+            color: black;
+        }
+
+        .navOculto ul li span {
+            margin-right: 10px;
+        }
+
+        #menu,
+        #cuenta {
+            font-size: 6vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 20%;
+            justify-content: center;
+        }
+
 
         /*Fin navegador*/
 
@@ -168,20 +188,20 @@
 
 <body>
     <header>
-        <i class="fa-solid fa-bars" id="menu"></i>
+        <span class="material-symbols-outlined" id="menu">menu</span>
         <div>
             <img src="img/LogoFi.png" alt="">
             <h3>Tus apuntes en la nube sin límites</h3>
         </div>
-        <i class="fa-solid fa-user"></i>
+        <span class="material-symbols-outlined" id="cuenta">person</span>
         <nav class="navOculto">
             <ul>
-                <li>Subir archivo</li>
-                <li>Subir carpeta</li>
-                <li>Ver usuarios</li>
-                <li>Mis repositorios</li>
-                <li>Compartido conmigo</li>
-                <li>Reposita2</li>
+                <li><span class="material-symbols-outlined">upload_file</span> Subir archivo</li>
+                <li><span class="material-symbols-outlined">drive_folder_upload</span> Subir carpeta</li>
+                <li><span class="material-symbols-outlined">user_attributes</span> Ver usuarios</li>
+                <li><span class="material-symbols-outlined">home</span> Mis repositorios</li>
+                <li><span class="material-symbols-outlined">group</span> Compartido conmigo</li>
+                <li><span class="material-symbols-outlined">sports_esports</span> Reposita2</li>
             </ul>
         </nav>
     </header>
