@@ -15,10 +15,15 @@
         $(document).ready(function () {
 
             $("#menu").on("click", function () {
-                if ($(".navOculto").css("right") == "4000px") {
-                    $(".navOculto").css("right", "0px");
+                if ($(".navOculto").css("opacity") == "1") {
+                    $(".navOculto").css("opacity", "0");
+                    $(".navOculto ul").css("margin-bottom", "0px");
+                    $("#menu").text("expand_less");
+
                 } else {
-                    $(".navOculto").css("right", "4000px");
+                    $(".navOculto").css("opacity", "1");
+                    $(".navOculto ul").css("margin-bottom", "35%");
+                    $("#menu").text("expand_more");
                 }
             });
         });
@@ -82,15 +87,16 @@
             color: white;
             transition: all .5s;
             align-self: flex-start;
-            width: 100%;
+            opacity: 0;
+            transition: all .4s;
+            margin-top: 5px;
         }
 
         .navOculto ul {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
+            transition: all .5s;
+            height: 0;
         }
 
         .navOculto ul li {
@@ -101,7 +107,7 @@
             font-size: 4vmin;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+
         }
 
         .navOculto ul li:hover {
@@ -174,7 +180,16 @@
         }
 
         main form input {
+            border-radius: 10px;
+            background-color: #4CAF50;
             padding: 2%;
+            transition: all .5s;
+        }
+
+        main form input:hover {
+            background-color: #0d47a1;
+            color: whitev;
+            padding: 3%;
         }
 
         /*encabezado del cuerpo*/
@@ -191,6 +206,36 @@
         /*Footer*/
         footer {
             display: flex;
+            justify-content: space-around;
+        }
+
+        footer div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer div p {
+            font-size: 2.5vmin;
+        }
+
+        footer ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer ul li {
+            list-style: none;
+        }
+
+        footer ul li a {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: #0d47a1;
         }
 
         /*Fin Footer*/
@@ -249,7 +294,17 @@
 
     </main>
     <footer>
-        Pie
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <div>
+            <p>© Jose Antonio Fajardo Naranjo </p>
+            <p> e Ismael José Jiménez López</p>
+        </div>
+
     </footer>
 </body>
 
