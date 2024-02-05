@@ -152,12 +152,9 @@
         }
 
         main {
-            background: url(img/fondoPantallaTrasnparente.png) no-repeat;
-            background-position: center;
-            background-size: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             height: 100%;
             align-items: center;
             text-align: center;
@@ -188,8 +185,7 @@
 
         main form input:hover {
             background-color: #0d47a1;
-            color: whitev;
-            padding: 3%;
+            color: white;
         }
 
         /*encabezado del cuerpo*/
@@ -205,6 +201,8 @@
 
         /*Footer*/
         footer {
+            background: url(img/fondoNubes.jpg);
+            background-size: contain;
             display: flex;
             justify-content: space-around;
         }
@@ -286,10 +284,12 @@
 
         <section>
             <h3>Inicia sesión o regístrate para comenzar a usar la aplicación</h3>
+
             <form action="index.html">
                 <input type="submit" value="Iniciar sesión">
                 <input type="submit" value="Registrarme">
             </form>
+
         </section>
 
     </main>
