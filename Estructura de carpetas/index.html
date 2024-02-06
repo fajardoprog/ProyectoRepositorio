@@ -30,6 +30,13 @@
 
     </script>
     <style>
+        @font-face {
+            font-family: 'FuentePer';
+            src: url('fuenteProyecto/Merriweather-Regular.ttf') format('truetype');
+            font-style: normal;
+            font-weight: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -37,13 +44,14 @@
 
         /*Diseño movil*/
         body {
-            background: linear-gradient(blue, lightblue);
+            background: linear-gradient(rgb(76 153 223), rgb(178 213 245));
             min-width: 300px;
             display: flex;
             flex-direction: column;
             height: 100vh;
             justify-content: space-between;
             background-attachment: fixed;
+            font-family: "FuentePer";
         }
 
         /*Parte header del body*/
@@ -204,7 +212,8 @@
             background: url(img/fondoNubes.png);
             background-size: contain;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 5%;
         }
 
         footer div {
@@ -214,6 +223,7 @@
             align-content: center;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
 
         footer div p {
@@ -222,11 +232,18 @@
 
         footer ul {
             display: flex;
-            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            text-align: center;
         }
 
         footer ul li {
             list-style: none;
+            border-left: 2px solid #4CAF50;
+        }
+
+        footer ul li:first-child {
+            border-left: none;
         }
 
         footer ul li a {
@@ -234,6 +251,7 @@
             margin: 5px;
             text-decoration: none;
             color: #0d47a1;
+            font-size: 3vmin;
         }
 
         /*Fin Footer*/
@@ -301,8 +319,8 @@
         </ul>
 
         <div>
-            <p>© Jose Antonio Fajardo Naranjo </p>
-            <p> e Ismael José Jiménez López</p>
+            <p>© J.A. Fajardo Naranjo </p>
+            <p> I.J. Jiménez López</p>
         </div>
 
     </footer>
