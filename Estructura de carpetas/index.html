@@ -272,11 +272,15 @@
             .navOculto ul li {
                 box-sizing: border-box;
                 list-style: none;
-                padding: 5%;
                 width: 33%;
                 font-size: 3vmin;
                 display: flex;
                 align-items: center;
+            }
+
+            .navOculto ul li a {
+                padding: 5%;
+                text-decoration: none;
             }
 
             .navOculto ul li span {
@@ -333,22 +337,35 @@
         <nav class="navOculto">
             <ul>
                 <li>
-                    <span class="material-symbols-outlined">upload_file</span> Subir archivo
+                    <a href="#">
+                        <span class="material-symbols-outlined">upload_file</span> Subir archivo
+                    </a>
+
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">drive_folder_upload</span> Subir carpeta
+                    <a href="#">
+                        <span class="material-symbols-outlined">drive_folder_upload</span> Subir carpeta
+                    </a>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">user_attributes</span> Ver usuarios
+                    <a href="#">
+                        <span class="material-symbols-outlined">user_attributes</span> Ver usuarios
+                    </a>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">home</span> Mis repositorios
+                    <a href="#">
+                        <span class="material-symbols-outlined">home</span> Mis repositorios
+                    </a>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">group</span> Compartido conmigo
+                    <a href="#">
+                        <span class="material-symbols-outlined">group</span> Compartido conmigo
+                    </a>
                 </li>
                 <li>
-                    <span class="material-symbols-outlined">sports_esports</span> Reposita2
+                    <a href="#">
+                        <span class="material-symbols-outlined">sports_esports</span> Reposita2
+                    </a>
                 </li>
             </ul>
         </nav>
