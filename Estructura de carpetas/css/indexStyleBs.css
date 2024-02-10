@@ -1,0 +1,23 @@
+@font-face {
+    font-family: bi;
+    src: url(../fonts/bootstrap-icons.woff);
+}
+
+body {
+    background-color: beige;
+    min-width: 400px;
+}
+
+.container-fluid img {
+    width: 5vw;
+}
+
+.nav-item:not(.nav-item:first-child) a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
