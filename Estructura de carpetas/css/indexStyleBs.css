@@ -8,8 +8,16 @@ body {
     min-width: 400px;
 }
 
+header {
+    background-color: rgb(76 175 80);
+}
+
 .container-fluid img {
     width: 5vw;
+}
+
+.navbar .navbar-nav .nav-item a.nav-link {
+    color: white;
 }
 
 .nav-item:not(.nav-item:first-child) a {
@@ -17,7 +25,34 @@ body {
     align-items: center;
 }
 
-.nav-item {
+.nav-item:not(.nav-item:first-child) {
     display: flex;
     align-items: center;
+}
+
+.dropdown-menu {
+    background-color: #1e9f2c;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+.container-fluid button.navbar-toggler {
+    color: white;
+}
+
+.container-fluid .navbar-toggler {
+    border-color: white;
+}
+
+.footeDiv {
+    background: url(../img/fondoNubes.png);
+    padding: 1%;
+    background-size: contain;
+    font-size: 2vmin;
+}
+
+i {
+    font-size: 3vmin;
 }
