@@ -47,10 +47,11 @@ header {
 }
 
 .divFooter {
-    background: url(../img/CESPED.png);
+    background: url(../img/fondoNubesTrans.png);
     padding: 1%;
     background-repeat: repeat-x;
-    background-size: contain;
+    background-size: 100%;
+    background-position: top;
     font-size: 2vmin;
 }
 
