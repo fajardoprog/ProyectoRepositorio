@@ -1,0 +1,60 @@
+@font-face {
+    font-family: bi;
+    src: url(../fonts/bootstrap-icons.woff);
+}
+
+body {
+    background-color: beige;
+    min-width: 400px;
+}
+
+header {
+    background-color: rgb(76 175 80);
+}
+
+.container-fluid img {
+    width: 5vw;
+}
+
+.navbar .navbar-nav .nav-item a.nav-link {
+    color: white;
+}
+
+.nav-item:not(.nav-item:first-child) a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:not(.nav-item:first-child) {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    background-color: #1e9f2c;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+.container-fluid button.navbar-toggler {
+    color: white;
+}
+
+.container-fluid .navbar-toggler {
+    border-color: white;
+}
+
+.divFooter {
+    background: url(../img/fondoNubesTrans.png);
+    padding: 1%;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: top;
+    font-size: 2vmin;
+}
+
+i {
+    font-size: 3vmin;
+}
