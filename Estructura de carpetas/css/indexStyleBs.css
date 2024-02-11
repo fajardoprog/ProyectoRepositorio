@@ -48,7 +48,6 @@ header {
 
 .footeDiv {
     background: url(../img/fondoNubes.png);
-    padding: 1%;
     background-size: contain;
     font-size: 2vmin;
 }
