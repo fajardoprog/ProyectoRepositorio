@@ -46,8 +46,10 @@ header {
     border-color: white;
 }
 
-.footeDiv {
-    background: url(../img/fondoNubes.png);
+.divFooter {
+    background: url(../img/CESPED.png);
+    padding: 1%;
+    background-repeat: repeat-x;
     background-size: contain;
     font-size: 2vmin;
 }
