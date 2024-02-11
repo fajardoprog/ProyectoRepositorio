@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: beige;
+    background-color: #9dfffe;
     min-width: 400px;
 }
 
@@ -57,4 +57,8 @@ header {
 
 i {
     font-size: 3vmin;
+}
+
+#breadcrumbs {
+    --bs-breadcrumb-divider: ">";
 }
