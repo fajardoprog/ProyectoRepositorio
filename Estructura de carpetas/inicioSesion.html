@@ -20,7 +20,7 @@
 
 <body class="d-flex flex-column justify-content-between">
     <header>
-        <nav class="navbar navbar-expand-xl navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"
@@ -33,14 +33,14 @@
                 </a>
 
                 <a href="inicioSesion.html"
-                    class="order-xl-1 d-flex flex-column align-items-center text-decoration-none">
+                    class="order-lg-1 d-flex flex-column align-items-center text-decoration-none">
                     <span class="material-symbols-outlined" id="iniSesi">account_circle</span>
                     <span class="text-center " id="nombreUsu">No está conectado</span>
                 </a>
 
                 <div class="collapse navbar-collapse justify-content-between" id="barraNavPrincipal">
-                    <ul class="navbar-nav mb-2 mb-xl-0">
-                        <li class="nav-item dropdown d-xl-flex align-items-center">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown d-lg-flex align-items-center">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Subida
@@ -102,32 +102,52 @@
                 </div>
             </div>
         </nav>
-
     </header>
 
-    <main>
+    <main class="container-fluid">
         <nav aria-label="breadcrumb" id="breadcrumbs">
             <ol class="breadcrumb p-4">
-                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                <li class="breadcrumb-item active" aria-current="page">Inicio Sesión</li>
             </ol>
         </nav>
-        <div class="d-flex flex-column align-items-center">
-            <h1 class="text-center">FIpository</h1>
-            <h2 class="text-center">Tus Apuntes en la nube sin límites</h2>
+        <!--Formulario Inicio Sesion ocultado-->
+        <form class="text-center  border border-black" id="formu">
+            <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
 
-            <img src="img/LogoFi.png" alt="Logo" class="img-fluid align-items-center m-5" id="logoMain">
+            <div class="d-flex flex-column justify-content-around align-items-center">
+                <div class="col-12">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="d-lg-block d-none">Nombre Usuario:</span>
+                    <div class="form-floating m-2">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Nombre Usuario</label>
+                    </div>
+                </div>
 
-            <div class="d-flex col-12 justify-content-around mt-5">
-                <form action="#" method="get" class="align-items-center ">
-                    <button class="btn btn-primary px-3 " type="button">Iniciar Sesión</button>
-                </form>
 
-                <form action="#" method="get" class="align-items-center">
-                    <button class="btn btn-primary px-3" type="button">Registrarse</button>
-                </form>
+                <div class="col-12">
+                    <span class="material-symbols-outlined">password</span>
+                    <span class="d-lg-block d-none">Contraseña:</span>
+                    <div class="form-floating m-2 align-items-center">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                </div>
+
             </div>
-        </div>
 
+
+            <div class="d-flex flex-row justify-content-around m-3">
+                <button class="btn btn-primary w-30 py-2 col-5" type="submit">Registrarse</button>
+                <button class="btn btn-primary w-30 py-2 col-5" type="submit">Iniciar sesion</button>
+            </div>
+
+            <a href="#">¿Olvidaste tu contraseña?</a>
+
+            <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
+        </form>
+        <!--Fin formulario-->
 
     </main>
 
