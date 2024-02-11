@@ -30,9 +30,9 @@
                     <img src="img/LogoFi.png" alt="Logo" width="20" height="" class="d-inline-block">
                     FIpository
                 </a>
-                <div class="collapse navbar-collapse" id="barraNavPrincipal">
-                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
-                        <li class="nav-item dropdown">
+                <div class="collapse navbar-collapse justify-content-between" id="barraNavPrincipal">
+                    <ul class="navbar-nav mb-2 mb-xl-0">
+                        <li class="nav-item dropdown d-xl-flex align-items-center">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Subida
@@ -52,42 +52,46 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                href="#">
                                 <span class="material-symbols-outlined mx-2">user_attributes</span>Ver usuarios
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                href="#">
                                 <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                href="#">
                                 <span class="material-symbols-outlined mx-2">group</span>Compartido
                                 conmigo
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                href="#">
                                 <span class="material-symbols-outlined mx-2">sports_esports</span>Reposita2
                             </a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <div class="input-group input-group-sm mb-3">
-                            <label class="input-group-text" for="campoBusquedaPrincipal">Nombre</label>
-                            <input class="form-control me-1" type="search" placeholder="Búsqueda..."
+                    <form class="d-flex align-items-center justify-content-center">
+                        <div class="input-group input-group-sm row">
+                            <label class="input-group-text col-2 ms-2" for="campoBusquedaPrincipal">Nombre</label>
+                            <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                 aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                            <label class="input-group-text" for="filtroBusquedaPrincipal">Filtrar por</label>
-                            <select class="form-select" id="filtroBusquedaPrincipal">
+                            <label class="input-group-text col-2 ms-2" for="filtroBusquedaPrincipal">Filtrar por</label>
+                            <select class="form-select col-2" id="filtroBusquedaPrincipal">
                                 <option selected="">Usuario</option>
                                 <option value="1">Repositorio</option>
                             </select>
-                        </div>
-                        <div>
-                            <button class="btn btn-sm btn-primary" type="submit">Buscar</button>
+                            <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
                         </div>
                     </form>
+
+
                 </div>
                 <!-- <a href="#" class="nav-item"><span class="material-symbols-outlined" id="cuenta">person</span></a> -->
             </div>
@@ -95,12 +99,12 @@
     </header>
     <main>
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb p-4">
                 <li class="breadcrumb-item active" aria-current="page">Inicio</li>
             </ol>
         </nav>
     </main>
-    <div class="container-fluid footeDiv">
+    <div class="container-fluid divFooter">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
