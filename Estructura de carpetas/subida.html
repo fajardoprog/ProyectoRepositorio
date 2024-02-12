@@ -14,9 +14,26 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <style>
+        #carpetas {
+            display: none;
+        }
+    </style>
     <script>
         $(function () {
+            $("input[name='elegirArchivo']").on("change", function () {
+                if ($("#ficheros").css("display") === "block") {
+                    $("#ficheros").fadeToggle(function () {
+                        $("#carpetas").fadeToggle();
+                    });
+                } else {
+                    $("#carpetas").fadeToggle(function () {
+                        $("#ficheros").fadeToggle();
+                    });
+                }
 
+
+            });
         });
     </script>
 
@@ -115,15 +132,17 @@
                 <li class="breadcrumb-item active" aria-current="page">Subida de archivos</li>
             </ol>
         </nav>
+
         <div class="container">
             <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="subirFichero" autocomplete="off" checked>
+                <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
                 <label class="btn btn-outline-primary" for="subirFichero">Fichero</label>
-                <input type="radio" class="btn-check" name="btnradio" id="subirCarpeta" autocomplete="off">
+                <input type="radio" class="btn-check" name="elegirArchivo" id="subirCarpeta" autocomplete="off">
                 <label class="btn btn-outline-primary" for="subirCarpeta">Carpeta</label>
             </div>
         </div>
-        <div class="container text-center my-5">
+
+        <div class="container text-center my-5" id="ficheros">
             <h1>Subida de ficheros</h1>
             <form action="#">
                 <article>
@@ -139,9 +158,11 @@
                     <input type="file" class="form-control" name="" id="" placeholder=""
                         aria-describedby="fileHelpId" />
                 </article>
+                <button type="submit" class="btn btn-primary my-3">Subir fichero</button>
             </form>
         </div>
-        <div class="container text-center my-5">
+
+        <div class="container text-center my-5" id="carpetas">
             <h1>Subida de carpeta</h1>
             <form action="#">
                 <article>
@@ -162,13 +183,18 @@
                     <h2>Crea tu carpeta</h2>
                     <input class="form-control" type=" search" placeholder="Nombre de la carpeta" aria-label="Búsqueda"
                         id="nombreCarpeta" name="nombreCarpeta" />
-                    <label for="exampleColorInput" class="form-label">Color picker</label>
-                    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+                </article>
+                <article>
+                    <h2>3. Elige el color de tu carpeta</h2>
+                    <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
+                    <input type="color" class="form-control form-control-color" id="colorCarpeta" value="#563d7c"
                         title="Choose your color">
                 </article>
+
                 <button type="submit" class="btn btn-primary mb-3">Crear carpeta</button>
             </form>
         </div>
+
     </main>
     <footer>
     </footer>
