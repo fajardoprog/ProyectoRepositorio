@@ -62,3 +62,36 @@ i {
 #breadcrumbs {
     --bs-breadcrumb-divider: ">";
 }
+
+
+#logoMain {
+    width: 30%;
+}
+
+#iniSesi {
+    font-size: 4vmin;
+    color: white;
+    margin: 2px;
+    text-decoration: none;
+}
+
+#nombreUsu {
+    text-decoration: none;
+    color: white;
+}
+
+#iniSesi:hover {
+    color: rgb(192, 192, 192);
+}
+
+#formu {
+    background-color: #69e387;
+}
+
+/*Breakpoint personalizado para tamaño del texto*/
+
+@media screen and (max-width:992px) {
+    li a {
+        font-size: 3.5vmin;
+    }
+}
