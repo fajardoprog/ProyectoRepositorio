@@ -1,0 +1,6 @@
+.lineaJuego {
+    background-color: brown;
+    box-sizing: border-box;
+    height: 8vh;
+    border: 2px solid white;
+}
