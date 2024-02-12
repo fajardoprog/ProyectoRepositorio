@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/indexStyleBs.css">
     <link rel="stylesheet" href="css/bootstrap-icons.css">
     <link rel="stylesheet" href="css/estiloComun.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script>
 
     </script>
@@ -112,35 +113,61 @@
             </ol>
         </nav>
         <!--Formulario Inicio Sesion ocultado-->
-        <form class="text-center  border border-black" id="formu">
-            <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
 
-            <div class="d-flex flex-column justify-content-around align-items-center">
-                <div class="col-12">
-                    <span class="material-symbols-outlined">person</span>
-                    <span class="d-lg-block d-none">Nombre Usuario:</span>
-                    <div class="form-floating m-2">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Nombre Usuario</label>
+        <form action="compruebaFormu" class=" d-flex m-2 flex-row">
+            <input type="submit" class="btn btn-primary col-6" name="btnradio" id="btnradio1"
+                value="Formulario iniciar sesión">
+            <input type="submit" class="btn btn-outline-primary col-6" name="btnradio" id="btnradio2"
+                value="Formulario resgistrarse">
+        </form>
+
+        <form class="text-center  border border-black rounded" id="formu">
+
+            <div id="inicioSesion">
+
+                <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
+
+                <div class="d-flex flex-column justify-content-around align-items-center">
+
+                    <div class="col-11 d-flex justify-content-between align-items-center">
+                        <div class="d-flex col-2 justify-content-around">
+                            <span class="material-symbols-outlined">person</span>
+                            <span class="d-lg-block d-none">Nombre Usuario:</span>
+                        </div>
+
+                        <div class="form-floating m-2 col-10">
+                            <input type="text" class="form-control col-11" id="floatingInput" placeholder="Usuario"
+                                name="nombreUsu">
+                            <label for="floatingInput">Nombre Usuario</label>
+                        </div>
                     </div>
+
+
+                    <div class="col-11 d-flex justify-content-between align-items-center">
+                        <div class="d-flex col-2 justify-content-around">
+                            <span class="material-symbols-outlined">password</span>
+                            <span class="d-lg-block d-none">Contraseña:</span>
+                        </div>
+
+                        <div class="form-floating m-2 align-items-center col-10">
+                            <input type="password" class="form-control col-11" id="floatingPassword"
+                                placeholder="Password" name="contraUsu">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                    </div>
+
                 </div>
 
 
-                <div class="col-12">
-                    <span class="material-symbols-outlined">password</span>
-                    <span class="d-lg-block d-none">Contraseña:</span>
-                    <div class="form-floating m-2 align-items-center">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
-                    </div>
+                <div class="d-flex flex-row justify-content-around m-3">
+                    <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Iniciar sesion">
                 </div>
 
             </div>
 
 
-            <div class="d-flex flex-row justify-content-around m-3">
-                <button class="btn btn-primary w-30 py-2 col-5" type="submit">Registrarse</button>
-                <button class="btn btn-primary w-30 py-2 col-5" type="submit">Iniciar sesion</button>
+            <div id="registrarseForm">
+
             </div>
 
             <a href="#">¿Olvidaste tu contraseña?</a>
