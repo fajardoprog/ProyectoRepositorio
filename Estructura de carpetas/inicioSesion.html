@@ -112,7 +112,6 @@
                 <li class="breadcrumb-item active" aria-current="page">Inicio Sesión</li>
             </ol>
         </nav>
-        <!--Formulario Inicio Sesion ocultado-->
 
         <form action="compruebaFormu" class=" d-flex m-2 flex-row">
             <input type="submit" class="btn btn-primary col-6" name="btnradio" id="btnradio1"
@@ -121,36 +120,35 @@
                 value="Formulario resgistrarse">
         </form>
 
-        <form class="text-center  border border-black rounded" id="formu">
-
-            <div id="inicioSesion">
+        <div class="d-flex flex-column align-items-md-center">
+            <form class="text-center  border border-black rounded col-md-6 " id="formu">
 
                 <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
 
                 <div class="d-flex flex-column justify-content-around align-items-center">
 
                     <div class="col-11 d-flex justify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around">
+                        <div class="d-flex col-2 justify-content-around align-items-center">
                             <span class="material-symbols-outlined">person</span>
-                            <span class="d-lg-block d-none">Nombre Usuario:</span>
+                            <span class="d-lg-block d-none m-2">Nombre Usuario:</span>
                         </div>
 
                         <div class="form-floating m-2 col-10">
-                            <input type="text" class="form-control col-11" id="floatingInput" placeholder="Usuario"
+                            <input type="text" class="form-control col-11 m-1" id="floatingInput" placeholder="Usuario"
                                 name="nombreUsu">
                             <label for="floatingInput">Nombre Usuario</label>
                         </div>
                     </div>
 
 
-                    <div class="col-11 d-flex justify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around">
+                    <div class="col-11 d-flex just ify-content-between align-items-center">
+                        <div class="d-flex col-2 justify-content-around align-items-center">
                             <span class="material-symbols-outlined">password</span>
-                            <span class="d-lg-block d-none">Contraseña:</span>
+                            <span class="d-lg-block d-none m-2">Contraseña:</span>
                         </div>
 
                         <div class="form-floating m-2 align-items-center col-10">
-                            <input type="password" class="form-control col-11" id="floatingPassword"
+                            <input type="password" class="form-control col-11 m-1" id="floatingPassword"
                                 placeholder="Password" name="contraUsu">
                             <label for="floatingPassword">Password</label>
                         </div>
@@ -163,18 +161,15 @@
                     <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Iniciar sesion">
                 </div>
 
-            </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
 
+                <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
+            </form>
+        </div>
 
-            <div id="registrarseForm">
+        <div id="registrarseForm">
 
-            </div>
-
-            <a href="#">¿Olvidaste tu contraseña?</a>
-
-            <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
-        </form>
-        <!--Fin formulario-->
+        </div>
 
     </main>
 
