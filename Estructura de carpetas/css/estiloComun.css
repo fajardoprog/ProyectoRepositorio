@@ -95,3 +95,16 @@ i {
         font-size: 3.5vmin;
     }
 }
+
+footer {
+    background: url(../img/fondoNubes.gif);
+    background-size: contain;
+}
+
+footer ul li {
+    border-right: 1px solid rgb(0, 217, 255);
+}
+
+footer ul li:last-child {
+    border: none;
+}
