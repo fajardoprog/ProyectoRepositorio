@@ -1,0 +1,13 @@
+aside {
+    background-color: black;
+    height: 80vh;
+    width: 10px;
+}
+
+.valido {
+    background-color: green;
+}
+
+.foco {
+    background-color: lightgreen;
+}
