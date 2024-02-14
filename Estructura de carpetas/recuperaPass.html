@@ -16,43 +16,11 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <style>
-        #registrarseForm {
-            display: none;
-        }
 
-        #otroG {
-            display: none;
-        }
-
-        #formularioIniciarSesi {
-            display: flex;
-        }
     </style>
 
     <script>
         $(function () {
-            $("input[name='tipoFormulario']").on("change", function () {
-                if ($("#formularioIniciarSesi").css("display") === "flex") {
-                    $("#formularioIniciarSesi").fadeToggle(function () {
-                        $("#registrarseForm").fadeToggle().css("display", "flex");
-                    });
-                } else {
-                    $("#registrarseForm").fadeToggle(function () {
-                        $("#formularioIniciarSesi").fadeToggle().css("display", "flex");
-                    });
-                }
-
-            });
-
-
-            $("#seleccionGene").on("change", function () {
-                /*Esta parte sirve para mostrar la casilla para que el ususario especifique su genero*/
-                if ($(this).val() == 'O') {
-                    $("#otroG").css("display", "flex");
-                } else {
-                    $("#otroG").css("display", "none");
-                }
-            });
 
         });
     </script>
@@ -160,28 +128,17 @@
         <nav aria-label="breadcrumb" id="breadcrumbs">
             <ol class="breadcrumb p-4">
                 <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                <li class="breadcrumb-item active" aria-current="page">Inicio Sesión/Registrarse</li>
+                <li class="breadcrumb-item" aria-current="page">Inicio Sesión</li>
+                <li class="breadcrumb-item active" aria-current="page">Recuperar Contraseña</li>
             </ol>
         </nav>
         <!--Fin breadcrumb-->
 
-        <!--Seleccion de formulario-->
-        <div class="container mb-2">
-            <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="tipoFormulario" id="inicioSesion" autocomplete="off"
-                    checked>
-                <label class="btn btn-outline-primary" for="inicioSesion">Formulario iniciar sesión</label>
-                <input type="radio" class="btn-check" name="tipoFormulario" id="registrarse" autocomplete="off">
-                <label class="btn btn-outline-primary" for="registrarse">Formulario registrarse</label>
-            </div>
-        </div>
-        <!--Fin Seleccion de formulario-->
-
         <!--Bloque formulario Iniciar Sesión-->
-        <div class="flex-column align-items-md-center" id="formularioIniciarSesi">
+        <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
             <form class="text-center  border border-black rounded col-md-6 " id="formu">
 
-                <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
+                <h1 class="h3 mb-3 fw-normal m-3">Recuperar Contraseña</h1>
 
                 <div class="d-flex flex-column justify-content-around align-items-center">
 
@@ -205,54 +162,7 @@
 
                         <div class="form-floating m-2 align-items-center col-10">
                             <input type="password" class="form-control col-11 m-1" id="floatingPassword"
-                                placeholder="Password" name="contraUsu">
-                            <label for="floatingPassword">Contraseña</label>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="d-flex flex-row justify-content-around m-3">
-                    <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Iniciar sesion">
-                </div>
-
-                <a href="recuperaPass.html">¿Olvidaste tu contraseña?</a>
-
-                <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
-            </form>
-        </div>
-        <!--Fin Bloque formulario Iniciar Sesión-->
-
-        <!--Bloque formulario Registrar-->
-        <div class=" flex-column align-items-md-center" id="registrarseForm">
-            <form class="text-center  border border-black rounded col-md-6 " id="formu">
-
-                <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
-
-                <div class="d-flex flex-column justify-content-around align-items-center">
-
-                    <div class="col-11 d-flex justify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-
-                        <div class="form-floating m-2 col-10">
-                            <input type="text" class="form-control col-11 m-1" id="floatingInput" placeholder="Usuario"
-                                name="nombreUsu">
-                            <label for="floatingInput">Nombre Usuario</label>
-                        </div>
-                    </div>
-
-
-                    <div class="col-11 d-flex just ify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                            <span class="material-symbols-outlined">password</span>
-                        </div>
-
-                        <div class="form-floating m-2 align-items-center col-10">
-                            <input type="password" class="form-control col-11 m-1" id="floatingPassword"
-                                placeholder="Password" name="contraUsu">
+                                placeholder="Password" name="NuevacontraUsu">
                             <label for="floatingPassword">Contraseña</label>
                         </div>
                     </div>
@@ -264,70 +174,22 @@
 
                         <div class="form-floating m-2 align-items-center col-10">
                             <input type="password" class="form-control col-11 m-1" id="floatingPassword"
-                                placeholder="Password" name="contraUsuRepe">
+                                placeholder="Password" name="NuevacontraUsu">
                             <label for="floatingPassword">Repetir Contraseña</label>
                         </div>
                     </div>
 
-                    <div class="col-11 d-flex just ify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                            <span class="material-symbols-outlined">mail</span>
-                        </div>
-
-                        <div class="form-floating m-2 align-items-center col-10">
-                            <input type="email" class="form-control col-11 m-1" id="floatingPassword"
-                                placeholder="email" name="emailUsu">
-                            <label for="floatingPassword">Correo Electrónico</label>
-                        </div>
-                    </div>
-
-                    <div class="col-11 d-flex just ify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                            <span class="material-symbols-outlined">calendar_month</span>
-                        </div>
-
-                        <div class="form-floating m-2 align-items-center col-10">
-                            <input type="date" class="form-control col-11 m-1" id="floatingPassword"
-                                placeholder="Fecha nacimiento" name="fechaNaciUsu">
-                            <label for="floatingPassword">Fecha de nacimiento</label>
-                        </div>
-                    </div>
-
-                    <div class="col-11 d-flex just ify-content-between align-items-center">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                            <span class="material-symbols-outlined">wc</span>
-                        </div>
-
-                        <div class="form-floating d-flex col-2 justify-content-around align-items-center col-10 m-3 ">
-                            <select class="form-select" id="seleccionGene" aria-label="Floating label select example">
-                                <option value="H">Hombre</option>
-                                <option value="M">Mujer</option>
-                                <option value="O">Otro</option>
-                            </select>
-                            <label for="floatingSelect">Selecciona tu Género</label>
-                        </div>
-                    </div>
-
-                    <div class="col-11 just ify-content-between align-items-center" id="otroG">
-                        <div class="d-flex col-2 justify-content-around align-items-center">
-                        </div>
-
-                        <div class="form-floating m-2 align-items-center col-10">
-                            <input type="text" class="form-control col-11 m-1" id="generoUsu" placeholder="Password"
-                                name="generoUsu">
-                            <label for="generoUsu">Especifique su Género</label>
-                        </div>
-                    </div>
-
                 </div>
 
+
                 <div class="d-flex flex-row justify-content-around m-3">
-                    <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Resgistrarme">
+                    <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Cambiar Contraseña">
                 </div>
 
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
+            </form>
         </div>
-        <!--Fin Bloque formulario Registrar-->
+        <!--Fin Bloque formulario Iniciar Sesión-->
 
     </main>
 
