@@ -39,66 +39,76 @@
                     <span class="text-center " id="nombreUsu">No está conectado</span>
                 </a>
 
-                <div class="collapse navbar-collapse justify-content-between" id="barraNavPrincipal">
-                    <ul class="navbar-nav mb-2 mb-xl-0">
-                        <li class="nav-item dropdown d-xl-flex align-items-center">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Subida
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <span class="material-symbols-outlined mx-2">upload_file</span>Subir archivos
+                <div class="collapse navbar-collapse justify-content-between flex-column" id="barraNavPrincipal">
+
+                    <div class="d-flex flex-column">
+                        <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
+                        <div class="mb-2">
+                            <ul class="navbar-nav mb-2 mb-xl-0">
+                                <li class="nav-item dropdown d-xl-flex align-items-center">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Subida
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <span class="material-symbols-outlined mx-2">upload_file</span>Subir
+                                                archivos
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <span
+                                                    class="material-symbols-outlined mx-2">drive_folder_upload</span>Subir
+                                                carpetas
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                        href="#">
+                                        <span class="material-symbols-outlined mx-2">user_attributes</span>Ver usuarios
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <span class="material-symbols-outlined mx-2">drive_folder_upload</span>Subir
-                                        carpetas
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                        href="#">
+                                        <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                        href="#">
+                                        <span class="material-symbols-outlined mx-2">group</span>Compartido
+                                        conmigo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
+                                        href="#">
+                                        <span class="material-symbols-outlined mx-2">sports_esports</span>Reposita2
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                href="#">
-                                <span class="material-symbols-outlined mx-2">user_attributes</span>Ver usuarios
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                href="#">
-                                <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                href="#">
-                                <span class="material-symbols-outlined mx-2">group</span>Compartido
-                                conmigo
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                href="#">
-                                <span class="material-symbols-outlined mx-2">sports_esports</span>Reposita2
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="d-flex align-items-center justify-content-center">
-                        <div class="input-group input-group-sm row">
-                            <label class="input-group-text col-2 ms-2" for="campoBusquedaPrincipal">Nombre</label>
-                            <input class="form-control col-4" type="search" placeholder="Búsqueda..."
-                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                            <label class="input-group-text col-2 ms-2" for="filtroBusquedaPrincipal">Filtrar por</label>
-                            <select class="form-select col-2" id="filtroBusquedaPrincipal">
-                                <option selected>Usuario</option>
-                                <option value="1">Repositorio</option>
-                            </select>
-                            <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
                         </div>
-                    </form>
+
+
+                        <div>
+                            <form class="d-flex align-items-center justify-content-center">
+                                <div class="input-group input-group-sm row">
+                                    <label class="input-group-text col-2 ms-2"
+                                        for="campoBusquedaPrincipal">Nombre</label>
+                                    <input class="form-control col-4" type="search" placeholder="Búsqueda..."
+                                        aria-label="Búsqueda" id="campoBusquedaPrincipal" />
+                                    <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
