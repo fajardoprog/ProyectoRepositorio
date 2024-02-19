@@ -1,6 +1,57 @@
-.lineaJuego {
+.container-letra-juego {
     background-color: brown;
     box-sizing: border-box;
-    height: 8vh;
+    padding: 0vh 2vh;
     border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.linea-juego {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-juego {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container-teclado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+}
+
+.linea-teclado {
+    display: flex;
+    width: 100%;
+}
+
+.container-letra-teclado {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: gray;
+    padding: 1vh 0.5vh;
+    margin: 0.2vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media screen and (min-width:1200px) {
+    .container-juego {
+        width: 30vw;
+    }
 }
