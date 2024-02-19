@@ -4,12 +4,13 @@
 }
 
 body {
-    background-color: #9dfffe;
+    background: linear-gradient(to right bottom, #9dfffe, #6989fd);
+    background-attachment: fixed;
     min-width: 400px;
 }
 
 header {
-    background-color: rgb(76 175 80);
+    background: linear-gradient(rgb(66, 150, 68), rgb(76 175 80), rgb(66, 150, 68));
 }
 
 .container-fluid img {
@@ -90,14 +91,10 @@ i {
 
 /*Breakpoint personalizado para tamaño del texto*/
 
-@media screen and (max-width:1199px) {
-    li a {
-        font-size: 3.5vmin;
-    }
-}
-
 footer {
     background: url(../img/fondoNubes.gif);
+    background-repeat: repeat-x;
+    background-position-y: bottom;
     background-size: contain;
 }
 
@@ -107,4 +104,18 @@ footer ul li {
 
 footer ul li:last-child {
     border: none;
+}
+
+@media screen and (min-width:576px) {}
+
+@media screen and (max-width:991px) {
+    li a {
+        font-size: 3.5vmin;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .navbar .navbar-nav li.nav-item {
+        width: auto !important;
+    }
 }
