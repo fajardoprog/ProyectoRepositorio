@@ -14,7 +14,12 @@
     <script>
 
     </script>
-
+    <style>
+        #fotoPer {
+            width: 30%;
+            border-radius: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,7 +103,7 @@
                             <form class="d-flex align-items-center justify-content-center">
                                 <div class="input-group input-group-sm row">
                                     <label class="input-group-text col-2 ms-2"
-                                        for="campoBusquedaPrincipal">Nombre</label>
+                                        for="campoBusquedaPrincipal">Buscar</label>
                                     <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                         aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                                     <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
@@ -107,20 +112,67 @@
                         </div>
                     </div>
 
-
-
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" id="breadcrumbs">
             <ol class="breadcrumb p-4">
-                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                <li class="breadcrumb-item" aria-current="page"><a href="indexConBs.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mi perfil</li>
             </ol>
         </nav>
+
+        <div class="container-fluid col-lg-6">
+            <h1>Mi Perfil</h1>
+            <form action="">
+                <div class="col-12 d-flex justify-content-center">
+                    <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer">
+                </div>
+
+
+                <label for="nombreUsu" class="form-label">Nombre Usuario</label>
+                <input type="text" class="form-control" id="nombreUsu" aria-describedby="nombre Usuario"
+                    value="Evaristo97">
+
+                <h4>Cambio contraseña</h4>
+                <label for="passUsu" class="form-label">Contraseña usuario</label>
+                <input type="password" class="form-control" id="passUsu" aria-describedby="contraseña del Usuario"
+                    value="Evaristo97">
+
+                <label for="repePass" class="form-label">Confirmar contraseña usuario</label>
+                <input type="text" class="form-control" id="repePass" aria-describedby="nombre Usuario">
+            </form>
+        </div>
+
+
     </main>
-    <footer>
+    <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
+        <div class="col-md-4 d-flex flex-column">
+            <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>
+            <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
+            <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
+                Jiménez</h6>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="px-3">
+                <a class="text-body-secondary" href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </li>
+            <li class="px-3">
+                <a class="text-body-secondary" href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            </li>
+            <li class="px-3">
+                <a class="text-body-secondary" href="#">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
 </body>
 
