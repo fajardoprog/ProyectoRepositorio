@@ -1,7 +1,17 @@
-.enlace-repositorio img {
+.avatar-repositorio {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     border: 1px solid white;
     box-sizing: border-box;
+}
+
+.container-repositorios div {
+    display: flex;
+    align-items: center;
+}
+
+.enlace-repositorio {
+    color: green;
+    text-decoration: none;
 }
