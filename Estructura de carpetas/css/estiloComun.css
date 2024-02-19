@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-.container-fluid img {
+nav .container-fluid img {
     width: 5vw;
 }
 

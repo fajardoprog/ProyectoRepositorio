@@ -22,7 +22,7 @@
     </style>
 </head>
 
-<body>
+<body class="d-flex flex-column justify-content-between">
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark">
             <div class="container-fluid">
@@ -119,18 +119,21 @@
             </ol>
         </nav>
     </header>
-    <main>
-        <div class="container-fluid col-lg-6">
+    <main class="d-flex flex-column align-items-center">
+        <div class="container-fluid col-lg-6 m-5 d-flex flex-column justify-content-center">
             <h1>Mi Perfil</h1>
-            <form action="">
+            <form action="" class="d-flex flex-column align-items-center">
                 <div class="col-12 d-flex justify-content-center">
-                    <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer">
+                    <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40">
                 </div>
 
 
                 <label for="nombreUsu" class="form-label">Nombre Usuario</label>
-                <input type="text" class="form-control" id="nombreUsu" aria-describedby="nombre Usuario"
+                <input type="text" class="form-control" id="nombreUsuario" aria-describedby="nombre Usuario"
                     value="Evaristo97">
+
+                <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center"><img src="img/filigrana2.png"
+                        alt="filigrana" class="w-50"></div>
 
                 <h4>Cambio contraseña</h4>
                 <label for="passUsu" class="form-label">Contraseña usuario</label>
@@ -138,7 +141,10 @@
                     value="Evaristo97">
 
                 <label for="repePass" class="form-label">Confirmar contraseña usuario</label>
-                <input type="text" class="form-control" id="repePass" aria-describedby="nombre Usuario">
+                <input type="password" class="form-control" id="repePass" aria-describedby="nombre Usuario"
+                    value="Evaristo97">
+
+                <input type="submit" value="Confirmar cambios" class="btn btn-success m-3">
             </form>
         </div>
 
