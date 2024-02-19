@@ -7,14 +7,15 @@ body {
     background: linear-gradient(to right bottom, #9dfffe, #6989fd);
     background-attachment: fixed;
     min-width: 400px;
-}
-
-header {
-    background: linear-gradient(rgb(66, 150, 68), rgb(76 175 80), rgb(66, 150, 68));
+    height: 100vh;
 }
 
 .container-fluid img {
     width: 5vw;
+}
+
+header .navbar {
+    background: linear-gradient(rgb(66, 150, 68), rgb(76 175 80), rgb(66, 150, 68));
 }
 
 .navbar .navbar-nav .nav-item a.nav-link {

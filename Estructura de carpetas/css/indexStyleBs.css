@@ -1,4 +1,6 @@
-@font-face {
+/* TODO: modificar para tener en este CSS SOLAMENTE estilo relacionado con el index (ni header ni footer) */
+
+/* @font-face {
     font-family: bi;
     src: url(../fonts/bootstrap-icons.woff);
 }
@@ -84,10 +86,12 @@ i {
     background-color: #c7ffc8;
 }
 
-/*Breakpoint personalizado para tamaño del texto*/
+Breakpoint personalizado para tamaño del texto
 
 @media screen and (max-width:992px) {
     li a {
         font-size: 3.5vmin;
     }
 }
+
+*/

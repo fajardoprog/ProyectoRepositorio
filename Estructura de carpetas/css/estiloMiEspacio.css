@@ -1,0 +1,7 @@
+.enlace-repositorio img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
