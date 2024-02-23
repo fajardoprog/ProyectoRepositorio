@@ -82,7 +82,8 @@ i {
     color: white;
 }
 
-#iniSesi:hover {
+#enlInciarSesion:hover #nombreUsu,
+#enlInciarSesion:hover #iniSesi {
     color: rgb(192, 192, 192);
 }
 
