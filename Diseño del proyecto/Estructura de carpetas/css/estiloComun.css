@@ -1,0 +1,122 @@
+@font-face {
+    font-family: bi;
+    src: url(../fonts/bootstrap-icons.woff);
+}
+
+body {
+    background: linear-gradient(to right bottom, #9dfffe, #6989fd);
+    background-attachment: fixed;
+    min-width: 400px;
+    height: 100vh;
+}
+
+nav .container-fluid img {
+    width: 5vw;
+}
+
+header .navbar {
+    background: linear-gradient(rgb(66, 150, 68), rgb(76 175 80), rgb(66, 150, 68));
+}
+
+.navbar .navbar-nav .nav-item a.nav-link {
+    color: white;
+}
+
+.nav-item:not(.nav-item:first-child) a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:not(.nav-item:first-child) {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    background-color: #1e9f2c;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+.container-fluid button.navbar-toggler {
+    color: white;
+}
+
+.container-fluid .navbar-toggler {
+    border-color: white;
+}
+
+.divFooter {
+    background: url(../img/fondoNubesTrans.png);
+    padding: 1%;
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: top;
+    font-size: 2vmin;
+}
+
+i {
+    font-size: 3vmin;
+}
+
+#breadcrumbs {
+    --bs-breadcrumb-divider: ">";
+}
+
+
+#logoMain {
+    width: 10%;
+}
+
+#iniSesi {
+    font-size: 4vmin;
+    color: white;
+    margin: 2px;
+    text-decoration: none;
+}
+
+#nombreUsu {
+    text-decoration: none;
+    color: white;
+}
+
+#iniSesi:hover {
+    color: rgb(192, 192, 192);
+}
+
+#formu {
+    background-color: #69e387;
+}
+
+/*Breakpoint personalizado para tamaño del texto*/
+
+footer {
+    background: url(../img/fondoNubes.gif);
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    background-size: contain;
+}
+
+footer ul li {
+    border-right: 1px solid rgb(0, 217, 255);
+}
+
+footer ul li:last-child {
+    border: none;
+}
+
+@media screen and (min-width:576px) {}
+
+@media screen and (max-width:991px) {
+    li a {
+        font-size: 3.5vmin;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .navbar .navbar-nav li.nav-item {
+        width: auto !important;
+    }
+}
