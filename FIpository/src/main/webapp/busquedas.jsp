@@ -128,9 +128,9 @@
             <main>
                 <h1>Búsquedas</h1>
                 <section class="filtro">
-                    <select class="form-select">
-                        <option selected="selected">Repositorio</option>
-                        <option>Usuario</option>
+                    <select class="btn">
+                        <option selected="selected">Por repositorio</option>
+                        <option>Por usuario</option>
                     </select>
                 </section>
             </main>
