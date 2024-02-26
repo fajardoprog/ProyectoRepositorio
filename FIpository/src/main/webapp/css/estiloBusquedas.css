@@ -1,3 +1,44 @@
 #labelCampoPrincipal{
     margin: 0;
 }
+
+.avatar-repositorio {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.container-repositorios div {
+    display: flex;
+    align-items: center;
+}
+
+.enlace-repositorio {
+    color: green;
+    text-decoration: none;
+}
+
+aside{
+    background-color: #00cc99;
+    border-radius: 10px;
+}
+
+.carta-actividad p {
+    padding: 0;
+    margin: 0;
+}
+
+.carta-actividad{
+    margin-top: 10px;
+}
+
+.contenedor-afectado-repositorio p:first-child{
+    font-weight: bold;
+}
+
+.usuario-completo p:first-child{
+    font-weight: bold;
+}
+
