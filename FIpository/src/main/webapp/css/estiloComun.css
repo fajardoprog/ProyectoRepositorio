@@ -28,7 +28,9 @@ body {
     background-attachment: fixed;
     min-width: 400px;
     height: 100vh;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav .container-fluid img {

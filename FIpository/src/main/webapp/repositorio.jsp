@@ -103,8 +103,7 @@
                 </table>            
             </div>
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>
