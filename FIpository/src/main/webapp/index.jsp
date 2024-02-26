@@ -57,8 +57,8 @@
                             <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
                             <div class="mb-2">
                                 <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0">
-                                    <li class="nav-item dropdown d-xl-flex w-100 align-items-center text-md-center">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    <li class="nav-item dropdown d-xl-flex w-50 align-items-center text-md-center">
+                                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown"
                                            aria-expanded="false">
                                             Subida
                                         </a>
@@ -87,14 +87,7 @@
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                            href="misRepositorios.jsp">
-                                            <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
-                                        </a>
-                                    </li>
-                                    <li class="nav-item w-50">
-                                        <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="miEspacio.jsp">
-                                            <span class="material-symbols-outlined mx-2">group</span>Compartido
-                                            conmigo
+                                            <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
                                     <li class="nav-item w-50">

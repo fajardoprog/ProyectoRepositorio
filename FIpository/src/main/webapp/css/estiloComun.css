@@ -3,11 +3,32 @@
     src: url(../fonts/bootstrap-icons.woff);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(#83c4fd, #6989fd);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(76, 175, 80);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(66, 150, 68);
+}
+
 body {
     background: linear-gradient(to right bottom, #9dfffe, #6989fd);
     background-attachment: fixed;
     min-width: 400px;
     height: 100vh;
+    
 }
 
 nav .container-fluid img {

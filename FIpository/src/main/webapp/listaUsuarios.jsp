@@ -41,6 +41,11 @@
                         FIpository
                     </a>
 
+                    <!-- Cambiar esta estructura por 
+                    <form>
+                        submit
+                    </form>
+                    -->
                     <a href="inicioSesion.jsp"
                        class="order-xl-1 d-flex flex-column align-items-center text-decoration-none mx-3"
                        id="enlInciarSesion">
@@ -53,8 +58,8 @@
                             <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
                             <div class="mb-2">
                                 <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0">
-                                    <li class="nav-item dropdown d-xl-flex w-100 align-items-center text-md-center">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    <li class="nav-item dropdown d-xl-flex w-50 align-items-center text-md-center">
+                                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown"
                                            aria-expanded="false">
                                             Subida
                                         </a>
@@ -83,14 +88,7 @@
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                            href="misRepositorios.jsp">
-                                            <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
-                                        </a>
-                                    </li>
-                                    <li class="nav-item w-50">
-                                        <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="miEspacio.jsp">
-                                            <span class="material-symbols-outlined mx-2">group</span>Compartido
-                                            conmigo
+                                            <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
                                     <li class="nav-item w-50">
@@ -105,7 +103,7 @@
                                 <form class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
-                                               for="campoBusquedaPrincipal">Nombre</label>
+                                               for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                                         <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
@@ -118,8 +116,8 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                      <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                     <li class="breadcrumb-item active" aria-current="page">Lista de usuarios</li>
+                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item active" aria-current="page">Lista de usuarios</li>
                 </ol>
             </nav>
         </header>
