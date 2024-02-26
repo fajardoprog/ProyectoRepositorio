@@ -99,7 +99,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <form class="d-flex align-items-center justify-content-center">
+                                <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
                                                for="campoBusquedaPrincipal">Buscar</label>
