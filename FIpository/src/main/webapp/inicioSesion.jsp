@@ -158,7 +158,7 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Iniciar Sesión / Registro</li>
                 </ol>
             </nav>
@@ -180,7 +180,7 @@
             <!--Fin Seleccion de formulario-->
 
             <!--Bloque formulario Iniciar Sesión-->
-            <div class="flex-column align-items-md-center" id="formularioIniciarSesi">
+            <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
                 <form class="text-center  border border-black rounded col-md-6 " id="formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
@@ -223,11 +223,11 @@
 
                     <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
                 </form>
-            </div>
+            </article>
             <!--Fin Bloque formulario Iniciar Sesión-->
 
             <!--Bloque formulario Registrar-->
-            <div class=" flex-column align-items-md-center" id="registrarseForm">
+            <article class=" flex-column align-items-md-center" id="registrarseForm">
                 <form class="text-center  border border-black rounded col-md-6 " id="formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
@@ -240,9 +240,50 @@
                             </div>
 
                             <div class="form-floating m-2 col-10">
-                                <input type="text" class="form-control col-11" id="floatingInput" placeholder="Usuario"
-                                       name="nombreUsu">
+                                <input type="text" class="form-control col-11" placeholder="Nombre Usuario"
+                                       name="nicknameUsu">
                                 <label for="floatingInput">Nombre Usuario</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-11 d-flex justify-content-between align-items-center">
+                            <div class="d-flex col-2 justify-content-around align-items-center">
+                                <span class="material-symbols-outlined">contacts</span>
+                            </div>
+
+                            <div class="form-floating m-2 col-10">
+                                <input type="text" class="form-control col-11" placeholder="Tu nombre"
+                                       name="nombreUsu">
+                                <label for="floatingInput">Tu nombre</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-11 d-flex justify-content-between align-items-center">
+                            <div class="d-flex col-2 justify-content-around align-items-center">
+                                <span class="material-symbols-outlined">contacts</span>
+                            </div>
+
+                            <div class="form-floating m-2 col-10">
+                                <input type="text" class="form-control col-11" placeholder="Primer apellido"
+                                       name="ape1Usu" required="true">
+                                <label for="floatingInput">Primer Apellido</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-11 d-flex justify-content-between align-items-center">
+                            <div class="d-flex col-2 justify-content-around align-items-center">
+                                <span class="material-symbols-outlined">contacts</span>
+                            </div>
+
+                            <div class="form-floating m-2 col-10">
+                                <input type="text" class="form-control col-11" placeholder="Segundo apellido"
+                                       name="ape2Usu">
+                                <label for="floatingInput">Segundo Apellido</label>
                             </div>
                         </div>
 
@@ -253,7 +294,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-1" id="floatingPassword"
+                                <input type="password" class="form-control col-1" 
                                        placeholder="Password" name="contraUsu">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
@@ -265,7 +306,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-11" id="floatingPassword"
+                                <input type="password" class="form-control col-11" 
                                        placeholder="Password" name="contraUsuRepe">
                                 <label for="floatingPassword">Repetir Contraseña</label>
                             </div>
@@ -277,7 +318,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="email" class="form-control col-11" id="floatingPassword" placeholder="email"
+                                <input type="email" class="form-control col-11"  placeholder="email"
                                        name="emailUsu">
                                 <label for="floatingPassword">Correo Electrónico</label>
                             </div>
@@ -289,7 +330,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="date" class="form-control col-11" id="floatingPassword"
+                                <input type="date" class="form-control col-11" 
                                        placeholder="Fecha nacimiento" name="fechaNaciUsu">
                                 <label for="floatingPassword">Fecha de nacimiento</label>
                             </div>
@@ -328,34 +369,32 @@
                     </div>
                 </form>
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
-            </div>
+            </article>
             <!--Fin Bloque formulario Registrar-->
 
         </main>
 
 
-        <footer class="d-flex flex-wrap justify-content-around align-items-center py-3 my-4">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© FIpository Jose Antonio Ismael</span>
+        <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
+            <div class="col-md-4 d-flex flex-column">
+                <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>
+                <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
+                <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
+                    Jiménez</h6>
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </li>
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-facebook"></i>
                     </a>
                 </li>
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-whatsapp"></i>
                     </a>
@@ -364,4 +403,4 @@
         </footer>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
-</html>F
+</html>
