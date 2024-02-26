@@ -10,15 +10,15 @@ Cambiar:
 Ids repetidos, estilo separado del común
 
 // Mi espacio
-Mismo verde header: #429644
+-- Mismo verde header: #429644
 
 -- Mis repositorios: #57c34d
-Compartido conmigo: linear-gradient(0deg, #429644, #57c34d);
+-- Compartido conmigo: linear-gradient(0deg, #429644, #57c34d);
 my-5;
-Textos en negro
+-- Textos en negro
 
 // Búsquedas
-bg transparent
+-- bg transparent
 
 // Inicio juego
 textos responsive
@@ -35,8 +35,6 @@ Botones: btn-lg p-3
 Input de ficheros y carpetas: 
 contenedor: row
 input: offset-2 col-8
-
-o... quitar los 3 puntos
 
 // footer
 política de cookies/ privacidad/ condiciones de uso
