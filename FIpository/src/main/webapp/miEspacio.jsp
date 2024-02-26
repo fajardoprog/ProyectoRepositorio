@@ -124,8 +124,8 @@
                 </ol>
             </nav>
         </header>
-        <div class="d-block p-1 p-sm-0 d-sm-flex">
-            <aside class="col-sm-5 p-3">
+        <div class="container-fluid m-0 p-1 p-md-0 d-md-flex">
+            <aside class="col-md-5 p-3">
                 <h3 class="p-0">Tus repositorios</h3>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" name="busqueda-repositorios" id="busqueda-repositorios"
