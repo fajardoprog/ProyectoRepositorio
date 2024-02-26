@@ -8,7 +8,7 @@
 <!--Pie principalmente funciona-->
 <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
     <div class="col-md-4 d-flex flex-column">
-        <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>
+        <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por: #year</h6>
         <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
         <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
             Jiménez</h6>

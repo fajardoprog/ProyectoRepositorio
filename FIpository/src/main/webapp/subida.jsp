@@ -152,7 +152,7 @@
                             <input type="file" class="form-control" name="" id="" placeholder=""
                                    aria-describedby="fileHelpId" />
                         </article>
-                        <h2 class="m-2">o...</h2>
+                        <h2 class="m-2">o</h2>
                         <article>
                             <h2 class="m-2">Crea tu carpeta</h2>
                             <input class="form-control" type=" search" placeholder="Nombre de la carpeta"

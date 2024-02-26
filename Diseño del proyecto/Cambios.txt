@@ -1,0 +1,40 @@
+Cambiar degradado header;
+
+
+// Inicio sesión
+Textos en blanco
+enlace blanco y hover negro
+
+// Mi espacio
+Mismo verde header: #429644
+
+Mis repositorios: #57c34d
+Compartido conmigo: linear-gradient(0deg, #429644, #57c34d);
+my-5;
+Textos en negro
+
+// Búsquedas
+bg transparent
+
+// Inicio juego
+textos responsive
+negrita para el podio
+reducir columna de puesto
+
+// Recupera pass
+Textos en blanco
+enlace blanco y hover negro
+
+// Subida
+Botones: btn-lg p-3
+
+Input de ficheros y carpetas: 
+contenedor: row
+input: offset-2 col-8
+
+o... quitar los 3 puntos
+
+// footer
+política de cookies/ privacidad/ condiciones de uso
+@ cambiar a una linea abajo del todo
+@FIpository #year
