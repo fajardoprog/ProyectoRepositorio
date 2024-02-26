@@ -114,9 +114,9 @@
 
             <div class="container my-5" id="ficheros">
                 <h1 class="text-center">Subida de ficheros</h1>
-                <form action="#">
+                <form action="#" class="d-flex flex-column d-md-block">
                     <article id="paso1fichero">
-                        <h2>1. Selecciona el repositorio</h2>
+                        <h2 class="m-3">1. Selecciona el repositorio</h2>
                         <div class="input-group">
                             <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
                             <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
@@ -128,19 +128,19 @@
                         </datalist>
                     </article>
                     <article id="paso2fichero">
-                        <h2>2. Selecciona el fichero</h2>
+                        <h2 class="m-3">2. Selecciona el fichero</h2>
                         <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
                                aria-describedby="fileHelpId" />
                     </article>
-                    <button type="submit" class="btn btn-primary my-3">Subir fichero</button>
+                    <button type="submit" class="btn btn-primary my-3 align-items-center">Subir fichero</button>
                 </form>
             </div>
 
             <div class="container my-5" id="carpetas">
                 <h1 class="text-center">Subida de carpeta</h1>
-                <form action="#">
+                <form action="#" class="d-flex flex-column d-md-block">
                     <article id="paso1carpeta">
-                        <h2>1. Selecciona el repositorio</h2>
+                        <h2 class="m-2">1. Selecciona el repositorio</h2>
                         <div class="input-group">
                             <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
                             <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
@@ -148,25 +148,25 @@
                     </article>
                     <section id="paso2carpeta">
                         <article>
-                            <h2>2. Sube tu carpeta</h2>
+                            <h2 class="m-2">2. Sube tu carpeta</h2>
                             <input type="file" class="form-control" name="" id="" placeholder=""
                                    aria-describedby="fileHelpId" />
                         </article>
-                        <h2>o...</h2>
+                        <h2 class="m-2">o...</h2>
                         <article>
-                            <h2>Crea tu carpeta</h2>
+                            <h2 class="m-2">Crea tu carpeta</h2>
                             <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
                                    aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
                         </article>
                     </section>
                     <article id="paso3carpeta">
-                        <h2>3. Elige el color de tu carpeta</h2>
+                        <h2 class="m-2">3. Elige el color de tu carpeta</h2>
                         <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
                         <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
                                title="Choose your color">
                     </article>
 
-                    <button type="submit" class="btn btn-primary mb-3">Crear carpeta</button>
+                    <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>
                 </form>
             </div>
         </main>

@@ -141,7 +141,7 @@ footer ul li:last-child {
 
 @media screen and (max-width:1200px) {
     nav:first-child li a {
-        font-size: 3.5vmin;
+        font-size: 3vmin;
     }
 }
 
