@@ -48,6 +48,12 @@ header .navbar {
     border-color: white;
 }
 
+#breadcrumbs ol li a{
+    color:black;
+    text-decoration: none;    
+}
+
+
 .divFooter {
     background: url(../img/fondoNubesTrans.png);
     padding: 1%;
@@ -111,7 +117,7 @@ footer ul li:last-child {
 @media screen and (min-width:576px) {}
 
 @media screen and (max-width:991px) {
-    li a {
+   nav:first-child li a {
         font-size: 3.5vmin;
     }
 }

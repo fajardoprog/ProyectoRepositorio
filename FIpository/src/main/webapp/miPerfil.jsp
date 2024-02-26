@@ -21,19 +21,25 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
+        <link rel="stylesheet" href="css/miPerfil.css">
+
+
+        <script src="js/jquery-3.7.1.min.js"></script>
         <script>
 
-        </script>
-        <style>
-            #fotoPer {
-                width: 30%;
-                border-radius: 100px;
-            }
-        </style>
+            $(document).ready(function () {
+                $("#imgUsu").on("change", function () {
+                    let file = this.files[0];
+                    console.log(file);
+                    $("#nombreFoto").text(file.name);
+                });
+            });
+
+        </script>       
     </head>
 
     <body class="d-flex flex-column justify-content-between">
-       <header>
+        <header>
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -110,7 +116,7 @@
                                 <form class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
-                                               for="campoBusquedaPrincipal">Nombre</label>
+                                               for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                                         <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
@@ -121,37 +127,58 @@
                     </div>
                 </div>
             </nav>
+            <!--Ver donde manda al pulsar Inicio-->
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                    <li class="breadcrumb-item" aria-current="page">Mi espacio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Mi perfil</li>
                 </ol>
             </nav>
         </header>
         <main class="d-flex flex-column align-items-center">
-            <div class="container-fluid col-lg-6 m-5 d-flex flex-column justify-content-center">
+            <div class="container-fluid col-md-6 m-5 d-flex flex-column justify-content-center">
                 <h1>Mi Perfil</h1>
                 <form action="" class="d-flex flex-column align-items-center">
-                    <div class="col-12 d-flex justify-content-center">
-                        <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40">
+                    
+                    <div class="col-12 d-flex justify-content-around position-relative">
+                        <input type="file" name="ImgUsu" id="imgUsu"/>
+
+                        <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><span>add_circle</span></label>
+                            <span id="nombreFoto"></span>
+                        </div>
                     </div>
 
-
-                    <label for="nombreUsu" class="form-label">Nombre Usuario</label>
-                    <input type="text" class="form-control" id="nombreUsuario" aria-describedby="nombre Usuario"
+                    <label for="nicknameUsu" class="form-label">Nickname</label>
+                    <input type="text" class="form-control" id="nicknameUsu" aria-describedby="nickname" name="nicknameUsu"
                            value="Evaristo97">
 
-                    <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center"><img src="img/filigrana2.png"
-                                                                                             alt="filigrana" class="w-50"></div>
+                    <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center separador" ><span></span></div>
+
+                    <label for="nombreRealUsu" class="form-label">Nombre Usuario</label>
+                    <input type="text" class="form-control" id="nombreUsuario" aria-describedby="nombre Usuario" name="nombreUsu"
+                           value="Evaristo">
+
+                    <label for="ape1Usu" class="form-label">1º Apellido</label>
+                    <input type="text" class="form-control" id="ape1Usu" aria-describedby="ape1Usu" name="ape1Usu"
+                           value="Díaz">
+
+                    <label for="ape2Usu" class="form-label">2º Apellido</label>
+                    <input type="text" class="form-control" id="ape2Usu" aria-describedby="ape2Usu" name="ape2Usu"
+                           value="Pérez">
+
+                    <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center separador" ><span></span></div>
 
                     <h4>Cambio contraseña</h4>
                     <label for="passUsu" class="form-label">Contraseña usuario</label>
-                    <input type="password" class="form-control" id="passUsu" aria-describedby="contraseña del Usuario"
+                    <input type="password" class="form-control" id="passUsu" aria-describedby="contraseña del Usuario" name="passUsu"
                            value="Evaristo97">
 
                     <label for="repePass" class="form-label">Confirmar contraseña usuario</label>
-                    <input type="password" class="form-control" id="repePass" aria-describedby="nombre Usuario"
+                    <input type="password" class="form-control" id="repePass" aria-describedby="nombre Usuario" name="passUsuRepe"
                            value="Evaristo97">
 
                     <input type="submit" value="Confirmar cambios" class="btn btn-success m-3">

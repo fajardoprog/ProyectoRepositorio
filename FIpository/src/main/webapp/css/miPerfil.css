@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 feb. 2024, 9:34:54
+    Author     : IsmaelJJL
+*/
+
+#fotoPer {
+    width: 15%;
+    border-radius: 100px;
+}
+.separador{
+    border-top: 5px dotted black;
+}
+
+#imgUsu{
+   position: fixed;
+    left: 9999px;
+}
+
+#labelImg{
+    cursor: pointer;
+}
