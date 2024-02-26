@@ -1,3 +1,4 @@
+
 <%-- 
     Document   : listaUsuarios
     Created on : 24 feb. 2024, 16:04:00
@@ -49,183 +50,191 @@
                 </ol>
             </nav>
         </header>
-        <div class="container-fluid">
-            <aside class="d-none">
+        <div class="container">
+            <div class="row d-flex flex-column flex-md-row g-0">
+                <aside class="d-none d-md-flex w-30 col-4">
+                    <section>
+                         <h3>Filtrar por</h3>
+                        <div class=""></div>
+                        <h3>Ordenar por</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
+                                    <label class="form-check-label" for="reputacion">Reputación</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
+                                    <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
+                                    <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="nombre">
+                                    <label class="form-check-label" for="nombre">Nombre</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+                <main class="offset-md-1 col-md-7">
+                    <h1>Búsquedas</h1>
+                    <section class="filtros d-flex flex-column justify-content-around">
+                        <div class="d-flex d-md-none justify-content-around">
+                            <div class="dropdown diferenciar-busqueda" >
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filtro-base">
+                                    Por repositorio
+                                </button>
+                                <ul class="dropdown-menu lista-filtro">
+                                    <li><button class="dropdown-item" href="#">Por repositorio</button></li>
+                                    <li><button class="dropdown-item" href="#">Por usuario</button></li>
+                                </ul>
+                            </div>
 
-            </aside>
-            <main>
-                <h1>Búsquedas</h1>
-                <section class="filtros d-flex flex-column justify-content-around">
-                    <div class="d-flex justify-content-around">
-                        <div class="dropdown diferenciar-busqueda" >
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filtro-base">
-                                Por repositorio
-                            </button>
-                            <ul class="dropdown-menu lista-filtro">
-                                <li><button class="dropdown-item" href="#">Por repositorio</button></li>
-                                <li><button class="dropdown-item" href="#">Por usuario</button></li>
-                            </ul>
+                            <div class="filtro-especifico">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filtroModal">
+                                    Filtros
+                                </button>
+                            </div>
                         </div>
 
-                        <div class="filtro-especifico">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filtroModal">
-                                Filtros
-                            </button>
-                        </div>
-                    </div>
+                        <div>
+                            <div class="form-floating my-3">
+                                <input type="text" id="campoPrincipal" class="form-control" placeholder="Contengan">
+                                <label id="labelCampoPrincipal" for="campoPrincipal">Búsqueda con filtros:</label>
+                            </div>
 
-                    <div>
-                        <div class="form-floating my-3">
-                            <input type="text" id="campoPrincipal" class="form-control" placeholder="Contengan">
-                            <label id="labelCampoPrincipal" for="campoPrincipal">Búsqueda con filtros:</label>
-                        </div>
+                            <div class="modal fade" id="filtroModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
 
-                        <div class="modal fade" id="filtroModal" tabindex="-1" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
+                                        <form>
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Ordenar por</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
+                                                            <label class="form-check-label" for="reputacion">Reputación</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
+                                                            <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
+                                                            <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" role="switch" id="nombre">
+                                                            <label class="form-check-label" for="nombre">Nombre</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                <input type="submit" value="Guardar filtro" name="guardaFiltro" class="btn btn-primary"/>
+                                                <input type="reset" value="Limpiar filtro" name="limpia" class="btn btn-primary"/>
+                                            </div>
+                                        </form>
 
-                                    <form>
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Ordenar por</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
-                                                        <label class="form-check-label" for="reputacion">Reputación</label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
-                                                        <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
-                                                        <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <div class="form-check form-switch">
-                                                        <input class="form-check-input" type="checkbox" role="switch" id="nombre">
-                                                        <label class="form-check-label" for="nombre">Nombre</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                            <input type="submit" value="Guardar filtro" name="guardaFiltro" class="btn btn-primary"/>
-                                            <input type="reset" value="Limpiar filtro" name="limpia" class="btn btn-primary"/>
-                                        </div>
-                                    </form>
-
+                                    </div>
                                 </div>
                             </div>
+                            <!--Ventana modal-->
                         </div>
-                        <!--Ventana modal-->
-                    </div>
-                </section>
+                    </section>
 
-                <section class="container cartas">
-                    <article class="card card-usuario">
-                        <header class="card-header d-flex align-items-center justify-content-around">
-                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <div class="titulo-accion ps-md-3 p-3 p-md-1 ">
-                                <h5>petorluj</h5>
-                                <p>Última vez conectado: Hace 7 horas</p>
-                            </div>
-                             <form>
-                                     <input type="submit" value="Comenzar a seguir" class="btn btn-success"/>
-                            </form>
-                        </header>
+                    <section class="container cartas">
+                        <article class="card card-usuario">
+                            <header class="card-header d-flex align-items-center justify-content-between">
+                                <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                                <div class="titulo-accion ps-md-3 p-3 p-md-1 ">
+                                    <h5>petorluj</h5>
+                                    <p>Última vez conectado: Hace 7 horas</p>
+                                </div>
+                                <form>
+                                    <input type="submit" value="Visitar perfil" class="btn btn-success"/>
+                                </form>
+                            </header>
 
-                        <div class="datos-usuario d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center text-truncate">
-                               
-                                <div class="usuario-completo ps-3 text-truncate">
-                                    <p>petorluj</p>
-                                    <p class="text-truncate">Pedro Manuel Torres Luján</p>
-                                    <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
+                            <div class="datos-usuario d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center text-truncate">
+
+                                    <div class="usuario-completo ps-3 text-truncate">
+                                        <p>petorluj</p>
+                                        <p class="text-truncate">Pedro Manuel Torres Luján</p>
+                                        <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="stats d-flex justify-content-around pt-2 text-center">
-                            <p class="px-2">
-                                <span class="num-repositorios">
-                                    33
-                                </span>
-                                repositorio/s
-                            </p>
+                            <div class="stats d-flex justify-content-around pt-2 text-center">
+                                <p class="px-2">
+                                    <span class="num-repositorios">
+                                        33
+                                    </span>
+                                    repositorio/s
+                                </p>
 
-                            <p class="px-2">
-                                <span class="num-seguidores">
-                                    33
-                                </span>
-                                seguidor/es
-                            </p>
+                                <p class="px-2">
+                                    <span class="num-seguidores">
+                                        33
+                                    </span>
+                                    seguidor/es
+                                </p>
 
-                            <p class="px-2">
-                                <span class="num-reputacion">
-                                    333
-                                </span>
-                                punto/s de reputación
-                            </p>
-                        </div>
-                    </article>
-                    <article class="card card-repositorio">
-<header class="card-header d-flex align-items-center justify-content-around">
-                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <div class="titulo-accion ps-md-3 p-3 p-md-1 ">
-                                <h5>petorluj</h5>
-                                <p>Última vez conectado: Hace 7 horas</p>
+                                <p class="px-2">
+                                    <span class="num-reputacion">
+                                        333
+                                    </span>
+                                    punto/s de reputación
+                                </p>
                             </div>
-                             <form>
-                                     <input type="submit" value="Comenzar a seguir" class="btn btn-success"/>
-                            </form>
-                        </header>
-
-                        <div class="datos-usuario d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center text-truncate">
-                               
-                                <div class="usuario-completo ps-3 text-truncate">
-                                    <p>petorluj</p>
-                                    <p class="text-truncate">Pedro Manuel Torres Luján</p>
-                                    <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
+                        </article>
+                        <article class="card card-repositorio my-3">
+                            <header class="card-header d-flex  justify-content-between align-items-center px-3 px-md-3">
+                                <div class="titulo-accion ps-3 justify-content-center">
+                                    <h5>IsmaelJ/Apuntes Lola</h5>
+                                    <p>Ultima modificación: Hace 7 horas</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="stats d-flex justify-content-around pt-2 text-center">
-                            <p class="px-2">
-                                <span class="num-repositorios">
-                                    33
-                                </span>
-                                repositorio/s
-                            </p>
-
-                            <p class="px-2">
-                                <span class="num-seguidores">
-                                    33
-                                </span>
-                                seguidor/es
-                            </p>
-
-                            <p class="px-2">
-                                <span class="num-reputacion">
-                                    333
-                                </span>
-                                punto/s de reputación
-                            </p>
-                        </div>
-                    </article>
-                </section>
-
-            </main>
+                                <form>
+                                    <input type="submit" value="Ir al repositorio" class="btn btn-success"/>
+                                </form>
+                            </header>
+                            <article class="contenedor-afectado-repositorio d-flex align-items-center justify-content-between container-fluid py-2">
+                                <div class="datos-repositorio text-truncate">
+                                    <p>
+                                        IsmaelJ/Apuntes Lola
+                                    </p>
+                                    <p class="text-truncate">
+                                        Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor
+                                    </p>
+                                </div>
+                            </article>
+                        </article>
+                    </section>
+                </main>
+            </div>
         </div>
+
         <footer>
         </footer>
     </body>
