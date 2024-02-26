@@ -109,7 +109,7 @@
                                 <form class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
-                                               for="campoBusquedaPrincipal">Nombre</label>
+                                               for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                                         <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
