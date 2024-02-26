@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
-
+        <link rel="stylesheet" href="css/repositorio.css">
         <script>
 
         </script>
@@ -51,12 +51,10 @@
                     <button class="btn btn-success" type="submit">Mi Espacio</button>
                 </form> 
             </div>
-            
-            <div class="d-flex flex-column align-items-center container-fluid p-4 container-fluid">
 
-
-                <table class="col-12 m-2 table table-striped table-success">
-                    <thead>
+            <div class="col-12 container-fluid">
+                <table class=" table table-striped table-success container-fluid">
+                    <thead class="text-center">
                         <tr>
                             <th>Nombre</th>
                             <th>Tipo</th>
@@ -68,42 +66,44 @@
                     <tbody class="table-group-divider">
                         <!--Esto sería una fila completa-->
                         <tr>
-                            <td class="row text-truncate">Factura</td>
-                            <td class="row text-truncate">PDF</td>
-                            <td class="row text-truncate">10/10/2010 13:59</td>
-                            <td class="row text-truncate">YO</td>
+                            <td>Factura</td>
+                            <td>PDF</td>
+                            <td>10/10/2010 13:59</td>
+                            <td>YO</td>
                         </tr>
                         <!--Fin fila completa-->
 
                         <!--Ejemplos DEMO BORRAR Despues-->
                         <tr>
-                            <td>Fotos</td>
-                            <td>Carpeta</td>
-                            <td>11/04/2019 20:43</td>
-                            <td>Fajardo</td>
+                            <td><p >Fotos</p></td>
+                            <td><p>Carpeta</p></td>
+                            <td><p >11/04/2019 20:43</p></td>
+                            <td><p >Fajardo</p></td>
                         </tr>
-
-                        <tr>
-                            <td>ApuntesDiseño</td>
-                            <td>PDF</td>
-                            <td>12/05/2021 14:00</td>
-                            <td>YO</td>
+                         <tr>
+                            <td><p >Fotos</p></td>
+                            <td><p>Carpeta</p></td>
+                            <td><p >11/04/2019 20:43</p></td>
+                            <td><p >Fajardo</p></td>
                         </tr>
-
-                        <tr>
-                            <td>ApuntesProg</td>
-                            <td>Carpeta</td>
-                            <td>22/05/2023 15:00</td>
-                            <td>YO</td>
+                         <tr>
+                            <td><p >Fotos</p></td>
+                            <td><p>Carpeta</p></td>
+                            <td><p >11/04/2019 20:43</p></td>
+                            <td><p >Fajardo</p></td>
+                        </tr>
+                         <tr>
+                            <td><p >Fotos</p></td>
+                            <td><p>Carpeta</p></td>
+                            <td><p >11/04/2019 20:43</p></td>
+                            <td><p >Fajardo</p></td>
                         </tr>
                         <!--Fin DEMO-->
                     </tbody>
-                </table>
+                </table>            
             </div>
-
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>

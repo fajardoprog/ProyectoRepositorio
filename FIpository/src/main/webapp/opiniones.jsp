@@ -28,8 +28,8 @@
     </head>
 
     <body>
-      <header>
-         <jsp:include page="cabecera.jsp" />
+        <header>
+            <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
@@ -40,14 +40,11 @@
             </nav>
         </header>
         <main>
-            
-            
-            
-                    
-            
-        </main>
-        <footer>
-        </footer>
+
+
+        </main>        
+        <jsp:include page="pie.jsp"/>
     </body>
+
     <script src="js/bootstrap.bundle.js"></script>
 </html>
