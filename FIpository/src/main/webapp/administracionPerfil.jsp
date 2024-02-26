@@ -28,7 +28,7 @@
     </head>
 
     <body>
-      <header>
+        <header>
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -116,10 +116,10 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page">Administrador</li>
                     <li class="breadcrumb-item" aria-current="page">Gestión de usuarios</li>
-                     <li class="breadcrumb-item active" aria-current="page">Administración de un perfil</li>
+                    <li class="breadcrumb-item active" aria-current="page">Administración de un perfil</li>
                 </ol>
             </nav>
         </header>
