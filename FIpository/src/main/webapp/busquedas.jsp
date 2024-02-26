@@ -1,6 +1,6 @@
 <%-- 
-    Document   : verRepositorios
-    Created on : 24 feb. 2024, 16:05:24
+    Document   : listaUsuarios
+    Created on : 24 feb. 2024, 16:04:00
     Author     : José Antonio Fajardo Naranjo
 --%>
 
@@ -14,7 +14,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista de repositorios</title>
+        <title>Lista usuarios</title>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -28,7 +28,7 @@
     </head>
 
     <body>
-     <header>
+        <header>
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -41,6 +41,11 @@
                         FIpository
                     </a>
 
+                    <!-- Cambiar esta estructura por 
+                    <form>
+                        submit
+                    </form>
+                    -->
                     <a href="inicioSesion.jsp"
                        class="order-xl-1 d-flex flex-column align-items-center text-decoration-none mx-3"
                        id="enlInciarSesion">
@@ -53,8 +58,8 @@
                             <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
                             <div class="mb-2">
                                 <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0">
-                                    <li class="nav-item dropdown d-xl-flex w-100 align-items-center text-md-center">
-                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    <li class="nav-item dropdown d-xl-flex w-50 align-items-center text-md-center">
+                                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown"
                                            aria-expanded="false">
                                             Subida
                                         </a>
@@ -83,14 +88,7 @@
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                            href="misRepositorios.jsp">
-                                            <span class="material-symbols-outlined mx-2">home</span>Mis repositorios
-                                        </a>
-                                    </li>
-                                    <li class="nav-item w-50">
-                                        <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="miEspacio.jsp">
-                                            <span class="material-symbols-outlined mx-2">group</span>Compartido
-                                            conmigo
+                                            <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
                                     <li class="nav-item w-50">
@@ -105,7 +103,7 @@
                                 <form class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
-                                               for="campoBusquedaPrincipal">Nombre</label>
+                                               for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                                         <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
@@ -118,12 +116,25 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item active" aria-current="page">Búsquedas</li>
                 </ol>
             </nav>
         </header>
-        <main>
-        </main>
+        <div class="container-fluid">
+            <aside class="d-none">
+                
+            </aside>
+            <main>
+                <h1>Búsquedas</h1>
+                <section class="filtro">
+                    <select class="form-select">
+                        <option selected="selected">Repositorio</option>
+                        <option>Usuario</option>
+                    </select>
+                </section>
+            </main>
+        </div>
         <footer>
         </footer>
     </body>
