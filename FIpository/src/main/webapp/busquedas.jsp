@@ -178,7 +178,49 @@
                         </div>
                     </article>
                     <article class="card card-repositorio">
+<header class="card-header d-flex align-items-center justify-content-around">
+                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <div class="titulo-accion ps-md-3 p-3 p-md-1 ">
+                                <h5>petorluj</h5>
+                                <p>Última vez conectado: Hace 7 horas</p>
+                            </div>
+                             <form>
+                                     <input type="submit" value="Comenzar a seguir" class="btn btn-success"/>
+                            </form>
+                        </header>
 
+                        <div class="datos-usuario d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center text-truncate">
+                               
+                                <div class="usuario-completo ps-3 text-truncate">
+                                    <p>petorluj</p>
+                                    <p class="text-truncate">Pedro Manuel Torres Luján</p>
+                                    <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats d-flex justify-content-around pt-2 text-center">
+                            <p class="px-2">
+                                <span class="num-repositorios">
+                                    33
+                                </span>
+                                repositorio/s
+                            </p>
+
+                            <p class="px-2">
+                                <span class="num-seguidores">
+                                    33
+                                </span>
+                                seguidor/es
+                            </p>
+
+                            <p class="px-2">
+                                <span class="num-reputacion">
+                                    333
+                                </span>
+                                punto/s de reputación
+                            </p>
+                        </div>
                     </article>
                 </section>
 
