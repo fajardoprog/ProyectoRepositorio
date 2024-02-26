@@ -299,6 +299,7 @@
                     <header>
                         <h3>Quizá te interese basado en tus búsquedas</h3>
                     </header>
+                    <!--TODO: Colocar artículos basados en tus búsquedas-->
                     <article>
 
                     </article>
