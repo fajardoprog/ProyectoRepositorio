@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
-        
+
         <script>
 
         </script>
@@ -126,53 +126,62 @@
         <main>
             <h1 class="text-center">2DAW (nombre repositorio)</h1>
 
-            <form action="opiniones.jsp" class="m-2 ms-5">
-                <button class="btn btn-success" type="submit">Opiniones</button>
-            </form> 
+            <div class="d-flex justify-content-around">
+                <form action="opiniones.jsp" class="m-2 ms-5">
+                    <button class="btn btn-success" type="submit">Opiniones</button>
+                </form> 
 
-
+                <form action="miEspacio.jsp" class="m-2 ms-5">
+                    <button class="btn btn-success" type="submit">Mi Espacio</button>
+                </form> 
+            </div>
+            
             <div class="d-flex flex-column align-items-center container-fluid p-4 container-fluid">
 
 
                 <table class="col-12 m-2 table table-striped table-success">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Tipo</th>
-                        <th>Fecha</th>
-                        <th>Usuario</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
 
-                    <!--Esto sería una fila completa-->
-                    <tr>
-                        <td>Factura</td>
-                        <td>PDF</td>
-                        <td>10/10/2010 13:59</td>
-                        <td>YO</td>
-                    </tr>
-                    <!--Fin fila completa-->
+                    <tbody class="table-group-divider">
+                        <!--Esto sería una fila completa-->
+                        <tr>
+                            <td class="row text-truncate">Factura</td>
+                            <td class="row text-truncate">PDF</td>
+                            <td class="row text-truncate">10/10/2010 13:59</td>
+                            <td class="row text-truncate">YO</td>
+                        </tr>
+                        <!--Fin fila completa-->
 
-                    <!--Ejemplos DEMO BORRAR Despues-->
-                    <tr>
-                        <td>Fotos</td>
-                        <td>Carpeta</td>
-                        <td>11/04/2019 20:43</td>
-                        <td>Fajardo</td>
-                    </tr>
+                        <!--Ejemplos DEMO BORRAR Despues-->
+                        <tr>
+                            <td>Fotos</td>
+                            <td>Carpeta</td>
+                            <td>11/04/2019 20:43</td>
+                            <td>Fajardo</td>
+                        </tr>
 
-                    <tr>
-                        <td>ApuntesDiseño</td>
-                        <td>PDF</td>
-                        <td>12/05/2021 14:00</td>
-                        <td>YO</td>
-                    </tr>
+                        <tr>
+                            <td>ApuntesDiseño</td>
+                            <td>PDF</td>
+                            <td>12/05/2021 14:00</td>
+                            <td>YO</td>
+                        </tr>
 
-                    <tr>
-                        <td>ApuntesProg</td>
-                        <td>Carpeta</td>
-                        <td>22/05/2023</td>
-                        <td>YO</td>
-                    </tr>
-                    <!--Fin DEMO-->
+                        <tr>
+                            <td>ApuntesProg</td>
+                            <td>Carpeta</td>
+                            <td>22/05/2023 15:00</td>
+                            <td>YO</td>
+                        </tr>
+                        <!--Fin DEMO-->
+                    </tbody>
                 </table>
             </div>
 
