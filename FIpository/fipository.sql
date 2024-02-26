@@ -4,9 +4,13 @@
 
 -- Creación de la tabla Usuario
 CREATE OR REPLACE TABLE Usuario (
-    nombre VARCHAR(25) PRIMARY KEY,
+    nombre_usuario VARCHAR(25) PRIMARY KEY,
+    nombre_completo VARCHAR(50),
+    primer_apellido VARCHAR(30),
+    segundo_apellido VARCHAR(30),
     reputacion INT,
     correo VARCHAR(50),
+    descripcion VARCHAR(255),
     contraseña VARCHAR(16),
     genero VARCHAR(10),
     foto VARCHAR(50),
@@ -17,6 +21,7 @@ CREATE OR REPLACE TABLE Usuario (
 CREATE OR REPLACE TABLE Repositorio (
     nombre_usuario VARCHAR(25),
     nombre_repositorio VARCHAR(25),
+    descripcion VARCHAR(255),
     PRIMARY KEY (nombre_usuario, nombre_repositorio),
     fecha_creacion DATE,
     FOREIGN KEY (nombre_usuario) REFERENCES Usuario(nombre) ON DELETE CASCADE

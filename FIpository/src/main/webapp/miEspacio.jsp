@@ -124,59 +124,187 @@
                 </ol>
             </nav>
         </header>
-        <div class="container-fluid m-0 p-1 p-md-0 d-md-flex">
-            <aside class="col-md-5 p-3">
-                <h3 class="p-0">Tus repositorios</h3>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="busqueda-repositorios" id="busqueda-repositorios"
-                           placeholder="" />
-                    <label for="busqueda-repositorios">Buscar repositorio</label>
-                </div>
-                <div class="d-flex flex-column container-repositorios">
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">1 DAW</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">2 DAW</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Policía</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Cliente</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Diseño de Interfaces Web</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Despliegue</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Desarrollo web en entorno servidor</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Programación</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">Bases de datos</a>
-                    </div>
-                    <div>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">FOL</a>
-                    </div>
-                </div>
-            </aside>
-            <main class="col-sm-7">
+        <h1>Mi espacio</h1>
+        <div class="container-fluid m-0 p-3 p-md-2 d-md-flex">
+            <aside class="col-md-4 p-3">
+                <h3 class="p-0">Mis repositorios</h3>
 
+                <article>
+                    <form  class="form-floating mb-3">
+                        <input type="text" class="form-control" name="busqueda-repositorios" id="busqueda-repositorios"
+                               placeholder="" />
+                        <label for="busqueda-repositorios">Buscar repositorio</label>
+                    </form>
+                </article>
+
+                <section class="d-flex flex-column container-repositorios">
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/1 DAW</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/2 DAW</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Policía</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Cliente</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Diseño de Interfaces Web</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Despliegue</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Desarrollo web en entorno servidor</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Programación</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Bases de datos</a>
+                    </article>
+                    <article>
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/FOL</a>
+                    </article>
+                </section>
+            </aside>
+            <main class="offset-md-1 col-md-7">
+                <section id="compartido-conmigo">
+                    <header>
+                        <h3>Compartido conmigo</h3>
+                    </header>
+                    <section class="d-flex flex-column container-repositorios">
+                        <article>
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/3 DAW</a>
+                        </article>
+                        <article>
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Profesores</a>
+                        </article>
+                        <article>
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Apuntes de Bootstrap</a>
+                        </article>
+                        <article>
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Accesibilidad</a>
+                        </article>
+                    </section>
+                </section>
+                <section id="actividad-reciente">
+                    <header>
+                        <h3>Actividad reciente</h3>
+                    </header>
+                    <article class="card carta-actividad">
+                        <header class="card-header d-flex align-items-center">
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <div class="titulo-accion ps-3">
+                                <h5>IsmaelJ creó un repositorio</h5>
+                                <p>Hace 7 horas</p>
+                            </div>
+                        </header>
+                        <article class="contenedor-afectado-repositorio d-flex align-items-center justify-content-between container-fluid py-2">
+                            <div class="datos-repositorio text-truncate">
+                                <p>
+                                    IsmaelJ/Apuntes Lola
+                                </p>
+                                <p class="text-truncate">
+                                    Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor
+                                </p>
+                            </div>
+                            <form class="ms-5">
+                                <input type="submit" value="Ir al repositorio" class="btn btn-success"/>
+                            </form>
+                        </article>
+                    </article>
+
+                    <article class="card carta-actividad">
+                        <header class="card-header d-flex align-items-center">
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <div class="titulo-accion ps-3">
+                                <h5>IsmaelJ ha empezado a seguir a alguien</h5>
+                                <p>Hace 7 horas</p>
+                            </div>
+                        </header>
+                        <article class="contenedor-afectado-usuario container-fluid d-flex flex-column py-2">
+                            <div class="datos-usuario d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center text-truncate">
+                                    <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                                    <div class="usuario-completo ps-3 text-truncate">
+                                        <p>petorluj</p>
+                                        <p class="text-truncate">Pedro Manuel Torres Luján</p>
+                                        <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
+                                    </div>
+                                </div>
+                                <form class="ms-5">
+                                    <input type="submit" value="Comenzar a seguir" class="btn btn-success"/>
+                                </form>
+                            </div>
+                            <div class="stats d-flex justify-content-around pt-2 text-center">
+                                <p class="px-2">
+                                    <span class="num-repositorios">
+                                        33
+                                    </span>
+                                    repositorio/s
+                                </p>
+
+                                <p class="px-2">
+                                    <span class="num-seguidores">
+                                        33
+                                    </span>
+                                    seguidor/es
+                                </p>
+
+                                <p class="px-2">
+                                    <span class="num-reputacion">
+                                        333
+                                    </span>
+                                    punto/s de reputación
+                                </p>
+                            </div>
+                        </article>
+                    </article>
+
+                    <article class="card carta-actividad">
+                        <header class="card-header d-flex align-items-center">
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <div class="titulo-accion ps-3">
+                                <h5>IsmaelJ ha jugado una partida a Reposita2</h5>
+                                <p>Hace 9 horas</p>
+                            </div>
+                        </header>
+                        <article class="contenedor-afectado-juego">
+                            <div class="container-fluid d-flex justify-content-between align-items-center py-2 text-truncate">
+                                <p class=" text-truncate">¡No pierdas tu oportunidad y juega tú también!</p>
+                                <form>
+                                    <input type="submit" class="btn btn-success" value="Jugar ahora">
+                                </form>
+                            </div>
+                        </article>
+                    </article>
+
+                </section>
+                <section id="intereses">
+                    <header>
+                        <h3>Quizá te interese basado en tus búsquedas</h3>
+                    </header>
+                    <article>
+
+                    </article>
+                </section>
             </main>
         </div>
         <footer>
