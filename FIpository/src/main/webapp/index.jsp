@@ -40,6 +40,11 @@
                         FIpository
                     </a>
 
+                    <!-- Cambiar esta estructura por 
+                    <form>
+                        submit
+                    </form>
+                    -->
                     <a href="inicioSesion.jsp"
                        class="order-xl-1 d-flex flex-column align-items-center text-decoration-none mx-3"
                        id="enlInciarSesion">
