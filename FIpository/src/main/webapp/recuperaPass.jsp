@@ -40,7 +40,7 @@
     <body class="d-flex flex-column justify-content-between">
         <!--Header de la pagina donde se encuentra el menu-->
         <header>
-  <nav class="navbar navbar-expand-xl navbar-dark">
+            <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"
@@ -98,7 +98,7 @@
                                     </li>
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="misRepositorios.jsp">
+                                           href="miEspacio.jsp">
                                             <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
@@ -111,13 +111,13 @@
                                 </ul>
                             </div>
                             <div>
-                                <form class="d-flex align-items-center justify-content-center">
+                                <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
                                                for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                                        <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
+                                        <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-2 ms-2"/>
                                     </div>
                                 </form>
                             </div>
@@ -127,8 +127,8 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                    <li class="breadcrumb-item" aria-current="page">Iniciar Sesión / Registro</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="inicioSesion.jsp">Iniciar Sesión / Registro</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Recuperar contraseña</li>
                 </ol>
             </nav>
@@ -163,9 +163,9 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-11 m-1" id="floatingPassword"
+                                <input type="password" class="form-control col-11 m-1" id="floatingPassword1"
                                        placeholder="Password" name="NuevacontraUsu">
-                                <label for="floatingPassword">Contraseña</label>
+                                <label for="floatingPassword1">Contraseña</label>
                             </div>
                         </div>
 
@@ -175,9 +175,9 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-11 m-1" id="floatingPassword"
-                                       placeholder="Password" name="NuevacontraUsu">
-                                <label for="floatingPassword">Repetir Contraseña</label>
+                                <input type="password" class="form-control col-11 m-1" id="floatingPassword2"
+                                       placeholder="Password" name="NuevacontraUsuRepe">
+                                <label for="floatingPassword2">Repetir Contraseña</label>
                             </div>
                         </div>
 
@@ -196,28 +196,25 @@
         </main>
 
 
-        <footer class="d-flex flex-wrap justify-content-around align-items-center py-3 my-4">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">© FIpository Jose Antonio Ismael</span>
+        <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
+            <div class="col-md-4 d-flex flex-column">
+                <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>
+                <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
+                <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
+                    Jiménez</h6>
             </div>
-
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </li>
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-facebook"></i>
                     </a>
                 </li>
-                <li class="ms-3">
+                <li class="px-3">
                     <a class="text-body-secondary" href="#">
                         <i class="bi bi-whatsapp"></i>
                     </a>

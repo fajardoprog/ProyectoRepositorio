@@ -28,7 +28,7 @@
     </head>
 
     <body>
-      <header>
+        <header>
             <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -87,7 +87,7 @@
                                     </li>
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="misRepositorios.jsp">
+                                           href="miEspacio.jsp">
                                             <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
@@ -100,13 +100,13 @@
                                 </ul>
                             </div>
                             <div>
-                                <form class="d-flex align-items-center justify-content-center">
+                                <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
                                                for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                                        <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
+                                        <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-2 ms-2"/>
                                     </div>
                                 </form>
                             </div>
@@ -116,10 +116,10 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page">Administrador</li>
                     <li class="breadcrumb-item" aria-current="page">Gestión de usuarios</li>
-                     <li class="breadcrumb-item active" aria-current="page">Administración de un perfil</li>
+                    <li class="breadcrumb-item active" aria-current="page">Administración de un perfil</li>
                 </ol>
             </nav>
         </header>

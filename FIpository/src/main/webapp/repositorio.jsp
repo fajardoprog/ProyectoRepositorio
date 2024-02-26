@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
+        
         <script>
 
         </script>
@@ -29,7 +30,7 @@
 
     <body>
         <header>
-           <nav class="navbar navbar-expand-xl navbar-dark">
+            <nav class="navbar navbar-expand-xl navbar-dark">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"
@@ -87,7 +88,7 @@
                                     </li>
                                     <li class="nav-item w-50">
                                         <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                                           href="misRepositorios.jsp">
+                                           href="miEspacio.jsp">
                                             <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                                         </a>
                                     </li>
@@ -100,13 +101,13 @@
                                 </ul>
                             </div>
                             <div>
-                                <form class="d-flex align-items-center justify-content-center">
+                                <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
                                     <div class="input-group input-group-sm row">
                                         <label class="input-group-text col-2 ms-2"
                                                for="campoBusquedaPrincipal">Buscar</label>
                                         <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                                aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                                        <button class="btn btn-sm btn-primary col-2 ms-2" type="submit">Buscar</button>
+                                        <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-2 ms-2"/>
                                     </div>
                                 </form>
                             </div>
@@ -116,13 +117,65 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                    <li class="breadcrumb-item" aria-current="page">Mi espacio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">2DAW (nombre repositorio)</li>
                 </ol>
             </nav>
         </header>
         <main>
+            <h1 class="text-center">2DAW (nombre repositorio)</h1>
+
+            <form action="opiniones.jsp" class="m-2 ms-5">
+                <button class="btn btn-success" type="submit">Opiniones</button>
+            </form> 
+
+
+            <div class="d-flex flex-column align-items-center container-fluid p-4 container-fluid">
+
+
+                <table class="col-12 m-2 table table-striped table-success">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Fecha</th>
+                        <th>Usuario</th>
+                    </tr>
+
+                    <!--Esto sería una fila completa-->
+                    <tr>
+                        <td>Factura</td>
+                        <td>PDF</td>
+                        <td>10/10/2010 13:59</td>
+                        <td>YO</td>
+                    </tr>
+                    <!--Fin fila completa-->
+
+                    <!--Ejemplos DEMO BORRAR Despues-->
+                    <tr>
+                        <td>Fotos</td>
+                        <td>Carpeta</td>
+                        <td>11/04/2019 20:43</td>
+                        <td>Fajardo</td>
+                    </tr>
+
+                    <tr>
+                        <td>ApuntesDiseño</td>
+                        <td>PDF</td>
+                        <td>12/05/2021 14:00</td>
+                        <td>YO</td>
+                    </tr>
+
+                    <tr>
+                        <td>ApuntesProg</td>
+                        <td>Carpeta</td>
+                        <td>22/05/2023</td>
+                        <td>YO</td>
+                    </tr>
+                    <!--Fin DEMO-->
+                </table>
+            </div>
+
         </main>
         <footer>
         </footer>

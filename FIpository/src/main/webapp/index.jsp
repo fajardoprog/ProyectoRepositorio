@@ -115,7 +115,7 @@
             </nav>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item active" aria-current="page">Bienvenida</li>
                 </ol>
             </nav>
         </header>
