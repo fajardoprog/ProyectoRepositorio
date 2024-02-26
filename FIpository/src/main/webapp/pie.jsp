@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<!--Pie principalmente funciona-->
 <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
     <div class="col-md-4 d-flex flex-column">
         <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>

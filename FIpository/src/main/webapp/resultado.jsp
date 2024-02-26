@@ -29,12 +29,13 @@
 
     <body>
         <header>
-        <jsp:include page="cabecera.jsp" />
+            <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                    <li class="breadcrumb-item" aria-current="page">Reposita2</li>
-                    <li class="breadcrumb-item" aria-current="page">Juego</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="reposita2.jsp">Reposita2</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="juego.jsp"> Juego</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Resultado</li>
                 </ol>
             </nav>
@@ -42,8 +43,7 @@
         <main>
 
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>

@@ -34,7 +34,8 @@
             <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvendia</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Reposita2</li>
                 </ol>
             </nav>
@@ -53,19 +54,19 @@
                     <div class="row row-cols-3 align-items-end text-center g-0">
                         <div>
                             <h2 class="text-truncate">El mismísimo pato Lucas de los Looneys</h2>
-                            <article id="segundo">
+                            <article id="segundo" class="d-flex align-items-center justify-content-center">
                                 2º: 2000 puntos
                             </article>
                         </div>
                         <div>
                             <h1 class="text-truncate">Paquillo</h1>
-                            <article id="primero">
+                            <article id="primero" class="d-flex align-items-center justify-content-center">
                                 1º: 3000 puntos
                             </article>
                         </div>
                         <div>
                             <h3 class="text-truncate">M. Rajoy</h3>
-                            <article id="tercero">
+                            <article id="tercero" class="d-flex align-items-center justify-content-center">
                                 3º: 1000 puntos
                             </article>
                         </div>
@@ -111,8 +112,7 @@
                 </section>
             </div>
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>

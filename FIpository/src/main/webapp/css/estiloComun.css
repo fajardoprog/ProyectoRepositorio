@@ -9,18 +9,18 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(#83c4fd, #6989fd);
+    background: linear-gradient(#83c4fd, #6989fd);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(76, 175, 80);
-  border-radius: 10px;
+    background: rgb(76, 175, 80);
+    border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(66, 150, 68);
+    background: rgb(66, 150, 68);
 }
 
 body {
@@ -139,8 +139,8 @@ footer ul li:last-child {
 
 @media screen and (min-width:576px) {}
 
-@media screen and (max-width:991px) {
-   nav:first-child li a {
+@media screen and (max-width:1200px) {
+    nav:first-child li a {
         font-size: 3.5vmin;
     }
 }
@@ -148,5 +148,5 @@ footer ul li:last-child {
 @media screen and (min-width:1200px) {
     .navbar .navbar-nav li.nav-item {
         width: auto !important;
-    }
+    }   
 }

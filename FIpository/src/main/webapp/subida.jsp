@@ -95,8 +95,8 @@
             <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
-                    <li class="breadcrumb-item" aria-current="page">Mi espacio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>                    
                     <li class="breadcrumb-item active" aria-current="page">Subida de archivos</li>
                 </ol>
             </nav>
@@ -162,7 +162,7 @@
                     <article id="paso3carpeta">
                         <h2>3. Elige el color de tu carpeta</h2>
                         <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
-                        <input type="color" class="form-control form-control-color" id="colorCarpeta" value="#563d7c"
+                        <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
                                title="Choose your color">
                     </article>
 
@@ -170,8 +170,7 @@
                 </form>
             </div>
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>

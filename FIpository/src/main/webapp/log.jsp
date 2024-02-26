@@ -28,23 +28,23 @@
     </head>
 
     <body>
-     <header>
-           <jsp:include page="cabecera.jsp" />
+        <header>
+            <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
+                <!--Asignar enlaces una vez hecha la parte admin-->                
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page">Administrador</li>
                     <li class="breadcrumb-item" aria-current="page">Gestión de usuarios</li>
-                     <li class="breadcrumb-item" aria-current="page">Administración de un perfil</li>
-                     <li class="breadcrumb-item active" aria-current="page">Registro de usuario</li>
+                    <li class="breadcrumb-item" aria-current="page">Administración de un perfil</li>
+                    <li class="breadcrumb-item active" aria-current="page">Registro de usuario</li>
                 </ol>
             </nav>
         </header>
         <main>
 
         </main>
-        <footer>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
 
     <script src="js/bootstrap.bundle.js"></script>

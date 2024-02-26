@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
+<!--Cabecera cambios hechos preguntar a Fajardo-->
+
 <nav class="navbar navbar-expand-xl navbar-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,8 +37,8 @@
             <div class="d-flex flex-column">
                 <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
                 <div class="mb-2">
-                    <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0">
-                        <li class="nav-item dropdown d-xl-flex w-50 align-items-center text-md-center">
+                    <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0 justify-content-around">
+                        <li class="nav-item dropdown d-xl-flex w-100 align-items-center text-sm-center">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Subida
@@ -56,19 +59,19 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item w-50">
+                        <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                href="busquedas.jsp">
                                 <span class="material-symbols-outlined mx-2">user_attributes</span>Ver usuarios
                             </a>
                         </li>
-                        <li class="nav-item w-50">
+                        <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                href="miEspacio.jsp">
                                 <span class="material-symbols-outlined mx-2">home</span>Mi espacio
                             </a>
                         </li>
-                        <li class="nav-item w-50">
+                        <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                href="reposita2.jsp">
                                 <span class="material-symbols-outlined mx-2">sports_esports</span>Reposita2

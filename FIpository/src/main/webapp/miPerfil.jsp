@@ -44,8 +44,8 @@
             <!--Ver donde manda al pulsar Inicio-->
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page"><a href="">Inicio</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Mi perfil</li>
                 </ol>
             </nav>
@@ -101,32 +101,7 @@
 
 
         </main>
-        <footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
-            <div class="col-md-4 d-flex flex-column">
-                <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por:</h6>
-                <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
-                <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
-                    Jiménez</h6>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="px-3">
-                    <a class="text-body-secondary" href="#">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li class="px-3">
-                    <a class="text-body-secondary" href="#">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                </li>
-                <li class="px-3">
-                    <a class="text-body-secondary" href="#">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+        <jsp:include page="pie.jsp"/>
     </body>
 
     <script src="js/bootstrap.bundle.js"></script>
