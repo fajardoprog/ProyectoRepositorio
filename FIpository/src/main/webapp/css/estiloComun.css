@@ -38,7 +38,7 @@ nav .container-fluid img {
 }
 
 header .navbar {
-    background: linear-gradient(rgb(66, 150, 68), rgb(76 175 80), rgb(66, 150, 68));
+    background: rgb(66, 150, 68);
 }
 
 .navbar .navbar-nav .nav-item a.nav-link {
@@ -117,7 +117,21 @@ i {
 }
 
 #formu {
-    background-color: #69e387;
+    background-color: #429644;
+    color: white
+}
+
+#formu label {
+    color: black
+}
+
+#formu a{
+    color:white;
+    transition: 0.5s all;
+}
+
+#formu a:hover{
+    color: black
 }
 
 /*Breakpoint personalizado para tamaño del texto*/

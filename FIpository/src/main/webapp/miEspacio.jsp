@@ -39,8 +39,8 @@
             </nav>
         </header>
         <h1>Mi espacio</h1>
-        <div class="container-fluid m-0 p-3 p-md-2 d-md-flex">
-            <aside class="col-md-4 p-3">
+        <div class="container-fluid m-0 p-3 p-lg-2 d-lg-flex">
+            <aside  id="mis-repositorios"  class="col-lg-4 p-4">
                 <h3 class="p-0">Mis repositorios</h3>
 
                 <article>
@@ -94,8 +94,8 @@
                     </article>
                 </section>
             </aside>
-            <main class="offset-md-1 col-md-7 pe-md-5">
-                <section id="compartido-conmigo">
+            <main class="offset-lg-1 col-lg-7 pe-lg-5">
+                <section id="compartido-conmigo" class="p-4 my-3 my-lg-0">
                     <header>
                         <h3>Compartido conmigo</h3>
                     </header>
@@ -118,7 +118,7 @@
                         </article>
                     </section>
                 </section>
-                <section id="actividad-reciente">
+                <section id="actividad-reciente" class="my-lg-3">
                     <header>
                         <h3>Actividad reciente</h3>
                     </header>

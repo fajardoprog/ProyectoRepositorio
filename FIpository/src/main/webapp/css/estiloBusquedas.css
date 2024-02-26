@@ -25,6 +25,10 @@ aside{
     border-radius: 10px;
 }
 
+aside .list-group .list-group-item li.elemento-lista-aside{
+    background: transparent;
+}
+
 .carta-actividad p {
     padding: 0;
     margin: 0;

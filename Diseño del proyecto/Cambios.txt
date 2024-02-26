@@ -1,14 +1,18 @@
-Cambiar degradado header;
+Hecho: marcado con --
+
+-- Cambiar degradado header;
 
 
 // Inicio sesión
-Textos en blanco
-enlace blanco y hover negro
+-- Textos en blanco
+-- enlace blanco y hover negro
+Cambiar: 
+Ids repetidos, estilo separado del común
 
 // Mi espacio
 Mismo verde header: #429644
 
-Mis repositorios: #57c34d
+-- Mis repositorios: #57c34d
 Compartido conmigo: linear-gradient(0deg, #429644, #57c34d);
 my-5;
 Textos en negro

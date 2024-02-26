@@ -52,31 +52,31 @@
         </header>
         <div class="container">
             <div class="row d-flex flex-column flex-md-row g-0">
-                <aside class="d-none d-md-flex w-30 col-4">
+                <aside class="d-none d-md-flex flex-column col-4">
                     <section>
                          <h3>Filtrar por</h3>
                         <div class=""></div>
                         <h3>Ordenar por</h3>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
                                     <label class="form-check-label" for="reputacion">Reputación</label>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
                                     <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
                                     <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
                                 </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" role="switch" id="nombre">
                                     <label class="form-check-label" for="nombre">Nombre</label>

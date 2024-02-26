@@ -12,13 +12,17 @@
 }
 
 .enlace-repositorio {
-    color: green;
+    color: black;
     text-decoration: none;
+}
+
+.enlace-repositorio:hover {
+    color:white;
 }
 
 aside{
     background-color: #00cc99;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .carta-actividad p {
@@ -39,3 +43,13 @@ aside{
     font-weight: bold;
 }
 
+#compartido-conmigo{
+    background: linear-gradient(0deg, #429644, #57c34d);
+    border-radius: 20px;
+}
+
+
+#mis-repositorios{
+    background: #57c34d;
+    
+}
