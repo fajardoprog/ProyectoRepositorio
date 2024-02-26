@@ -140,13 +140,14 @@
             <div class="container-fluid col-md-6 m-5 d-flex flex-column justify-content-center">
                 <h1>Mi Perfil</h1>
                 <form action="" class="d-flex flex-column align-items-center">
-                    
+
+
                     <div class="col-12 d-flex justify-content-around position-relative">
                         <input type="file" name="ImgUsu" id="imgUsu"/>
 
                         <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
 
-                        <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-center align-items-center position-absolute  top-0 end-0">
                             <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><span>add_circle</span></label>
                             <span id="nombreFoto"></span>
                         </div>
@@ -164,11 +165,11 @@
 
                     <label for="ape1Usu" class="form-label">1º Apellido</label>
                     <input type="text" class="form-control" id="ape1Usu" aria-describedby="ape1Usu" name="ape1Usu"
-                           value="Díaz">
+                           value="Díaz" readonly>
 
                     <label for="ape2Usu" class="form-label">2º Apellido</label>
                     <input type="text" class="form-control" id="ape2Usu" aria-describedby="ape2Usu" name="ape2Usu"
-                           value="Pérez">
+                           value="Pérez" readonly>
 
                     <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center separador" ><span></span></div>
 
