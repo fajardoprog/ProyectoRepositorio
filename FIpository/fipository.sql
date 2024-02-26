@@ -1,5 +1,3 @@
--- TODO: Arreglar tabla solicitar
-
 -- Creación de la base de datos
 -- CREATE DATABASE Fipository;
 
@@ -26,11 +24,18 @@ CREATE OR REPLACE TABLE Repositorio (
 
 -- Creación de la tabla Solicita_Acceso
 CREATE OR REPLACE TABLE Solicita_Acceso (
-    -- Arreglar
     cod_solicitud INT AUTO_INCREMENT PRIMARY KEY,
     nombre_usuario VARCHAR(25),
     nombre_repositorio VARCHAR(25),
     FOREIGN KEY (nombre_usuario, nombre_repositorio) REFERENCES Repositorio(nombre_usuario, nombre_repositorio) ON DELETE CASCADE
+);
+
+-- Creación de la tabla Reporte
+CREATE OR REPLACE TABLE Reporte (
+    cod_reporte INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_usuario VARCHAR(25),
+    usuario_reportado VARCHAR(25),
+    fecha_reporte DATE
 );
 
 -- Creación de la tabla Colaboradores
