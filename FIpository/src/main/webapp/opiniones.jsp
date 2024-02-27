@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
+        <link rel="stylesheet" href="css/estiloOpiniones.css">
         <script>
 
         </script>
@@ -82,19 +83,32 @@
                 </table>
             </section>
 
-            <div>
-                <form action="opiniones.jsp" class="">
-                    <div>
+            <div class="container-fluid d-flex flex-column align-content-center">
+                
+                <form action="opiniones.jsp" class="d-flex flex-column justify-content-center">
+                    <div class="row justify-content-center">
                         <!--Aquí iran las estrellas-->
+                        <img src="img/3estrella.png" alt="nEstrellas" class="col-6">
                     </div>
 
-                    <input type="text" name="OpinionUsu" placeholder="Escribe tu opinión..."/>
+                    <div class="container-fluid row justify-content-center">
+                        <input type="text" name="OpinionUsu" placeholder="Escribe tu opinión..." class="col-6 m-3 p-1"/>
 
-                    <input type="submit" value="Subir mi Opinión"/>
+                        <select class="col-4 m-3 p-1 text-center" aria-label="numero de estrellas">
+                            <option selected>-- Vota --</option>
+                            <option value="1">1 ☆</option>
+                            <option value="2">2 ☆☆</option>
+                            <option value="3">3 ☆☆☆</option>
+                            <option value="3">4 ☆☆☆☆</option>
+                            <option value="3">5 ☆☆☆☆☆</option>
+                        </select>
+
+                        <input type="submit" value="Subir mi Opinión" class="btn btn-primary m-3 p-1 col-6"/>
+                    </div>                   
                 </form>
 
-                <form action="misOpiniones.jsp">
-                    <input type="submit" value="Ver mis opiniones"/>
+                <form action="misOpiniones.jsp" class="d-flex">
+                    <input type="submit" value="Ver mis opiniones" class="btn btn-secondary"/>
                 </form>
             </div>
 

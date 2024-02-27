@@ -117,8 +117,10 @@ i {
 }
 /*Esta parte se encuentra en Iniciar sesion y recuperar Contraseña*/
 .formu {
-    background-color: #429644;
-    color: white
+    /*background-color: #429644;*/
+    background-color: white;
+    color: #0d6efd;
+    border-radius: 10px;
 }
 
 .formu label {
