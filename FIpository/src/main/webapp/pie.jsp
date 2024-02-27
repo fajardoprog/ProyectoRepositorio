@@ -24,8 +24,8 @@
             </a>
         </li>
     </ul>
-    <div class="col-md-4 d-flex flex-column">
-        <h6 class="mb-3 mb-md-0 text-body-secondary">
+    <div class="col-md-4 d-flex justify-content-center py-2">
+        <h6 class="mb-0 text-body-secondary">
             ©FIpository por: #year, José Antonio Fajardo, Ismael J. Jiménez
         </h6>
     </div>
