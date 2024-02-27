@@ -172,17 +172,13 @@
                                 <p>Hace 7 horas</p>
                             </div>
                         </header>
-                        <article class="contenedor-afectado-repositorio d-flex align-items-center justify-content-between container-fluid py-2">
-                            <div class="datos-repositorio text-truncate">
-                                <p>
-                                    IsmaelJ/Apuntes Lola
-                                </p>
-                                <p class="text-truncate">
-                                    Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor
-                                </p>
+                        <article class="contenedor-afectado-repositorio d-flex flex-column flex-sm-row align-items-stretch justify-content-between container-fluid py-2">
+                            <div class="datos-repositorio d-flex flex-column text-truncate w-100">
+                                <p>IsmaelJ/Apuntes Lola</p>
+                                <p class="text-truncate">Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor</p>
                             </div>
-                            <form class="ms-5">
-                                <input type="submit" value="Ir al repositorio" class="btn btn-success"/>
+                            <form class="my-2 ms-sm-5">
+                                <input type="submit" value="Ir al repositorio" class="btn btn-success w-100"/>
                             </form>
                         </article>
                     </article>
@@ -195,61 +191,42 @@
                                 <p>Hace 7 horas</p>
                             </div>
                         </header>
-                        <article class="contenedor-afectado-usuario container-fluid d-flex flex-column py-2">
-                            <div class="datos-usuario d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center text-truncate">
+
+                        <article class="contenedor-afectado-repositorio d-flex flex-column flex-sm-row align-items-stretch justify-content-between container-fluid py-2">
+                            <div class="datos-repositorio d-flex flex-column text-truncate w-100">
+                                <div class="d-flex align-content-center align-items-center">
                                     <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                                    <div class="usuario-completo ps-3 text-truncate">
+                                    <div class="usuario-completo d-flex flex-column text-truncate ps-3">
                                         <p>petorluj</p>
                                         <p class="text-truncate">Pedro Manuel Torres Luján</p>
                                         <p class="text-truncate">Profesor de Desarrollo Web en entorno Cliente en el IES Martín Rivero</p>
                                     </div>
                                 </div>
-                                <form class="ms-5">
-                                    <input type="submit" value="Comenzar a seguir" class="btn btn-success"/>
-                                </form>
                             </div>
-                            <div class="stats d-flex justify-content-around pt-2 text-center">
-                                <p class="px-2">
-                                    <span class="num-repositorios">
-                                        33
-                                    </span>
-                                    repositorio/s
-                                </p>
-
-                                <p class="px-2">
-                                    <span class="num-seguidores">
-                                        33
-                                    </span>
-                                    seguidor/es
-                                </p>
-
-                                <p class="px-2">
-                                    <span class="num-reputacion">
-                                        333
-                                    </span>
-                                    punto/s de reputación
-                                </p>
-                            </div>
+                            <form class="my-2 ms-sm-5">
+                                <input type="submit" value="Comenzar a seguir" class="btn btn-success w-100"/>
+                            </form>
                         </article>
-                    </article>
-
-                    <article class="card carta-actividad">
-                        <header class="card-header d-flex align-items-center">
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <div class="titulo-accion ps-3">
-                                <h5>IsmaelJ ha jugado una partida a Reposita2</h5>
-                                <p>Hace 9 horas</p>
-                            </div>
-                        </header>
-                        <article class="contenedor-afectado-juego">
-                            <div class="container-fluid d-flex justify-content-between align-items-center py-2 text-truncate">
-                                <p>¡No pierdas tu oportunidad y juega tú también!</p>
-                                <form>
-                                    <input type="submit" class="btn btn-success" value="Jugar ahora">
-                                </form>
-                            </div>
-                        </article>
+                        <div class="stats d-flex flex-column flex-md-row justify-content-around pt-2 text-center">
+                            <p class="py-2 py-sm-0 px-2">
+                                <span class="num-repositorios">
+                                    33
+                                </span>
+                                repositorio/s
+                            </p>
+                            <p class="py-2 py-sm-0 px-2">
+                                <span class="num-seguidores">
+                                    33
+                                </span>
+                                seguidor/es
+                            </p>
+                            <p class="py-2 py-sm-0 px-2">
+                                <span class="num-reputacion">
+                                    333
+                                </span>
+                                punto/s de reputación
+                            </p>
+                        </div>
                     </article>
 
                 </section>

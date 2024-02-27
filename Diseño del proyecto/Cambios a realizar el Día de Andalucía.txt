@@ -1,0 +1,6 @@
+Cambiar avatares: homogeneización de los mismos
+
+Cambiar lugar de botón "mis opiniones" -> Mi espacio
+
+Separar en //busquedas "filtro" y "ordenar por"
+

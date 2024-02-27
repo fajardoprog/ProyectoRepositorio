@@ -29,7 +29,7 @@
         <a href="inicioSesion.jsp"
            class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
            id="enlInciarSesion">
-            <span class="material-symbols-outlined" id="iniSesi">account_circle</span>
+            <i class="bi bi-person-circle" id="iniSesi"></i>
             <span class="text-center " id="nombreUsu">No está conectado</span>
         </a>
 
@@ -46,14 +46,13 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="subida.jsp">
-                                        <span class="material-symbols-outlined mx-2">upload_file</span>Subir
+                                       <i class="bi bi-file-earmark-arrow-up mx-2"></i>Subir
                                         archivos
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="subida.jsp">
-                                        <span
-                                            class="material-symbols-outlined mx-2">drive_folder_upload</span>Subir
+                                            <i class="bi bi-folder-plus mx-2"></i>Subir
                                         carpetas
                                     </a>
                                 </li>
@@ -62,29 +61,29 @@
                         <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                href="busquedas.jsp">
-                                <span class="material-symbols-outlined mx-2">user_attributes</span>Ver usuarios
+                                <i class="bi bi-people-fill mx-2"></i>Ver usuarios
                             </a>
                         </li>
                         <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
                                href="miEspacio.jsp">
-                                <span class="material-symbols-outlined mx-2">home</span>Mi espacio
+                                <i class="bi bi-house-fill mx-2"></i>Mi espacio
                             </a>
                         </li>
                         <li class="nav-item w-33">
                             <a class="nav-link d-flex flex-wrap align-items-center justify-content-center text-center"
-                               href="reposita2.jsp">
-                                <span class="material-symbols-outlined mx-2">sports_esports</span>Reposita2
+                               href="misOpiniones.jsp">
+                                <i class="mx-2 bi bi-person-heart"></i>Mis opiniones
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
-                        <div class="input-group input-group row">
-                            <label class="input-group-text col-2 ms-2"
-                                   for="campoBusquedaPrincipal">Buscar</label>
-                            <input class="form-control col-4" type="search" placeholder="Búsqueda..."
+                        <div class="input-group">
+                            <label class="input-group-text ms-2"
+                                   for="campoBusquedaPrincipal"><i class="bi bi-search mx-2 fs-3"></i></label>
+                            <input class="form-control" type="search" placeholder="Búsqueda..."
                                    aria-label="Búsqueda" id="campoBusquedaPrincipal" />
                             <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-4 ms-2 me-2"/>
                         </div>

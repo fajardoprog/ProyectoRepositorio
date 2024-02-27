@@ -44,11 +44,11 @@
 
             <h1 class="m-3">2DAW (nombre repositorio)</h1>
 
-            <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center ">
+            <section class="container-opiniones row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center g-0 ">
                 <!--Aquí van las opiniones-->
 
-                <div class="p-2 ">
-                    <article class="card flex-row align-items-center m-1    shadow mb-5 bg-body-tertiary rounded">
+                <div>
+                    <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -61,8 +61,8 @@
                     </article>
                 </div>
 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
+                <div>
+                   <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -76,8 +76,8 @@
                 </div>
 
 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
+                <div>
+                   <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -91,8 +91,8 @@
                 </div>
                 
                 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1 shadow mb-5 bg-body-tertiary rounded">
+               <div>
+                   <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -105,8 +105,8 @@
                     </article>
                 </div>
                 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
+               <div>
+                    <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -119,8 +119,8 @@
                     </article>
                 </div>
                 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
+                <div>
+                 <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -133,8 +133,8 @@
                     </article>
                 </div>
                 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
+                <div>
+                   <article class="card flex-row align-items-center shadow bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>

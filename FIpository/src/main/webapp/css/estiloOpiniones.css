@@ -9,3 +9,7 @@ article img{
     width: 120px;
     height: 90px;
 }
+
+.container-opiniones>div{
+    padding: 1rem !important;
+}

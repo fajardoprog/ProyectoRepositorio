@@ -55,6 +55,7 @@ aside{
     padding: 1rem !important; 
 }
 
+
 .card header h5{
     font-size: 5.5vmin;
 }
@@ -102,5 +103,9 @@ aside{
     }
     .card article  div:not(.stats) p:last-child{
         font-size: 2vmin;
+    }
+
+    .card input{
+        font-size:4vmin; 
     }
 }

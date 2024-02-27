@@ -50,6 +50,10 @@ header .navbar {
     font-size: 5.5vmin;
 }
 
+.navbar .navbar-nav .nav-item a.nav-link i{
+    font-size: 5.5vmin;
+}
+
 .nav-item:not(.nav-item:first-child) a {
     display: flex;
     align-items: center;
@@ -181,22 +185,53 @@ h2{
         font-size: 5vmin;        
     }
 
+    .navbar .navbar-nav .nav-item a.nav-link {
+        color: white;
+        font-size: 3vmin;
+    }
+    
+     .navbar .navbar-nav .nav-item a.nav-link i {
+        font-size: 3vmin;
+    }
+
+    .dropdown-menu a {
+        font-size: 3vmin;
+    }
+
 }
 
 @media screen and (min-width:992px) {
     /*Resolución Ordenador*/
-    nav:first-child li a {
-        font-size: 3vmin;
-    }
-
     input[type="submit"],.btn{
         font-size: 6.5vmin;
     }
 
     h1{
-        font-size: 11vmin;
+        font-size: 10vmin;
     }
     h2{
-        font-size: 7vmin;        
+        font-size: 6vmin;        
     }
+
+    .navbar .navbar-nav .nav-item a.nav-link {
+        color: white;
+        font-size: 2.5vmin;
+    }
+    
+      .navbar .navbar-nav .nav-item a.nav-link i{
+        font-size: 2.5vmin;
+    }
+
+    .navbar input[type="submit"]{
+        font-size: 2.5vmin;
+    }
+
+    nav:first-child li:first-child  {
+        width: auto !important;
+    }
+    
+       .dropdown-menu li a {
+        font-size: 2.5vmin;
+    }
+
 }
