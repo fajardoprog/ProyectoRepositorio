@@ -47,8 +47,8 @@
             <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center ">
                 <!--Aquí van las opiniones-->
 
-                <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                <div class="p-2 ">
+                    <article class="card flex-row align-items-center m-1    shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -77,7 +77,7 @@
 
 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -92,7 +92,7 @@
                 
                 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1 shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -106,7 +106,7 @@
                 </div>
                 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -120,7 +120,7 @@
                 </div>
                 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
@@ -134,7 +134,7 @@
                 </div>
                 
                 <div class="p-2">
-                    <article class="card flex-row align-items-center m-1">
+                    <article class="card flex-row align-items-center m-1  shadow mb-5 bg-body-tertiary rounded">
                         <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
                         <div class="d-flex flex-column justify-content-around">
                             <h5>Nombre</h5>
