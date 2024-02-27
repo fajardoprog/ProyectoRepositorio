@@ -51,44 +51,42 @@
             </nav>
         </header>
         <div class="container">
-            <div class="row d-flex flex-column flex-md-row g-0">
-                <aside class="d-none d-md-flex flex-column col-4">
-                    <section>
-                         <h3>Filtrar por</h3>
-                        <div class=""></div>
-                        <h3>Ordenar por</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-transparent">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
-                                    <label class="form-check-label" for="reputacion">Reputación</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item bg-transparent">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
-                                    <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item bg-transparent">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
-                                    <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item bg-transparent">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="nombre">
-                                    <label class="form-check-label" for="nombre">Nombre</label>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
+            <div class="row d-flex flex-column flex-lg-row g-0">
+                <aside class="d-none d-lg-flex flex-column col-4 p-4">
+                    <h3>Filtrar por</h3>
+                    <div class=""></div>
+                    <h3>Ordenar por</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
+                                <label class="form-check-label" for="reputacion">Reputación</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
+                                <label class="form-check-label" for="nVisitas"> Nº de visitas</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
+                                <label class="form-check-label" for="nArchivos"> Nº de archivos</label>
+                            </div>
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="nombre">
+                                <label class="form-check-label" for="nombre">Nombre</label>
+                            </div>
+                        </li>
+                    </ul>
                 </aside>
-                <main class="offset-md-1 col-md-7">
+                <main class="offset-lg-1 col-lg-7">
                     <h1>Búsquedas</h1>
                     <section class="filtros d-flex flex-column justify-content-around">
-                        <div class="d-flex d-md-none justify-content-around">
+                        <div class="d-flex d-lg-none justify-content-around">
                             <div class="dropdown diferenciar-busqueda" >
                                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filtro-base">
                                     Por repositorio
@@ -209,7 +207,7 @@
                                 </p>
                             </div>
                         </article>
-                        <article class="card card-repositorio my-3">
+                        <article class="card card-repositorio">
                             <header class="card-header d-flex  justify-content-between align-items-center px-3 px-md-3">
                                 <div class="titulo-accion ps-3 justify-content-center">
                                     <h5>IsmaelJ/Apuntes Lola</h5>

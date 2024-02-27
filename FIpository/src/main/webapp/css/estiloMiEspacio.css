@@ -54,6 +54,9 @@ aside{
     background: #57c34d;
 }
 
+.card{
+    padding: 1rem !important; 
+}
 
 @media screen and (min-width:1200px) {
     .enlace-repositorio {

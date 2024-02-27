@@ -91,7 +91,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-truncate text-center">2</td>
-                                        <td class="text-truncate">El mismísimo pato Lucas de los Looneys</td>
+                                        <td >El mismísimo pato Lucas de los Looneys</td>
                                         <td>2000</td>
                                     </tr>
                                     <tr>
