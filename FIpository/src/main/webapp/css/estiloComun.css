@@ -34,7 +34,7 @@ body {
 }
 
 aside{
-    
+
 }
 
 nav .container-fluid img {
@@ -47,6 +47,7 @@ header .navbar {
 
 .navbar .navbar-nav .nav-item a.nav-link {
     color: white;
+    font-size: 5.5vmin;
 }
 
 .nav-item:not(.nav-item:first-child) a {
@@ -65,6 +66,7 @@ header .navbar {
 
 .dropdown-menu a {
     color: white;
+    font-size: 5vmin;
 }
 
 .container-fluid button.navbar-toggler {
@@ -96,11 +98,6 @@ i {
 
 #breadcrumbs {
     --bs-breadcrumb-divider: ">";
-}
-
-
-#logoMain {
-    width: 10%;
 }
 
 #iniSesi {
@@ -157,16 +154,49 @@ footer ul li:last-child {
     border: none;
 }
 
-@media screen and (min-width:576px) {}
+/*Cambios Index dia 27/02*/
 
-@media screen and (max-width:1200px) {
+input[type="submit"],.btn{
+    font-size: 6.5vmin;
+}
+
+h1{
+    font-size: 11vmin;
+}
+h2{
+    font-size: 7vmin;
+    margin: 1rem;
+}
+
+@media screen and (min-width:576px) {
+    /*Resolución tablet*/
+    input[type="submit"],.btn{
+        font-size: 4vmin;
+    }
+
+    h1{
+        font-size: 8vmin;
+    }
+    h2{
+        font-size: 5vmin;        
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    /*Resolución Ordenador*/
     nav:first-child li a {
         font-size: 3vmin;
     }
-}
 
-@media screen and (min-width:1200px) {
-    .navbar .navbar-nav li.nav-item {
-        width: auto !important;
-    }   
+    input[type="submit"],.btn{
+        font-size: 6.5vmin;
+    }
+
+    h1{
+        font-size: 11vmin;
+    }
+    h2{
+        font-size: 7vmin;        
+    }
 }

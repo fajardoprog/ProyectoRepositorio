@@ -81,12 +81,12 @@
                 </div>
                 <div>
                     <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
-                        <div class="input-group input-group-sm row">
+                        <div class="input-group input-group row">
                             <label class="input-group-text col-2 ms-2"
                                    for="campoBusquedaPrincipal">Buscar</label>
                             <input class="form-control col-4" type="search" placeholder="Búsqueda..."
                                    aria-label="Búsqueda" id="campoBusquedaPrincipal" />
-                            <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-2 ms-2"/>
+                            <input type="submit" value="Buscar" class="btn btn-sm btn-primary col-4 ms-2 me-2"/>
                         </div>
                     </form>
                 </div>
