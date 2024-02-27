@@ -25,10 +25,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
-        <style>
-
-        </style>
-
+        <link rel="stylesheet" href="css/estiloRecuperaPass.css">
+       
         <script>
             $(function () {
 
@@ -55,7 +53,7 @@
         <main class="container-fluid">
             <!--Bloque formulario Iniciar Sesión-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form class="text-center  border border-black rounded col-md-6 formu">
+                <form class="text-center  border border-black rounded col-md-8 formu p-4">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Recuperar Contraseña</h1>
 
@@ -67,7 +65,7 @@
                             </div>
 
                             <div class="form-floating m-2 col-10">
-                                <input type="mail" class="form-control col-11 m-1" id="floatingInput" placeholder="Usuario"
+                                <input type="mail" class="form-control col-10 m-2" id="floatingInput" placeholder="Usuario"
                                        name="EmailUsu">
                                 <label for="floatingInput">Correo Usuario</label>
                             </div>
@@ -80,7 +78,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-11 m-1" id="floatingPassword1"
+                                <input type="password" class="form-control col-10 m-2" id="floatingPassword1"
                                        placeholder="Password" name="NuevacontraUsu">
                                 <label for="floatingPassword1">Contraseña</label>
                             </div>
@@ -92,7 +90,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-11 m-1" id="floatingPassword2"
+                                <input type="password" class="form-control col-10 m-2" id="floatingPassword2"
                                        placeholder="Password" name="NuevacontraUsuRepe">
                                 <label for="floatingPassword2">Repetir Contraseña</label>
                             </div>
@@ -101,9 +99,9 @@
                     </div>
 
 
-                    <div class="d-flex flex-row justify-content-around m-3">                        
-                        <button type="submit" class="btn btn-success w-30 py-2 col-5">Success</button>
-                    </div>
+                    <form action="" class="d-flex flex-row justify-content-around m-3">                        
+                        <button type="submit" class="btn w-30 p-2 m-2 col-5">Cambiar Contraseña</button>
+                    </form>
 
                     <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
                 </form>
