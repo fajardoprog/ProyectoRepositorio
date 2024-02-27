@@ -97,7 +97,7 @@
 
             <!--Bloque formulario Iniciar Sesión-->
             <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form class="text-center  border border-black rounded col-md-6 " id="formu">
+                <form class="text-center  border border-black rounded col-md-6 " class="formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
 
@@ -144,7 +144,7 @@
 
             <!--Bloque formulario Registrar-->
             <article class=" flex-column align-items-md-center" id="registrarseForm">
-                <form class="text-center  border border-black rounded col-md-6 " id="formu">
+                <form class="text-center  border border-black rounded col-md-6 " class="formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
 
