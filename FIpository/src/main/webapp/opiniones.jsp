@@ -44,51 +44,95 @@
 
             <h1 class="m-3">2DAW (nombre repositorio)</h1>
 
-            <section class="container-fluid">
+            <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center ">
                 <!--Aquí van las opiniones-->
-                <table class="table table-info">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Opinión</th>
-                            <th>Fecha Opinión realizada</th>
-                        </tr>
-                    </thead>
 
-                    <tbody>
-                        <tr>
-                            <td>EricCartman21</td>
-                            <td>"Me gusta mucho este Repositorio"</td>
-                            <td>11/12/2023</td>
-                        </tr>
+                <article class="card flex-row align-items-center m-1">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
 
-                        <tr>
-                            <td>Eva2342</td>
-                            <td>"Me gusta mucho"</td>
-                            <td>15/03/2023</td>
-                        </tr>
+                
+                <article class="card flex-row align-items-center">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
+                
+                
+                <article class="card flex-row align-items-center">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
+                
+                
+                <article class="card flex-row align-items-center">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
+                
+                
+                <article class="card flex-row align-items-center">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
+                
+                
+                <article class="card flex-row align-items-center">
+                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                    <div class="d-flex flex-column justify-content-around">
+                        <h5>Nombre</h5>
+                        <p>EricCartman21</p>
+                        <h5>Opinión</h5>
+                        <p>"Me gusta mucho este Repositorio"</p>
+                        <h5>Fecha Opinión realizada</h5>
+                        <p>11/12/2023</p>
+                    </div>
+                </article>
+              
 
-                        <tr>
-                            <td>Alvaro845</td>
-                            <td>"Menos mal que encontré este repositorio"</td>
-                            <td>10/05/2023</td>
-                        </tr>
-
-                        <tr>
-                            <td>Vegetta777</td>
-                            <td>"Sí , aunque aportaría otra cosa a tus apuntes"</td>
-                            <td>05/11/2023</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
 
             <div class="container-fluid d-flex flex-column align-content-center">
-                
+
                 <form action="opiniones.jsp" class="d-flex flex-column justify-content-center">
                     <div class="row justify-content-center">
                         <!--Aquí iran las estrellas-->
-                        <img src="img/3estrella.png" alt="nEstrellas" class="col-6">
+                        <img src="img/3estrella.png" alt="nEstrellas" class="col-md-4 col-6">
                     </div>
 
                     <div class="container-fluid row justify-content-center">
