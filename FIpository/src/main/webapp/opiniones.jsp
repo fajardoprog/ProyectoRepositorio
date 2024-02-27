@@ -47,83 +47,105 @@
             <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center ">
                 <!--Aquí van las opiniones-->
 
-                <article class="card flex-row align-items-center m-1">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
 
-                
-                <article class="card flex-row align-items-center">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
-                
-                
-                <article class="card flex-row align-items-center">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
-                
-                
-                <article class="card flex-row align-items-center">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
                 
                 
-                <article class="card flex-row align-items-center">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
                 
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
                 
-                <article class="card flex-row align-items-center">
-                    <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
-                    <div class="d-flex flex-column justify-content-around">
-                        <h5>Nombre</h5>
-                        <p>EricCartman21</p>
-                        <h5>Opinión</h5>
-                        <p>"Me gusta mucho este Repositorio"</p>
-                        <h5>Fecha Opinión realizada</h5>
-                        <p>11/12/2023</p>
-                    </div>
-                </article>
-              
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="p-2">
+                    <article class="card flex-row align-items-center m-1">
+                        <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle"/>
+                        <div class="d-flex flex-column justify-content-around">
+                            <h5>Nombre</h5>
+                            <p>EricCartman21</p>
+                            <h5>Opinión</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha Opinión realizada</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
 
             </section>
 
