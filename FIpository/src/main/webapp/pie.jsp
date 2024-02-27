@@ -6,13 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--Pie principalmente funciona-->
-<footer class="d-flex flex-wrap justify-content-around align-items-center p-5 pb-3">
-    <div class="col-md-4 d-flex flex-column">
-        <h6 class="mb-3 mb-md-0 text-body-secondary">©FIpository por: #year</h6>
-        <h6 class="mb-3 mb-md-0 text-body-secondary">José Antonio Fajardo</h6>
-        <h6 class="mb-3 mb-md-0 text-body-secondary">Ismael J.
-            Jiménez</h6>
-    </div>
+<footer class="d-flex flex-wrap flex-column p-5 pb-3">
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
         <li class="px-3">
             <a class="text-body-secondary" href="#">
@@ -30,5 +24,10 @@
             </a>
         </li>
     </ul>
+    <div class="col-md-4 d-flex flex-column">
+        <h6 class="mb-3 mb-md-0 text-body-secondary">
+            ©FIpository por: #year, José Antonio Fajardo, Ismael J. Jiménez
+        </h6>
+    </div>
 </footer>
 

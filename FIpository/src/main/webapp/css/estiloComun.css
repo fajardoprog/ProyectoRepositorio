@@ -116,21 +116,21 @@ i {
     color: rgb(192, 192, 192);
 }
 
-#formu {
+.formu {
     background-color: #429644;
     color: white
 }
 
-#formu label {
+.formu label {
     color: black
 }
 
-#formu a{
+.formu a{
     color:white;
     transition: 0.5s all;
 }
 
-#formu a:hover{
+.formu a:hover{
     color: black
 }
 
