@@ -244,7 +244,7 @@
                         </header>
                         <article class="contenedor-afectado-juego">
                             <div class="container-fluid d-flex justify-content-between align-items-center py-2 text-truncate">
-                                <p class=" text-truncate">¡No pierdas tu oportunidad y juega tú también!</p>
+                                <p>¡No pierdas tu oportunidad y juega tú también!</p>
                                 <form>
                                     <input type="submit" class="btn btn-success" value="Jugar ahora">
                                 </form>

@@ -37,12 +37,8 @@ aside{
     box-shadow:  4px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
-.contenedor-afectado-repositorio p:first-child{
-    font-weight: bold;
+.card article div:not(.stats) p:first-child{
     font-size: 5vmin;
-}
-
-.usuario-completo p:first-child{
     font-weight: bold;
 }
 
@@ -83,10 +79,11 @@ aside{
         font-size: 2.5vmin;
     }
 
-    .contenedor-afectado-repositorio p:first-child{
+    .card article div:not(.stats) p:first-child{
         font-size: 3vmin;
     }
-    .card article p:last-child{
+
+    .card article div:not(.stats) p:last-child{
         font-size: 2.5vmin;
     }
 }
@@ -103,7 +100,7 @@ aside{
     .card header p{
         font-size: 2vmin;
     }
-    .card article p:last-child{
+    .card article  div:not(.stats) p:last-child{
         font-size: 2vmin;
     }
 }

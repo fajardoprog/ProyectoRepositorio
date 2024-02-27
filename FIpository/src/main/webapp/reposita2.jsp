@@ -43,7 +43,7 @@
         <main>
             <div class="container-fluid my-4" id="cabezeraJuego">
                 <h1 class="text-center">Reposita2</h1>
-                <h5 class="text-center">¡Juega ahora para aumentar tu reputación!</h5>
+                <h2 class="text-center">¡Juega ahora para aumentar tu reputación!</h2>
                 <form action="#" class="row">
                     <button type="submit" class="btn btn-sm btn-primary offset-3 col-6 p-3" type="submit">Jugar</button>
                 </form>

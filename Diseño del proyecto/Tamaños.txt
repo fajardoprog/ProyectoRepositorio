@@ -1,0 +1,3 @@
+Móvil:
+botones: 6.5vmin
+títulos: 11vmin
