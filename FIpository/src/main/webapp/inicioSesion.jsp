@@ -72,13 +72,13 @@
         <main class="container-fluid">
 
             <!--Seleccion de formulario-->
-            <div class="container mb-2">
+            <div class="container mb-4">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="tipoFormulario" id="inicioSesion" autocomplete="off"
                            checked>
-                    <label class="btn btn-outline-primary" for="inicioSesion">Formulario iniciar sesión</label>
+                    <label class="btn btn-lg btn-outline-primary" for="inicioSesion">Formulario iniciar sesión</label>
                     <input type="radio" class="btn-check" name="tipoFormulario" id="registrarse" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="registrarse">Formulario registrarse</label>
+                    <label class="btn btn-lg btn-outline-primary" for="registrarse">Formulario registrarse</label>
                 </div>
             </div>
             <!--Fin Seleccion de formulario-->

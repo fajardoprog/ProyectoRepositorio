@@ -4,7 +4,9 @@
     Author     : IsmaelJJL
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="now" class="java.util.Date"/> 
 <!--Pie principalmente funciona-->
 <footer class="d-flex flex-wrap flex-column p-5 pb-3">
     <ul class="nav justify-content-end list-unstyled d-flex">
@@ -26,7 +28,7 @@
     </ul>
     <div class="d-flex justify-content-center py-3">
         <h6 class="mb-0 text-body-secondary">
-            ©FIpository por: #year, José Antonio Fajardo, Ismael J. Jiménez
+            ©FIpository <c:out value="${1900+now.year}"/>, por: José Antonio Fajardo, Ismael J. Jiménez
         </h6>
     </div>
 </footer>

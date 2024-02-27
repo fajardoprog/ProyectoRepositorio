@@ -9,7 +9,7 @@
 
 <!--Cabecera cambios hechos preguntar a Fajardo-->
 
-<nav class="navbar navbar-expand-xl navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"
@@ -27,7 +27,7 @@
         </form>
         -->
         <a href="inicioSesion.jsp"
-           class="order-xl-1 d-flex flex-column align-items-center text-decoration-none mx-3"
+           class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
            id="enlInciarSesion">
             <span class="material-symbols-outlined" id="iniSesi">account_circle</span>
             <span class="text-center " id="nombreUsu">No está conectado</span>
@@ -37,8 +37,8 @@
             <div class="d-flex flex-column">
                 <!--Dentro de este bloque se engloba los dos para que se vaya el filtro debajo-->
                 <div class="mb-2">
-                    <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-xl-nowrap mb-xl-0 justify-content-around">
-                        <li class="nav-item dropdown d-xl-flex w-100 align-items-center text-sm-center">
+                    <ul class="navbar-nav mb-2 flex-sm-row flex-sm-wrap flex-lg-nowrap mb-lg-0 justify-content-around">
+                        <li class="nav-item dropdown d-lg-flex w-100 align-items-center text-sm-center">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
                                 Subida

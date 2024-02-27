@@ -99,7 +99,7 @@
 
                             <div class="filtro-especifico">
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filtroModal">
-                                    Filtros
+                                    Ordenar por
                                 </button>
                             </div>
                         </div>

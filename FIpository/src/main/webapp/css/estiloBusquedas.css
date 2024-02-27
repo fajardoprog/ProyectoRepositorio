@@ -60,3 +60,7 @@ aside .list-group .list-group-item li.elemento-lista-aside{
 .usuario-completo, .datos-repositorio{
     padding: 1rem;
 }
+
+aside{
+    height: 100%
+}
