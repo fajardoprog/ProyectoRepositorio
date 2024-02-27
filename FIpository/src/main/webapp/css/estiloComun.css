@@ -128,12 +128,12 @@ i {
 }
 
 .formu a{
-    color:white;
+    color:black;
     transition: 0.5s all;
 }
 
 .formu a:hover{
-    color: black
+    color: #0d6efd;
 }
 
 /*Breakpoint personalizado para tamaño del texto*/
