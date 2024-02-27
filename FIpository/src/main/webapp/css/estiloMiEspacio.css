@@ -6,12 +6,14 @@
     box-sizing: border-box;
 }
 
-.container-repositorios div {
+.container-repositorios article {
+    margin: 5px 0;
     display: flex;
     align-items: center;
 }
 
 .enlace-repositorio {
+    font-size: 3vmin;
     color: black;
     text-decoration: none;
 }
@@ -48,8 +50,13 @@ aside{
     border-radius: 20px;
 }
 
-
 #mis-repositorios{
     background: #57c34d;
-    
+}
+
+
+@media screen and (min-width:1200px) {
+    .enlace-repositorio {
+        font-size: 2vmin;
+    }   
 }

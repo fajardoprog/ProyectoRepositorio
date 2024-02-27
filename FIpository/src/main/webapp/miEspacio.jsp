@@ -39,7 +39,7 @@
             </nav>
         </header>
         <h1>Mi espacio</h1>
-       <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
+        <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
                 <h3 class="p-0">Mis repositorios</h3>
 
@@ -54,47 +54,77 @@
                 <section class="d-flex flex-column container-repositorios">
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/1 DAW</a>
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">JFajardo/1 DAW
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/2 DAW</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/2 DAW
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Policía</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Policía
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Cliente</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Cliente
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Diseño de Interfaces Web</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Diseño de Interfaces Web
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Despliegue</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Despliegue
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Desarrollo web en entorno servidor</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Desarrollo web en entorno servidor
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Programación</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Programación
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Bases de datos</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Bases de datos
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/FOL</a>
+                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/FOL
+                            <i class="bi bi-arrow-right">
+                            </i>
+                        </a>
                     </article>
                 </section>
             </aside>
-            <main class="offset-lg-1 col-lg-7 pe-lg-5">
+            <main class="offset-lg-1 col-lg-7">
                 <section id="compartido-conmigo" class="p-4 my-3 my-lg-0">
                     <header>
                         <h3>Compartido conmigo</h3>
@@ -102,19 +132,31 @@
                     <section class="d-flex flex-column container-repositorios">
                         <article>
                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/3 DAW</a>
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/3 DAW
+                                <i class="bi bi-arrow-right">
+                                </i>
+                            </a>
                         </article>
                         <article>
                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Profesores</a>
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Profesores
+                                <i class="bi bi-arrow-right">
+                                </i>
+                            </a>
                         </article>
                         <article>
                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Apuntes de Bootstrap</a>
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Apuntes de Bootstrap
+                                <i class="bi bi-arrow-right">
+                                </i> 
+                            </a>
                         </article>
                         <article>
                             <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Accesibilidad</a>
+                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Accesibilidad
+                                <i class="bi bi-arrow-right">
+                                </i>
+                            </a>
                         </article>
                     </section>
                 </section>

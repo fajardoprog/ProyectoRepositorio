@@ -49,67 +49,71 @@
                 </form>
             </div>
             <div class="container">
-                <section>
-                    <h2 class="text-center">Usuarios más valorados</h2>
-                    <div class="row row-cols-3 align-items-end text-center g-0">
-                        <div>
-                            <h2 class="text-truncate">El mismísimo pato Lucas de los Looneys</h2>
-                            <article id="segundo" class="d-flex align-items-center justify-content-center">
-                                2º: 2000 puntos
-                            </article>
-                        </div>
-                        <div>
-                            <h1 class="text-truncate">Paquillo</h1>
-                            <article id="primero" class="d-flex align-items-center justify-content-center">
-                                1º: 3000 puntos
-                            </article>
-                        </div>
-                        <div>
-                            <h3 class="text-truncate">M. Rajoy</h3>
-                            <article id="tercero" class="d-flex align-items-center justify-content-center">
-                                3º: 1000 puntos
-                            </article>
-                        </div>
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <section>
+                            <h2 class="text-center">Usuarios más valorados</h2>
+                            <div class="row row-cols-3 align-items-end text-center g-0">
+                                <div>
+                                    <h2 class="text-truncate">El mismísimo pato Lucas de los Looneys</h2>
+                                    <article id="segundo" class="d-flex fw-bold align-items-center justify-content-center">
+                                        2º: 2000 puntos
+                                    </article>
+                                </div>
+                                <div>
+                                    <h1 class="text-truncate">Paquillo</h1>
+                                    <article id="primero" class="d-flex fw-bold align-items-center justify-content-center">
+                                        1º: 3000 puntos
+                                    </article>
+                                </div>
+                                <div>
+                                    <h3 class="text-truncate">M. Rajoy</h3>
+                                    <article id="tercero" class="d-flex fw-bold  align-items-center justify-content-center">
+                                        3º: 1000 puntos
+                                    </article>
+                                </div>
 
+                            </div>
+                        </section>
+                        <section id="puntuaciones" class="my-5">
+                            <h4>Puntuaciones</h4>
+                            <table class="table table-striped table-responsive table-hover table-primary">
+                                <tr class="text-center">
+                                    <th>Puesto</th>
+                                    <th>Nombre</th>
+                                    <th>Puntuacion</th>
+                                </tr>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <td class="text-truncate text-center">1</td>
+                                        <td class="text-truncate">Paquillo</td>
+                                        <td class="text-truncate">3000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-truncate text-center">2</td>
+                                        <td class="text-truncate">El mismísimo pato Lucas de los Looneys</td>
+                                        <td>2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-truncate text-center">3</td>
+                                        <td class="text-truncate">M. Rajoy</td>
+                                        <td class="text-truncate">1000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-truncate text-center">4</td>
+                                        <td class="text-truncate">Sin ánimo de lucro, tú que prefieres?</td>
+                                        <td class="text-truncate">500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-truncate text-center">5</td>
+                                        <td class="text-truncate">El negrito del África tropical</td>
+                                        <td class="text-truncate">60</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
                     </div>
-                </section>
-                <section id="puntuaciones" class="my-5">
-                    <h4>Puntuaciones</h4>
-                    <table class="table table-striped table-hover table-primary">
-                        <tr class="row row-cols-3 text-center">
-                            <th>Puesto</th>
-                            <th>Nombre</th>
-                            <th>Puntuacion</th>
-                        </tr>
-                        <tbody class="table-group-divider">
-                            <tr class="row row-cols-3">
-                                <td class="text-truncate">1</td>
-                                <td class="text-truncate">Paquillo</td>
-                                <td class="text-truncate">3000</td>
-                            </tr>
-                            <tr class="row row-cols-3">
-                                <td class="text-truncate">2</td>
-                                <td class="text-truncate">El mismísimo pato Lucas de los Looneys</td>
-                                <td>2000</td>
-                            </tr>
-                            <tr class="row row-cols-3">
-                                <td class="text-truncate">3</td>
-                                <td class="text-truncate">M. Rajoy</td>
-                                <td class="text-truncate">1000</td>
-                            </tr>
-                            <tr class="row row-cols-3">
-                                <td class="text-truncate">4</td>
-                                <td class="text-truncate">Sin ánimo de lucro, tú que prefieres?</td>
-                                <td class="text-truncate">500</td>
-                            </tr>
-                            <tr class="row row-cols-3">
-                                <td class="text-truncate">5</td>
-                                <td class="text-truncate">El negrito del África tropical</td>
-                                <td class="text-truncate">60</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                </div>
             </div>
         </main>
         <jsp:include page="pie.jsp"/>

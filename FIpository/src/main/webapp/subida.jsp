@@ -102,7 +102,6 @@
             </nav>
         </header>
         <main>
-
             <div class="container">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>

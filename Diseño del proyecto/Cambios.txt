@@ -7,7 +7,7 @@ Hecho: marcado con --
 -- Textos en blanco
 -- enlace blanco y hover negro
 Cambiar: 
-Ids repetidos, estilo separado del común
+-- Ids repetidos, estilo separado del común
 
 // Mi espacio
 -- Mismo verde header: #429644
@@ -33,7 +33,7 @@ reducir columna de puesto
 
 Input de ficheros y carpetas: 
 -- contenedor: row
-input: offset-2 col-8
+-- input: offset-2 col-8
 
 // footer
 política de cookies/ privacidad/ condiciones de uso
