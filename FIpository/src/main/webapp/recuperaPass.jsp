@@ -55,7 +55,7 @@
         <main class="container-fluid">
             <!--Bloque formulario Iniciar Sesión-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form class="text-center  border border-black rounded col-md-6 " id="formu">
+                <form class="text-center  border border-black rounded col-md-6 formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Recuperar Contraseña</h1>
 
@@ -101,8 +101,8 @@
                     </div>
 
 
-                    <div class="d-flex flex-row justify-content-around m-3">
-                        <input type="submit" class="btn btn-primary w-30 py-2 col-5" value="Cambiar Contraseña">
+                    <div class="d-flex flex-row justify-content-around m-3">                        
+                        <button type="submit" class="btn btn-success w-30 py-2 col-5">Success</button>
                     </div>
 
                     <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>

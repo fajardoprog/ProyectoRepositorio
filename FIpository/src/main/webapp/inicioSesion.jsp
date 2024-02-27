@@ -25,19 +25,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
-        <style>
-            #registrarseForm {
-                display: none;
-            }
-
-            #otroG {
-                display: none;
-            }
-
-            #formularioIniciarSesi {
-                display: flex;
-            }
-        </style>
+        <link rel="stylesheet" href="css/estiloInicioSesion.css">
 
         <script>
             $(function () {
@@ -291,7 +279,7 @@
         </main>
 
 
-       <jsp:include page="pie.jsp"/>
+        <jsp:include page="pie.jsp"/>
     </body>
     <script src="js/bootstrap.bundle.js"></script>
 </html>

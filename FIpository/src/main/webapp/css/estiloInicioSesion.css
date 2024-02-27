@@ -1,0 +1,11 @@
+#registrarseForm {
+    display: none;
+}
+
+#otroG {
+    display: none;
+}
+
+#formularioIniciarSesi {
+    display: flex;
+}
