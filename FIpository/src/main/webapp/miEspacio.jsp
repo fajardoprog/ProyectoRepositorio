@@ -39,7 +39,7 @@
             </nav>
         </header>
         <h1>Mi espacio</h1>
-        <div class="container-fluid m-0 p-3 p-lg-2 d-lg-flex">
+       <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
                 <h3 class="p-0">Mis repositorios</h3>
 

@@ -106,68 +106,76 @@
             <div class="container">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="subirFichero">Fichero</label>
+                    <label class="btn btn-lg btn-outline-primary" for="subirFichero">Fichero</label>
                     <input type="radio" class="btn-check" name="elegirArchivo" id="subirCarpeta" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="subirCarpeta">Carpeta</label>
+                    <label class="btn btn-lg btn-outline-primary" for="subirCarpeta">Carpeta</label>
                 </div>
             </div>
 
-            <div class="container my-5" id="ficheros">
-                <h1 class="text-center">Subida de ficheros</h1>
-                <form action="#" class="d-flex flex-column d-md-block">
-                    <article id="paso1fichero">
-                        <h2 class="m-3">1. Selecciona el repositorio</h2>
-                        <div class="input-group">
-                            <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
-                            <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
-                        </div>
-                        <datalist id="opcionesDatalist">
-                            <option value="2 DAW"></option>
-                            <option value="Policía"></option>
-                            <option value="Lucah"></option>
-                        </datalist>
-                    </article>
-                    <article id="paso2fichero">
-                        <h2 class="m-3">2. Selecciona el fichero</h2>
-                        <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
-                               aria-describedby="fileHelpId" />
-                    </article>
-                    <button type="submit" class="btn btn-primary my-3 align-items-center">Subir fichero</button>
-                </form>
+            <div class="container" id="ficheros">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <h1 class="text-center">Subida de ficheros</h1>
+                        <form action="#" class="d-flex flex-column d-md-block">
+                            <article id="paso1fichero">
+                                <h2 class="m-3">1. Selecciona el repositorio</h2>
+                                <div class="input-group">
+                                    <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
+                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
+                                </div>
+                                <datalist id="opcionesDatalist">
+                                    <option value="2 DAW"></option>
+                                    <option value="Policía"></option>
+                                    <option value="Lucah"></option>
+                                </datalist>
+                            </article>
+                            <article id="paso2fichero">
+                                <h2 class="m-3">2. Selecciona el fichero</h2>
+                                <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
+                                       aria-describedby="fileHelpId" />
+                            </article>
+                            <button type="submit" class="btn btn-primary my-3 align-items-center">Subir fichero</button>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-            <div class="container my-5" id="carpetas">
-                <h1 class="text-center">Subida de carpeta</h1>
-                <form action="#" class="d-flex flex-column d-md-block">
-                    <article id="paso1carpeta">
-                        <h2 class="m-2">1. Selecciona el repositorio</h2>
-                        <div class="input-group">
-                            <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
-                            <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
-                        </div>
-                    </article>
-                    <section id="paso2carpeta">
-                        <article>
-                            <h2 class="m-2">2. Sube tu carpeta</h2>
-                            <input type="file" class="form-control" name="" id="" placeholder=""
-                                   aria-describedby="fileHelpId" />
-                        </article>
-                        <h2 class="m-2">o</h2>
-                        <article>
-                            <h2 class="m-2">Crea tu carpeta</h2>
-                            <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
-                                   aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
-                        </article>
-                    </section>
-                    <article id="paso3carpeta">
-                        <h2 class="m-2">3. Elige el color de tu carpeta</h2>
-                        <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
-                        <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
-                               title="Choose your color">
-                    </article>
+            <div class="container" id="carpetas">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <h1 class="text-center">Subida de carpeta</h1>
+                        <form action="#" class="d-flex flex-column d-md-block">
+                            <article id="paso1carpeta">
+                                <h2 class="m-2">1. Selecciona el repositorio</h2>
+                                <div class="input-group">
+                                    <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
+                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
+                                </div>
+                            </article>
+                            <section id="paso2carpeta">
+                                <article>
+                                    <h2 class="m-2">2. Sube tu carpeta</h2>
+                                    <input type="file" class="form-control" name="" id="" placeholder=""
+                                           aria-describedby="fileHelpId" />
+                                </article>
+                                <h2 class="m-2">o</h2>
+                                <article>
+                                    <h2 class="m-2">Crea tu carpeta</h2>
+                                    <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
+                                           aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
+                                </article>
+                            </section>
+                            <article id="paso3carpeta">
+                                <h2 class="m-2">3. Elige el color de tu carpeta</h2>
+                                <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
+                                <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
+                                       title="Choose your color">
+                            </article>
 
-                    <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>
-                </form>
+                            <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
         <jsp:include page="pie.jsp"/>
