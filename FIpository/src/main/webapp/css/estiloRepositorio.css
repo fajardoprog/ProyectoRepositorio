@@ -1,0 +1,40 @@
+.container-botones .btn{
+    height: 100%;
+    font-size: 4.5vmin
+}
+
+#comentario{
+    height: 100px;
+}
+
+.modal .btn{
+    font-size: 4.7vmin;
+}
+
+@media screen and (min-width:576px) {
+    .container-botones .btn{
+        font-size: 3.5vmin
+    }
+
+    #comentario{
+        height: 150px;
+    }
+
+
+}
+
+@media screen and (min-width:992px) {
+
+    #logoMain{
+        width: 7%;
+    }
+
+    .modal .btn{
+        font-size: 3vmin;
+    }
+
+    #comentario{
+        height: 200px;
+    }
+
+}
