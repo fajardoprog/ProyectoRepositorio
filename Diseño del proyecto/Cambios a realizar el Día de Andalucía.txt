@@ -16,6 +16,8 @@ Listo marcado con --
 
 -- Cambiar lugar de botón "mis opiniones" -> header
 
+//Opiniones y //MisOpiniones cambiar bp de lg a xl
+
 Cambiar avatares: homogeneización de los mismos
 
 "Popover" para validaciones

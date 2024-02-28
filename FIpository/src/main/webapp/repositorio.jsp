@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
-        <link rel="stylesheet" href="css/repositorio.css">
+        <link rel="stylesheet" href="css/estiloRepositorio.css">
         <script>
 
         </script>
@@ -42,14 +42,16 @@
         <main>
             <h1 class="text-center">2DAW (nombre repositorio)</h1>
 
-            <div class="row row-cols-3 justify-content-around g-0">
-                <form action="opiniones.jsp" class="">
-                    <button class="btn btn-success" type="submit">Opiniones</button>
+            <div class="row container-botones row-cols-3 justify-content-around g-0">
+                <form action="opiniones.jsp" class="p-3">
+                    <button class="btn btn-success w-100" type="submit">Opiniones</button>
                 </form> 
+                <div class="p-3">
+                    <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#modalComentario">
+                        Añadir opinión
+                    </button>
+                </div>
 
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalComentario">
-                    Añadir opinión
-                </button>
 
                 <div class="modal fade" id="modalComentario" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog">
@@ -62,7 +64,7 @@
                                 <div class="modal-body container-fluid">
                                     <div class="row justify-content-center">
                                         <div class="form-floating g-0">
-                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="comentario" name="comentario" ></textarea>
                                             <label for="floatingTextarea2">Escribe tu comentario</label>
                                         </div>
                                         <select class="form-select form-select-lg col-10 my-3" aria-label="numero de estrellas">
@@ -84,8 +86,8 @@
                     </div>
                 </div>
 
-                <form action="miEspacio.jsp" class="">
-                    <button class="btn btn-success" type="submit">Mi Espacio</button>
+                <form action="miEspacio.jsp" class="p-3">
+                    <button class="btn btn-success w-100" type="submit">Mi Espacio</button>
                 </form> 
             </div>
 
