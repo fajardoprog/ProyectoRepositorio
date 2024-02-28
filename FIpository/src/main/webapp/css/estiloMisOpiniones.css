@@ -18,3 +18,15 @@ article img{
 .container-opiniones>div{
     padding: 1rem !important;
 }
+
+@media screen and (min-width:576px) {
+    div>h5+form>input[type="submit"]{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    div>h5+form>input[type="submit"]{
+        font-size: 20px;
+    }
+}

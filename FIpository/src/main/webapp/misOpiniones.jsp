@@ -37,18 +37,21 @@
         <main>
 
             <h1>Mis opiniones</h1>
-            <section class="container-opiniones row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center g-0 ">
+            <section class="container-opiniones row row-cols-1 row-cols-md-2 row-cols-xl-3 row container-fluid justify-content-center g-0 ">
                 <!--Aquí van las opiniones-->
 
-                <div>
-                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-around align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
                             <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            <form action="repositorio.jsp" class="pe-4">
+                                <input type="submit" class="btn btn-primary w-100"/>
+                            </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -56,15 +59,19 @@
                         </div>
                     </article>
                 </div>
-                <div>
-                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+               
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-around align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
                             <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            <form action="repositorio.jsp" class="pe-4">
+                                <input type="submit" class="btn btn-primary w-100"/>
+                            </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -72,15 +79,19 @@
                         </div>
                     </article>
                 </div>
-                <div>
-                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
-                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-around align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor FajardoProg/Desarrollo Web en entorno ServidorFajardoProg/Desarrollo Web en entorno ServidorFajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            <form action="repositorio.jsp" class="pe-4">
+                                <input type="submit" class="btn btn-primary w-100"/>
+                            </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -88,15 +99,39 @@
                         </div>
                     </article>
                 </div>
-                <div>
-                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-around align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
                             <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            <form action="repositorio.jsp" class="pe-4">
+                                <input type="submit" class="btn btn-primary w-100"/>
+                            </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-around align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            <form action="repositorio.jsp" class="pe-4">
+                                <input type="submit" class="btn btn-primary w-100"/>
+                            </form>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -108,7 +143,7 @@
             </section>
 
             <form action="miEspacio.jsp" class="text-center row g-0">               
-                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6" value="Volver al Inicio"/>
+                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8 offset-xl-3 col-xl-6" value="Volver al Inicio"/>
             </form>
 
         </main>        
