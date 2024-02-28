@@ -1,0 +1,20 @@
+article img{
+    width: 120px;
+    height: 90px;
+}
+
+input[type="text"]{
+    border-radius: 10px;
+}
+
+select{
+    border-radius: 5px;
+}
+article img{
+    width: 120px;
+    height: 90px;
+}
+
+.container-opiniones>div{
+    padding: 1rem !important;
+}

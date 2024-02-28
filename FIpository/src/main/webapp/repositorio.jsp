@@ -42,12 +42,49 @@
         <main>
             <h1 class="text-center">2DAW (nombre repositorio)</h1>
 
-            <div class="d-flex justify-content-around">
-                <form action="opiniones.jsp" class="m-2 ms-5">
+            <div class="row row-cols-3 justify-content-around g-0">
+                <form action="opiniones.jsp" class="">
                     <button class="btn btn-success" type="submit">Opiniones</button>
                 </form> 
 
-                <form action="miEspacio.jsp" class="m-2 ms-5">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalComentario">
+                    Añadir opinión
+                </button>
+
+                <div class="modal fade" id="modalComentario" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Añade tu opinión</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <form class="p-3">
+                                <div class="modal-body container-fluid">
+                                    <div class="row justify-content-center">
+                                        <div class="form-floating g-0">
+                                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                            <label for="floatingTextarea2">Escribe tu comentario</label>
+                                        </div>
+                                        <select class="form-select form-select-lg col-10 my-3" aria-label="numero de estrellas">
+                                            <option selected>-- Vota --</option>
+                                            <option value="1">1 ☆</option>
+                                            <option value="2">2 ☆☆</option>
+                                            <option value="3">3 ☆☆☆</option>
+                                            <option value="3">4 ☆☆☆☆</option>
+                                            <option value="3">5 ☆☆☆☆☆</option>
+                                        </select>
+                                    </div>   
+                                </div>
+                                <div class="modal-footer p-0">
+                                    <input type="reset" value="Limpiar formulario" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    <input type="submit" value="Enviar opinión" class="btn btn-primary"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="miEspacio.jsp" class="">
                     <button class="btn btn-success" type="submit">Mi Espacio</button>
                 </form> 
             </div>
@@ -80,19 +117,19 @@
                             <td><p >11/04/2019 20:43</p></td>
                             <td><p >Fajardo</p></td>
                         </tr>
-                         <tr>
+                        <tr>
                             <td><p >Fotos</p></td>
                             <td><p>Carpeta</p></td>
                             <td><p >11/04/2019 20:43</p></td>
                             <td><p >Fajardo</p></td>
                         </tr>
-                         <tr>
+                        <tr>
                             <td><p >Fotos</p></td>
                             <td><p>Carpeta</p></td>
                             <td><p >11/04/2019 20:43</p></td>
                             <td><p >Fajardo</p></td>
                         </tr>
-                         <tr>
+                        <tr>
                             <td><p >Fotos</p></td>
                             <td><p>Carpeta</p></td>
                             <td><p >11/04/2019 20:43</p></td>

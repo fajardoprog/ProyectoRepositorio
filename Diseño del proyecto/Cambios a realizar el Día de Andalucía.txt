@@ -12,9 +12,11 @@ Listo marcado con --
 
 -- Cambiar el lugar del botón en //busquedas y hacer que se coloquen de forma similar a los que hay en //mi espacio
 
-Cambiar avatares: homogeneización de los mismos
+-- Eliminar rastros del juego en la aplicación
 
-Cambiar lugar de botón "mis opiniones" -> Mi espacio
+-- Cambiar lugar de botón "mis opiniones" -> header
+
+Cambiar avatares: homogeneización de los mismos
 
 "Popover" para validaciones
 
@@ -22,8 +24,6 @@ Investigar "toasts" y "spinners"
 
 breakpoint para tablets -> sm
 breakpoint para pc -> lg
-
-Eliminar rastros del juego en la aplicación
 
 Cambiar y revisar los breadcrumbs
 

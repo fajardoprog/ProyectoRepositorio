@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
+        <link rel="stylesheet" href="css/estiloMisOpiniones.css">
         <script>
 
         </script>
@@ -29,8 +30,6 @@
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="repositorio.jsp">2DAW (nombre repositorio)</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="opiniones.jsp">Opiniones</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Mis Opiniones</li>
                 </ol>
             </nav>
@@ -38,46 +37,78 @@
         <main>
 
             <h1>Mis opiniones</h1>
-            <section class="container-fluid">
+            <section class="container-opiniones row row-cols-1 row-cols-md-2 row-cols-lg-3 row container-fluid justify-content-center g-0 ">
                 <!--Aquí van las opiniones-->
-                <table class="table table-info">
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Opinión</th>
-                            <th>Fecha Opinión realizada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tú</td>
-                            <td>"Me gusta mucho este Repositorio"</td>
-                            <td>11/12/2023</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Tú</td>
-                            <td>"Me gusta mucho"</td>
-                            <td>15/03/2023</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Tú</td>
-                            <td>"Menos mal que encontré este repositorio"</td>
-                            <td>10/05/2023</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Tú</td>
-                            <td>"Sí , aunque aportaría otra cosa a tus apuntes"</td>
-                            <td>05/11/2023</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div>
+                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column align-items-center justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column align-items-center justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column align-items-center justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article class="card flex-column flex-lg-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column align-items-center justify-content-between">
+                            <img src="img/images.jfif" class="d-block d-lg-none img-fluid"/>
+                            <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-lg-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
             </section>
 
-            <form action="miEspacio.jsp">               
-                <input type="submit" value="Volver al Inicio"/>
+            <form action="miEspacio.jsp" class="text-center row g-0">               
+                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8 offset-lg-3 col-lg-6" value="Volver al Inicio"/>
             </form>
 
         </main>        
