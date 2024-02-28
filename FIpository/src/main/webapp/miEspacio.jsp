@@ -178,7 +178,7 @@
                                 <p class="text-truncate">Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor</p>
                             </div>
                             <form class="my-2 ms-sm-5">
-                                <input type="submit" value="Ir al repositorio" class="btn btn-success w-100"/>
+                                <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                             </form>
                         </article>
                     </article>
@@ -204,7 +204,7 @@
                                 </div>
                             </div>
                             <form class="my-2 ms-sm-5">
-                                <input type="submit" value="Comenzar a seguir" class="btn btn-success w-100"/>
+                                <input type="submit" value="Comenzar a seguir" class="btn btn-primary w-100"/>
                             </form>
                         </article>
                         <div class="stats d-flex flex-column flex-md-row justify-content-around pt-2 text-center">

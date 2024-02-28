@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+.diferenciar-busqueda button, .filtro-especifico button{
+    width: 100%;
+}
+
 .container-repositorios div {
     display: flex;
     align-items: center;
@@ -20,10 +24,14 @@
     text-decoration: none;
 }
 
-aside{
+aside section{
     background-color: #00cc99;
     border-radius: 10px;
     height: auto;
+}
+
+aside section:last-child{
+    margin-top: 2rem;
 }
 
 aside .list-group .list-group-item li.elemento-lista-aside{
@@ -61,6 +69,107 @@ aside .list-group .list-group-item li.elemento-lista-aside{
     padding: 1rem;
 }
 
+.filtros .filtro-especifico{
+    margin-top: 1rem;
+}
+
 aside{
     height: 100%
+}
+
+
+.card header h5{
+    font-size: 5.5vmin;
+}
+
+.card header{
+    background-color: transparent;
+}
+
+.lista-filtro{
+    width: 100%
+}
+
+.lista-filtro li{
+    font-size:  6.5vmin;
+}
+
+aside li label{
+    font-size: 2.5vmin;
+}
+
+aside .form-check{
+    display: flex;
+    align-items: center;
+}
+
+aside .form-check labe{
+    margin: 0rem 1rem;
+}
+
+
+
+@media screen and (min-width:576px) {
+    /*Resolución tablet*/
+    .enlace-repositorio {
+        font-size: 3.5vmin;
+    }
+
+    .card header h5{
+        font-size: 4vmin;
+    }
+
+    .card header p{
+        font-size: 2.5vmin;
+    }
+
+    .card article div:not(.stats) p:first-child{
+        font-size: 3vmin;
+    }
+
+    .card article div:not(.stats) p:last-child{
+        font-size: 2.5vmin;
+    }
+
+    .filtros .filtro-especifico{
+        margin-top: 0;
+    }
+
+
+    .lista-filtro li{
+        font-size:  4vmin;
+    }
+
+
+}
+
+
+@media screen and (min-width:992px) {
+
+    aside h3{
+        font-size: 3rem;
+        padding: 0rem 0rem 1.5rem;
+    }
+    /*Resolución Ordenador*/
+    aside .list-group-item button, aside .list-group-item input[type="submit"]{
+        font-size: 3vmin;
+        width: 100%
+    }
+
+    aside section{
+        padding: 2.5rem 1.5rem;
+    }
+
+    aside .list-group-item{
+        margin: 0;
+        padding: 0;
+    }
+
+    main button, main input[type="submit"]{
+        font-size: 2.5vmin;
+    }
+
+    .lista-filtro li:last-child{
+        margin-top: 1rem;
+    }
 }

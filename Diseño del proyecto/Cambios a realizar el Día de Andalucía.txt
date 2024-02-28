@@ -1,8 +1,20 @@
+Listo marcado con --
+
+-- Separar en //busquedas "filtro" y "ordenar por"
+
+-- //Busquedas, dropdown que ocupe el 100% del botón
+
+-- Cambiar color de botones en //busquedas y //mi espacio de verde a azul (mas oscuro del gradient o primary de bs)
+
+-- En //subida, los botones en desktop más pequeños
+
+-- También en //subida, los h1 actuales sustituir por h2, y crear un h1 encima de los formularios que sea "Subida de archivos"
+
+-- Cambiar el lugar del botón en //busquedas y hacer que se coloquen de forma similar a los que hay en //mi espacio
+
 Cambiar avatares: homogeneización de los mismos
 
 Cambiar lugar de botón "mis opiniones" -> Mi espacio
-
-Separar en //busquedas "filtro" y "ordenar por"
 
 "Popover" para validaciones
 
@@ -11,17 +23,9 @@ Investigar "toasts" y "spinners"
 breakpoint para tablets -> sm
 breakpoint para pc -> lg
 
-Cambiar color de botones en //busquedas y //mi espacio de verde a azul (mas oscuro del gradient o primary de bs)
-
 Eliminar rastros del juego en la aplicación
 
 Cambiar y revisar los breadcrumbs
-
-En //subida, los botones en desktop más pequeños
-
-También en //subida, los h1 actuales sustituir por h2, y crear un h1 encima de los formularios que sea "Subida de archivos"
-
-Cambiar el lugar del botón en //busquedas y hacer que se coloquen de forma similar a los que hay en //mi espacio
 
 En //Repositorio, crear botón entre los existentes "ver opiniones" y "volver a mi espacio" que sea "Añadir o modificar opinión"
 que despliegue una ventana modal en la que se rellenará el formulario para añadir una opinión al repositorio actual

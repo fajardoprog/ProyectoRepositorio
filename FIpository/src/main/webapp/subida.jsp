@@ -102,6 +102,7 @@
             </nav>
         </header>
         <main>
+              <h1>Subida de archivos</h1>
             <div class="container">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
@@ -114,10 +115,10 @@
             <div class="container" id="ficheros">
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
-                        <h1 class="text-center">Subida de ficheros</h1>
+                        <h2 class="text-center">Subida de ficheros</h2>
                         <form action="#" class="d-flex flex-column d-md-block">
                             <article id="paso1fichero">
-                                <h2 class="m-3">1. Selecciona el repositorio</h2>
+                                <h3 class="m-3">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
                                     <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
@@ -129,7 +130,7 @@
                                 </datalist>
                             </article>
                             <article id="paso2fichero">
-                                <h2 class="m-3">2. Selecciona el fichero</h2>
+                                <h3 class="m-3">2. Selecciona el fichero</h3>
                                 <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
                                        aria-describedby="fileHelpId" />
                             </article>
@@ -142,10 +143,10 @@
             <div class="container" id="carpetas">
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
-                        <h1 class="text-center">Subida de carpeta</h1>
+                        <h2 class="text-center">Subida de carpeta</h2>
                         <form action="#" class="d-flex flex-column d-md-block">
                             <article id="paso1carpeta">
-                                <h2 class="m-2">1. Selecciona el repositorio</h2>
+                                <h3 class="m-2">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
                                     <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
@@ -153,19 +154,19 @@
                             </article>
                             <section id="paso2carpeta">
                                 <article>
-                                    <h2 class="m-2">2. Sube tu carpeta</h2>
+                                    <h3 class="m-2">2. Sube tu carpeta</h3>
                                     <input type="file" class="form-control" name="" id="" placeholder=""
                                            aria-describedby="fileHelpId" />
                                 </article>
-                                <h2 class="m-2">o</h2>
+                                <h3 class="m-2">o</h3>
                                 <article>
-                                    <h2 class="m-2">Crea tu carpeta</h2>
+                                    <h3 class="m-2">Crea tu carpeta</h3>
                                     <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
                                            aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
                                 </article>
                             </section>
                             <article id="paso3carpeta">
-                                <h2 class="m-2">3. Elige el color de tu carpeta</h2>
+                                <h3 class="m-2">3. Elige el color de tu carpeta</h3>
                                 <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
                                 <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
                                        title="Choose your color">

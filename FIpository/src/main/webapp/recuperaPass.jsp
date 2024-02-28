@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="form-floating m-2 col-10">
-                                <input type="mail" class="form-control col-10 m-2" id="floatingInput" placeholder="Usuario"
+                                <input type="mail" class="form-control col-10" id="floatingInput" placeholder="Usuario"
                                        name="EmailUsu">
                                 <label for="floatingInput">Correo Usuario</label>
                             </div>
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10 m-2" id="floatingPassword1"
+                                <input type="password" class="form-control col-10" id="floatingPassword1"
                                        placeholder="Password" name="NuevacontraUsu">
                                 <label for="floatingPassword1">Contraseña</label>
                             </div>
@@ -90,7 +90,7 @@
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10 m-2" id="floatingPassword2"
+                                <input type="password" class="form-control col-10" id="floatingPassword2"
                                        placeholder="Password" name="NuevacontraUsuRepe">
                                 <label for="floatingPassword2">Repetir Contraseña</label>
                             </div>
