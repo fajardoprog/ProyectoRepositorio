@@ -148,5 +148,6 @@
 
         </main>        
         <jsp:include page="pie.jsp"/>
+         <script src="js/bootstrap.bundle.js"></script>
     </body>
 </html>

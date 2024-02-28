@@ -16,7 +16,7 @@ Listo marcado con --
 
 -- Cambiar lugar de botón "mis opiniones" -> header
 
-//Opiniones y //MisOpiniones cambiar bp de lg a xl
+-- //Opiniones y //MisOpiniones cambiar bp de lg a xl
 
 Cambiar avatares: homogeneización de los mismos
 
@@ -29,7 +29,7 @@ breakpoint para pc -> lg
 
 Cambiar y revisar los breadcrumbs
 
-En //Repositorio, crear botón entre los existentes "ver opiniones" y "volver a mi espacio" que sea "Añadir o modificar opinión"
+-- En //Repositorio, crear botón entre los existentes "ver opiniones" y "volver a mi espacio" que sea "Añadir o modificar opinión"
 que despliegue una ventana modal en la que se rellenará el formulario para añadir una opinión al repositorio actual
 
 Cambio en el footer, añadir términos y servicios a la izquierda y sumar un mailto
