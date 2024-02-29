@@ -149,23 +149,47 @@
 
             <main class="offset-lg-1 col-lg-7">
                 <h4>Información del repositorio</h4>
-                <article class="card">
-                    <h4 class="text-center">ApuntesDise</h4>
-                    <div>
-                        <h5>Media opiniones</h5>
-                        <p>4.25/5</p>
+
+
+                <article class="card card-repositorio">
+                    <header class="card-header d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-content-lg-center px-3 px-md-3">
+                        <div class="titulo-accion ps-3 justify-content-center">
+                            <h5>IsmaelJ/Apuntes Lola</h5>
+                            <p>Ultima modificación: Hace 7 horas</p>
+                        </div>
+                        <form class="d-flex align-items-center ">
+                            <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
+                        </form>
+                    </header>
+                    <div class="d-flex flex-column">
+                        <div class="contenedor-afectado-repositorio d-flex align-items-center justify-content-between container-fluid py-2">
+                            <div class="datos-repositorio text-truncate">
+                                <div class="d-flex">
+                                    <p class="text-truncate d-inline mw-100">
+                                        IsmaelJ/Apuntes Lola Casa Servidor casa lola casa lola casa lola juanma
+                                    </p>
+                                    <i class="mx-2 bi bi-lock-fill"></i>
+                                </div>
+
+                                <p class="text-truncate">
+                                    Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor
+                                </p>
+                            </div>
+                        </div>
+                        <div class="datos-opiniones d-flex flex-column">
+                            <div class="datos-opiniones-numeros d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5>Media opiniones</h5>
+                                    <p>4.25/5</p>
+                                </div>
+
+                                <form action="opiniones.jsp" class="d-flex justify-content-end me-3">
+                                    <input type="submit" class="btn btn-primary botonOpiniones" value="Ver Opiniones"/>
+                                </form>
+                            </div>
+                            <img class="img-fluid" src="img/4estrella.png" alt="nEstrellas"/>
+                        </div>
                     </div>
-
-                    <form action="opiniones.jsp" class="d-flex justify-content-end me-3">
-                        <input type="submit" class="btn btn-primary botonOpiniones" value="Ver Opiniones"/>
-                    </form>
-
-                    <img src="img/4estrella.png" alt="nEstrellas"/>
-
-                    <div>
-                        <p>Permiso para ver el repositorio: Si </p>
-                    </div>
-
                 </article>
 
                 <section id="intereses">

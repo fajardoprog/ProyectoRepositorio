@@ -37,7 +37,7 @@ aside{
     box-shadow:  4px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
-.card article div:not(.stats) p:first-child{
+.card div div:not(.stats) p:first-child, .card div div:not(.stats) i{
     font-size: 5vmin;
     font-weight: bold;
 }
@@ -55,6 +55,9 @@ aside{
     padding: 1rem !important; 
 }
 
+.card .datos-opiniones{
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
 
 .card header h5{
     font-size: 5.5vmin;
@@ -64,6 +67,13 @@ aside{
     background-color: transparent;
 }
 
+.datos-opiniones-numeros {
+    padding: 1.5rem 0;
+}
+
+.datos-opiniones-numeros div {
+    padding: 0 0 0 1.5rem;
+}
 
 
 @media screen and (min-width:576px) {
@@ -80,7 +90,7 @@ aside{
         font-size: 2.5vmin;
     }
 
-    .card article div:not(.stats) p:first-child{
+    .card div div:not(.stats) p:first-child, .card div div:not(.stats) i{
         font-size: 3vmin;
     }
 
@@ -121,4 +131,8 @@ aside{
         font-size: 2.5vmin;
     }
 
+    .card div div:not(.stats) p:first-child, .card div div:not(.stats) i{
+        font-size: 2vmin;
+    }
+    
 }
