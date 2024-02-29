@@ -9,3 +9,9 @@
 #formularioIniciarSesi {
     display: flex;
 }
+
+@media screen and (min-width:992px) {
+    main .btn{
+        font-size: 3vmin;
+    }
+}
