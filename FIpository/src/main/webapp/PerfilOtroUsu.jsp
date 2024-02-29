@@ -53,6 +53,14 @@
 
         <h1>Espacio de: Juanma</h1>
 
+        <!--boton reporte y like-->
+        <div>
+            <a href=""><i class="bi bi-heart"></i></a>
+            <a href=""><i class="bi bi-exclamation-triangle-fill"></i></a>
+        </div>
+
+        <!-- fin boton -->
+
         <!-- Modal -->
         <div class="modal fade" id="peticion" tabindex="-1" aria-labelledby="ventana Peticion" aria-hidden="true">
             <div class="modal-dialog">
