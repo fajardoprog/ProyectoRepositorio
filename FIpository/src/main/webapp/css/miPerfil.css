@@ -17,10 +17,11 @@ and open the template in the editor.
 }
 
 #imgUsu{
-   position: fixed;
+    position: fixed;
     left: 9999px;
 }
 
 #labelImg{
     cursor: pointer;
+    margin-left: 50px;
 }

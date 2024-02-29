@@ -60,7 +60,7 @@
 
                         <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
 
-                        <div class="d-flex flex-column justify-content-center align-items-center position-absolute  top-0 end-0">
+                        <div class="d-flex flex-column justify-content-center align-items-center position-absolute start-50">
                             <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><span>add_circle</span></label>
                             <span id="nombreFoto"></span>
                         </div>
