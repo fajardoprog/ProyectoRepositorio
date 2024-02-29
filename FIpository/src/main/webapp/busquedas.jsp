@@ -225,7 +225,7 @@
                                     <h5>IsmaelJ/Apuntes Lola</h5>
                                     <p>Ultima modificación: Hace 7 horas</p>
                                 </div>
-                                <form>
+                                <form class="d-flex align-items-center ">
                                     <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                                 </form>
                             </header>

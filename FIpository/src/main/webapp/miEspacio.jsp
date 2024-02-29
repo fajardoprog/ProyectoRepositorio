@@ -55,71 +55,71 @@
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">JFajardo/1 DAW
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-slash-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/2 DAW
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-slash-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Policía
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Cliente
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Diseño de Interfaces Web
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Despliegue
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Desarrollo web en entorno servidor
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Programación
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Bases de datos
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
                         <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/FOL
-                            <i class="bi bi-arrow-right">
-                            </i>
+                            <i class="ms-2 bi bi-eye-fill"></i>
+                            <i class="ms-2 bi bi-arrow-right"></i>
                         </a>
                     </article>
                 </section>
@@ -174,7 +174,7 @@
                         </header>
                         <article class="contenedor-afectado-repositorio d-flex flex-column flex-sm-row align-items-stretch justify-content-between container-fluid py-2">
                             <div class="datos-repositorio d-flex flex-column text-truncate w-100">
-                                <p>IsmaelJ/Apuntes Lola</p>
+                                <p>IsmaelJ/Apuntes Lola<i class="mx-2 bi bi-lock-fill"></i></p>
                                 <p class="text-truncate">Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor</p>
                             </div>
                             <form class="my-2 ms-sm-5">

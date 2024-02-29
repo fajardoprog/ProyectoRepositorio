@@ -143,7 +143,7 @@ main .btn{
     }
 
     .lista-filtro li{
-        font-size:  4vmin;
+        font-size:  3vmin;
     }
 
     .modal input[type="submit"], .modal .btn {
@@ -166,7 +166,8 @@ main .btn{
     /*Resolución Ordenador*/
     aside .list-group-item button, aside .list-group-item input[type="submit"]{
         font-size: 3vmin;
-        width: 100%
+        width: 100%;
+        text-align: left;
     }
 
     aside section{
@@ -182,7 +183,4 @@ main .btn{
         font-size: 3vmin;
     }
 
-    .lista-filtro li:last-child{
-        margin-top: 1rem;
-    }
 }

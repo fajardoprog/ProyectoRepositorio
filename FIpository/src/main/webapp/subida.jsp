@@ -46,30 +46,38 @@
 
                 $("#paso1fichero").on("blur", "input", function () {
                     if (validarCampo($(this))) {
-                        $("#paso1fichero").addClass("valido");
-                        $("#paso1fichero").removeClass("foco");
-                        $("#paso2fichero").addClass("foco");
+                        if (!$("#paso1fichero h3").hasClass("valido")) {
+                            $("#paso1fichero h3").addClass("valido").append($("<i>").addClass("bi bi-check-circle-fill mx-2"));
+                        }
+                        $("#paso1fichero h3").removeClass("foco");
+                        $("#paso2fichero h3").addClass("foco");
                     }
                 });
 
                 $("#paso1carpeta").on("blur", "input", function () {
                     if (validarCampo($(this))) {
-                        $("#paso1carpeta").addClass("valido");
-                        $("#paso1carpeta").removeClass("foco");
-                        $("#paso2carpeta").addClass("foco");
+                        if (!$("#paso1carpeta h3").hasClass("valido")) {
+                            $("#paso1carpeta h3").addClass("valido").append($("<i>").addClass("bi bi-check-circle-fill mx-2"));
+                        }
+                        $("#paso1carpeta h3").removeClass("foco");
+                        $("#paso2carpeta h3").addClass("foco");
                     }
                 });
                 $("#paso2carpeta").on("blur", "input", function () {
                     if (validarCampo($(this))) {
-                        $("#paso2carpeta").addClass("valido");
-                        $("#paso2carpeta").removeClass("foco");
-                        $("#paso3carpeta").addClass("foco");
+                        if (!$("#paso2carpeta h3").hasClass("valido")) {
+                            $("#paso2carpeta h3").addClass("valido").append($("<i>").addClass("bi bi-check-circle-fill mx-2"));
+                        }
+                        $("#paso2carpeta h3").removeClass("foco");
+                        $("#paso3carpeta h3").addClass("foco");
                     }
                 });
                 $("#paso3carpeta").on("blur", "input", function () {
                     if (validarCampo($(this))) {
-                        $("#paso3carpeta").addClass("valido");
-                        $("#paso3carpeta").removeClass("foco");
+                        if (!$("#paso3carpeta h3").hasClass("valido")) {
+                            $("#paso3carpeta h3").addClass("valido").append($("<i>").addClass("bi bi-check-circle-fill mx-2"));
+                        }
+                        $("#paso3carpeta h3").removeClass("foco");
                     }
                 });
 
@@ -116,9 +124,19 @@
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
                         <h2 class="text-center">Subida de ficheros</h2>
+
+                        <div class="barra-progresion position-relative m-4">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"></div>
+                            </div>
+                            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
+                            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill" >2</button>
+                            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
+                        </div>
+
                         <form action="#" class="d-flex flex-column d-md-block">
                             <article id="paso1fichero">
-                                <h3 class="m-3">1. Selecciona el repositorio</h3>
+                                <h3 class="my-3">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
                                     <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
@@ -129,9 +147,10 @@
                                     <option value="Lucah"></option>
                                 </datalist>
                             </article>
+                            <hr class="hr" />
                             <article id="paso2fichero">
-                                <h3 class="m-3">2. Selecciona la carpeta</h3>
-                                <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 container-archivos">
+                                <h3 class="my-3">2. Selecciona la carpeta</h3>
+                                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos">
                                     <div>
                                         <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
@@ -168,11 +187,13 @@
                                     </div>
                                 </section>
                             </article>
+                            <hr class="hr" />
                             <article id="paso3fichero">
-                                <h3 class="m-3">3. Selecciona el fichero</h3>
+                                <h3 class="my-3">3. Selecciona el fichero</h3>
                                 <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
                                        aria-describedby="fileHelpId" />
                             </article>
+                            <hr class="hr" />
                             <button type="submit" class="btn btn-primary my-3 align-items-center">Subir fichero</button>
                         </form>
                     </div>
@@ -183,37 +204,54 @@
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
                         <h2 class="text-center">Subida de carpeta</h2>
+
+                        <div class="barra-progresion position-relative m-4">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"></div>
+                            </div>
+                            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
+                            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill">2</button>
+                            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
+                        </div>
+
                         <form action="#" class="d-flex flex-column d-md-block">
                             <article id="paso1carpeta">
-                                <h3 class="m-2">1. Selecciona el repositorio</h3>
+                                <h3 class="my-2">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
                                     <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
                                 </div>
                             </article>
+                            <hr class="hr" />
                             <section id="paso2carpeta">
                                 <article>
-                                    <h3 class="m-2">2. Sube tu carpeta</h3>
-                                    <input type="file" class="form-control" name="" id="" placeholder=""
-                                           aria-describedby="fileHelpId" />
-                                </article>
-                                <h3 class="m-2">o</h3>
-                                <article>
-                                    <h3 class="m-2">Crea tu carpeta</h3>
-                                    <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
-                                           aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
+                                    <h3 class="my-2">2. Sube tu carpeta o crea tu carpeta</h3>
+                                    <section class="row row-cols-1 row-cols-sm-2">
+                                        <div>
+                                            <input type="file" class="form-control" name="" id="" placeholder=""
+                                                   aria-describedby="fileHelpId" />
+                                        </div>
+                                        <div>
+                                            <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
+                                                   aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
+                                        </div>
+                                    </section>
+
                                 </article>
                             </section>
+                            <hr class="hr" />
                             <article id="paso3carpeta">
-                                <h3 class="m-2">3. Elige el color de tu carpeta</h3>
+                                <h3 class="my-2">3. Elige el color de tu carpeta</h3>
                                 <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
                                 <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
                                        title="Choose your color">
                             </article>
-
+                            <hr class="hr" />
                             <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>
                         </form>
                     </div>
+
+
                 </div>
             </div>
         </main>
