@@ -33,6 +33,16 @@
                     console.log(file);
                     $("#nombreFoto").text(file.name);
                 });
+
+                const toastTrigger = document.getElementById('meGusta');
+                const toastLiveExample = document.getElementById('liveToastMG');
+
+                if (toastTrigger) {
+                    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+                    toastTrigger.addEventListener('click', () => {
+                        toastBootstrap.show();
+                    });
+                }
             });
 
         </script>       
@@ -53,13 +63,20 @@
 
         <h1>Espacio de: Juanma</h1>
 
-        <!--boton reporte y like-->
-        <div>
-            <a href=""><i class="bi bi-heart"></i></a>
-            <a href=""><i class="bi bi-exclamation-triangle-fill"></i></a>
+        <!--Toast me gusta -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastMG">
+            <div id="liveToastMG" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">¡Me gusta!</strong>
+                    <small>hace un momento</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    ¡Le has dado me gusta a este repositorio!
+                </div>
+            </div>
         </div>
-
-        <!-- fin boton -->
+        <!-- Fin Toast me gusta-->
 
         <!-- Modal -->
         <div class="modal fade" id="peticion" tabindex="-1" aria-labelledby="ventana Peticion" aria-hidden="true">
@@ -86,6 +103,32 @@
 
         <!-- Atributos para que funcione la ventana modal->  data-bs-toggle="modal" data-bs-target="#peticion"-->
         <!-- Fin Vetana Modal-->
+
+
+
+        <!-- Modal Warning -->
+
+        <div class="modal fade" id="warningRep" tabindex="-1" aria-labelledby="ventana Peticion Reporte" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" class="tituloModal">Cuentanos más sobre tu reporte</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <form action="" class="row d-flex justify-content-around w-100">
+                            <div class="form-floating g-0">
+                                <textarea class="form-control mb-4" placeholder="Motivo de tu reporte..." id="motivoRep" name="comentario" ></textarea>
+                                <label for="motivoRep">Motivo de tu reporte...</label>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Enviar"/>
+                        </form>                                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fin Modal Warning-->
 
         <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
@@ -150,13 +193,20 @@
             <main class="offset-lg-1 col-lg-7">
                 <h4>Información del repositorio</h4>
 
-
                 <article class="card card-repositorio">
                     <header class="card-header d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-content-lg-center px-3 px-md-3">
                         <div class="titulo-accion ps-3 justify-content-center">
                             <h5>IsmaelJ/Apuntes Lola</h5>
                             <p>Ultima modificación: Hace 7 horas</p>
                         </div>
+
+                        <!--boton reporte y like-->
+                        <div class="text-end m-2">
+                            <span class="me-1" id="meGusta"><i class="bi bi-heart"></i></span>
+                            <span class="ms-1 me-2" id="warninBtn" data-bs-toggle="modal" data-bs-target="#warningRep"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                        </div> 
+                        <!-- fin boton -->
+
                         <form class="d-flex align-items-center ">
                             <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                         </form>

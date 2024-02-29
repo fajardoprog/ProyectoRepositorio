@@ -134,5 +134,18 @@ aside{
     .card div div:not(.stats) p:first-child, .card div div:not(.stats) i{
         font-size: 2vmin;
     }
+
+    #toastMG{
+        color: black;
+        z-index: 99;
+    }
+
+    #meGusta,#warninBtn{
+        cursor: pointer;
+    }
     
+    textarea{
+        resize: none;
+        height: 70px;
+    }
 }
