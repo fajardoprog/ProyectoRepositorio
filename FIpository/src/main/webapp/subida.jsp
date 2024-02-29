@@ -102,7 +102,7 @@
             </nav>
         </header>
         <main>
-              <h1>Subida de archivos</h1>
+            <h1>Subida de archivos</h1>
             <div class="container">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
@@ -130,7 +130,46 @@
                                 </datalist>
                             </article>
                             <article id="paso2fichero">
-                                <h3 class="m-3">2. Selecciona el fichero</h3>
+                                <h3 class="m-3">2. Selecciona la carpeta</h3>
+                                <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3 container-archivos">
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined"><span>Checked success radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined2" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined2"><span>Checked success radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined3" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined3"><span>Checked radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined4" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined4"><span>Checked success radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined5" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined5"><span>Checked radio</span></label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined6" autocomplete="off">
+                                        <label class="btn btn-outline-danger" for="danger-outlined6"><span>Checked radio</span></label>
+                                    </div>
+                                </section>
+                            </article>
+                            <article id="paso3fichero">
+                                <h3 class="m-3">3. Selecciona el fichero</h3>
                                 <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
                                        aria-describedby="fileHelpId" />
                             </article>

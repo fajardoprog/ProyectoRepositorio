@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+
 .diferenciar-busqueda button, .filtro-especifico button{
     width: 100%;
 }
@@ -110,7 +111,9 @@ aside .form-check labe{
 .modal input[type="submit"], .modal .btn {
     font-size: 4vmin;
 }
-
+main .btn{
+    font-size: 5.5vmin;
+}
 
 
 @media screen and (min-width:576px) {
@@ -144,6 +147,10 @@ aside .form-check labe{
     }
 
     .modal input[type="submit"], .modal .btn {
+        font-size: 3vmin;
+    }
+
+    main .btn{
         font-size: 3vmin;
     }
 

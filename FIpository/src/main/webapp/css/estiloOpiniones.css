@@ -13,3 +13,7 @@ article img{
 .container-opiniones>div{
     padding: 1rem !important;
 }
+
+.card{
+    width: 100%;
+}
