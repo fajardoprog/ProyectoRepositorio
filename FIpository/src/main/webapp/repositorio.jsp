@@ -22,7 +22,41 @@
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
         <link rel="stylesheet" href="css/estiloRepositorio.css">
+        <script src="js/jquery-3.7.1.min.js"></script>
         <script>
+
+            $(document).ready(function () {
+                $("table tr td:last-child form").append(
+                        $("<button>").attr({
+                    type: "button",
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "bottom",
+                    "data-bs-custom-class": "boton-tooltip",
+                    "data-bs-title": "Descargar"
+                }).addClass("btn").append("<i>").addClass("bi bi-download")
+                        ).append(
+                        $("<button>").attr({
+                    type: "button",
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "bottom",
+                    "data-bs-custom-class": "boton-tooltip",
+                    "data-bs-title": "Cambiar nombre"
+                }).addClass("btn").append("<i>").addClass("bi bi-pencil-square")).append($("<button>").attr({
+                    type: "button",
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "bottom",
+                    "data-bs-custom-class": "boton-tooltip",
+                    "data-bs-title": "Borrar archivo"
+                }).addClass("btn").append("<i>").addClass("bi bi-trash-fill"));
+                
+                // Necesario que se realice tras cargar el documento, si no da problema
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                    new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+                
+            }
+            );
 
         </script>
 
@@ -91,14 +125,14 @@
                 </form> 
             </div>
 
-            <div class="col-12 container-fluid">
-                <table class=" table table-striped table-success container-fluid">
-                    <thead class="text-center">
+            <div class="container-fluid">
+                <table class="table tabla-repositorio table-responsive table-striped table-success">
+                    <thead>
                         <tr>
                             <th>Nombre</th>
                             <th>Tipo</th>
                             <th>Fecha</th>
-                            <th>Usuario</th>
+                            <th >Usuario</th>
                         </tr>
                     </thead>
 
@@ -108,41 +142,100 @@
                             <td>Factura</td>
                             <td>PDF</td>
                             <td>10/10/2010 13:59</td>
-                            <td>YO</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>YO</span>
+                                    <form>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         <!--Fin fila completa-->
 
-                        <!--Ejemplos DEMO BORRAR Despues-->
                         <tr>
-                            <td><p >Fotos</p></td>
-                            <td><p>Carpeta</p></td>
-                            <td><p >11/04/2019 20:43</p></td>
-                            <td><p >Fajardo</p></td>
+                            <td>Fotos</td>
+                            <td>Carpeta</td>
+                            <td>11/04/2019 20:43</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Fajardo</span>
+                                    <form>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td><p >Fotos</p></td>
-                            <td><p>Carpeta</p></td>
-                            <td><p >11/04/2019 20:43</p></td>
-                            <td><p >Fajardo</p></td>
+                            <td>Fotos</td>
+                            <td>Carpeta</td>
+                            <td>11/04/2019 20:43</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Fajardo</span>
+                                    <form>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td><p >Fotos</p></td>
-                            <td><p>Carpeta</p></td>
-                            <td><p >11/04/2019 20:43</p></td>
-                            <td><p >Fajardo</p></td>
+                            <td>Fotos</td>
+                            <td>Carpeta</td>
+                            <td>11/04/2019 20:43</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Fajardo</span>
+                                    <form>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td><p >Fotos</p></td>
-                            <td><p>Carpeta</p></td>
-                            <td><p >11/04/2019 20:43</p></td>
-                            <td><p >Fajardo</p></td>
+                            <td>Fotos</td>
+                            <td>Carpeta</td>
+                            <td>11/04/2019 20:43</td>
+                            <td>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Fajardo</span>
+                                    <form>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         <!--Fin DEMO-->
                     </tbody>
-                </table>            
+                </table>
+                <div class="container">
+                    <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
+                        <article class="card">
+                            <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                            <div class="card-body">
+                                <h4 class="card-title">FotoOrla.png</h4>
+                                <p class="card-text">Última modificación: hace 3 días</p>
+                                <form class="d-flex justify-content-between align-items-end">
+                                    <button type="button" class="btn" 
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom"
+                                            data-bs-custom-class="boton-tooltip"
+                                            data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                    <button type="button" class="btn"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom"
+                                            data-bs-custom-class="boton-tooltip"
+                                            data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                    <button type="button" class="btn"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom"
+                                            data-bs-custom-class="boton-tooltip"
+                                            data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                </form>
+                            </div>
+                        </article>
+
+                    </section>
+                </div>
+
             </div>
         </main>
         <jsp:include page="pie.jsp"/>
+        <script src="js/bootstrap.bundle.js"></script>
     </body>
-    <script src="js/bootstrap.bundle.js"></script>
 </html>

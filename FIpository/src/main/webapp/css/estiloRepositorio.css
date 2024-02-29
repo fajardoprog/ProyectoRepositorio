@@ -11,15 +11,52 @@
     font-size: 4.7vmin;
 }
 
+.tabla-repositorio .btn{
+    font-size: 3vmin;
+    margin:0 0.5rem;
+    opacity: 0;
+    transition: all 0.40s;
+    border-radius: 50px;
+}
+
+.card .btn{
+    font-size: 3vmin;
+    margin:0 0.5rem;
+    border-radius: 50px;
+    transition: all 0.40s;
+}
+
+.tabla-repositorio tr:hover .btn{
+    opacity: 1;
+}
+
+.tabla-repositorio .btn:hover, .card .btn:hover{
+    background-color: lightgray;
+}
+
+
+.tabla-repositorio tbody{
+    vertical-align: middle;
+}
+
+.tabla-repositorio form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card form{
+    margin: 0;    
+}
+
+.tabla-repositorio td:last-child{
+    width: 7%
+}
+
 @media screen and (min-width:576px) {
     .container-botones .btn{
         font-size: 3.5vmin
     }
-
-    #comentario{
-        height: 150px;
-    }
-
 
 }
 
@@ -33,8 +70,5 @@
         font-size: 3vmin;
     }
 
-    #comentario{
-        height: 200px;
-    }
 
 }
