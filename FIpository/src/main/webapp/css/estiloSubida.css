@@ -6,6 +6,16 @@ aside {
 
 .valido {
     background-color: green;
+    color: white;
+}
+
+h2{
+    margin: 2rem 1rem 3rem; 
+}
+
+main h3{
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
 }
 
 .foco {
@@ -16,12 +26,12 @@ aside {
     width: 1% !important;
 }
 
-label.btn{
+.container-archivos label.btn{
     display: flex;
     height: 100%;
-    align-items: center
+    align-items: center;
+    justify-content: center;
 }
-
 
 .container-archivos div{
     display: flex;
@@ -31,16 +41,62 @@ label.btn{
 
 .container-archivos{
     height: 200px;
-    overflow-y: scroll
+    overflow-y: scroll;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+/* Track */
+.container-archivos::-webkit-scrollbar-track {
+    background: none;
+}
+
+
+
+.progress {
+    height: 5px;
+}
+
+.progress-bar{
+    /*style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"*/
+    width: 0%;
+}
+
+.barra-progresion button.btn{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.container-archivos .btn{
+    font-size: 4vmin;
 }
 
 @media screen and (min-width:576px) {
+    .container-archivos{
+        height: 300px;
+        overflow-y: scroll
+    }
 
+    .container-archivos .btn{
+        font-size: 3vmin;
+    }
 }
 
 
 @media screen and (min-width:992px) {
-    main .btn{
-        font-size: 4.5vmin;
+    h1{
+        font-size: 8vmin;
+        margin:1.5rem;
     }
+    
+    main .btn{
+        font-size: 3.5vmin;
+    }
+
+    .container-archivos{
+        height: 400px;
+        overflow-y: scroll
+    }
+
 }
