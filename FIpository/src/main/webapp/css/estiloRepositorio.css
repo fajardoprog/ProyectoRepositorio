@@ -53,9 +53,28 @@
     width: 7%
 }
 
+.container-carta{
+    padding: 1rem;
+    display: flex;
+}
+
+.container-carta .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card i {
+    font-size: 7vmin;
+}
+
 @media screen and (min-width:576px) {
-    .container-botones .btn{
+    .container-botones .btn i{
         font-size: 3.5vmin
+    }
+
+    .card i {
+        font-size: 4vmin;
     }
 
 }
@@ -70,5 +89,9 @@
         font-size: 3vmin;
     }
 
+
+    .card i {
+        font-size: 3vmin;
+    }
 
 }

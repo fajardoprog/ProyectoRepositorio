@@ -10,7 +10,6 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +60,7 @@
             </nav>
         </header>
 
-        <h1>Espacio de: Juanma</h1>
+            <h1>Espacio de: <span></span></h1>
         
         <div class="row row-cols-3 g-0 justify-content-around">
             <form action="" class="p-3">

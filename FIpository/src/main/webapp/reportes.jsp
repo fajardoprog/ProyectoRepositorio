@@ -44,18 +44,18 @@
         </header>
         <div class="container">
             <main>
-                <h1>Registro de acciones del usuario</h1>
+                <h1>Reportes del usuario</h1>
                 <section>
                     <table class="tabla-log table table-hover table-striped bg-white">
                         <tr>
-                            <th>Usuario afectado</th>
-                            <th>Tipo</th>
+                            <th>Usuario que reporta</th>
+                            <th>Motivo principal</th>
                             <th>Fecha</th>
-                            <th>Descripción</th>
+                            <th>Resto de motivos</th>
                         </tr>
                         
                          <tr>
-                            <td>Evaristo</td>
+                            <td>Facundo</td>
                             <td>Inicio de sesión</td>
                             <td>24/12/2023 13:45hs</td>
                             <td>Evaristo ha iniciado sesión a las 13:45hs del 24 de diciembre de 2023</td>
@@ -102,7 +102,6 @@
                             <td>24/12/2023 14:40hs</td>
                             <td>Evaristo ha iniciado sesión a las 14:40hs del 24 de diciembre de 2023</td>
                         </tr>
-                        
                         
                     </table>
                 </section>

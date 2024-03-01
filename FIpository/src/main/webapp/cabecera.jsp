@@ -4,6 +4,7 @@
     Author     : José Antonio Fajardo Naranjo
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -30,8 +31,32 @@
            class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
            id="enlInciarSesion">
             <i class="bi bi-person-circle" id="iniSesi"></i>
-            <span class="text-center " id="nombreUsu">No está conectado</span>
+            <span class="text-center " id="nombreUsu">
+                <c:choose>
+                    <c:when test="${sessionScope.usuarioActual != null}">
+                        ${sessionScope.usuarioActual.nombreUsuario}
+                    </c:when>
+                    <c:otherwise>
+                        No está conectado
+                    </c:otherwise>
+                </c:choose> 
+            </span>
         </a>
+
+        <!--        
+                <div class="dropdown text-end">
+                  <a href="#" class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+        -->
 
         <div class="collapse navbar-collapse justify-content-between flex-column" id="barraNavPrincipal">
             <div class="d-flex flex-column">
@@ -45,14 +70,20 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
+                                    <a class="dropdown-item" href="#">
+                                       <i class="bi bi-cloud-plus mx-2"></i>Crear repositorio
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
                                     <a class="dropdown-item" href="subida.jsp">
-                                       <i class="bi bi-file-earmark-arrow-up mx-2"></i>Subir
+                                        <i class="bi bi-file-earmark-arrow-up mx-2"></i>Subir
                                         archivos
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="subida.jsp">
-                                            <i class="bi bi-folder-plus mx-2"></i>Subir
+                                        <i class="bi bi-folder-plus mx-2"></i>Subir
                                         carpetas
                                     </a>
                                 </li>

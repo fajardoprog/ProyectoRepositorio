@@ -85,7 +85,7 @@
 
             <!--Bloque formulario Iniciar Sesión-->
             <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form class="text-center  border border-black rounded col-md-6 formu">
+                <form action="InicioSesion" class="text-center  border border-black rounded col-md-6 formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
 
@@ -98,7 +98,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" id="floatingInput" placeholder="Usuario"
-                                       name="nombreUsu">
+                                       name="nombreUsuario">
                                 <label for="floatingInput">Nombre Usuario</label>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-11" id="floatingPassword"
-                                       placeholder="Password" name="contraUsu">
+                                       placeholder="Password" name="password">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
 
             <!--Bloque formulario Registrar-->
             <article class=" flex-column align-items-md-center" id="registrarseForm">
-                <form class="text-center  border border-black rounded col-md-6 formu">
+                <form action="Registro" method="post" class="text-center  border border-black rounded col-md-6 formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
 
@@ -145,7 +145,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" placeholder="Nombre Usuario"
-                                       name="nicknameUsu">
+                                       name="nombreUsuario">
                                 <label for="floatingInput">Nombre Usuario</label>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" placeholder="Tu nombre"
-                                       name="nombreUsu">
+                                       name="nombreCompleto">
                                 <label for="floatingInput">Tu nombre</label>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" placeholder="Primer apellido"
-                                       name="ape1Usu" required="true">
+                                       name="primerApellidoUsuario" required="true">
                                 <label for="floatingInput">Primer Apellido</label>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" placeholder="Segundo apellido"
-                                       name="ape2Usu">
+                                       name="segundoApellidoUsuario">
                                 <label for="floatingInput">Segundo Apellido</label>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-1" 
-                                       placeholder="Password" name="contraUsu">
+                                       placeholder="Password" name="passwordUsuario">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-11" 
-                                       placeholder="Password" name="contraUsuRepe">
+                                       placeholder="Password" name="passwordUsuarioRepetida">
                                 <label for="floatingPassword">Repetir Contraseña</label>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="email" class="form-control col-11"  placeholder="email"
-                                       name="emailUsu">
+                                       name="correoUsuario">
                                 <label for="floatingPassword">Correo Electrónico</label>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="date" class="form-control col-11" 
-                                       placeholder="Fecha nacimiento" name="fechaNaciUsu">
+                                       placeholder="Fecha nacimiento" name="fechaNacimientoUsuario">
                                 <label for="floatingPassword">Fecha de nacimiento</label>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                             </div>
 
                             <div class="form-floating d-flex col-2 justify-content-around align-items-center col-10 m-2 ">
-                                <select class="form-select" id="seleccionGene" aria-label="Floating label select example">
+                                <select name="generoUsuario" class="form-select" id="seleccionGene" aria-label="Floating label select example">
                                     <option value="H">Hombre</option>
                                     <option value="M">Mujer</option>
                                     <option value="O">Otro</option>
@@ -261,7 +261,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="text" class="form-control col-11" id="generoUsu" placeholder="Password"
-                                       name="generoUsu">
+                                       name="otroGenero">
                                 <label for="generoUsu">Especifique su Género</label>
                             </div>
                         </div>
@@ -269,7 +269,7 @@
                     </div>
 
                     <div class="d-flex flex-row justify-content-around m-2">
-                        <input type="submit" class="btn btn-primary w-30 py-2" value="Registrarme">
+                        <input type="submit" class="btn btn-primary py-2" value="Registrarme" name="registrarse">
                     </div>
                 </form>
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>

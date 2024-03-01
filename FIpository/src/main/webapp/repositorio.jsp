@@ -48,13 +48,13 @@
                     "data-bs-custom-class": "boton-tooltip",
                     "data-bs-title": "Borrar archivo"
                 }).addClass("btn").append("<i>").addClass("bi bi-trash-fill"));
-                
+
                 // Necesario que se realice tras cargar el documento, si no da problema
                 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
                 tooltipTriggerList.forEach(function (tooltipTriggerEl) {
                     new bootstrap.Tooltip(tooltipTriggerEl);
                 });
-                
+
             }
             );
 
@@ -126,7 +126,7 @@
             </div>
 
             <div class="container-fluid">
-                <table class="table tabla-repositorio table-responsive table-striped table-success">
+                <table class="table tabla-repositorio table-responsive table-striped bg-light">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -205,31 +205,223 @@
                 </table>
                 <div class="container">
                     <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
-                        <article class="card">
-                            <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
-                            <div class="card-body">
-                                <h4 class="card-title">FotoOrla.png</h4>
-                                <p class="card-text">Última modificación: hace 3 días</p>
-                                <form class="d-flex justify-content-between align-items-end">
-                                    <button type="button" class="btn" 
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom"
-                                            data-bs-custom-class="boton-tooltip"
-                                            data-bs-title="Descargar"><i class="bi bi-download"></i></button>
-                                    <button type="button" class="btn"
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom"
-                                            data-bs-custom-class="boton-tooltip"
-                                            data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
-                                    <button type="button" class="btn"
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom"
-                                            data-bs-custom-class="boton-tooltip"
-                                            data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
-                                </form>
-                            </div>
-                        </article>
 
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/fichero.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Virus.word</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">FotoOrla.png</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="container-carta">
+                            <article class="card">
+                                <img class="card-img-top" src="img/carpeta.png" alt="Card image">
+                                <div class="card-body">
+                                    <h4 class="card-title">Fotos viaje Asturias</h4>
+                                    <p class="card-text">Última modificación: hace 3 días</p>
+                                    <form class="d-flex justify-content-between align-items-end">
+                                        <button type="button" class="btn" 
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Descargar"><i class="bi bi-download"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Cambiar nombre"><i class="bi bi-pencil-square"></i></button>
+                                        <button type="button" class="btn"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="bottom"
+                                                data-bs-custom-class="boton-tooltip"
+                                                data-bs-title="Borrar archivo"><i class="bi bi-trash-fill"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                        </div>
+                        
                     </section>
                 </div>
 
