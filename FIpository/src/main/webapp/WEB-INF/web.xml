@@ -8,6 +8,10 @@
         <servlet-name>Registro</servlet-name>
         <servlet-class>com.daw.fipository.logica.Registro</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreacionRepositorio</servlet-name>
+        <servlet-class>com.daw.fipository.logica.CreacionRepositorio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>Registro</servlet-name>
         <url-pattern>/Registro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreacionRepositorio</servlet-name>
+        <url-pattern>/CreacionRepositorio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

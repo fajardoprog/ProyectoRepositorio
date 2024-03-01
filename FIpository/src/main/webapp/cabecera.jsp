@@ -33,8 +33,8 @@
             <i class="bi bi-person-circle" id="iniSesi"></i>
             <span class="text-center " id="nombreUsu">
                 <c:choose>
-                    <c:when test="${sessionScope.usuarioActual != null}">
-                        ${sessionScope.usuarioActual.nombreUsuario}
+                    <c:when test="${cookie.usuarioActual != null}">
+                        ${cookie.usuarioActual.value}
                     </c:when>
                     <c:otherwise>
                         No está conectado

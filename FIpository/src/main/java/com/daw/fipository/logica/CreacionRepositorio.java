@@ -5,13 +5,20 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DTO.Repositorio;
+import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +30,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author José Antonio Fajardo Naranjo
  */
-public class InicioSesion extends HttpServlet {
+public class CreacionRepositorio extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,25 +43,53 @@ public class InicioSesion extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
+        ServletContext sc = request.getSession().getServletContext();
         HttpSession s = request.getSession();
-        String nombre = request.getParameter("nombreUsuario");
-        String password = request.getParameter("password");
-        Usuario u = ctrUsu.findUsuario(nombre);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
+        RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
+        UsuarioJpaController ctrUsu  = new UsuarioJpaController(emf);
+        Usuario u;
+        Repositorio r;
 
-        if (u != null) {
-            if (u.getPasswordUsuario().equalsIgnoreCase(password)) {
-                Cookie c = new Cookie("usuarioActual", u.getNombreUsuario());
-                response.addCookie(c);
-                response.sendRedirect("miEspacio.jsp");
-            } else {
-                response.sendRedirect("inicioSesion.jsp");
+        Cookie c = null;
+        Cookie[] cs = request.getCookies();
+
+        for (int i = 0; i < cs.length; i++) {
+            if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
+                c = cs[i];
             }
-        } else {
-            response.sendRedirect("inicioSesion.jsp");
+        }
+        
+        String nombreRepositorio = request.getParameter("nombreRepositorio");
+        boolean existente = false;
+        u = ctrUsu.findUsuario(c.getValue());
+
+        File repositorios = new File(sc.getRealPath("/repositorios"));
+        if (!repositorios.exists()) {
+            repositorios.mkdir();
         }
 
+        File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
+        if (!raizUsuario.exists()) {
+            raizUsuario.mkdir();
+        }
+
+        File repositorioCreado = new File(sc.getRealPath("/repositorios/" + c.getValue() + "/" + nombreRepositorio));
+        if (!repositorioCreado.exists()) {
+            repositorioCreado.mkdir();
+            RepositorioPK rPk = new RepositorioPK(c.getValue(), nombreRepositorio);
+            r = new Repositorio(rPk, "", new Date());
+            System.out.println("repositorio"+r);
+            try {
+                ctrRepo.create(r);
+            } catch (Exception ex) {
+                System.err.println(ex.getCause());
+            }
+        } else {
+            existente = true;
+        }
+
+        request.setAttribute("repositorioExistente", existente);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
