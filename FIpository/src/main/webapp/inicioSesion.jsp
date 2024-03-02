@@ -138,6 +138,15 @@
 
                     <div class="d-flex flex-column justify-content-around align-items-center">
 
+
+                        <div class="d-flex justify-content-center align-items-center container-fluid">
+                            <div class="mb-3 col-11">
+                                <label for="fotoPerfil" class="form-label">Tu foto perfil: </label>
+                                <input class="form-control" type="file" id="fotoPerfil" name="fotoUsu">
+                            </div>
+                        </div>
+
+
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
                                 <span class="material-symbols-outlined">person</span>
@@ -149,8 +158,6 @@
                                 <label for="floatingInput">Nombre Usuario</label>
                             </div>
                         </div>
-
-
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
@@ -247,8 +254,8 @@
 
                             <div class="form-floating d-flex col-2 justify-content-around align-items-center col-10 m-2 ">
                                 <select name="generoUsuario" class="form-select" id="seleccionGene" aria-label="Floating label select example">
-                                    <option value="H">Hombre</option>
-                                    <option value="M">Mujer</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
                                     <option value="O">Otro</option>
                                 </select>
                                 <label for="floatingSelect">Selecciona tu Género</label>
@@ -266,11 +273,17 @@
                             </div>
                         </div>
 
-                    </div>
 
-                    <div class="d-flex flex-row justify-content-around m-2">
-                        <input type="submit" class="btn btn-primary py-2" value="Registrarme" name="registrarse">
-                    </div>
+                        <div class="col-12 just ify-content-between align-items-center container-fluid">
+                            <div class="form-floating g-0">
+                                <textarea class="form-control" placeholder="pequeña Descrición tuya..." name="descripcionUsu" id="descripcion"></textarea>
+                                <label for="descripcion">Pequeña descrición tuya...</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row justify-content-around m-2">
+                            <input type="submit" class="btn btn-primary py-2" value="Registrarme" name="registrarse">
+                        </div>
                 </form>
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
             </article>

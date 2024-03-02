@@ -41,11 +41,11 @@
             <img src="img/LogoFi.png" alt="Logo" class="img-fluid align-items-center" id="logoMain">
             <div class="d-flex col-12 justify-content-around mt-5">
                 <form action="inicioSesion.jsp" method="get" class="align-items-center ">
-                    <button class="btn btn-success px-3 py-2 px-sm-5 py-sm-3" type="button" id="bIniciarSesion">Iniciar
+                    <button class="btn btn-success px-3 py-2 px-sm-5 py-sm-3" type="submit" id="bIniciarSesion">Iniciar
                         Sesión</button>
                 </form>
                 <form action="inicioSesion.jsp" method="get" class="align-items-center">
-                    <button class="btn btn-success px-3 py-2 px-sm-5 py-sm-3" type="button"
+                    <button class="btn btn-success px-3 py-2 px-sm-5 py-sm-3" type="submit"
                             id="Registrarse">Registrarse</button>
                 </form>
             </div>
