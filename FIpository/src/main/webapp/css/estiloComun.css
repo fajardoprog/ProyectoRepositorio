@@ -177,6 +177,10 @@ h2{
     color: white;
     text-decoration: none;
 }
+/*Imagen de la cabecera*/
+#imgUsuario{
+    width: 10vmin;
+}
 @media screen and (min-width:576px) {
     /*Resolución tablet*/
     input[type="submit"],.btn{

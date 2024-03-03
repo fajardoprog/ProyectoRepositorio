@@ -42,7 +42,7 @@
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="inicioSesion.jsp">Iniciar Sesión / Registro</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Recuperar contraseña</li>
                 </ol>
@@ -100,7 +100,7 @@
 
 
                     <form action="" class="d-flex flex-row justify-content-around m-3">                        
-                        <button type="submit" class="btn w-30 p-2 m-2 col-5">Cambiar Contraseña</button>
+                        <button type="submit" class="btn btn-primary w-30 p-2 m-2 col-5">Cambiar Contraseña</button>
                     </form>
 
                     <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
