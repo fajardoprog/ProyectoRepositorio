@@ -10,6 +10,10 @@
     display: flex;
 }
 
+#descripcion{
+    height: 100px;
+}
+
 @media screen and (min-width:992px) {
     main .btn{
         font-size: 3vmin;

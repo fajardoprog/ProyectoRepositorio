@@ -67,7 +67,7 @@
                 </ol>
             </nav>
         </header>
-        <!--Fin Header-->
+
         <!--Parte main-->
         <main class="container-fluid">
 
@@ -139,7 +139,7 @@
                     <div class="d-flex flex-column justify-content-around align-items-center">
 
 
-                        <div class="d-flex justify-content-center align-items-center container-fluid">
+                        <div class="d-flex justify-content-end align-items-center container-fluid">
                             <div class="mb-3 col-11">
                                 <label for="fotoPerfil" class="form-label">Tu foto perfil: </label>
                                 <input class="form-control" type="file" id="fotoPerfil" name="fotoUsu">
@@ -262,7 +262,7 @@
                             </div>
                         </div>
 
-                        <div class="col-11 just ify-content-between align-items-center" id="otroG">
+                        <div class="col-11 align-items-center" id="otroG">
                             <div class="d-flex col-2 justify-content-around align-items-center">
                             </div>
 
@@ -274,8 +274,13 @@
                         </div>
 
 
-                        <div class="col-12 just ify-content-between align-items-center container-fluid">
-                            <div class="form-floating g-0">
+                        <div class="d-flex flex-row col-12 justify-content-between align-items-center container-fluid mt-2">
+
+                            <div class="d-flex align-items-center col-2 justify-content-center">
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                            
+                            <div class="form-floating g-1 col-10">
                                 <textarea class="form-control" placeholder="pequeña Descrición tuya..." name="descripcionUsu" id="descripcion"></textarea>
                                 <label for="descripcion">Pequeña descrición tuya...</label>
                             </div>
