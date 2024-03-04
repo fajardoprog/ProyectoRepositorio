@@ -196,26 +196,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="stats d-flex justify-content-around pt-2 text-center">
-                                <p class="px-2">
-                                    <span class="num-repositorios">
-                                        33
-                                    </span>
+                            <div class="stats d-flex justify-content-around pt-2 text-center align-items-stretch">
+                                <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado" >
                                     repositorio/s
+                                    <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
 
-                                <p class="px-2">
-                                    <span class="num-seguidores">
-                                        33
-                                    </span>
+                                <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado">
                                     seguidor/es
+                                    <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
 
-                                <p class="px-2">
-                                    <span class="num-reputacion">
-                                        333
-                                    </span>
+                                 <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado">
                                     punto/s de reputación
+                                    <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
                             </div>
                         </article>

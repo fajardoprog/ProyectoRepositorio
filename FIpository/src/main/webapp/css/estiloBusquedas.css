@@ -115,6 +115,12 @@ main .btn{
     font-size: 5.5vmin;
 }
 
+.badgeCentrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;    
+}
 
 @media screen and (min-width:576px) {
     /*Resolución tablet*/
@@ -153,7 +159,13 @@ main .btn{
     main .btn{
         font-size: 3vmin;
     }
-
+    
+    .badgeCentrado{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 
@@ -183,4 +195,11 @@ main .btn{
         font-size: 3vmin;
     }
 
+    .badgeCentrado{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
 }
