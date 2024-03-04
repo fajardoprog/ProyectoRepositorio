@@ -29,7 +29,7 @@
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Inicio</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Mis Opiniones</li>
                 </ol>
             </nav>

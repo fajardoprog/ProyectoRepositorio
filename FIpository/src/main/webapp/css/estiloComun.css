@@ -172,6 +172,15 @@ h2{
     margin: 1rem;
 }
 
+/*Bloque imagen de perfil usuario con nombre en la cabecera*/
+#perfilUsuario{
+    color: white;
+    text-decoration: none;
+}
+/*Imagen de la cabecera*/
+#imgUsuario{
+    width: 10vmin;
+}
 @media screen and (min-width:576px) {
     /*Resolución tablet*/
     input[type="submit"],.btn{
@@ -189,8 +198,8 @@ h2{
         color: white;
         font-size: 3vmin;
     }
-    
-     .navbar .navbar-nav .nav-item a.nav-link i {
+
+    .navbar .navbar-nav .nav-item a.nav-link i {
         font-size: 3vmin;
     }
 
@@ -217,8 +226,8 @@ h2{
         color: white;
         font-size: 2.5vmin;
     }
-    
-      .navbar .navbar-nav .nav-item a.nav-link i{
+
+    .navbar .navbar-nav .nav-item a.nav-link i{
         font-size: 2.5vmin;
     }
 
@@ -229,8 +238,8 @@ h2{
     nav:first-child li:first-child  {
         width: auto !important;
     }
-    
-       .dropdown-menu li a {
+
+    .dropdown-menu li a {
         font-size: 2.5vmin;
     }
 

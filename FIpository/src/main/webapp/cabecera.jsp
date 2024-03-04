@@ -17,7 +17,8 @@
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        
+        <a class="navbar-brand" href="index.jsp">
             <img src="img/LogoFi.png" alt="Logo" class="d-inline-block">
             FIpository
         </a>
@@ -30,33 +31,27 @@
         <a href="inicioSesion.jsp"
            class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
            id="enlInciarSesion">
-            <i class="bi bi-person-circle" id="iniSesi"></i>
-            <span class="text-center " id="nombreUsu">
-                <c:choose>
-                    <c:when test="${cookie.usuarioActual != null}">
-                        ${cookie.usuarioActual.value}
-                    </c:when>
-                    <c:otherwise>
-                        No está conectado
-                    </c:otherwise>
-                </c:choose> 
-            </span>
-        </a>
+            <c:if test="${cookie.usuarioActual == null}">
+                <i class="bi bi-person-circle" id="iniSesi"></i>
+                <span class="text-center " id="nombreUsu">No está conectado</span>
+            </c:if>
 
-        <!--        
-                <div class="dropdown text-end">
-                  <a href="#" class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                  </a>
-                  <ul class="dropdown-menu text-small">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
+            <c:if test="${cookie.usuarioActual != null}">
+                <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3 p-2">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
+                        <img src="img/MiFoto.png" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
+                        ${cookie.usuarioActual.value}
+                    </a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item" href="miPerfil.jsp">Ver mi Perfil</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                    </ul>
                 </div>
-        -->
+            </c:if>
+        </a>
 
         <div class="collapse navbar-collapse justify-content-between flex-column" id="barraNavPrincipal">
             <div class="d-flex flex-column">
@@ -71,7 +66,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                       <i class="bi bi-cloud-plus mx-2"></i>Crear repositorio
+                                        <i class="bi bi-cloud-plus mx-2"></i>Crear repositorio
                                     </a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>

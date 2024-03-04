@@ -33,7 +33,7 @@
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Administrador</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="#">Administrador</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Gestión de usuarios</li>
                 </ol>
             </nav>
