@@ -52,7 +52,7 @@
                <jsp:include page="CreacionRepositorio"/>
         <main>
             <h1>Creación de repositorios</h1>
-            <div class="container" id="ficheros">
+            <div class="container" id="reposiotrio">
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
                         <h2 class="text-center">Crea ahora tu repositorio</h2>
@@ -66,7 +66,7 @@
                             <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                         </div>
 
-                        <form action="crearRepositorio.jsp" class="d-flex flex-column d-md-block">
+                        <form action="crearRepositorio.jsp" method="post" class="d-flex flex-column d-md-block">
                             <article id="paso1fichero">
                                 <h3 class="my-3">1. Escribe el nombre tu repositorio</h3>
                                 <div class="input-group">

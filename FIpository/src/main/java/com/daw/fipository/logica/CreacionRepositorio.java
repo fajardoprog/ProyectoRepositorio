@@ -7,6 +7,7 @@ package com.daw.fipository.logica;
 
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
 import com.daw.fipository.DTO.Repositorio;
 import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
@@ -47,7 +48,7 @@ public class CreacionRepositorio extends HttpServlet {
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
-        UsuarioJpaController ctrUsu  = new UsuarioJpaController(emf);
+        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         Usuario u;
         Repositorio r;
 
@@ -59,7 +60,7 @@ public class CreacionRepositorio extends HttpServlet {
                 c = cs[i];
             }
         }
-        
+
         String nombreRepositorio = request.getParameter("nombreRepositorio");
         boolean existente = false;
         u = ctrUsu.findUsuario(c.getValue());
@@ -79,12 +80,22 @@ public class CreacionRepositorio extends HttpServlet {
             repositorioCreado.mkdir();
             RepositorioPK rPk = new RepositorioPK(c.getValue(), nombreRepositorio);
             r = new Repositorio(rPk, "", new Date());
-            System.out.println("repositorio"+r);
+            u.getRepositorioList().add(r);
+            
             try {
                 ctrRepo.create(r);
             } catch (Exception ex) {
                 System.err.println(ex.getCause());
             }
+
+            try {
+                ctrUsu.edit(u);
+            } catch (NonexistentEntityException ex) {
+                Logger.getLogger(CreacionRepositorio.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(CreacionRepositorio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         } else {
             existente = true;
         }

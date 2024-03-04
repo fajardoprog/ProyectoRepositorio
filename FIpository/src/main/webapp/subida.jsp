@@ -228,8 +228,9 @@
                                     <h3 class="my-2">2. Sube tu carpeta o crea tu carpeta</h3>
                                     <section class="row row-cols-1 row-cols-sm-2">
                                         <div>
-                                            <input type="file" class="form-control" name="" id="" placeholder=""
-                                                   aria-describedby="fileHelpId" />
+                                            <input type="file" multiple="multiple" class="form-control" name="carpetaSeleccionada" id="carpetaSeleccionada" placeholder=""
+                                                   webkitdirectory mozdirectory msdirectory odirectory directory>
+                                            <!--onchange="selectFolder(event);"-->
                                         </div>
                                         <div>
                                             <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
