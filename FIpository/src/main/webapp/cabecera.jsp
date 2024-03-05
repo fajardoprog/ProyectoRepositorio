@@ -44,10 +44,10 @@
                     </a>
                     <ul class="dropdown-menu text-small">
                         <li><a class="dropdown-item" href="miPerfil.jsp">Ver mi Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="miEspacio.jsp">Mi espacio</a></li>
+                        <li><a class="dropdown-item" href="misOpiniones.jsp">Mis opiniones</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-power"></i> Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </c:if>

@@ -14,9 +14,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fipository</title>
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Fipository</title>       
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/estiloIndex.css">
@@ -93,7 +91,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">person</span>
+                               <i class="bi bi-person-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -106,7 +104,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">password</span>
+                                <i class="bi bi-key-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -131,8 +129,8 @@
             <!--Fin Bloque formulario Iniciar Sesión-->
 
             <!--Bloque formulario Registrar-->
-            <article class=" flex-column align-items-md-center" id="registrarseForm">
-                <form action="Registro" method="post" class="text-center  border border-black rounded col-md-6 formu">
+            <article class=" flex-column align-items-lg-center" id="registrarseForm">
+                <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
 
@@ -149,7 +147,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">person</span>
+                               <i class="bi bi-file-person-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -161,7 +159,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">contacts</span>
+                                <i class="bi bi-person-vcard-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -175,7 +173,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">contacts</span>
+                                <i class="bi bi-person-vcard-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -188,7 +186,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">contacts</span>
+                                <i class="bi bi-person-vcard-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -201,7 +199,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">password</span>
+                               <i class="bi bi-key-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -213,7 +211,8 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">refresh password</span>
+                               <i class="bi bi-key-fill"></i>
+                               <i class="bi bi-arrow-clockwise"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -225,7 +224,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">mail</span>
+                                <i class="bi bi-envelope-at-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -237,7 +236,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">calendar_month</span>
+                                <i class="bi bi-calendar-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -249,7 +248,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">wc</span>
+                                <i class="bi bi-person-standing"></i>
                             </div>
 
                             <div class="form-floating d-flex col-2 justify-content-around align-items-center col-10 m-2 ">
