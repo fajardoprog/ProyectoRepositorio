@@ -24,6 +24,7 @@ CREATE OR REPLACE TABLE Repositorio (
     nombre_repositorio VARCHAR(25) NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     fecha_creacion DATE NOT NULL,
+    visibilidad INT DEFAULT 0,
     PRIMARY KEY (nombre_usuario, nombre_repositorio)
 );
 

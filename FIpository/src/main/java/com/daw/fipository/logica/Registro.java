@@ -16,6 +16,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -51,9 +52,9 @@ public class Registro extends HttpServlet {
         String fechaNacimientoUsuario = request.getParameter("fechaNacimientoUsuario");
         String generoUsuario = request.getParameter("generoUsuario");
         String otroGenero = request.getParameter("otroGenero");
-        
+
 //        Date fechaNacimiento = new Date(fechaNacimientoUsuario);
-        if (generoUsuario.equalsIgnoreCase("O")){
+        if (generoUsuario.equalsIgnoreCase("O")) {
             generoUsuario = otroGenero;
         }
         //(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, boolean admin) {
@@ -61,13 +62,16 @@ public class Registro extends HttpServlet {
         u.setReputacion(0);
         try {
             ctrUsu.create(u);
+            Cookie c = new Cookie("usuarioActual", u.getNombreUsuario());
+            response.addCookie(c);
+            response.sendRedirect("miEspacio.jsp");
         } catch (Exception ex) {
             Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         s.setAttribute("usuarioActual", u);
         response.sendRedirect("miEspacio.jsp");
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

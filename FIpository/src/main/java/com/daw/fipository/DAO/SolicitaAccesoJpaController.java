@@ -6,16 +6,15 @@
 package com.daw.fipository.DAO;
 
 import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
+import com.daw.fipository.DTO.SolicitaAcceso;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import com.daw.fipository.DTO.Repositorio;
-import com.daw.fipository.DTO.SolicitaAcceso;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -37,16 +36,7 @@ public class SolicitaAccesoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Repositorio repositorio = solicitaAcceso.getRepositorio();
-            if (repositorio != null) {
-                repositorio = em.getReference(repositorio.getClass(), repositorio.getRepositorioPK());
-                solicitaAcceso.setRepositorio(repositorio);
-            }
             em.persist(solicitaAcceso);
-            if (repositorio != null) {
-                repositorio.getSolicitaAccesoList().add(solicitaAcceso);
-                repositorio = em.merge(repositorio);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -60,22 +50,7 @@ public class SolicitaAccesoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            SolicitaAcceso persistentSolicitaAcceso = em.find(SolicitaAcceso.class, solicitaAcceso.getCodSolicitud());
-            Repositorio repositorioOld = persistentSolicitaAcceso.getRepositorio();
-            Repositorio repositorioNew = solicitaAcceso.getRepositorio();
-            if (repositorioNew != null) {
-                repositorioNew = em.getReference(repositorioNew.getClass(), repositorioNew.getRepositorioPK());
-                solicitaAcceso.setRepositorio(repositorioNew);
-            }
             solicitaAcceso = em.merge(solicitaAcceso);
-            if (repositorioOld != null && !repositorioOld.equals(repositorioNew)) {
-                repositorioOld.getSolicitaAccesoList().remove(solicitaAcceso);
-                repositorioOld = em.merge(repositorioOld);
-            }
-            if (repositorioNew != null && !repositorioNew.equals(repositorioOld)) {
-                repositorioNew.getSolicitaAccesoList().add(solicitaAcceso);
-                repositorioNew = em.merge(repositorioNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -104,11 +79,6 @@ public class SolicitaAccesoJpaController implements Serializable {
                 solicitaAcceso.getCodSolicitud();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The solicitaAcceso with id " + id + " no longer exists.", enfe);
-            }
-            Repositorio repositorio = solicitaAcceso.getRepositorio();
-            if (repositorio != null) {
-                repositorio.getSolicitaAccesoList().remove(solicitaAcceso);
-                repositorio = em.merge(repositorio);
             }
             em.remove(solicitaAcceso);
             em.getTransaction().commit();

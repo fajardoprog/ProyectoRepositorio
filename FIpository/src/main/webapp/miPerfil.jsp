@@ -40,7 +40,7 @@
 
     <body class="d-flex flex-column justify-content-between">
         <header>
-           <jsp:include page="cabecera.jsp" />
+            <jsp:include page="cabecera.jsp" />
             <!--Ver donde manda al pulsar Inicio-->
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
@@ -61,12 +61,13 @@
                         <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
 
                         <div class="d-flex flex-column justify-content-center align-items-center position-absolute start-50">
-                            <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><span>add_circle</span></label>
-                            <span id="nombreFoto"></span>
+                            <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><i class="bi bi-plus-circle-fill"></i></label>
+
                         </div>
                     </div>
-
+                    <span id="nombreFoto"></span>
                     <label for="nicknameUsu" class="form-label">Nickname</label>
+
                     <input type="text" class="form-control" id="nicknameUsu" aria-describedby="nickname" name="nicknameUsu"
                            value="Evaristo97">
 

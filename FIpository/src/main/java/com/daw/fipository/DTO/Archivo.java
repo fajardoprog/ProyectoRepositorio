@@ -8,23 +8,17 @@ package com.daw.fipository.DTO;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -65,13 +59,6 @@ public class Archivo implements Serializable {
     @NotNull
     @Column(name = "peso")
     private BigDecimal peso;
-    @JoinColumns({
-        @JoinColumn(name = "nombre_usuario", referencedColumnName = "nombre_usuario", insertable = false, updatable = false),
-        @JoinColumn(name = "nombre_repositorio", referencedColumnName = "nombre_repositorio", insertable = false, updatable = false)})
-    @ManyToOne(optional = false)
-    private Repositorio repositorio;
-    @OneToMany(mappedBy = "archivo")
-    private List<AccionSobreArchivo> accionSobreArchivoList;
 
     public Archivo() {
     }
@@ -130,23 +117,6 @@ public class Archivo implements Serializable {
 
     public void setPeso(BigDecimal peso) {
         this.peso = peso;
-    }
-
-    public Repositorio getRepositorio() {
-        return repositorio;
-    }
-
-    public void setRepositorio(Repositorio repositorio) {
-        this.repositorio = repositorio;
-    }
-
-    @XmlTransient
-    public List<AccionSobreArchivo> getAccionSobreArchivoList() {
-        return accionSobreArchivoList;
-    }
-
-    public void setAccionSobreArchivoList(List<AccionSobreArchivo> accionSobreArchivoList) {
-        this.accionSobreArchivoList = accionSobreArchivoList;
     }
 
     @Override

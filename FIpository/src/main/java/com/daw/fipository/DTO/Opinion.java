@@ -9,13 +9,9 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -29,6 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Opinion.findAll", query = "SELECT o FROM Opinion o"),
+    @NamedQuery(name = "Opinion.findByNombreUsuario", query = "SELECT o FROM Opinion o WHERE o.nombreUsuario = :nombreUsuario"),
     @NamedQuery(name = "Opinion.findByNombreUsuarioOpinado", query = "SELECT o FROM Opinion o WHERE o.opinionPK.nombreUsuarioOpinado = :nombreUsuarioOpinado"),
     @NamedQuery(name = "Opinion.findByNombreRepositorio", query = "SELECT o FROM Opinion o WHERE o.opinionPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Opinion.findByEstrella", query = "SELECT o FROM Opinion o WHERE o.estrella = :estrella")})
@@ -37,20 +34,15 @@ public class Opinion implements Serializable {
     private static final long serialVersionUID = 1L;
     @EmbeddedId
     protected OpinionPK opinionPK;
+    @Size(max = 25)
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
     @Column(name = "estrella")
     private Integer estrella;
     @Lob
     @Size(max = 65535)
     @Column(name = "valoracion")
     private String valoracion;
-    @JoinColumn(name = "nombre_usuario", referencedColumnName = "nombre_usuario")
-    @ManyToOne
-    private Usuario nombreUsuario;
-    @JoinColumns({
-        @JoinColumn(name = "nombre_usuario_opinado", referencedColumnName = "nombre_usuario", insertable = false, updatable = false),
-        @JoinColumn(name = "nombre_repositorio", referencedColumnName = "nombre_repositorio", insertable = false, updatable = false)})
-    @OneToOne(optional = false)
-    private Repositorio repositorio;
 
     public Opinion() {
     }
@@ -71,6 +63,14 @@ public class Opinion implements Serializable {
         this.opinionPK = opinionPK;
     }
 
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
     public Integer getEstrella() {
         return estrella;
     }
@@ -85,22 +85,6 @@ public class Opinion implements Serializable {
 
     public void setValoracion(String valoracion) {
         this.valoracion = valoracion;
-    }
-
-    public Usuario getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public void setNombreUsuario(Usuario nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
-
-    public Repositorio getRepositorio() {
-        return repositorio;
-    }
-
-    public void setRepositorio(Repositorio repositorio) {
-        this.repositorio = repositorio;
     }
 
     @Override

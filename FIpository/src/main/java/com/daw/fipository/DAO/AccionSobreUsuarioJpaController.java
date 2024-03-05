@@ -8,14 +8,13 @@ package com.daw.fipository.DAO;
 import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
 import com.daw.fipository.DTO.AccionSobreUsuario;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import com.daw.fipository.DTO.Usuario;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -37,16 +36,7 @@ public class AccionSobreUsuarioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Usuario codigoUsuarioAfectado = accionSobreUsuario.getCodigoUsuarioAfectado();
-            if (codigoUsuarioAfectado != null) {
-                codigoUsuarioAfectado = em.getReference(codigoUsuarioAfectado.getClass(), codigoUsuarioAfectado.getNombreUsuario());
-                accionSobreUsuario.setCodigoUsuarioAfectado(codigoUsuarioAfectado);
-            }
             em.persist(accionSobreUsuario);
-            if (codigoUsuarioAfectado != null) {
-                codigoUsuarioAfectado.getAccionSobreUsuarioList().add(accionSobreUsuario);
-                codigoUsuarioAfectado = em.merge(codigoUsuarioAfectado);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -60,22 +50,7 @@ public class AccionSobreUsuarioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            AccionSobreUsuario persistentAccionSobreUsuario = em.find(AccionSobreUsuario.class, accionSobreUsuario.getCodigoAccion());
-            Usuario codigoUsuarioAfectadoOld = persistentAccionSobreUsuario.getCodigoUsuarioAfectado();
-            Usuario codigoUsuarioAfectadoNew = accionSobreUsuario.getCodigoUsuarioAfectado();
-            if (codigoUsuarioAfectadoNew != null) {
-                codigoUsuarioAfectadoNew = em.getReference(codigoUsuarioAfectadoNew.getClass(), codigoUsuarioAfectadoNew.getNombreUsuario());
-                accionSobreUsuario.setCodigoUsuarioAfectado(codigoUsuarioAfectadoNew);
-            }
             accionSobreUsuario = em.merge(accionSobreUsuario);
-            if (codigoUsuarioAfectadoOld != null && !codigoUsuarioAfectadoOld.equals(codigoUsuarioAfectadoNew)) {
-                codigoUsuarioAfectadoOld.getAccionSobreUsuarioList().remove(accionSobreUsuario);
-                codigoUsuarioAfectadoOld = em.merge(codigoUsuarioAfectadoOld);
-            }
-            if (codigoUsuarioAfectadoNew != null && !codigoUsuarioAfectadoNew.equals(codigoUsuarioAfectadoOld)) {
-                codigoUsuarioAfectadoNew.getAccionSobreUsuarioList().add(accionSobreUsuario);
-                codigoUsuarioAfectadoNew = em.merge(codigoUsuarioAfectadoNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -104,11 +79,6 @@ public class AccionSobreUsuarioJpaController implements Serializable {
                 accionSobreUsuario.getCodigoAccion();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The accionSobreUsuario with id " + id + " no longer exists.", enfe);
-            }
-            Usuario codigoUsuarioAfectado = accionSobreUsuario.getCodigoUsuarioAfectado();
-            if (codigoUsuarioAfectado != null) {
-                codigoUsuarioAfectado.getAccionSobreUsuarioList().remove(accionSobreUsuario);
-                codigoUsuarioAfectado = em.merge(codigoUsuarioAfectado);
             }
             em.remove(accionSobreUsuario);
             em.getTransaction().commit();

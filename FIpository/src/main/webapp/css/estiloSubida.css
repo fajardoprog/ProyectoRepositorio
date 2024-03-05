@@ -40,7 +40,7 @@ main h3{
 }
 
 .container-archivos{
-    height: 200px;
+    height: 250px;
     overflow-y: scroll;
     border-radius: 20px;
     border: 2px solid white;
@@ -95,7 +95,7 @@ main h3{
     }
 
     .container-archivos{
-        height: 400px;
+        height: 200px;
         overflow-y: scroll
     }
 

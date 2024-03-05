@@ -12,12 +12,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -29,7 +28,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "SolicitaAcceso.findAll", query = "SELECT s FROM SolicitaAcceso s"),
-    @NamedQuery(name = "SolicitaAcceso.findByCodSolicitud", query = "SELECT s FROM SolicitaAcceso s WHERE s.codSolicitud = :codSolicitud")})
+    @NamedQuery(name = "SolicitaAcceso.findByCodSolicitud", query = "SELECT s FROM SolicitaAcceso s WHERE s.codSolicitud = :codSolicitud"),
+    @NamedQuery(name = "SolicitaAcceso.findByNombreUsuario", query = "SELECT s FROM SolicitaAcceso s WHERE s.nombreUsuario = :nombreUsuario"),
+    @NamedQuery(name = "SolicitaAcceso.findByNombreRepositorio", query = "SELECT s FROM SolicitaAcceso s WHERE s.nombreRepositorio = :nombreRepositorio")})
 public class SolicitaAcceso implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -38,17 +39,28 @@ public class SolicitaAcceso implements Serializable {
     @Basic(optional = false)
     @Column(name = "cod_solicitud")
     private Integer codSolicitud;
-    @JoinColumns({
-        @JoinColumn(name = "nombre_usuario", referencedColumnName = "nombre_usuario"),
-        @JoinColumn(name = "nombre_repositorio", referencedColumnName = "nombre_repositorio")})
-    @ManyToOne(optional = false)
-    private Repositorio repositorio;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 25)
+    @Column(name = "nombre_usuario")
+    private String nombreUsuario;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 25)
+    @Column(name = "nombre_repositorio")
+    private String nombreRepositorio;
 
     public SolicitaAcceso() {
     }
 
     public SolicitaAcceso(Integer codSolicitud) {
         this.codSolicitud = codSolicitud;
+    }
+
+    public SolicitaAcceso(Integer codSolicitud, String nombreUsuario, String nombreRepositorio) {
+        this.codSolicitud = codSolicitud;
+        this.nombreUsuario = nombreUsuario;
+        this.nombreRepositorio = nombreRepositorio;
     }
 
     public Integer getCodSolicitud() {
@@ -59,12 +71,20 @@ public class SolicitaAcceso implements Serializable {
         this.codSolicitud = codSolicitud;
     }
 
-    public Repositorio getRepositorio() {
-        return repositorio;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setRepositorio(Repositorio repositorio) {
-        this.repositorio = repositorio;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String getNombreRepositorio() {
+        return nombreRepositorio;
+    }
+
+    public void setNombreRepositorio(String nombreRepositorio) {
+        this.nombreRepositorio = nombreRepositorio;
     }
 
     @Override

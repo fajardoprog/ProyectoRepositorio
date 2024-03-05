@@ -80,12 +80,12 @@
                                 <section class="row row-cols-2 p-3 container-archivos">
                                     <div>
                                         <input type="radio" class="btn-check" name="visibilidad" value="publico" id="success-outlined" autocomplete="off" checked>
-                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                                        <label class="btn btn-outline-success" for="success-outlined"><span>Público</span></label>
                                     </div>
 
                                     <div>
                                         <input type="radio" class="btn-check" name="visibilidad" value="privado" id="danger-outlined" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined"><span>Checked success radio</span></label>
+                                        <label class="btn btn-outline-danger" for="danger-outlined"><span>Privado</span></label>
                                     </div>
                                 </section>
                             </article>

@@ -8,14 +8,13 @@ package com.daw.fipository.DAO;
 import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
 import com.daw.fipository.DTO.AccionSobreRepositorio;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import com.daw.fipository.DTO.Repositorio;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -37,16 +36,7 @@ public class AccionSobreRepositorioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Repositorio repositorio = accionSobreRepositorio.getRepositorio();
-            if (repositorio != null) {
-                repositorio = em.getReference(repositorio.getClass(), repositorio.getRepositorioPK());
-                accionSobreRepositorio.setRepositorio(repositorio);
-            }
             em.persist(accionSobreRepositorio);
-            if (repositorio != null) {
-                repositorio.getAccionSobreRepositorioList().add(accionSobreRepositorio);
-                repositorio = em.merge(repositorio);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -60,22 +50,7 @@ public class AccionSobreRepositorioJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            AccionSobreRepositorio persistentAccionSobreRepositorio = em.find(AccionSobreRepositorio.class, accionSobreRepositorio.getCodigoAccion());
-            Repositorio repositorioOld = persistentAccionSobreRepositorio.getRepositorio();
-            Repositorio repositorioNew = accionSobreRepositorio.getRepositorio();
-            if (repositorioNew != null) {
-                repositorioNew = em.getReference(repositorioNew.getClass(), repositorioNew.getRepositorioPK());
-                accionSobreRepositorio.setRepositorio(repositorioNew);
-            }
             accionSobreRepositorio = em.merge(accionSobreRepositorio);
-            if (repositorioOld != null && !repositorioOld.equals(repositorioNew)) {
-                repositorioOld.getAccionSobreRepositorioList().remove(accionSobreRepositorio);
-                repositorioOld = em.merge(repositorioOld);
-            }
-            if (repositorioNew != null && !repositorioNew.equals(repositorioOld)) {
-                repositorioNew.getAccionSobreRepositorioList().add(accionSobreRepositorio);
-                repositorioNew = em.merge(repositorioNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -104,11 +79,6 @@ public class AccionSobreRepositorioJpaController implements Serializable {
                 accionSobreRepositorio.getCodigoAccion();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The accionSobreRepositorio with id " + id + " no longer exists.", enfe);
-            }
-            Repositorio repositorio = accionSobreRepositorio.getRepositorio();
-            if (repositorio != null) {
-                repositorio.getAccionSobreRepositorioList().remove(accionSobreRepositorio);
-                repositorio = em.merge(repositorio);
             }
             em.remove(accionSobreRepositorio);
             em.getTransaction().commit();

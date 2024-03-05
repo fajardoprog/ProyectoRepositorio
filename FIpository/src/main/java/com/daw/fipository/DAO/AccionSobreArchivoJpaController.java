@@ -8,14 +8,13 @@ package com.daw.fipository.DAO;
 import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
 import com.daw.fipository.DTO.AccionSobreArchivo;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import com.daw.fipository.DTO.Archivo;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -37,16 +36,7 @@ public class AccionSobreArchivoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Archivo archivo = accionSobreArchivo.getArchivo();
-            if (archivo != null) {
-                archivo = em.getReference(archivo.getClass(), archivo.getArchivoPK());
-                accionSobreArchivo.setArchivo(archivo);
-            }
             em.persist(accionSobreArchivo);
-            if (archivo != null) {
-                archivo.getAccionSobreArchivoList().add(accionSobreArchivo);
-                archivo = em.merge(archivo);
-            }
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -60,22 +50,7 @@ public class AccionSobreArchivoJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            AccionSobreArchivo persistentAccionSobreArchivo = em.find(AccionSobreArchivo.class, accionSobreArchivo.getCodigoAccion());
-            Archivo archivoOld = persistentAccionSobreArchivo.getArchivo();
-            Archivo archivoNew = accionSobreArchivo.getArchivo();
-            if (archivoNew != null) {
-                archivoNew = em.getReference(archivoNew.getClass(), archivoNew.getArchivoPK());
-                accionSobreArchivo.setArchivo(archivoNew);
-            }
             accionSobreArchivo = em.merge(accionSobreArchivo);
-            if (archivoOld != null && !archivoOld.equals(archivoNew)) {
-                archivoOld.getAccionSobreArchivoList().remove(accionSobreArchivo);
-                archivoOld = em.merge(archivoOld);
-            }
-            if (archivoNew != null && !archivoNew.equals(archivoOld)) {
-                archivoNew.getAccionSobreArchivoList().add(accionSobreArchivo);
-                archivoNew = em.merge(archivoNew);
-            }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
@@ -104,11 +79,6 @@ public class AccionSobreArchivoJpaController implements Serializable {
                 accionSobreArchivo.getCodigoAccion();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The accionSobreArchivo with id " + id + " no longer exists.", enfe);
-            }
-            Archivo archivo = accionSobreArchivo.getArchivo();
-            if (archivo != null) {
-                archivo.getAccionSobreArchivoList().remove(accionSobreArchivo);
-                archivo = em.merge(archivo);
             }
             em.remove(accionSobreArchivo);
             em.getTransaction().commit();

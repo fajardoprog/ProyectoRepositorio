@@ -10,8 +10,6 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -39,9 +37,6 @@ public class Realiza implements Serializable {
     @Size(max = 25)
     @Column(name = "tipo_accion")
     private String tipoAccion;
-    @JoinColumn(name = "nombre_usuario", referencedColumnName = "nombre_usuario", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private Usuario usuario;
 
     public Realiza() {
     }
@@ -68,14 +63,6 @@ public class Realiza implements Serializable {
 
     public void setTipoAccion(String tipoAccion) {
         this.tipoAccion = tipoAccion;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
     }
 
     @Override

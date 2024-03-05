@@ -12,8 +12,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -30,6 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "AccionSobreUsuario.findAll", query = "SELECT a FROM AccionSobreUsuario a"),
     @NamedQuery(name = "AccionSobreUsuario.findByCodigoAccion", query = "SELECT a FROM AccionSobreUsuario a WHERE a.codigoAccion = :codigoAccion"),
+    @NamedQuery(name = "AccionSobreUsuario.findByCodigoUsuarioAfectado", query = "SELECT a FROM AccionSobreUsuario a WHERE a.codigoUsuarioAfectado = :codigoUsuarioAfectado"),
     @NamedQuery(name = "AccionSobreUsuario.findByTipo", query = "SELECT a FROM AccionSobreUsuario a WHERE a.tipo = :tipo")})
 public class AccionSobreUsuario implements Serializable {
 
@@ -40,11 +39,11 @@ public class AccionSobreUsuario implements Serializable {
     @Column(name = "codigo_accion")
     private Integer codigoAccion;
     @Size(max = 25)
+    @Column(name = "codigo_usuario_afectado")
+    private String codigoUsuarioAfectado;
+    @Size(max = 25)
     @Column(name = "tipo")
     private String tipo;
-    @JoinColumn(name = "codigo_usuario_afectado", referencedColumnName = "nombre_usuario")
-    @ManyToOne
-    private Usuario codigoUsuarioAfectado;
 
     public AccionSobreUsuario() {
     }
@@ -61,20 +60,20 @@ public class AccionSobreUsuario implements Serializable {
         this.codigoAccion = codigoAccion;
     }
 
+    public String getCodigoUsuarioAfectado() {
+        return codigoUsuarioAfectado;
+    }
+
+    public void setCodigoUsuarioAfectado(String codigoUsuarioAfectado) {
+        this.codigoUsuarioAfectado = codigoUsuarioAfectado;
+    }
+
     public String getTipo() {
         return tipo;
     }
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public Usuario getCodigoUsuarioAfectado() {
-        return codigoUsuarioAfectado;
-    }
-
-    public void setCodigoUsuarioAfectado(Usuario codigoUsuarioAfectado) {
-        this.codigoUsuarioAfectado = codigoUsuarioAfectado;
     }
 
     @Override

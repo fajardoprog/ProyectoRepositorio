@@ -49,6 +49,11 @@ public class CreacionRepositorio extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
+        String nombreRepositorio = request.getParameter("nombreRepositorio");
+        String valorVisibilidadRepositorio = request.getParameter("visibilidad");
+        String descripcionRepositorio= request.getParameter("descripcionRepositorio");
+        int visibilidadRepositorio=0;
+        boolean existente = false;
         Usuario u;
         Repositorio r;
 
@@ -61,8 +66,6 @@ public class CreacionRepositorio extends HttpServlet {
             }
         }
 
-        String nombreRepositorio = request.getParameter("nombreRepositorio");
-        boolean existente = false;
         u = ctrUsu.findUsuario(c.getValue());
 
         File repositorios = new File(sc.getRealPath("/repositorios"));
@@ -79,8 +82,12 @@ public class CreacionRepositorio extends HttpServlet {
         if (!repositorioCreado.exists()) {
             repositorioCreado.mkdir();
             RepositorioPK rPk = new RepositorioPK(c.getValue(), nombreRepositorio);
-            r = new Repositorio(rPk, "", new Date());
-            u.getRepositorioList().add(r);
+            
+            if(valorVisibilidadRepositorio.equalsIgnoreCase("privado")){
+                visibilidadRepositorio=1;
+            }
+            
+            r = new Repositorio(rPk, descripcionRepositorio,visibilidadRepositorio , new Date());    
             
             try {
                 ctrRepo.create(r);

@@ -7,25 +7,18 @@ package com.daw.fipository.DTO;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -49,21 +42,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Usuario.findByFechaNacimiento", query = "SELECT u FROM Usuario u WHERE u.fechaNacimiento = :fechaNacimiento"),
     @NamedQuery(name = "Usuario.findByAdmin", query = "SELECT u FROM Usuario u WHERE u.admin = :admin")})
 public class Usuario implements Serializable {
-
-    public Usuario(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, Integer reputacion, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, boolean admin) {
-        this.nombreUsuario = nombreUsuario;
-        this.passwordUsuario = passwordUsuario;
-        this.nombreCompleto = nombreCompleto;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.reputacion = reputacion;
-        this.correo = correo;
-        this.descripcion = descripcion;
-        this.genero = genero;
-        this.foto = foto;
-        this.fechaNacimiento = fechaNacimiento;
-        this.admin = admin;
-    }
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -123,20 +101,6 @@ public class Usuario implements Serializable {
     @NotNull
     @Column(name = "admin")
     private boolean admin;
-    @JoinTable(name = "colaboradores", joinColumns = {
-        @JoinColumn(name = "nombre_usuario_colaborador", referencedColumnName = "nombre_usuario")}, inverseJoinColumns = {
-        @JoinColumn(name = "nombre_usuario_colaborado", referencedColumnName = "nombre_usuario"),
-        @JoinColumn(name = "nombre_repositorio_colaborado", referencedColumnName = "nombre_repositorio")})
-    @ManyToMany
-    private List<Repositorio> repositorioList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
-    private List<Repositorio> repositorioList1;
-    @OneToMany(mappedBy = "codigoUsuarioAfectado")
-    private List<AccionSobreUsuario> accionSobreUsuarioList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usuario")
-    private List<Realiza> realizaList;
-    @OneToMany(mappedBy = "nombreUsuario")
-    private List<Opinion> opinionList;
 
     public Usuario() {
     }
@@ -253,51 +217,6 @@ public class Usuario implements Serializable {
 
     public void setAdmin(boolean admin) {
         this.admin = admin;
-    }
-
-    @XmlTransient
-    public List<Repositorio> getRepositorioList() {
-        return repositorioList;
-    }
-
-    public void setRepositorioList(List<Repositorio> repositorioList) {
-        this.repositorioList = repositorioList;
-    }
-
-    @XmlTransient
-    public List<Repositorio> getRepositorioList1() {
-        return repositorioList1;
-    }
-
-    public void setRepositorioList1(List<Repositorio> repositorioList1) {
-        this.repositorioList1 = repositorioList1;
-    }
-
-    @XmlTransient
-    public List<AccionSobreUsuario> getAccionSobreUsuarioList() {
-        return accionSobreUsuarioList;
-    }
-
-    public void setAccionSobreUsuarioList(List<AccionSobreUsuario> accionSobreUsuarioList) {
-        this.accionSobreUsuarioList = accionSobreUsuarioList;
-    }
-
-    @XmlTransient
-    public List<Realiza> getRealizaList() {
-        return realizaList;
-    }
-
-    public void setRealizaList(List<Realiza> realizaList) {
-        this.realizaList = realizaList;
-    }
-
-    @XmlTransient
-    public List<Opinion> getOpinionList() {
-        return opinionList;
-    }
-
-    public void setOpinionList(List<Opinion> opinionList) {
-        this.opinionList = opinionList;
     }
 
     @Override

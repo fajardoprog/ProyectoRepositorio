@@ -7,26 +7,18 @@ package com.daw.fipository.DTO;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -40,6 +32,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Repositorio.findByNombreUsuario", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreUsuario = :nombreUsuario"),
     @NamedQuery(name = "Repositorio.findByNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Repositorio.findByDescripcion", query = "SELECT r FROM Repositorio r WHERE r.descripcion = :descripcion"),
+    @NamedQuery(name = "Repositorio.findByPrivado", query = "SELECT r FROM Repositorio r WHERE r.privado = :privado"),
     @NamedQuery(name = "Repositorio.findByFechaCreacion", query = "SELECT r FROM Repositorio r WHERE r.fechaCreacion = :fechaCreacion")})
 public class Repositorio implements Serializable {
 
@@ -53,22 +46,13 @@ public class Repositorio implements Serializable {
     private String descripcion;
     @Basic(optional = false)
     @NotNull
+    @Column(name = "privado")
+    private int privado;
+    @Basic(optional = false)
+    @NotNull
     @Column(name = "fecha_creacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
-    @ManyToMany(mappedBy = "repositorioList")
-    private List<Usuario> usuarioList;
-    @JoinColumn(name = "nombre_usuario", referencedColumnName = "nombre_usuario", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
-    private Usuario usuario;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "repositorio")
-    private List<Archivo> archivoList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "repositorio")
-    private List<SolicitaAcceso> solicitaAccesoList;
-    @OneToMany(mappedBy = "repositorio")
-    private List<AccionSobreRepositorio> accionSobreRepositorioList;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "repositorio")
-    private Opinion opinion;
 
     public Repositorio() {
     }
@@ -77,9 +61,10 @@ public class Repositorio implements Serializable {
         this.repositorioPK = repositorioPK;
     }
 
-    public Repositorio(RepositorioPK repositorioPK, String descripcion, Date fechaCreacion) {
+    public Repositorio(RepositorioPK repositorioPK, String descripcion, int privado, Date fechaCreacion) {
         this.repositorioPK = repositorioPK;
         this.descripcion = descripcion;
+        this.privado = privado;
         this.fechaCreacion = fechaCreacion;
     }
 
@@ -103,64 +88,20 @@ public class Repositorio implements Serializable {
         this.descripcion = descripcion;
     }
 
+    public int getPrivado() {
+        return privado;
+    }
+
+    public void setPrivado(int privado) {
+        this.privado = privado;
+    }
+
     public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
-    }
-
-    @XmlTransient
-    public List<Usuario> getUsuarioList() {
-        return usuarioList;
-    }
-
-    public void setUsuarioList(List<Usuario> usuarioList) {
-        this.usuarioList = usuarioList;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    @XmlTransient
-    public List<Archivo> getArchivoList() {
-        return archivoList;
-    }
-
-    public void setArchivoList(List<Archivo> archivoList) {
-        this.archivoList = archivoList;
-    }
-
-    @XmlTransient
-    public List<SolicitaAcceso> getSolicitaAccesoList() {
-        return solicitaAccesoList;
-    }
-
-    public void setSolicitaAccesoList(List<SolicitaAcceso> solicitaAccesoList) {
-        this.solicitaAccesoList = solicitaAccesoList;
-    }
-
-    @XmlTransient
-    public List<AccionSobreRepositorio> getAccionSobreRepositorioList() {
-        return accionSobreRepositorioList;
-    }
-
-    public void setAccionSobreRepositorioList(List<AccionSobreRepositorio> accionSobreRepositorioList) {
-        this.accionSobreRepositorioList = accionSobreRepositorioList;
-    }
-
-    public Opinion getOpinion() {
-        return opinion;
-    }
-
-    public void setOpinion(Opinion opinion) {
-        this.opinion = opinion;
     }
 
     @Override
