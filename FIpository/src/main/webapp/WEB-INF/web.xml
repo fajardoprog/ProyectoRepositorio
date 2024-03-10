@@ -20,6 +20,10 @@
         <servlet-name>CargaDatosFichCarp</servlet-name>
         <servlet-class>com.daw.fipository.logica.CargaDatosFichCarp</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecuperarCarpetas</servlet-name>
+        <servlet-class>com.daw.fipository.ajax.RecuperarCarpetas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>CargaDatosFichCarp</servlet-name>
         <url-pattern>/CargaDatosFichCarp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecuperarCarpetas</servlet-name>
+        <url-pattern>/RecuperarCarpetas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

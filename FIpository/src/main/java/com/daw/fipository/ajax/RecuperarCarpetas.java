@@ -1,67 +1,77 @@
-package com.daw.fipository.logica;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.daw.fipository.ajax;
 
+import com.daw.fipository.DAO.ArchivoJpaController;
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DTO.Archivo;
+import com.daw.fipository.DTO.ArchivoPK;
+import com.daw.fipository.DTO.Repositorio;
+import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.servlet.ServletContext;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import org.json.JSONObject;
 
 /**
  *
  * @author José Antonio Fajardo Naranjo
  */
-public class CargaDatosFichCarp extends HttpServlet {
+public class RecuperarCarpetas extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    static JSONObject arrayObj, salida;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        ServletContext sc = request.getSession().getServletContext();
-        HttpSession s = request.getSession();
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+
+        String repositorio = request.getParameter("repositorio");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-        
+        ArchivoJpaController ctrArchivo = new ArchivoJpaController(emf);
+
         Cookie c = null;
         Cookie[] cs = request.getCookies();
-        ArrayList<String> listaDirectorios = new ArrayList<>();
 
         for (int i = 0; i < cs.length; i++) {
             if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
                 c = cs[i];
             }
         }
-
         Usuario u = ctrUsu.findUsuario(c.getValue());
-        File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
-        if (raizUsuario.exists()) {
-            File[] listaDirectoriosTotal = raizUsuario.listFiles();
-            for (int i = 0; i < listaDirectoriosTotal.length; i++) {
-                if (listaDirectoriosTotal[i].isDirectory()){
-                    listaDirectorios.add(listaDirectoriosTotal[i].getName());
-                }
-            }
+        System.out.println(repositorio);
+        List<Archivo> listaCarpetas = ctrArchivo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario(), repositorio);
+        
+        salida = new JSONObject();
+        for (Archivo carpeta : listaCarpetas) {
+            String carpetaJson = new com.google.gson.Gson().toJson(carpeta);  
+            salida.put(carpeta.getArchivoPK().getNombreArchivo(), carpetaJson);
         }
         
-        request.setAttribute("listaDirectorios", listaDirectorios);
+        out.println(salida);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -76,7 +86,7 @@ public class CargaDatosFichCarp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        doPost(request, response);
     }
 
     /**

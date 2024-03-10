@@ -25,12 +25,14 @@
         <link rel="stylesheet" href="css/estiloSubida.css">
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
+        <script src="js/peticionesAjax/PeticionesAjax.js"></script>
         <style>
             #carpetas {
                 display: none;
             }
         </style>
         <script>
+            var opcionesRepositorios = [];
             $(function () {
                 $("input[name='elegirArchivo']").on("change", function () {
                     if ($("#ficheros").css("display") === "block") {
@@ -81,6 +83,18 @@
                     }
                 });
 
+
+                $("#opcionesDatalist option").each(function () {
+                    opcionesRepositorios.push($(this)[0].value);
+                });
+
+                $("#elegirRepoFichero").on("input", function (ev) {
+                    if (opcionesRepositorios.indexOf($(this)[0].value) >= 0) {
+                        recuperarCarpetasRepositorio($(this)[0].value);
+                    } else {
+                        console.log("el nombre no se encuentra en la lista");
+                    }
+                });
             });
 
             function validarCampo(campo) {
@@ -101,7 +115,7 @@
     <body>
         <header>
             <jsp:include page="cabecera.jsp" />
-            <jsp:include page="/"/>
+            <jsp:include page="/CargaDatosFichCarp"/>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
@@ -143,12 +157,9 @@
                                     <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
                                 </div>
                                 <datalist id="opcionesDatalist">
-                                    <c:forEach items="">
-                                        
+                                    <c:forEach items="${requestScope.listaDirectorios}" var="directorio">
+                                        <option value="${directorio}"></option>
                                     </c:forEach>
-                                    <option value="2 DAW"></option>
-                                    <option value="Policía"></option>
-                                    <option value="Lucah"></option>
                                 </datalist>
                             </article>
                             <hr class="hr" />
@@ -158,36 +169,6 @@
                                     <div>
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined"><span>Checked success radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined2" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined2"><span>Checked success radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined3" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined3"><span>Checked radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined4" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined4"><span>Checked success radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined5" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined5"><span>Checked radio</span></label>
-                                    </div>
-
-                                    <div>
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined6" autocomplete="off">
-                                        <label class="btn btn-outline-danger" for="danger-outlined6"><span>Checked radio</span></label>
                                     </div>
                                 </section>
                             </article>
