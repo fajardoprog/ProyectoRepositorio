@@ -72,7 +72,7 @@
     <body class="d-flex flex-column justify-content-between">
         
          <c:if test="${!empty param.EmailUsu}">        
-             <jsp:include page="/CorreoRecuperaPass"/>
+             <jsp:include page="/CorreoRecuperaPassAdmin"/>
         </c:if>
         
         <!--Header de la pagina donde se encuentra el menu-->

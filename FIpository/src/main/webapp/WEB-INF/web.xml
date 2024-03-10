@@ -21,6 +21,10 @@
         <servlet-class>com.daw.fipository.logica.CargaDatosFichCarp</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>CorreoRecuperaPassAdmin</servlet-name>
+        <servlet-class>com.daw.fipository.logica.CorreoRecuperaPassAdmin</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>RecuperarCarpetas</servlet-name>
         <servlet-class>com.daw.fipository.ajax.RecuperarCarpetas</servlet-class>
     </servlet>
@@ -47,10 +51,10 @@
     <servlet-mapping>
         <servlet-name>RecuperarCarpetas</servlet-name>
         <url-pattern>/RecuperarCarpetas</url-pattern>
-         </servlet-mapping>
-        <servlet-mapping>
-        <servlet-name>CorreoRecuperaPass</servlet-name>
-        <url-pattern>/CorreoRecuperaPass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CorreoRecuperaPassAdmin</servlet-name>
+        <url-pattern>/CorreoRecuperaPassAdmin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
