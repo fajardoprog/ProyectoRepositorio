@@ -49,7 +49,10 @@
                 </ol>
             </nav>
         </header>
-               <jsp:include page="CreacionRepositorio"/>
+            <c:if test="${not empty param.crearRepo}">
+                <jsp:include page="CreacionRepositorio"/>
+            </c:if>
+               
         <main>
             <h1>Creación de repositorios</h1>
             <div class="container" id="reposiotrio">
@@ -98,7 +101,7 @@
                                 </div>
                             </article>
                             <hr class="hr" />
-                            <button type="submit" class="btn btn-primary my-3 align-items-center">Crear repositorio</button>
+                            <input  type="submit" value="Crear repositorio" name="crearRepo" class="btn btn-primary w-100 my-3 align-items-center"/>
                         </form>
                     </div>
                 </div>
