@@ -47,6 +47,10 @@
     <servlet-mapping>
         <servlet-name>RecuperarCarpetas</servlet-name>
         <url-pattern>/RecuperarCarpetas</url-pattern>
+         </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>CorreoRecuperaPass</servlet-name>
+        <url-pattern>/CorreoRecuperaPass</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

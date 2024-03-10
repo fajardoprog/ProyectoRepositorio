@@ -31,11 +31,50 @@
             $(function () {
 
             });
+
+            function generaPass() {
+                //Hoqwcvs2- --> Ejemplo de contraseña valida
+                let passNuevaGenerada = "";
+
+                let letraMay = String.fromCharCode(numeroAlea(65, 90));
+                let letraMin = String.fromCharCode(numeroAlea(97, 122));
+
+                let cadena = "";
+
+                for (var i = 0, max = 5; i < max; i++) {
+                    cadena += String.fromCharCode(numeroAlea(33, 122));
+                }
+
+                let caracterNumero = String.fromCharCode(numeroAlea(48, 57));
+                let caracterEspecial = String.fromCharCode(numeroAlea(33, 46));
+
+                passNuevaGenerada = letraMay + letraMin + cadena + caracterNumero + caracterEspecial;
+
+                $("#passGenerada").val("Hola hemos recibido tu solicitud sobre el cambio de contraseña aquí te dejamos la contraseña nueva que podrás cambiar cuando inicies sesión: " + passNuevaGenerada);
+            }
+
+            function numeroAlea(min, max) {
+                /*Incluye el minimo y maximo*/
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
         </script>
+
+        <style>
+            #passGenerada{
+                height: 110px;
+            }
+        </style>
 
     </head>
 
     <body class="d-flex flex-column justify-content-between">
+        
+         <c:if test="${!empty param.EmailUsu}">        
+             <jsp:include page="/CorreoRecuperaPass"/>
+        </c:if>
+        
         <!--Header de la pagina donde se encuentra el menu-->
         <header>
             <jsp:include page="cabecera.jsp" />
@@ -50,8 +89,8 @@
         </header>
         <!--Fin Header-->
         <!--Parte main-->
+
         <main class="container-fluid">
-            
             <!--Bloque formulario Recuperar contraseña-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
                 <form class="text-center  border border-black rounded col-md-8 formu p-4">
@@ -72,34 +111,25 @@
                             </div>
                         </div>
 
-
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
                                 <span class="material-symbols-outlined">password</span>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10" id="floatingPassword1"
-                                       placeholder="Password" name="NuevacontraUsu">
-                                <label for="floatingPassword1">Contraseña</label>
-                            </div>
-                        </div>
-
-                        <div class="col-11 d-flex just ify-content-between align-items-center">
-                            <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">refresh password</span>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="passGenerada" name="argumentoAdmin"> </textarea>
+                                <label for="passGenerada">Escribe tu comentario</label> 
                             </div>
 
-                            <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10" id="floatingPassword2"
-                                       placeholder="Password" name="NuevacontraUsuRepe">
-                                <label for="floatingPassword2">Repetir Contraseña</label>
-                            </div>
                         </div>
 
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-30 p-2 m-2 col-5">Cambiar Contraseña</button>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-warning  p-2 m-2 col-5" onclick="generaPass()">Generar Contraseña</button>
+                        <button type="submit" class="btn btn-primary  p-2 m-2 col-5">Enviar Mensaje</button>
+                    </div>
 
                     <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
                 </form>
