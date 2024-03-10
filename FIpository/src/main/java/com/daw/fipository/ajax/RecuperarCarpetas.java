@@ -9,9 +9,6 @@ import com.daw.fipository.DAO.ArchivoJpaController;
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Archivo;
-import com.daw.fipository.DTO.ArchivoPK;
-import com.daw.fipository.DTO.Repositorio;
-import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,17 +16,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import org.json.JSONObject;
 
@@ -48,22 +37,19 @@ public class RecuperarCarpetas extends HttpServlet {
 
         String repositorio = request.getParameter("repositorio");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         ArchivoJpaController ctrArchivo = new ArchivoJpaController(emf);
 
         Cookie c = null;
         Cookie[] cs = request.getCookies();
-
         for (int i = 0; i < cs.length; i++) {
             if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
                 c = cs[i];
             }
         }
         Usuario u = ctrUsu.findUsuario(c.getValue());
-        System.out.println(repositorio);
-        List<Archivo> listaCarpetas = ctrArchivo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario(), repositorio);
         
+        List<Archivo> listaCarpetas = ctrArchivo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario(), repositorio);
         salida = new JSONObject();
         for (Archivo carpeta : listaCarpetas) {
             String carpetaJson = new com.google.gson.Gson().toJson(carpeta);  

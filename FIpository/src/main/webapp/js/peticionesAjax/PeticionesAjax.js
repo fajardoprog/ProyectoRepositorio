@@ -6,8 +6,10 @@ function recuperarCarpetasRepositorio(repositorio) {
                 data: {
                     repositorio: repositorio
                 },
-                success: function (datos) {
-                    console.log(JSON.stringify(datos));
+                success: function (carpetas) {
+                    for (let carpeta in carpetas) {
+                        console.log(JSON.parse(carpetas[carpeta]));
+                    }
                 },
                 error: function (result, status, xhr) {
                     alert("Error-->" + status + "<br>" + xhr.responseText);

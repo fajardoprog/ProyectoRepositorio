@@ -33,6 +33,7 @@
         </style>
         <script>
             var opcionesRepositorios = [];
+            var carpetasFicheros = [];
             $(function () {
                 $("input[name='elegirArchivo']").on("change", function () {
                     if ($("#ficheros").css("display") === "block") {
@@ -88,8 +89,24 @@
                     opcionesRepositorios.push($(this)[0].value);
                 });
 
+
                 $("#elegirRepoFichero").on("input", function (ev) {
                     if (opcionesRepositorios.indexOf($(this)[0].value) >= 0) {
+//                         <div>
+                        //                                <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
+                        //                                <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                        //                          </div>
+                        $("#container-carpetas-fichero").empty();
+                        $("#container-carpetas-fichero").append($("<div>").append($("<input>").attr({
+                            type: "radio",
+                            class: "btn-check",
+                            name: "carpetaElegida",
+                            id: "raiz",
+                            autocomplete: "off"
+                        })).append($("<label>").attr({
+                            class: "btn btn-outline-success",
+                            for : "raiz"
+                        }).append("<span>").text("/")));
                         recuperarCarpetasRepositorio($(this)[0].value);
                     } else {
                         console.log("el nombre no se encuentra en la lista");
@@ -166,7 +183,7 @@
                             <article id="paso2fichero">
                                 <h3 class="my-3">2. Selecciona la carpeta</h3>
                                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos">
-                                    <div>
+                                    <div id="container-carpetas-fichero">
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
