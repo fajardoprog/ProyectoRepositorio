@@ -7,6 +7,7 @@ package com.daw.fipository.logica;
 
 import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Usuario;
+import java.io.File;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,11 +21,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import javax.servlet.ServletContext;
+import javax.servlet.annotation.MultipartConfig;
 
 /**
  *
  * @author José Antonio Fajardo Naranjo
  */
+@MultipartConfig
 public class Registro extends HttpServlet {
 
     /**
@@ -39,6 +43,7 @@ public class Registro extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        ServletContext sc = request.getSession().getServletContext();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         HttpSession s = request.getSession();
@@ -53,21 +58,27 @@ public class Registro extends HttpServlet {
         String otroGenero = request.getParameter("otroGenero");
 
 //        Date fechaNacimiento = new Date(fechaNacimientoUsuario);
-        if (generoUsuario.equalsIgnoreCase("O")) {
+        if (generoUsuario.equalsIgnoreCase("Otro")) {
             generoUsuario = otroGenero;
+        }
+
+        File repositorios = new File(sc.getRealPath("/imgPerfilUsuario"));
+        if (!repositorios.exists()) {
+            repositorios.mkdir();
         }
 
         final String[] extens = {".png", ".jpg", ".jpeg"};
 
         String rutaImg = getServletContext().getRealPath("imgPerfilUsuario");
         Part part = request.getPart("fotoUsu");
+        String nombreFich = "";
 
         if (part == null) {
-           request.setAttribute("mensajeError", "Error no se ha podido subir la foto");
+            request.setAttribute("mensajeError", "Error no se ha podido subir la foto");
         } else {
             if (isExtension(part.getSubmittedFileName(), extens)) {
 
-                String nombreFich = part.getSubmittedFileName();
+                nombreFich = part.getSubmittedFileName();
 
                 part.getInputStream();
 
@@ -77,13 +88,13 @@ public class Registro extends HttpServlet {
         }
 
         //(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, boolean admin) {
-        Usuario u = new Usuario(nombre, password, nombreCompleto, primerApellidoUsuario, segundoApellidoUsuario, correoUsuario, "", generoUsuario, "", new Date(), false);
+        Usuario u = new Usuario(nombre, password, nombreCompleto, primerApellidoUsuario, segundoApellidoUsuario, correoUsuario, "", generoUsuario, nombreFich, new Date(), false);
         u.setReputacion(0);
         try {
             ctrUsu.create(u);
             Cookie c = new Cookie("usuarioActual", u.getNombreUsuario());
             response.addCookie(c);
-            response.sendRedirect("miEspacio.jsp");
+            
         } catch (Exception ex) {
             Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -39,7 +39,7 @@
             <c:if test="${cookie.usuarioActual != null}">
                 <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3 p-2">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
-                        <img src="img/MiFoto.png" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
+                        <img src="imgPerfilUsuario/${}" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
                         ${cookie.usuarioActual.value}
                     </a>
                     <ul class="dropdown-menu text-small">

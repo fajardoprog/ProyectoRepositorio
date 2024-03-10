@@ -256,7 +256,7 @@
                                 <select name="generoUsuario" class="form-select" id="seleccionGene" aria-label="Floating label select example">
                                     <option value="Hombre">Hombre</option>
                                     <option value="Mujer">Mujer</option>
-                                    <option value="O">Otro</option>
+                                    <option value="Otro">Otro</option>
                                 </select>
                                 <label for="floatingSelect">Selecciona tu Género</label>
                             </div>
