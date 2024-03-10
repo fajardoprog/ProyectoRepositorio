@@ -12,6 +12,14 @@
         <servlet-name>CreacionRepositorio</servlet-name>
         <servlet-class>com.daw.fipository.logica.CreacionRepositorio</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubidaArchivos</servlet-name>
+        <servlet-class>com.daw.fipository.logica.SubidaArchivos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CargaDatosFichCarp</servlet-name>
+        <servlet-class>com.daw.fipository.logica.CargaDatosFichCarp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>CreacionRepositorio</servlet-name>
         <url-pattern>/CreacionRepositorio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubidaArchivos</servlet-name>
+        <url-pattern>/SubidaArchivos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CargaDatosFichCarp</servlet-name>
+        <url-pattern>/CargaDatosFichCarp</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

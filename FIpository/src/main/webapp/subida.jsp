@@ -101,6 +101,7 @@
     <body>
         <header>
             <jsp:include page="cabecera.jsp" />
+            <jsp:include page="/"/>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
@@ -139,9 +140,12 @@
                                 <h3 class="my-3">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
-                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero">
+                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
                                 </div>
                                 <datalist id="opcionesDatalist">
+                                    <c:forEach items="">
+                                        
+                                    </c:forEach>
                                     <option value="2 DAW"></option>
                                     <option value="Policía"></option>
                                     <option value="Lucah"></option>
@@ -152,22 +156,22 @@
                                 <h3 class="my-3">2. Selecciona la carpeta</h3>
                                 <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos">
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
 
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined" autocomplete="off">
                                         <label class="btn btn-outline-danger" for="danger-outlined"><span>Checked success radio</span></label>
                                     </div>
 
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined2" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined2" autocomplete="off">
                                         <label class="btn btn-outline-danger" for="danger-outlined2"><span>Checked success radio</span></label>
                                     </div>
 
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined3" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined3" autocomplete="off">
                                         <label class="btn btn-outline-danger" for="danger-outlined3"><span>Checked radio</span></label>
                                     </div>
 
@@ -177,12 +181,12 @@
                                     </div>
 
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined5" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined5" autocomplete="off">
                                         <label class="btn btn-outline-danger" for="danger-outlined5"><span>Checked radio</span></label>
                                     </div>
 
                                     <div>
-                                        <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined6" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="danger-outlined6" autocomplete="off">
                                         <label class="btn btn-outline-danger" for="danger-outlined6"><span>Checked radio</span></label>
                                     </div>
                                 </section>
