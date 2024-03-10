@@ -7,20 +7,19 @@ package com.daw.fipository.logica;
 
 import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Usuario;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
+import java.io.IOException;
 
 /**
  *
@@ -57,6 +56,26 @@ public class Registro extends HttpServlet {
         if (generoUsuario.equalsIgnoreCase("O")) {
             generoUsuario = otroGenero;
         }
+
+        final String[] extens = {".png", ".jpg", ".jpeg"};
+
+        String rutaImg = getServletContext().getRealPath("imgPerfilUsuario");
+        Part part = request.getPart("fotoUsu");
+
+        if (part == null) {
+           request.setAttribute("mensajeError", "Error no se ha podido subir la foto");
+        } else {
+            if (isExtension(part.getSubmittedFileName(), extens)) {
+
+                String nombreFich = part.getSubmittedFileName();
+
+                part.getInputStream();
+
+                part.write(rutaImg + "\\" + nombreFich);
+            }
+
+        }
+
         //(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, boolean admin) {
         Usuario u = new Usuario(nombre, password, nombreCompleto, primerApellidoUsuario, segundoApellidoUsuario, correoUsuario, "", generoUsuario, "", new Date(), false);
         u.setReputacion(0);
@@ -72,6 +91,16 @@ public class Registro extends HttpServlet {
         s.setAttribute("usuarioActual", u);
         response.sendRedirect("miEspacio.jsp");
 
+    }
+
+    private boolean isExtension(String fileName, String[] extensions) {
+        for (String et : extensions) {
+            if (fileName.toLowerCase().endsWith(et)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

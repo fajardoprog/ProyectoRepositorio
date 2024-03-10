@@ -33,13 +33,13 @@ public class CargaDatosFichCarp extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         ServletContext sc = request.getSession().getServletContext();
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-        
+
         Cookie c = null;
         Cookie[] cs = request.getCookies();
         ArrayList<String> listaDirectorios = new ArrayList<>();
@@ -49,19 +49,25 @@ public class CargaDatosFichCarp extends HttpServlet {
                 c = cs[i];
             }
         }
+        
+        if (c != null) {
+            Usuario u = ctrUsu.findUsuario(c.getValue());//si no estás registrado c.getValue da error por null pointer
 
-        Usuario u = ctrUsu.findUsuario(c.getValue());
-        File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
-        if (raizUsuario.exists()) {
-            File[] listaDirectoriosTotal = raizUsuario.listFiles();
-            for (int i = 0; i < listaDirectoriosTotal.length; i++) {
-                if (listaDirectoriosTotal[i].isDirectory()){
-                    listaDirectorios.add(listaDirectoriosTotal[i].getName());
+            File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
+            if (raizUsuario.exists()) {
+                File[] listaDirectoriosTotal = raizUsuario.listFiles();
+                for (int i = 0; i < listaDirectoriosTotal.length; i++) {
+                    if (listaDirectoriosTotal[i].isDirectory()) {
+                        listaDirectorios.add(listaDirectoriosTotal[i].getName());
+                    }
                 }
             }
+
+            request.setAttribute("listaDirectorios", listaDirectorios);
+        } else {
+            response.sendRedirect("inicioSesion.jsp");
         }
-        
-        request.setAttribute("listaDirectorios", listaDirectorios);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

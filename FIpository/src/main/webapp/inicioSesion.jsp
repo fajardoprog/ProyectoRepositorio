@@ -130,7 +130,8 @@
 
             <!--Bloque formulario Registrar-->
             <article class=" flex-column align-items-lg-center" id="registrarseForm">
-                <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu">
+                <h1>${requestScope.mensajeError}</h1>
+                <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu" enctype="multipart/form-data">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
 
