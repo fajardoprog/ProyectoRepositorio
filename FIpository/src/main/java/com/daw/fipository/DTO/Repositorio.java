@@ -32,8 +32,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Repositorio.findByNombreUsuario", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreUsuario = :nombreUsuario"),
     @NamedQuery(name = "Repositorio.findByNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Repositorio.findByDescripcion", query = "SELECT r FROM Repositorio r WHERE r.descripcion = :descripcion"),
-    @NamedQuery(name = "Repositorio.findByPrivado", query = "SELECT r FROM Repositorio r WHERE r.privado = :privado"),
-    @NamedQuery(name = "Repositorio.findByFechaCreacion", query = "SELECT r FROM Repositorio r WHERE r.fechaCreacion = :fechaCreacion")})
+    @NamedQuery(name = "Repositorio.findByFechaCreacion", query = "SELECT r FROM Repositorio r WHERE r.fechaCreacion = :fechaCreacion"),
+    @NamedQuery(name = "Repositorio.findByVisibilidad", query = "SELECT r FROM Repositorio r WHERE r.visibilidad = :visibilidad")})
 public class Repositorio implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -46,13 +46,11 @@ public class Repositorio implements Serializable {
     private String descripcion;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "privado")
-    private int privado;
-    @Basic(optional = false)
-    @NotNull
     @Column(name = "fecha_creacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
+    @Column(name = "visibilidad")
+    private Integer visibilidad;
 
     public Repositorio() {
     }
@@ -61,16 +59,24 @@ public class Repositorio implements Serializable {
         this.repositorioPK = repositorioPK;
     }
 
-    public Repositorio(RepositorioPK repositorioPK, String descripcion, int privado, Date fechaCreacion) {
+    public Repositorio(RepositorioPK repositorioPK, String descripcion, Date fechaCreacion) {
         this.repositorioPK = repositorioPK;
         this.descripcion = descripcion;
-        this.privado = privado;
         this.fechaCreacion = fechaCreacion;
     }
 
     public Repositorio(String nombreUsuario, String nombreRepositorio) {
         this.repositorioPK = new RepositorioPK(nombreUsuario, nombreRepositorio);
     }
+
+    public Repositorio(RepositorioPK repositorioPK, String descripcion, Date fechaCreacion, Integer visibilidad) {
+        this.repositorioPK = repositorioPK;
+        this.descripcion = descripcion;
+        this.fechaCreacion = fechaCreacion;
+        this.visibilidad = visibilidad;
+    }
+    
+    
 
     public RepositorioPK getRepositorioPK() {
         return repositorioPK;
@@ -88,20 +94,20 @@ public class Repositorio implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public int getPrivado() {
-        return privado;
-    }
-
-    public void setPrivado(int privado) {
-        this.privado = privado;
-    }
-
     public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
     public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
+    }
+
+    public Integer getVisibilidad() {
+        return visibilidad;
+    }
+
+    public void setVisibilidad(Integer visibilidad) {
+        this.visibilidad = visibilidad;
     }
 
     @Override

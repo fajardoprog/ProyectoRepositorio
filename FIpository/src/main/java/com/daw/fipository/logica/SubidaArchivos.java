@@ -5,13 +5,20 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DAO.ArchivoJpaController;
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DTO.Archivo;
+import com.daw.fipository.DTO.ArchivoPK;
 import com.daw.fipository.DTO.Repositorio;
 import com.daw.fipository.DTO.Usuario;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletContext;
@@ -45,26 +52,32 @@ public class SubidaArchivos extends HttpServlet {
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
-        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
+        ArchivoJpaController ctrArch = new ArchivoJpaController(emf);
         String repositorioSeleccionado = request.getParameter("elegirRepoFichero");
-        String valorVisibilidadRepositorio = request.getParameter("visibilidad");
-        String descripcionRepositorio = request.getParameter("descripcionRepositorio");
-        int visibilidadRepositorio = 0;
-        boolean existente = false;
+        String carpetaElegida = request.getParameter("carpetaElegida");
         Usuario u;
         Repositorio r;
-          //Se podria hacer en el doPost porque nunca se va a entrar por get
-        String ruta = getServletContext().getRealPath("Files");
+        u = (Usuario) s.getAttribute("usuarioActual");
+        String ruta = getServletContext().getRealPath("repositorios/" + u.getNombreUsuario() + "/" + repositorioSeleccionado + "/" + carpetaElegida);
         Collection<Part> parts = request.getParts();
         if (parts == null) {
             System.out.println("No ha seleccionado un archivo");
         } else {
             for (Part part : parts) {
-                // TODO: Hacer que se metan duplicados con el paréntesis: Ej: pedro.png (1), pedro.png (2),... pedro.png (n)
                 String nombreFich = part.getSubmittedFileName();
-                part.write(ruta + "\\" + nombreFich);
-            }
+                if (nombreFich != null) {
+                    File archivoFile = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario() + "/" + repositorioSeleccionado + "/" + carpetaElegida + "/" + nombreFich));
+                    part.write(ruta + "/" + nombreFich);
+                    ArchivoPK aPK = new ArchivoPK(carpetaElegida + "/" + nombreFich, u.getNombreUsuario(), repositorioSeleccionado);
+                    Archivo a = new Archivo(aPK, new Date(), false, archivoFile.length());
+                    try {
+                        ctrArch.create(a);
+                    } catch (Exception ex) {
+                        Logger.getLogger(SubidaArchivos.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
 
+            }
         }
         response.sendRedirect("subida.jsp");
 

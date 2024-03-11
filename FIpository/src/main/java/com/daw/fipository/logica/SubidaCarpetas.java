@@ -65,7 +65,7 @@ public class SubidaCarpetas extends HttpServlet {
         if (!carpetaCreado.exists()) {
             carpetaCreado.mkdir();
             ArchivoPK aPK = new ArchivoPK(nombreCarpeta, u.getNombreUsuario(), nombreRepositorio);
-            Archivo a = new Archivo(aPK, new Date(), true, 0);
+            Archivo a = new Archivo(aPK, new Date(), true, 0, colorCarpeta);
             System.out.println(a);
             try {
                 ctrArch.create(a);
