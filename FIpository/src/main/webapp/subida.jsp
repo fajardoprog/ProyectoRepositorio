@@ -192,7 +192,7 @@
                             <hr class="hr" />
                             <article id="paso3fichero">
                                 <h3 class="my-3">3. Selecciona el fichero</h3>
-                                <input type="file" class="form-control" name="" id="elegirFicheroFichero" placeholder=""
+                                <input type="file" class="form-control" name="elegirFicheroFichero" id="elegirFicheroFichero" placeholder=""
                                        aria-describedby="fileHelpId" />
                             </article>
                             <hr class="hr" />
@@ -216,12 +216,12 @@
                             <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                         </div>
 
-                        <form action="#" class="d-flex flex-column d-md-block">
+                        <form action="SubidaCarpetas" class="d-flex flex-column d-md-block">
                             <article id="paso1carpeta">
                                 <h3 class="my-2">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
                                     <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
-                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta">
+                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta" name="elegirRepoCarpeta">
                                 </div>
                             </article>
                             <hr class="hr" />
@@ -246,8 +246,8 @@
                             <article id="paso3carpeta">
                                 <h3 class="my-2">3. Elige el color de tu carpeta</h3>
                                 <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
-                                <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#563d7c"
-                                       title="Choose your color">
+                                <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#000000"
+                                       title="Selecciona el color" name="colorCarpeta">
                             </article>
                             <hr class="hr" />
                             <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>

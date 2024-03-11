@@ -58,9 +58,9 @@ CREATE OR REPLACE TABLE Archivo (
     carpeta BOOLEAN NOT NULL,
     nombre_usuario VARCHAR(25),
     nombre_repositorio VARCHAR(25),
-    num_archivos INT NOT NULL,  -- Este atributo es específico de la tabla Carpeta
-    peso DECIMAL(10, 2) NOT NULL,  -- Este atributo es específico de la tabla Fichero
-    CHECK (carpeta = FALSE AND num_archivos IS NULL AND peso IS NULL OR carpeta = TRUE AND num_archivos IS NOT NULL AND peso IS NULL OR carpeta = FALSE AND num_archivos IS NULL AND peso IS NOT NULL),
+    num_archivos INT,  -- Este atributo es específico de la tabla Carpeta
+    peso DECIMAL(10, 2),  -- Este atributo es específico de la tabla Fichero
+    color VARCHAR(20), -- Este atributo es específico de la tabla Carpeta
     PRIMARY KEY (nombre_usuario, nombre_repositorio, nombre_archivo)
 );
 

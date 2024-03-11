@@ -34,22 +34,13 @@ public class RecuperarCarpetas extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
-
+        HttpSession s = request.getSession();
         String repositorio = request.getParameter("repositorio");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         ArchivoJpaController ctrArchivo = new ArchivoJpaController(emf);
-
-        Cookie c = null;
-        Cookie[] cs = request.getCookies();
-        for (int i = 0; i < cs.length; i++) {
-            if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
-                c = cs[i];
-            }
-        }
-        Usuario u = ctrUsu.findUsuario(c.getValue());
-        
+        Usuario u = (Usuario) s.getAttribute("usuarioActual");
         List<Archivo> listaCarpetas = ctrArchivo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario(), repositorio);
+        
         salida = new JSONObject();
         for (Archivo carpeta : listaCarpetas) {
             String carpetaJson = new com.google.gson.Gson().toJson(carpeta);  
@@ -57,7 +48,6 @@ public class RecuperarCarpetas extends HttpServlet {
         }
         
         out.println(salida);
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

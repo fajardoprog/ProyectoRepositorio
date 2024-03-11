@@ -18,6 +18,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -34,8 +35,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Archivo.findByCarpeta", query = "SELECT a FROM Archivo a WHERE a.carpeta = :carpeta"),
     @NamedQuery(name = "Archivo.findByNombreUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreUsuario = :nombreUsuario"),
     @NamedQuery(name = "Archivo.findByNombreRepositorio", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio"),
-     @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),
     @NamedQuery(name = "Archivo.findByNumArchivos", query = "SELECT a FROM Archivo a WHERE a.numArchivos = :numArchivos"),
+    @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color"),
+     @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),
     @NamedQuery(name = "Archivo.findByPeso", query = "SELECT a FROM Archivo a WHERE a.peso = :peso")})
 public class Archivo implements Serializable {
 
@@ -52,15 +54,24 @@ public class Archivo implements Serializable {
     @Column(name = "carpeta")
     private boolean carpeta;
     @Basic(optional = false)
-    @NotNull
     @Column(name = "num_archivos")
     private int numArchivos;
+    @Basic(optional = false)
+    @Size(min = 1, max = 20)
+    @Column(name = "color")
+    private String color;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Basic(optional = false)
-    @NotNull
     @Column(name = "peso")
     private BigDecimal peso;
 
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, int numArchivos) {
+        this.archivoPK = archivoPK;
+        this.fechaCreacion = fechaCreacion;
+        this.carpeta = carpeta;
+        this.numArchivos = numArchivos;
+    }
+    
     public Archivo() {
     }
 
@@ -68,11 +79,12 @@ public class Archivo implements Serializable {
         this.archivoPK = archivoPK;
     }
 
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, int numArchivos, BigDecimal peso) {
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, int numArchivos, String color, BigDecimal peso) {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
         this.numArchivos = numArchivos;
+        this.color = color;
         this.peso = peso;
     }
 
@@ -110,6 +122,14 @@ public class Archivo implements Serializable {
 
     public void setNumArchivos(int numArchivos) {
         this.numArchivos = numArchivos;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public BigDecimal getPeso() {

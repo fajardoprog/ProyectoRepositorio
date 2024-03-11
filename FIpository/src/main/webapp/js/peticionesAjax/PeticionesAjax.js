@@ -8,7 +8,19 @@ function recuperarCarpetasRepositorio(repositorio) {
                 },
                 success: function (carpetas) {
                     for (let carpeta in carpetas) {
-                        console.log(JSON.parse(carpetas[carpeta]));
+                        let carpetaActual = JSON.parse(carpetas[carpeta]);
+                        nombreCarpeta = carpetaActual.archivoPK.nombreArchivo;
+                        $("#container-carpetas-fichero").append($("<div>").append($("<input>").attr({
+                            type: "radio",
+                            class: "btn-check",
+                            name: "carpetaElegida",
+                            id: nombreCarpeta,
+                            autocomplete: "off",
+                            value: nombreCarpeta
+                        })).append($("<label>").attr({
+                            class: "btn btn-outline-success",
+                            for : nombreCarpeta
+                        }).append("<span>").text(nombreCarpeta)));
                     }
                 },
                 error: function (result, status, xhr) {

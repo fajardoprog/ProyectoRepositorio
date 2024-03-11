@@ -5,30 +5,35 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DAO.ArchivoJpaController;
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
+import com.daw.fipository.DTO.Archivo;
+import com.daw.fipository.DTO.ArchivoPK;
 import com.daw.fipository.DTO.Repositorio;
+import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collection;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
 
 /**
  *
  * @author José Antonio Fajardo Naranjo
  */
-@MultipartConfig
-public class SubidaArchivos extends HttpServlet {
+public class SubidaCarpetas extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -45,27 +50,40 @@ public class SubidaArchivos extends HttpServlet {
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
+        ArchivoJpaController ctrArch = new ArchivoJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-        String repositorioSeleccionado = request.getParameter("elegirRepoFichero");
-        String valorVisibilidadRepositorio = request.getParameter("visibilidad");
-        String descripcionRepositorio = request.getParameter("descripcionRepositorio");
-        int visibilidadRepositorio = 0;
+        String nombreRepositorio = request.getParameter("elegirRepoCarpeta");
+        String nombreCarpeta = request.getParameter("nombreCarpeta");
+        String colorCarpeta = request.getParameter("colorCarpeta");
         boolean existente = false;
         Usuario u;
         Repositorio r;
-          //Se podria hacer en el doPost porque nunca se va a entrar por get
-        String ruta = getServletContext().getRealPath("Files");
-        Collection<Part> parts = request.getParts();
-        if (parts == null) {
-            System.out.println("No ha seleccionado un archivo");
-        } else {
-            for (Part part : parts) {
-                // TODO: Hacer que se metan duplicados con el paréntesis: Ej: pedro.png (1), pedro.png (2),... pedro.png (n)
-                String nombreFich = part.getSubmittedFileName();
-                part.write(ruta + "\\" + nombreFich);
-            }
 
+        u = (Usuario) s.getAttribute("usuarioActual");
+
+        File carpetaCreado = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario() + "/" + nombreRepositorio + "/" + nombreCarpeta));
+        if (!carpetaCreado.exists()) {
+            carpetaCreado.mkdir();
+            ArchivoPK aPK = new ArchivoPK(nombreCarpeta, u.getNombreUsuario(), nombreRepositorio);
+            Archivo a = new Archivo(aPK, new Date(), true, 0);
+            System.out.println(a);
+            try {
+                ctrArch.create(a);
+            } catch (Exception ex) {
+                System.err.println(ex.getCause());
+            }
+            try {
+                ctrUsu.edit(u);
+            } catch (NonexistentEntityException ex) {
+                Logger.getLogger(CreacionRepositorio.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex) {
+                Logger.getLogger(CreacionRepositorio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            existente = true;
         }
+
+        request.setAttribute("repositorioExistente", existente);
         response.sendRedirect("subida.jsp");
 
     }

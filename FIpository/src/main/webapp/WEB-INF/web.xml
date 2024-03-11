@@ -28,6 +28,10 @@
         <servlet-name>RecuperarCarpetas</servlet-name>
         <servlet-class>com.daw.fipository.ajax.RecuperarCarpetas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubidaCarpetas</servlet-name>
+        <servlet-class>com.daw.fipository.logica.SubidaCarpetas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>CorreoRecuperaPassAdmin</servlet-name>
         <url-pattern>/CorreoRecuperaPassAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubidaCarpetas</servlet-name>
+        <url-pattern>/SubidaCarpetas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
