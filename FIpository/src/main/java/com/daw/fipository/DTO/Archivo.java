@@ -36,9 +36,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Archivo.findByNombreUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreUsuario = :nombreUsuario"),
     @NamedQuery(name = "Archivo.findByNombreRepositorio", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Archivo.findByNumArchivos", query = "SELECT a FROM Archivo a WHERE a.numArchivos = :numArchivos"),
-    @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color"),
-     @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),
-    @NamedQuery(name = "Archivo.findByPeso", query = "SELECT a FROM Archivo a WHERE a.peso = :peso")})
+    @NamedQuery(name = "Archivo.findByPeso", query = "SELECT a FROM Archivo a WHERE a.peso = :peso"),
+    @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),
+    @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color")})
 public class Archivo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -53,25 +53,15 @@ public class Archivo implements Serializable {
     @NotNull
     @Column(name = "carpeta")
     private boolean carpeta;
-    @Basic(optional = false)
     @Column(name = "num_archivos")
-    private int numArchivos;
-    @Basic(optional = false)
-    @Size(min = 1, max = 20)
+    private Integer numArchivos;
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "peso")
+    private double peso;
+    @Size(max = 20)
     @Column(name = "color")
     private String color;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
-    @Basic(optional = false)
-    @Column(name = "peso")
-    private BigDecimal peso;
 
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, int numArchivos) {
-        this.archivoPK = archivoPK;
-        this.fechaCreacion = fechaCreacion;
-        this.carpeta = carpeta;
-        this.numArchivos = numArchivos;
-    }
-    
     public Archivo() {
     }
 
@@ -79,18 +69,32 @@ public class Archivo implements Serializable {
         this.archivoPK = archivoPK;
     }
 
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, int numArchivos, String color, BigDecimal peso) {
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta) {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
-        this.numArchivos = numArchivos;
-        this.color = color;
-        this.peso = peso;
     }
 
     public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
         this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
     }
+
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, String color) {
+        this.archivoPK = archivoPK;
+        this.fechaCreacion = fechaCreacion;
+        this.carpeta = carpeta;
+        this.numArchivos = numArchivos;
+        this.color = color;
+    }
+
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, double peso) {
+        this.archivoPK = archivoPK;
+        this.fechaCreacion = fechaCreacion;
+        this.carpeta = carpeta;
+        this.peso = peso;
+    }
+    
+    
 
     public ArchivoPK getArchivoPK() {
         return archivoPK;
@@ -116,12 +120,20 @@ public class Archivo implements Serializable {
         this.carpeta = carpeta;
     }
 
-    public int getNumArchivos() {
+    public Integer getNumArchivos() {
         return numArchivos;
     }
 
-    public void setNumArchivos(int numArchivos) {
+    public void setNumArchivos(Integer numArchivos) {
         this.numArchivos = numArchivos;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
     public String getColor() {
@@ -130,14 +142,6 @@ public class Archivo implements Serializable {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public BigDecimal getPeso() {
-        return peso;
-    }
-
-    public void setPeso(BigDecimal peso) {
-        this.peso = peso;
     }
 
     @Override

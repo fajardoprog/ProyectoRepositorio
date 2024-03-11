@@ -96,14 +96,14 @@
                         //                                <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                         //                                <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                         //                          </div>
-                        $("#container-carpetas-fichero").empty();
-                        $("#container-carpetas-fichero").append($("<div>").append($("<input>").attr({
+                        $("#container-carpetas").empty();
+                        $("#container-carpetas").append($("<div>").append($("<input>").attr({
                             type: "radio",
                             class: "btn-check",
                             name: "carpetaElegida",
                             id: "raiz",
                             autocomplete: "off"
-                        })).append($("<label>").attr({
+                        })).addClass("container-carpetas-fichero").append($("<label>").attr({
                             class: "btn btn-outline-success",
                             for : "raiz"
                         }).append("<span>").text("/")));
@@ -166,7 +166,7 @@
                             <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                         </div>
 
-                        <form action="#" class="d-flex flex-column d-md-block">
+                        <form action="SubidaArchivos" class="d-flex flex-column d-md-block" method="post" enctype="multipart/form-data">
                             <article id="paso1fichero">
                                 <h3 class="my-3">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
@@ -182,11 +182,24 @@
                             <hr class="hr" />
                             <article id="paso2fichero">
                                 <h3 class="my-3">2. Selecciona la carpeta</h3>
-                                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos">
-                                    <div id="container-carpetas-fichero">
+                                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos" id="container-carpetas">
+                                    <div class="container-carpetas-fichero">
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
+                                             <div class="container-carpetas-fichero">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
+                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                                    </div>
+                                             <div class="container-carpetas-fichero">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
+                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                                    </div>
+                                             <div class="container-carpetas-fichero">
+                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
+                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
+                                    </div>
+                                    
                                 </section>
                             </article>
                             <hr class="hr" />
@@ -196,7 +209,7 @@
                                        aria-describedby="fileHelpId" />
                             </article>
                             <hr class="hr" />
-                            <button type="submit" class="btn btn-primary my-3 align-items-center">Subir fichero</button>
+                            <input value="Subir fichero" type="submit" class="btn btn-primary my-3 align-items-center"/>
                         </form>
                     </div>
                 </div>
@@ -216,7 +229,7 @@
                             <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                         </div>
 
-                        <form action="SubidaCarpetas" class="d-flex flex-column d-md-block">
+                        <form action="SubidaCarpetas" class="d-flex flex-column d-md-block" method="post" enctype="multipart/form-data">
                             <article id="paso1carpeta">
                                 <h3 class="my-2">1. Selecciona el repositorio</h3>
                                 <div class="input-group">
