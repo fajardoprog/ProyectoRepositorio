@@ -10,14 +10,14 @@
 
 <!--Cabecera cambios hechos preguntar a Fajardo-->
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark" id="barraNavegacion">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <a class="navbar-brand" href="index.jsp">
             <img src="img/LogoFi.png" alt="Logo" class="d-inline-block">
             FIpository
@@ -119,3 +119,10 @@
         </div>
     </div>
 </nav>
+
+<!-- Parte para impresion no tocar-->
+<a class="navbar-brand" href="index.jsp" id="imagenCabecera"><!--Se pone id para el CSS Impresion-->
+    <img src="img/LogoFi.png" alt="Logo" class="d-inline-block">
+    FIpository
+</a>
+<!--Fin parte impresion-->

@@ -8,8 +8,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="now" class="java.util.Date"/> 
 <!--Pie principalmente funciona-->
-<footer class="d-flex flex-wrap flex-column p-5 pb-3">
-    <ul class="nav justify-content-end list-unstyled d-flex">
+<footer class="d-flex flex-wrap flex-column p-5 pb-3" >
+    <ul class="nav justify-content-end list-unstyled d-flex" id="footerUl">
         <li class="px-3">
             <a class="text-body-secondary" href="#">
                 <i class="bi bi-instagram"></i>
