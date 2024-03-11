@@ -57,31 +57,22 @@ public class CreacionRepositorio extends HttpServlet {
         Usuario u;
         Repositorio r;
 
-        Cookie c = null;
-        Cookie[] cs = request.getCookies();
-
-        for (int i = 0; i < cs.length; i++) {
-            if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
-                c = cs[i];
-            }
-        }
-
-        u = ctrUsu.findUsuario(c.getValue());
+        u = (Usuario) s.getAttribute("usuarioActual");
 
         File repositorios = new File(sc.getRealPath("/repositorios"));
         if (!repositorios.exists()) {
             repositorios.mkdir();
         }
 
-        File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
+        File raizUsuario = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario()));
         if (!raizUsuario.exists()) {
             raizUsuario.mkdir();
         }
 
-        File repositorioCreado = new File(sc.getRealPath("/repositorios/" + c.getValue() + "/" + nombreRepositorio));
+        File repositorioCreado = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario() + "/" + nombreRepositorio));
         if (!repositorioCreado.exists()) {
             repositorioCreado.mkdir();
-            RepositorioPK rPk = new RepositorioPK(c.getValue(), nombreRepositorio);
+            RepositorioPK rPk = new RepositorioPK( u.getNombreUsuario(), nombreRepositorio);
             
             if(valorVisibilidadRepositorio.equalsIgnoreCase("privado")){
                 visibilidadRepositorio=1;

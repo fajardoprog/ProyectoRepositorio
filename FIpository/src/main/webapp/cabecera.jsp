@@ -31,16 +31,16 @@
         <a href="inicioSesion.jsp"
            class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
            id="enlInciarSesion">
-            <c:if test="${cookie.usuarioActual == null}">
+            <c:if test="${sessionScope.usuarioActual.foto == null}">
                 <i class="bi bi-person-circle" id="iniSesi"></i>
                 <span class="text-center " id="nombreUsu">No está conectado</span>
             </c:if>
 
-            <c:if test="${cookie.usuarioActual != null}">
+            <c:if test="${sessionScope.usuarioActual.foto != null}">
                 <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3 p-2">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
-                        <img src="imgPerfilUsuario/${}" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
-                        ${cookie.usuarioActual.value}
+                        <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
+                        ${sessionScope.usuarioActual.nombreUsuario}
                     </a>
                     <ul class="dropdown-menu text-small">
                         <li><a class="dropdown-item" href="miPerfil.jsp">Ver mi Perfil</a></li>

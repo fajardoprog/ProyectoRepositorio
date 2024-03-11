@@ -42,11 +42,10 @@ public class InicioSesion extends HttpServlet {
         String nombre = request.getParameter("nombreUsuario");
         String password = request.getParameter("password");
         Usuario u = ctrUsu.findUsuario(nombre);
-
+        
         if (u != null) {
             if (u.getPasswordUsuario().equalsIgnoreCase(password)) {
-                Cookie c = new Cookie("usuarioActual", u.getNombreUsuario());
-                response.addCookie(c);
+                s.setAttribute("usuarioActual", u);
                 response.sendRedirect("miEspacio.jsp");
             } else {
                 response.sendRedirect("inicioSesion.jsp");
@@ -54,7 +53,7 @@ public class InicioSesion extends HttpServlet {
         } else {
             response.sendRedirect("inicioSesion.jsp");
         }
-
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

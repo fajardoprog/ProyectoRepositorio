@@ -39,21 +39,11 @@ public class CargaDatosFichCarp extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-
-        Cookie c = null;
-        Cookie[] cs = request.getCookies();
         ArrayList<String> listaDirectorios = new ArrayList<>();
 
-        for (int i = 0; i < cs.length; i++) {
-            if (cs[i].getName().equalsIgnoreCase("usuarioActual")) {
-                c = cs[i];
-            }
-        }
-        
-        if (c != null) {
-            Usuario u = ctrUsu.findUsuario(c.getValue());//si no estás registrado c.getValue da error por null pointer
-
-            File raizUsuario = new File(sc.getRealPath("/repositorios/" + c.getValue()));
+          Usuario u = (Usuario) s.getAttribute("usuarioActual");//si no estás registrado c.getValue da error por null pointer
+        if (u != null) {
+            File raizUsuario = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario()));
             if (raizUsuario.exists()) {
                 File[] listaDirectoriosTotal = raizUsuario.listFiles();
                 for (int i = 0; i < listaDirectoriosTotal.length; i++) {

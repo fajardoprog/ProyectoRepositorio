@@ -92,9 +92,6 @@ public class Registro extends HttpServlet {
         u.setReputacion(0);
         try {
             ctrUsu.create(u);
-            Cookie c = new Cookie("usuarioActual", u.getNombreUsuario());
-            response.addCookie(c);
-            
         } catch (Exception ex) {
             Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
         }
