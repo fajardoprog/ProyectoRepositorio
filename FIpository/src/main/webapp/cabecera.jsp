@@ -37,12 +37,12 @@
             </c:if>
 
             <c:if test="${sessionScope.usuarioActual.foto != null}">
-                <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3 p-2">
+                <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none  pe-5">
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
                         <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
                         ${sessionScope.usuarioActual.nombreUsuario}
                     </a>
-                    <ul class="dropdown-menu text-small">
+                    <ul class="dropdown-menu text-small mt-2" id="submenuLog">
                         <li><a class="dropdown-item" href="miPerfil.jsp">Ver mi Perfil</a></li>
                         <li><a class="dropdown-item" href="miEspacio.jsp">Mi espacio</a></li>
                         <li><a class="dropdown-item" href="misOpiniones.jsp">Mis opiniones</a></li>

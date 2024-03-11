@@ -179,8 +179,17 @@ h2{
 }
 /*Imagen de la cabecera*/
 #imgUsuario{
-    width: 10vmin;
+    width: 5vmin;
 }
+
+#submenuLog{
+    left: -35%;
+}
+
+#submenuLog li a,#submenuLog li a i{
+    font-size: 1.1rem;    
+}
+
 @media screen and (min-width:576px) {
     /*Resolución tablet*/
     input[type="submit"],.btn{
@@ -205,6 +214,14 @@ h2{
 
     .dropdown-menu a {
         font-size: 3vmin;
+    }
+
+    #submenuLog{
+        left: -20%;    
+    }
+
+    #submenuLog li a,#submenuLog li a i{
+        font-size: 1.5rem;    
     }
 
 }
@@ -241,6 +258,14 @@ h2{
 
     .dropdown-menu li a {
         font-size: 2.5vmin;
+    }
+
+    #submenuLog{
+        left: -10%;    
+    }
+
+    #submenuLog li a,#submenuLog li a i{
+        font-size: 1.1rem;    
     }
 
 }
