@@ -11,6 +11,7 @@ import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Archivo;
 import com.daw.fipository.DTO.ArchivoPK;
 import com.daw.fipository.DTO.Repositorio;
+import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
 import java.io.File;
 import java.io.IOException;
@@ -70,6 +71,8 @@ public class SubidaArchivos extends HttpServlet {
                     part.write(ruta + "/" + nombreFich);
                     ArchivoPK aPK = new ArchivoPK(carpetaElegida + "/" + nombreFich, u.getNombreUsuario(), repositorioSeleccionado);
                     Archivo a = new Archivo(aPK, new Date(), false, archivoFile.length());
+                    Archivo carpetaContenedora =  ctrArch.findArchivo(new ArchivoPK(carpetaElegida, u.getNombreUsuario(), repositorioSeleccionado));
+                    carpetaContenedora.setNumArchivos(carpetaContenedora.getNumArchivos()+1); 
                     try {
                         ctrArch.create(a);
                     } catch (Exception ex) {
