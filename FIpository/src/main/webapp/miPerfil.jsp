@@ -53,10 +53,10 @@
         <main class="d-flex flex-column align-items-center">
             <div class="container-fluid col-md-6 m-5 d-flex flex-column justify-content-center">
                 <h1>Mi Perfil</h1>
-                <form action="ModificaPerfil" class="d-flex flex-column align-items-center">
+                <form action="ModificaPerfil" enctype="multipart/form-data" class="d-flex flex-column align-items-center" method="post" >
 
                     <div class="col-12 d-flex justify-content-around position-relative">
-                        <input type="file" name="ImgUsu" id="imgUsu"/>
+                        <input type="file" name="ImgUsuario" id="imgUsu"/>
 
                         <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
 

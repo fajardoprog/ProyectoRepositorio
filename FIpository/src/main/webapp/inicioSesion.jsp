@@ -43,7 +43,7 @@
 
                 $("#seleccionGene").on("change", function () {
                     /*Esta parte sirve para mostrar la casilla para que el ususario especifique su genero*/
-                    if ($(this).val() == 'O') {
+                    if ($(this).val() == 'Otro') {
                         $("#otroG").css("display", "flex");
                     } else {
                         $("#otroG").css("display", "none");

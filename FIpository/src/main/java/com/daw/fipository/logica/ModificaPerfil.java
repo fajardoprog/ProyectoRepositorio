@@ -5,23 +5,44 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author IsmaelJJL
  */
+
+@MultipartConfig
 public class ModificaPerfil extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
+
+        HttpSession s = request.getSession();
+        
+        String ruta2 = getServletContext().getRealPath("imgPerfilUsuario");
+        Part imagenSubir = request.getPart("ImgUsuario");
+
+        String nombreFich = imagenSubir.getSubmittedFileName();
+
+        imagenSubir.getInputStream();
+
+        imagenSubir.write(ruta2 + "\\" + nombreFich);
+        
+        Usuario usu=(Usuario) s.getAttribute("usuarioActual");
+        usu.setFoto(nombreFich);
+        
+        response.sendRedirect("miEspacio.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
