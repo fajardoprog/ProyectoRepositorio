@@ -46,7 +46,7 @@
             <main>
                 <h1>Registro de acciones del usuario</h1>
                 <section>
-                    <table class="tabla-log table table-hover table-striped bg-white">
+                    <table class="tabla-log table table-hover table-striped bg-white" id="tablaLog">
                         <tr>
                             <th>Usuario afectado</th>
                             <th>Tipo</th>

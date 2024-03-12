@@ -5,15 +5,8 @@
  */
 package com.daw.fipository.logica;
 
-import com.daw.fipository.DAO.UsuarioJpaController;
-import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,43 +14,19 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
-public class InicioSesion extends HttpServlet {
+public class CerrarSesion extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-        HttpSession s = request.getSession();
-        String nombre = request.getParameter("nombreUsuario");
-        String password = request.getParameter("password");
-        Usuario u = ctrUsu.findUsuario(nombre);
+        response.setContentType("text/html;charset=UTF-8");
 
-        if (u != null) {
-            if (u.getAdmin()) {
-                s.setAttribute("usuarioActual", u);
-                response.sendRedirect("AdminIndex.jsp");
-            } else {
-                if (u.getPasswordUsuario().equalsIgnoreCase(password)) {
-                    s.setAttribute("usuarioActual", u);
-                    response.sendRedirect("miEspacio.jsp");
-                } else {
-                    response.sendRedirect("inicioSesion.jsp");
-                }
-            }
-        } else {
-            response.sendRedirect("inicioSesion.jsp");
-        }
+        HttpSession s = request.getSession();
+        
+        s.invalidate();
+        
+        response.sendRedirect("index.jsp");
 
     }
 

@@ -1,3 +1,35 @@
 .table tbody{
     vertical-align: middle;
 }
+
+@media print {    
+    #barraNavegacion,ol li a, ol li{
+        display: none;
+    }
+
+    #imagenCabecera{
+        display: flex;
+        flex-direction: column;
+        color: black;  
+        justify-content: center;
+        align-items: center;
+    }
+
+    #imagenCabecera img{
+        width: 50px;        
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    #tablaLog{
+        display: block;
+        width: 100%;
+        text-align: center;        
+    }
+
+    #footerUl ul li a i{
+        display: none;  
+    }
+}
