@@ -31,6 +31,7 @@
     <body>
         <header>
             <jsp:include page="cabecera.jsp" />
+            <jsp:include page="CargaDatosRepositorio"/>
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
@@ -52,76 +53,23 @@
                 </article>
 
                 <section class="d-flex flex-column container-repositorios">
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">JFajardo/1 DAW
-                            <i class="ms-2 bi bi-eye-slash-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/2 DAW
-                            <i class="ms-2 bi bi-eye-slash-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Policía
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Cliente
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Diseño de Interfaces Web
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Despliegue
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Desarrollo web en entorno servidor
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Programación
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/Bases de datos
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
-                    <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1" href="#">JFajardo/FOL
-                            <i class="ms-2 bi bi-eye-fill"></i>
-                            <i class="ms-2 bi bi-arrow-right"></i>
-                        </a>
-                    </article>
+                    <c:choose>
+                        <c:when test="${not empty requestScope.misRepositorios}">
+                            <c:forEach items="${requestScope.misRepositorios}}" var="repo">
+                                <article>
+                                    <img class="avatar-repositorio" src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="">
+                                    <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="repositorio.jsp">
+                                        ${sessionScope.usuarioActual.nombreUsuario}/${repo.nombreRepositorio}
+                                        <i class="ms-2 bi bi-eye-slash-fill"></i>
+                                        <i class="ms-2 bi bi-arrow-right"></i>
+                                    </a>
+                                </article>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+
+                        </c:otherwise>
+                    </c:choose>
                 </section>
             </aside>
             <main class="offset-lg-1 col-lg-7">

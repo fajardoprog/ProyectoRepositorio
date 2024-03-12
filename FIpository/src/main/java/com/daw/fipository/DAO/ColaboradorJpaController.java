@@ -15,6 +15,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -143,6 +144,14 @@ public class ColaboradorJpaController implements Serializable {
         } finally {
             em.close();
         }
+    }
+    
+    public List<Colaborador> listaRepositoriosColaboradores(String usuario) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Colaborador.findByNombreUsuarioColaborador", Colaborador.class);
+        tq.setParameter("nombreUsuarioColaborador", usuario);
+        List l = tq.getResultList();
+        return l;
     }
     
 }
