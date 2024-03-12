@@ -5,8 +5,13 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 
@@ -20,7 +25,6 @@ import javax.servlet.http.Part;
  *
  * @author IsmaelJJL
  */
-
 @MultipartConfig
 public class ModificaPerfil extends HttpServlet {
 
@@ -29,7 +33,9 @@ public class ModificaPerfil extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         HttpSession s = request.getSession();
-        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
+        UsuarioJpaController ctrUsu= new UsuarioJpaController(emf);
+
         String ruta2 = getServletContext().getRealPath("imgPerfilUsuario");
         Part imagenSubir = request.getPart("ImgUsuario");
 
@@ -38,9 +44,15 @@ public class ModificaPerfil extends HttpServlet {
         imagenSubir.getInputStream();
 
         imagenSubir.write(ruta2 + "\\" + nombreFich);
-        
-        Usuario usu=(Usuario) s.getAttribute("usuarioActual");
+
+        Usuario usu = (Usuario) s.getAttribute("usuarioActual");
         usu.setFoto(nombreFich);
+        
+        try {
+            ctrUsu.edit(usu);
+        } catch (Exception ex) {
+            Logger.getLogger(ModificaPerfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         response.sendRedirect("miEspacio.jsp");
     }
