@@ -49,7 +49,6 @@ public class SubidaCarpetas extends HttpServlet {
         ServletContext sc = request.getSession().getServletContext();
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
         ArchivoJpaController ctrArch = new ArchivoJpaController(emf);
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         String nombreRepositorio = request.getParameter("elegirRepoCarpeta");
@@ -57,7 +56,6 @@ public class SubidaCarpetas extends HttpServlet {
         String colorCarpeta = request.getParameter("colorCarpeta");
         boolean existente = false;
         Usuario u;
-        Repositorio r;
 
         u = (Usuario) s.getAttribute("usuarioActual");
 

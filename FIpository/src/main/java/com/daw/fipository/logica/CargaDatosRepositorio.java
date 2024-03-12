@@ -50,7 +50,7 @@ public class CargaDatosRepositorio extends HttpServlet {
             RepositorioPK rPk = new RepositorioPK(rC.getColaboradorPK().getNombreUsuarioColaborado(), rC.getColaboradorPK().getNombreRepositorioColaborado());
             listaRepositoriosCompartidos.add(new AuxiliarUsuarioRepositorio(ctrRepo.findRepositorio(rPk), u));
         }
-        request.setAttribute("repositoriosCompartidos", u);
+        request.setAttribute("repositoriosCompartidos", listaRepositoriosCompartidos);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

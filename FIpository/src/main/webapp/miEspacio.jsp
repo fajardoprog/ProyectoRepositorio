@@ -55,12 +55,17 @@
                 <section class="d-flex flex-column container-repositorios">
                     <c:choose>
                         <c:when test="${not empty requestScope.misRepositorios}">
-                            <c:forEach items="${requestScope.misRepositorios}}" var="repo">
+                            <c:forEach items="${requestScope.misRepositorios}" var="repo">
                                 <article>
                                     <img class="avatar-repositorio" src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="">
                                     <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="repositorio.jsp">
-                                        ${sessionScope.usuarioActual.nombreUsuario}/${repo.nombreRepositorio}
-                                        <i class="ms-2 bi bi-eye-slash-fill"></i>
+                                        ${sessionScope.usuarioActual.nombreUsuario}/${repo.repositorioPK.nombreRepositorio}
+                                        <c:if test="${repo.visibilidad == 1}">
+                                            <i class="ms-2 bi bi-eye-fill"></i>
+                                        </c:if>
+                                        <c:if test="${repo.visibilidad == 0}">
+                                            <i class="ms-2 bi bi-eye-slash-fill"></i>
+                                        </c:if>
                                         <i class="ms-2 bi bi-arrow-right"></i>
                                     </a>
                                 </article>
@@ -78,34 +83,24 @@
                         <h3>Compartido conmigo</h3>
                     </header>
                     <section class="d-flex flex-column container-repositorios">
-                        <article>
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/3 DAW
-                                <i class="bi bi-arrow-right">
-                                </i>
-                            </a>
-                        </article>
-                        <article>
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Profesores
-                                <i class="bi bi-arrow-right">
-                                </i>
-                            </a>
-                        </article>
-                        <article>
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Apuntes de Bootstrap
-                                <i class="bi bi-arrow-right">
-                                </i> 
-                            </a>
-                        </article>
-                        <article>
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
-                            <a class="enlace-repositorio m-2 my-1" href="#">IsmaelJ/Accesibilidad
-                                <i class="bi bi-arrow-right">
-                                </i>
-                            </a>
-                        </article>
+                        <c:choose>
+                            <c:when test="${not empty requestScope.repositoriosCompartidos}">
+                                <c:forEach items="${requestScope.repositoriosCompartidos}" var="repoCompartido">
+                                    <article>
+                                        <img class="avatar-repositorio" src="imgPerfilUsuario/${repoCompartido.usuario.foto}" alt="">
+                                        <a class="enlace-repositorio m-2 my-1" href="#">
+                                            ${repoCompartido.repositorio.repositorioPK.nombreUsuario}/${repoCompartido.repositorio.repositorioPK.nombreRepositorio}
+                                            <i class="bi bi-arrow-right">
+                                            </i>
+                                        </a>
+                                    </article> 
+                                </c:forEach>
+                            </c:when>
+                            <c:otherwise>
+
+                            </c:otherwise>
+                        </c:choose>
+
                     </section>
                 </section>
                 <section id="actividad-reciente" class="my-lg-3">

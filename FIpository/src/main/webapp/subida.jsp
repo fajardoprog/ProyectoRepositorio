@@ -249,7 +249,7 @@
                                         </div>
                                         <div>
                                             <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
-                                                   aria-label="Búsqueda" id="nombreCarpeta" name="nombreCarpeta" />
+                                                   aria-label="Nombre de la carpeta" id="nombreCarpeta" name="nombreCarpeta" />
                                         </div>
                                     </section>
 
