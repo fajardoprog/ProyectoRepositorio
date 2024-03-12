@@ -29,7 +29,7 @@
         text-align: center;        
     }
 
-    #footerUl{
+    #footerUl ul li a i{
         display: none;  
     }
 }

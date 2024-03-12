@@ -53,48 +53,46 @@
         <main class="d-flex flex-column align-items-center">
             <div class="container-fluid col-md-6 m-5 d-flex flex-column justify-content-center">
                 <h1>Mi Perfil</h1>
-                <form action="" class="d-flex flex-column align-items-center">
+                <form action="ModificaPerfil" class="d-flex flex-column align-items-center">
 
                     <div class="col-12 d-flex justify-content-around position-relative">
                         <input type="file" name="ImgUsu" id="imgUsu"/>
 
-                        <img src="img/LogoFi.gif" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
+                        <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
 
                         <div class="d-flex flex-column justify-content-center align-items-center position-absolute start-50">
                             <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><i class="bi bi-plus-circle-fill"></i></label>
-
                         </div>
                     </div>
                     <span id="nombreFoto"></span>
                     <label for="nicknameUsu" class="form-label">Nickname</label>
 
                     <input type="text" class="form-control" id="nicknameUsu" aria-describedby="nickname" name="nicknameUsu"
-                           value="Evaristo97">
+                           value="${sessionScope.usuarioActual.nombreUsuario}">
 
                     <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center separador" ><span></span></div>
 
                     <label for="nombreRealUsu" class="form-label">Nombre Usuario</label>
                     <input type="text" class="form-control" id="nombreUsuario" aria-describedby="nombre Usuario" name="nombreUsu"
-                           value="Evaristo">
+                           value="${sessionScope.usuarioActual.nombreCompleto}" readonly>
 
                     <label for="ape1Usu" class="form-label">1º Apellido</label>
                     <input type="text" class="form-control" id="ape1Usu" aria-describedby="ape1Usu" name="ape1Usu"
-                           value="Díaz" readonly>
+                           value="${sessionScope.usuarioActual.primerApellido}" readonly>
 
                     <label for="ape2Usu" class="form-label">2º Apellido</label>
                     <input type="text" class="form-control" id="ape2Usu" aria-describedby="ape2Usu" name="ape2Usu"
-                           value="Pérez" readonly>
+                           value="${sessionScope.usuarioActual.segundoApellido}" readonly>
 
                     <div class="col-12 mt-3 mb-3 d-flex flex-column align-items-center separador" ><span></span></div>
 
                     <h4>Cambio contraseña</h4>
                     <label for="passUsu" class="form-label">Contraseña usuario</label>
                     <input type="password" class="form-control" id="passUsu" aria-describedby="contraseña del Usuario" name="passUsu"
-                           value="Evaristo97">
+                           value="${sessionScope.usuarioActual.passwordUsuario}">
 
                     <label for="repePass" class="form-label">Confirmar contraseña usuario</label>
-                    <input type="password" class="form-control" id="repePass" aria-describedby="nombre Usuario" name="passUsuRepe"
-                           value="Evaristo97">
+                    <input type="password" class="form-control" id="repePass" aria-describedby="nombre Usuario" name="passUsuRepe">
 
                     <input type="submit" value="Confirmar cambios" class="btn btn-success m-3">
                 </form>

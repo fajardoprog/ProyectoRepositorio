@@ -32,6 +32,14 @@
         <servlet-name>SubidaCarpetas</servlet-name>
         <servlet-class>com.daw.fipository.logica.SubidaCarpetas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CerrarSesion</servlet-name>
+        <servlet-class>com.daw.fipository.logica.CerrarSesion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModificaPerfil</servlet-name>
+        <servlet-class>com.daw.fipository.logica.ModificaPerfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>SubidaCarpetas</servlet-name>
         <url-pattern>/SubidaCarpetas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CerrarSesion</servlet-name>
+        <url-pattern>/CerrarSesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModificaPerfil</servlet-name>
+        <url-pattern>/ModificaPerfil</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
