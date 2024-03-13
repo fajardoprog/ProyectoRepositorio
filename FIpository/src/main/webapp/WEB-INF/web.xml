@@ -48,6 +48,10 @@
         <servlet-name>CargaListaUsu</servlet-name>
         <servlet-class>com.daw.fipository.logica.CargaListaUsu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PeticionCambioPass</servlet-name>
+        <servlet-class>com.daw.fipository.logica.PeticionCambioPass</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -95,6 +99,10 @@
     <servlet-mapping>
         <servlet-name>CargaListaUsu</servlet-name>
         <url-pattern>/CargaListaUsu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PeticionCambioPass</servlet-name>
+        <url-pattern>/PeticionCambioPass</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

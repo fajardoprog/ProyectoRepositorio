@@ -54,7 +54,10 @@
             
             <!--Bloque formulario Recuperar contraseña-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form action="CorreoPeticionNuevaPass" class="text-center  border border-black rounded col-md-8 formu p-4">
+                
+                <h1 class="text-danger">${sessionScope.error}</h1>
+                
+                <form action="PeticionCambioPass" class="text-center  border border-black rounded col-md-8 formu p-4">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Recuperar Contraseña</h1>
 
@@ -66,9 +69,9 @@
                             </div>
 
                             <div class="form-floating m-2 col-10">
-                                <input type="mail" class="form-control col-10" id="floatingInput" placeholder="Usuario"
-                                       name="EmailUsu">
-                                <label for="floatingInput">Correo Usuario</label>
+                                <input type="text" class="form-control col-10" id="floatingInput" placeholder="Usuario"
+                                       name="nombreUsuario">
+                                <label for="floatingInput">Nickname Usuario</label>
                             </div>
                         </div>
                     </div>

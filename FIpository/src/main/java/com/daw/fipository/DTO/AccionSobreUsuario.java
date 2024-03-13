@@ -52,6 +52,12 @@ public class Accionsobreusuario implements Serializable {
         this.codigoAccion = codigoAccion;
     }
 
+    public Accionsobreusuario(Integer codigoAccion, String codigoUsuarioAfectado, String tipo) {
+        this.codigoAccion = codigoAccion;
+        this.codigoUsuarioAfectado = codigoUsuarioAfectado;
+        this.tipo = tipo;
+    }
+
     public Integer getCodigoAccion() {
         return codigoAccion;
     }
