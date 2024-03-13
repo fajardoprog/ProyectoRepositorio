@@ -1,3 +1,67 @@
+main {
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.container-botones div{
+    display: flex;
+    width: 100%;
+}
+
+.container-input-texto{
+    display: flex;
+}
+
+.container-input-texto label{
+    background: #999999;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 6vmin;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.container-input-texto input{
+    width: 100%;
+    border: none;
+    transition: 0.5s all;
+}
+
+.container-input-texto input:focus{
+    outline: none;
+    box-shadow: 0px 0px 20px var(--bs-primary)
+}
+
+.container-botones label{
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    background: none;
+    border-radius: 30px 0px 0px 30px;
+    padding: 0.5rem 2rem;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 8vmin;
+    width: 50%;
+    transition: 0.5s all;
+}
+
+label.radio-seleccionado{
+    color: white;
+    background: var(--bs-primary);
+}
+
+.container-botones label:last-of-type{
+    border-radius: 0px 30px 30px 0px;
+}
+
+.container-botones input{
+    position: absolute;
+    left: -2000px;
+}
+
 aside {
     background-color: black;
     height: 80vh;
@@ -10,7 +74,8 @@ aside {
 }
 
 h2{
-    margin: 2rem 1rem 3rem; 
+    margin: 2rem 1rem 3rem;
+    text-align: center;
 }
 
 main h3{
@@ -68,19 +133,20 @@ main h3{
     font-size: 1.5rem;
 }
 
-.container-archivos .btn{
-    font-size: 4vmin;
-}
-
 @media screen and (min-width:576px) {
     .container-archivos{
         height: 300px;
         overflow-y: scroll
     }
 
-    .container-archivos .btn{
-        font-size: 3vmin;
+    .container-botones label{
+        font-size: 6vmin;
     }
+
+    .container-input-texto label{
+        font-size: 4vmin;
+    }
+
 }
 
 
@@ -89,9 +155,13 @@ main h3{
         font-size: 8vmin;
         margin:1.5rem;
     }
-    
+
     main .btn{
         font-size: 3.5vmin;
+    }
+
+    .container-input-texto label{
+        font-size: 3vmin;
     }
 
     .container-archivos{
