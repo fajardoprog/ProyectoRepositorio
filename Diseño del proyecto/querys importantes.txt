@@ -4,6 +4,14 @@ querys personalizadas:
 @NamedQuery(name = "Repositorio.ordenadosPorNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.repositorioPK.nombreRepositorio"),
 @NamedQuery(name = "Repositorio.ordenadosPorNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r"),
 
+    public List<Repositorio> listaCarpetasUsuarioRepositorio(String usuario) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Repositorio.findByNombreUsuario", Repositorio.class);
+        tq.setParameter("nombreUsuario", usuario);
+        List l = tq.getResultList();
+        return l;
+    }
+
 -- Usuario
 @NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
 @NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
@@ -20,3 +28,4 @@ querys personalizadas:
         List l = tq.getResultList();
         return l;
     }
+
