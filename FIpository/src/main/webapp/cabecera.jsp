@@ -38,7 +38,7 @@
                 <c:if test="${sessionScope.usuarioActual.foto != null}">
                     <div class="dropdown text-end order-lg-1 d-flex flex-column align-items-center text-decoration-none  pe-5">
                         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
-                            <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="fotoPeril" class="rounded-circle" id="imgUsuario">
+                            <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="fotoPeril" id="imgUsuario">
                             ${sessionScope.usuarioActual.nombreUsuario}
                         </a>
                         <ul class="dropdown-menu text-small mt-2" id="submenuLog">

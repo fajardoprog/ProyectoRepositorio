@@ -26,7 +26,7 @@
 }
 
 aside section{
-    background-color: #00cc99;
+    background-color: #5ab55d;
     border-radius: 10px;
     height: auto;
 }
@@ -119,7 +119,8 @@ main .btn{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;    
+    justify-content: space-around;   
+    background-color: #669b5b;
 }
 
 @media screen and (min-width:576px) {
