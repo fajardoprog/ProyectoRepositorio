@@ -5,8 +5,13 @@
  */
 package com.daw.fipository.logica;
 
+import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,8 +29,12 @@ public class CargaListaUsu extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
+         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
+         
+        List<Usuario> listaUsu= ctrUsu.findUsuarioEntities();
         
-        
+        request.setAttribute("listaUsuario", listaUsu);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

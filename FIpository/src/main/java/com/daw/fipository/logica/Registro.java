@@ -56,8 +56,9 @@ public class Registro extends HttpServlet {
         String fechaNacimientoUsuario = request.getParameter("fechaNacimientoUsuario");
         String generoUsuario = request.getParameter("generoUsuario");
         String otroGenero = request.getParameter("otroGenero");
+        String descripcionUsu = request.getParameter("descripcionUsu");
 
-//        Date fechaNacimiento = new Date(fechaNacimientoUsuario);
+        Date fechaNacimiento = new Date(fechaNacimientoUsuario);
         if (generoUsuario.equalsIgnoreCase("Otro")) {
             generoUsuario = otroGenero;
         }
@@ -87,8 +88,8 @@ public class Registro extends HttpServlet {
 
         }
 
-        //(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, boolean admin) {
-        Usuario u = new Usuario(nombre, password, nombreCompleto, primerApellidoUsuario, segundoApellidoUsuario, correoUsuario, "", generoUsuario, nombreFich, new Date(), false);
+        //String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, Integer numeroReporte, Integer numeroLike, boolean admin
+        Usuario u = new Usuario(nombre, password, nombreCompleto, primerApellidoUsuario, segundoApellidoUsuario, correoUsuario, descripcionUsu, generoUsuario, nombreFich, fechaNacimiento,0,0,false);
         u.setReputacion(0);
         try {
             ctrUsu.create(u);

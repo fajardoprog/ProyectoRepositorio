@@ -133,6 +133,22 @@ public class Usuario implements Serializable {
         this.admin = admin;
     }
 
+    public Usuario(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, Integer numeroReporte, Integer numeroLike, boolean admin) {
+        this.nombreUsuario = nombreUsuario;
+        this.passwordUsuario = passwordUsuario;
+        this.nombreCompleto = nombreCompleto;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;        
+        this.correo = correo;
+        this.descripcion = descripcion;
+        this.genero = genero;
+        this.foto = foto;
+        this.fechaNacimiento = fechaNacimiento;
+        this.numeroReporte = numeroReporte;
+        this.numeroLike = numeroLike;
+        this.admin = admin;
+    }
+
     public String getNombreUsuario() {
         return nombreUsuario;
     }
