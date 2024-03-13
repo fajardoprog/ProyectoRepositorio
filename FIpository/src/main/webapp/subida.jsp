@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <!-- Importo por el reseteo de bootstrap y los iconos -->
-        
+
         <link rel="stylesheet" href="css/estiloComun.css">
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/estiloSubida.css">
@@ -39,10 +39,14 @@
             $(function () {
                 $("input[name='elegirArchivo']").on("change", function () {
                     if ($("#ficheros").css("display") === "block") {
+                        $("label[for='subirFichero']").toggleClass("radio-seleccionado");
+                        $("label[for='subirCarpeta']").toggleClass("radio-seleccionado");
                         $("#ficheros").fadeToggle(function () {
                             $("#carpetas").fadeToggle();
                         });
                     } else {
+                        $("label[for='subirFichero']").toggleClass("radio-seleccionado");
+                        $("label[for='subirCarpeta']").toggleClass("radio-seleccionado");
                         $("#carpetas").fadeToggle(function () {
                             $("#ficheros").fadeToggle();
                         });
@@ -143,21 +147,21 @@
                 </ol>
             </nav>
         </header>
-        <main>
+        <main >
             <h1>Subida de archivos</h1>
-            <div class="container">
-                <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" class="btn-check" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
-                    <label class="btn btn-lg btn-outline-primary" for="subirFichero">Fichero</label>
-                    <input type="radio" class="btn-check" name="elegirArchivo" id="subirCarpeta" autocomplete="off">
-                    <label class="btn btn-lg btn-outline-primary" for="subirCarpeta">Carpeta</label>
+            <div class="container-botones">
+                <div role="group" aria-label="Cambiar entre subir fichero y carpeta">
+                    <input type="radio" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
+                    <label class="radio-seleccionado" for="subirFichero">Fichero</label>
+                    <input type="radio" name="elegirArchivo" id="subirCarpeta" autocomplete="off">
+                    <label for="subirCarpeta">Carpeta</label>
                 </div>
             </div>
 
-            <div class="container" id="ficheros">
-                <div class="row">
-                    <div class="offset-lg-2 col-lg-8">
-                        <h2 class="text-center">Subida de ficheros</h2>
+            <div id="ficheros">
+                <div>
+                    <div>
+                        <h2>Subida de ficheros</h2>
 
                         <div class="barra-progresion position-relative m-4">
                             <div class="progress">
@@ -168,12 +172,12 @@
                             <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                         </div>
 
-                        <form action="SubidaArchivos" class="d-flex flex-column d-md-block" method="post" enctype="multipart/form-data">
+                        <form action="SubidaArchivos" method="post" enctype="multipart/form-data">
                             <article id="paso1fichero">
-                                <h3 class="my-3">1. Selecciona el repositorio</h3>
-                                <div class="input-group">
-                                    <label for="elegirRepoFichero" class="input-group-text">Buscar</label>
-                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
+                                <h3>1. Selecciona el repositorio</h3>
+                                <div class="container-input-texto">
+                                    <label for="elegirRepoFichero"><span>Buscar</span></label>
+                                    <input list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
                                 </div>
                                 <datalist id="opcionesDatalist">
                                     <c:forEach items="${requestScope.listaDirectorios}" var="directorio">
@@ -189,19 +193,19 @@
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
-                                             <div class="container-carpetas-fichero">
+                                    <div class="container-carpetas-fichero">
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
-                                             <div class="container-carpetas-fichero">
+                                    <div class="container-carpetas-fichero">
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
-                                             <div class="container-carpetas-fichero">
+                                    <div class="container-carpetas-fichero">
                                         <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                                         <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                                     </div>
-                                    
+
                                 </section>
                             </article>
                             <hr class="hr" />
