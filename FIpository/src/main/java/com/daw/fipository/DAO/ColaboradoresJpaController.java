@@ -6,13 +6,16 @@
 package com.daw.fipository.DAO;
 
 import com.daw.fipository.DAO.exceptions.NonexistentEntityException;
-import com.daw.fipository.DTO.Accionsobrearchivo;
+import com.daw.fipository.DAO.exceptions.PreexistingEntityException;
+import com.daw.fipository.DTO.Colaboradores;
+import com.daw.fipository.DTO.ColaboradoresPK;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
@@ -20,9 +23,9 @@ import javax.persistence.criteria.Root;
  *
  * @author IsmaelJJL
  */
-public class AccionsobrearchivoJpaController implements Serializable {
+public class ColaboradoresJpaController implements Serializable {
 
-    public AccionsobrearchivoJpaController(EntityManagerFactory emf) {
+    public ColaboradoresJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     private EntityManagerFactory emf = null;
@@ -31,13 +34,21 @@ public class AccionsobrearchivoJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Accionsobrearchivo accionsobrearchivo) {
+    public void create(Colaboradores colaboradores) throws PreexistingEntityException, Exception {
+        if (colaboradores.getColaboradoresPK() == null) {
+            colaboradores.setColaboradoresPK(new ColaboradoresPK());
+        }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            em.persist(accionsobrearchivo);
+            em.persist(colaboradores);
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            if (findColaboradores(colaboradores.getColaboradoresPK()) != null) {
+                throw new PreexistingEntityException("Colaboradores " + colaboradores + " already exists.", ex);
+            }
+            throw ex;
         } finally {
             if (em != null) {
                 em.close();
@@ -45,19 +56,19 @@ public class AccionsobrearchivoJpaController implements Serializable {
         }
     }
 
-    public void edit(Accionsobrearchivo accionsobrearchivo) throws NonexistentEntityException, Exception {
+    public void edit(Colaboradores colaboradores) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            accionsobrearchivo = em.merge(accionsobrearchivo);
+            colaboradores = em.merge(colaboradores);
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Integer id = accionsobrearchivo.getCodigoAccion();
-                if (findAccionsobrearchivo(id) == null) {
-                    throw new NonexistentEntityException("The accionsobrearchivo with id " + id + " no longer exists.");
+                ColaboradoresPK id = colaboradores.getColaboradoresPK();
+                if (findColaboradores(id) == null) {
+                    throw new NonexistentEntityException("The colaboradores with id " + id + " no longer exists.");
                 }
             }
             throw ex;
@@ -68,19 +79,19 @@ public class AccionsobrearchivoJpaController implements Serializable {
         }
     }
 
-    public void destroy(Integer id) throws NonexistentEntityException {
+    public void destroy(ColaboradoresPK id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Accionsobrearchivo accionsobrearchivo;
+            Colaboradores colaboradores;
             try {
-                accionsobrearchivo = em.getReference(Accionsobrearchivo.class, id);
-                accionsobrearchivo.getCodigoAccion();
+                colaboradores = em.getReference(Colaboradores.class, id);
+                colaboradores.getColaboradoresPK();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The accionsobrearchivo with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The colaboradores with id " + id + " no longer exists.", enfe);
             }
-            em.remove(accionsobrearchivo);
+            em.remove(colaboradores);
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -89,19 +100,19 @@ public class AccionsobrearchivoJpaController implements Serializable {
         }
     }
 
-    public List<Accionsobrearchivo> findAccionsobrearchivoEntities() {
-        return findAccionsobrearchivoEntities(true, -1, -1);
+    public List<Colaboradores> findColaboradoresEntities() {
+        return findColaboradoresEntities(true, -1, -1);
     }
 
-    public List<Accionsobrearchivo> findAccionsobrearchivoEntities(int maxResults, int firstResult) {
-        return findAccionsobrearchivoEntities(false, maxResults, firstResult);
+    public List<Colaboradores> findColaboradoresEntities(int maxResults, int firstResult) {
+        return findColaboradoresEntities(false, maxResults, firstResult);
     }
 
-    private List<Accionsobrearchivo> findAccionsobrearchivoEntities(boolean all, int maxResults, int firstResult) {
+    private List<Colaboradores> findColaboradoresEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            cq.select(cq.from(Accionsobrearchivo.class));
+            cq.select(cq.from(Colaboradores.class));
             Query q = em.createQuery(cq);
             if (!all) {
                 q.setMaxResults(maxResults);
@@ -113,20 +124,20 @@ public class AccionsobrearchivoJpaController implements Serializable {
         }
     }
 
-    public Accionsobrearchivo findAccionsobrearchivo(Integer id) {
+    public Colaboradores findColaboradores(ColaboradoresPK id) {
         EntityManager em = getEntityManager();
         try {
-            return em.find(Accionsobrearchivo.class, id);
+            return em.find(Colaboradores.class, id);
         } finally {
             em.close();
         }
     }
 
-    public int getAccionsobrearchivoCount() {
+    public int getColaboradoresCount() {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            Root<Accionsobrearchivo> rt = cq.from(Accionsobrearchivo.class);
+            Root<Colaboradores> rt = cq.from(Colaboradores.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();
@@ -134,5 +145,11 @@ public class AccionsobrearchivoJpaController implements Serializable {
             em.close();
         }
     }
-    
+    public List<Colaboradores> listaRepositoriosColaboradores(String usuario) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Colaborador.findByNombreUsuarioColaborador", Colaboradores.class);
+        tq.setParameter("nombreUsuarioColaborador", usuario);
+        List l = tq.getResultList();
+        return l;
+    }
 }

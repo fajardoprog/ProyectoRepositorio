@@ -78,7 +78,7 @@ public class CreacionRepositorio extends HttpServlet {
                 visibilidadRepositorio=1;
             }
             
-            r = new Repositorio(rPk, descripcionRepositorio, new Date(), visibilidadRepositorio);    
+            r = new Repositorio(rPk, descripcionRepositorio, new Date(), visibilidadRepositorio,0);    
             
             try{
                 ctrRepo.create(r);

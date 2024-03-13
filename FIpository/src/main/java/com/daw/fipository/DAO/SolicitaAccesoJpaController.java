@@ -18,7 +18,7 @@ import javax.persistence.criteria.Root;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 public class SolicitaAccesoJpaController implements Serializable {
 

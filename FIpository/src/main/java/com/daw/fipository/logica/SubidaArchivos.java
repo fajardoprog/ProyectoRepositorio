@@ -70,7 +70,8 @@ public class SubidaArchivos extends HttpServlet {
                     File archivoFile = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario() + "/" + repositorioSeleccionado + "/" + carpetaElegida + "/" + nombreFich));
                     part.write(ruta + "/" + nombreFich);
                     ArchivoPK aPK = new ArchivoPK(carpetaElegida + "/" + nombreFich, u.getNombreUsuario(), repositorioSeleccionado);
-                    Archivo a = new Archivo(aPK, new Date(), false, archivoFile.length());
+                    //ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, BigDecimal peso, String color
+                    Archivo a = new Archivo(aPK, new Date(), false, archivoFile.length(),0,"");
                     Archivo carpetaContenedora =  ctrArch.findArchivo(new ArchivoPK(carpetaElegida, u.getNombreUsuario(), repositorioSeleccionado));
                     carpetaContenedora.setNumArchivos(carpetaContenedora.getNumArchivos()+1); 
                     try {

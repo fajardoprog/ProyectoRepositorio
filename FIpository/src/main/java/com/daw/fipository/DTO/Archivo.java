@@ -6,6 +6,7 @@
 package com.daw.fipository.DTO;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -22,7 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 @Entity
 @Table(name = "archivo")
@@ -36,8 +37,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Archivo.findByNombreRepositorio", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Archivo.findByNumArchivos", query = "SELECT a FROM Archivo a WHERE a.numArchivos = :numArchivos"),
     @NamedQuery(name = "Archivo.findByPeso", query = "SELECT a FROM Archivo a WHERE a.peso = :peso"),
-    @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),
-    @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color")})
+    @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color"),
+    @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta")
+})
 public class Archivo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -56,12 +58,21 @@ public class Archivo implements Serializable {
     private Integer numArchivos;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "peso")
-    private double peso;
+    private BigDecimal peso;
     @Size(max = 20)
     @Column(name = "color")
     private String color;
 
     public Archivo() {
+    }
+
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, BigDecimal peso, String color) {
+        this.archivoPK = archivoPK;
+        this.fechaCreacion = fechaCreacion;
+        this.carpeta = carpeta;
+        this.numArchivos = numArchivos;
+        this.peso = peso;
+        this.color = color;
     }
 
     public Archivo(ArchivoPK archivoPK) {
@@ -74,26 +85,17 @@ public class Archivo implements Serializable {
         this.carpeta = carpeta;
     }
 
-    public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
-        this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
-    }
-
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, String color) {
-        this.archivoPK = archivoPK;
-        this.fechaCreacion = fechaCreacion;
-        this.carpeta = carpeta;
-        this.numArchivos = numArchivos;
-        this.color = color;
-    }
-
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, double peso) {
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, BigDecimal peso, String color) {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
         this.peso = peso;
+        this.color = color;
     }
-    
-    
+
+    public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
+        this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
+    }
 
     public ArchivoPK getArchivoPK() {
         return archivoPK;
@@ -127,11 +129,11 @@ public class Archivo implements Serializable {
         this.numArchivos = numArchivos;
     }
 
-    public double getPeso() {
+    public BigDecimal getPeso() {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public void setPeso(BigDecimal peso) {
         this.peso = peso;
     }
 

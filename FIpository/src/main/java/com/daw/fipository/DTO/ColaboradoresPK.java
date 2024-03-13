@@ -14,10 +14,10 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 @Embeddable
-public class ColaboradorPK implements Serializable {
+public class ColaboradoresPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
@@ -35,10 +35,10 @@ public class ColaboradorPK implements Serializable {
     @Column(name = "nombre_repositorio_colaborado")
     private String nombreRepositorioColaborado;
 
-    public ColaboradorPK() {
+    public ColaboradoresPK() {
     }
 
-    public ColaboradorPK(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
+    public ColaboradoresPK(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
         this.nombreUsuarioColaborador = nombreUsuarioColaborador;
         this.nombreUsuarioColaborado = nombreUsuarioColaborado;
         this.nombreRepositorioColaborado = nombreRepositorioColaborado;
@@ -80,10 +80,10 @@ public class ColaboradorPK implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ColaboradorPK)) {
+        if (!(object instanceof ColaboradoresPK)) {
             return false;
         }
-        ColaboradorPK other = (ColaboradorPK) object;
+        ColaboradoresPK other = (ColaboradoresPK) object;
         if ((this.nombreUsuarioColaborador == null && other.nombreUsuarioColaborador != null) || (this.nombreUsuarioColaborador != null && !this.nombreUsuarioColaborador.equals(other.nombreUsuarioColaborador))) {
             return false;
         }
@@ -98,7 +98,7 @@ public class ColaboradorPK implements Serializable {
 
     @Override
     public String toString() {
-        return "com.daw.fipository.DTO.ColaboradorPK[ nombreUsuarioColaborador=" + nombreUsuarioColaborador + ", nombreUsuarioColaborado=" + nombreUsuarioColaborado + ", nombreRepositorioColaborado=" + nombreRepositorioColaborado + " ]";
+        return "com.daw.fipository.DTO.ColaboradoresPK[ nombreUsuarioColaborador=" + nombreUsuarioColaborador + ", nombreUsuarioColaborado=" + nombreUsuarioColaborado + ", nombreRepositorioColaborado=" + nombreRepositorioColaborado + " ]";
     }
     
 }

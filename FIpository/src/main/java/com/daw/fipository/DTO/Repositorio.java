@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 @Entity
 @Table(name = "repositorio")
@@ -33,7 +33,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Repositorio.findByNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio = :nombreRepositorio"),
     @NamedQuery(name = "Repositorio.findByDescripcion", query = "SELECT r FROM Repositorio r WHERE r.descripcion = :descripcion"),
     @NamedQuery(name = "Repositorio.findByFechaCreacion", query = "SELECT r FROM Repositorio r WHERE r.fechaCreacion = :fechaCreacion"),
-    @NamedQuery(name = "Repositorio.findByVisibilidad", query = "SELECT r FROM Repositorio r WHERE r.visibilidad = :visibilidad")})
+    @NamedQuery(name = "Repositorio.findByPrivado", query = "SELECT r FROM Repositorio r WHERE r.privado = :privado"),
+    @NamedQuery(name = "Repositorio.findByNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.numeroVisitas = :numeroVisitas"),
+    @NamedQuery(name = "Repositorio.ordenadosPorFecha", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.fechaCreacion"),
+    @NamedQuery(name = "Repositorio.ordenadosPorNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.repositorioPK.nombreRepositorio"),
+    @NamedQuery(name = "Repositorio.ordenadosPorNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r")
+})
 public class Repositorio implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,10 +54,20 @@ public class Repositorio implements Serializable {
     @Column(name = "fecha_creacion")
     @Temporal(TemporalType.DATE)
     private Date fechaCreacion;
-    @Column(name = "visibilidad")
-    private Integer visibilidad;
+    @Column(name = "privado")
+    private Integer privado;
+    @Column(name = "numero_visitas")
+    private Integer numeroVisitas;
 
     public Repositorio() {
+    }
+
+    public Repositorio(RepositorioPK repositorioPK, String descripcion, Date fechaCreacion, Integer privado, Integer numeroVisitas) {
+        this.repositorioPK = repositorioPK;
+        this.descripcion = descripcion;
+        this.fechaCreacion = fechaCreacion;
+        this.privado = privado;
+        this.numeroVisitas = numeroVisitas;
     }
 
     public Repositorio(RepositorioPK repositorioPK) {
@@ -67,13 +82,6 @@ public class Repositorio implements Serializable {
 
     public Repositorio(String nombreUsuario, String nombreRepositorio) {
         this.repositorioPK = new RepositorioPK(nombreUsuario, nombreRepositorio);
-    }
-
-    public Repositorio(RepositorioPK repositorioPK, String descripcion, Date fechaCreacion, Integer visibilidad) {
-        this.repositorioPK = repositorioPK;
-        this.descripcion = descripcion;
-        this.fechaCreacion = fechaCreacion;
-        this.visibilidad = visibilidad;
     }
 
     public RepositorioPK getRepositorioPK() {
@@ -100,12 +108,20 @@ public class Repositorio implements Serializable {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public Integer getVisibilidad() {
-        return visibilidad;
+    public Integer getPrivado() {
+        return privado;
     }
 
-    public void setVisibilidad(Integer visibilidad) {
-        this.visibilidad = visibilidad;
+    public void setPrivado(Integer privado) {
+        this.privado = privado;
+    }
+
+    public Integer getNumeroVisitas() {
+        return numeroVisitas;
+    }
+
+    public void setNumeroVisitas(Integer numeroVisitas) {
+        this.numeroVisitas = numeroVisitas;
     }
 
     @Override

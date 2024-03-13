@@ -5,10 +5,10 @@
  */
 package com.daw.fipository.logica;
 
-import com.daw.fipository.DAO.ColaboradorJpaController;
+import com.daw.fipository.DAO.ColaboradoresJpaController;
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
-import com.daw.fipository.DTO.Colaborador;
+import com.daw.fipository.DTO.Colaboradores;
 import com.daw.fipository.DTO.Repositorio;
 import com.daw.fipository.DTO.RepositorioPK;
 import com.daw.fipository.DTO.Usuario;
@@ -38,16 +38,16 @@ public class CargaDatosRepositorio extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         
         RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
-        ColaboradorJpaController ctrColab = new ColaboradorJpaController(emf);
+        ColaboradoresJpaController ctrColab = new ColaboradoresJpaController(emf);
         
         HttpSession s = request.getSession();
         Usuario u = (Usuario) s.getAttribute("usuarioActual");
         List<Repositorio> listaRepositorios = ctrRepo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario());
         request.setAttribute("misRepositorios", listaRepositorios);
-        List<Colaborador> repositariosColaborados = ctrColab.listaRepositoriosColaboradores(u.getNombreUsuario());
+        List<Colaboradores> repositariosColaborados = ctrColab.listaRepositoriosColaboradores(u.getNombreUsuario());
         ArrayList<AuxiliarUsuarioRepositorio> listaRepositoriosCompartidos = new ArrayList();
-        for (Colaborador rC : repositariosColaborados) {
-            RepositorioPK rPk = new RepositorioPK(rC.getColaboradorPK().getNombreUsuarioColaborado(), rC.getColaboradorPK().getNombreRepositorioColaborado());
+        for (Colaboradores rC : repositariosColaborados) {
+            RepositorioPK rPk = new RepositorioPK(rC.getColaboradoresPK().getNombreUsuarioColaborado(), rC.getColaboradoresPK().getNombreRepositorioColaborado());
             listaRepositoriosCompartidos.add(new AuxiliarUsuarioRepositorio(ctrRepo.findRepositorio(rPk), u));
         }
         request.setAttribute("repositoriosCompartidos", listaRepositoriosCompartidos);

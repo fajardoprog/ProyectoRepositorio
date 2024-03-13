@@ -21,7 +21,7 @@ import javax.persistence.criteria.Root;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 public class RepositorioJpaController implements Serializable {
 
@@ -145,14 +145,11 @@ public class RepositorioJpaController implements Serializable {
             em.close();
         }
     }
-    
-        public List<Repositorio> listaCarpetasUsuarioRepositorio(String usuario) {
+     public List<Repositorio> listaCarpetasUsuarioRepositorio(String usuario) {
         EntityManager em = getEntityManager();
         TypedQuery tq = em.createNamedQuery("Repositorio.findByNombreUsuario", Repositorio.class);
         tq.setParameter("nombreUsuario", usuario);
         List l = tq.getResultList();
         return l;
     }
-
-    
 }

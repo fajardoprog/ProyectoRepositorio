@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 @Embeddable
 public class RealizaPK implements Serializable {

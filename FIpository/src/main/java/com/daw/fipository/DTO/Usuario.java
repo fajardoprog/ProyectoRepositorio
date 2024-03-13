@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author José Antonio Fajardo Naranjo
+ * @author IsmaelJJL
  */
 @Entity
 @Table(name = "usuario")
@@ -40,7 +40,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findByGenero", query = "SELECT u FROM Usuario u WHERE u.genero = :genero"),
     @NamedQuery(name = "Usuario.findByFoto", query = "SELECT u FROM Usuario u WHERE u.foto = :foto"),
     @NamedQuery(name = "Usuario.findByFechaNacimiento", query = "SELECT u FROM Usuario u WHERE u.fechaNacimiento = :fechaNacimiento"),
-    @NamedQuery(name = "Usuario.findByAdmin", query = "SELECT u FROM Usuario u WHERE u.admin = :admin")})
+    @NamedQuery(name = "Usuario.findByAdmin", query = "SELECT u FROM Usuario u WHERE u.admin = :admin"),
+    @NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
+    @NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
+    @NamedQuery(name = "Usuario.ordenadorPorNombre", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'")
+})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
