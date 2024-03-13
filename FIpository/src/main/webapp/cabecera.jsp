@@ -9,6 +9,7 @@
 
 
 <c:if test="${!sessionScope.usuarioActual.admin}">
+
     <nav class="navbar navbar-expand-lg navbar-dark" id="barraNavegacion">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -148,7 +149,7 @@
                         <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="perfilUsuario">
                             <i class="bi bi-person-standing"></i> ${sessionScope.usuarioActual.nombreUsuario}
                         </a>
-                        
+
                         <ul class="dropdown-menu text-small mt-2" id="submenuLog">
                             <li><a class="dropdown-item" href="AdminIndex.jsp">Inicio</a></li>
                             <li><a class="dropdown-item" href="log.jsp">Ver Logs</a></li>
@@ -160,8 +161,8 @@
                 </c:if>
             </a>
 
-            <div class="collapse navbar-collapse justify-content-between flex-column " id="barraNavPrincipal">
-                <div class="d-flex flex-column col-10">
+            <div class="collapse navbar-collapse justify-content-center flex-column col-8 " id="barraNavPrincipal">
+                <div class="d-flex flex-column col-12">
 
                     <form action="busquedas.jsp" class="d-flex align-items-center justify-content-center">
                         <div class="input-group">

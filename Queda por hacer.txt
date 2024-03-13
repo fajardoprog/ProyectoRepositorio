@@ -1,0 +1,16 @@
+META->Viernes 15 de Marzo
+
+Queda por hacer:
+
+--Ver otro Usuario (vista Usuario)
+--Ver otro Usuario (vista Admin)
+--Banear
+--Crear Logs
+--Tabla Me gusta BD
+--Corazon que se rellene y dar me gusta al usu
+--Reportes enviarlos
+--Subir Opiniones
+--Busquedas(Admin)
+--Busquedas(Usuario)
+--Dar permisos para ver otro repositorios
+--Boton en "miEspacio" para que el usuario acepte las peticiones para ver sus repositorios
