@@ -52,209 +52,50 @@
             <section class="container-Admin row row-cols-1 row-cols-md-2 row-cols-xl-3 row container-fluid justify-content-center g-0 ">
                 <!--Aquí van las opiniones-->
 
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
+                <c:forEach var="usuario" items="${requestScope.listaUsuario}">
+                    <c:if test="${usuario.nombreUsuario != 'admin'}">
+                        <div>
+                            <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
+                                <div class="d-flex flex-column align-items-center justify-content-between">
+                                    <!--Imagenes estrellas-->
+                                    <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                    <!---------------------->
+                                    <!--Foto Perfil Usuario-->
+                                    <div style="background: url(imgPerfilUsuario/${usuario.foto}) no-repeat;width: 100px;height: 100px;background-size: contain;border-radius: 100px;background-position: center;"></div>                                    
+                                    <!---->
+                                    <h5>${usuario.nombreUsuario}</h5>
+                                    <form action="verPerfilUsuario" class="d-none d-xl-block">
+                                        <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
+                                        <input type="hidden" name="UsuSelec" value="${usuario}" />
+                                    </form>
                                 </div>
 
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
+                                <div class="d-flex flex-column justify-content-around">
+                                    <h5>Fecha Nacimiento</h5>
+                                    <p><fmt:formatDate pattern = "yyyy-MM-dd"  value = "${usuario.fechaNacimiento}" /></p>
+
+                                    <div class="d-flex justify-content-around text-center">
+                                        <div>
+                                            <i class="bi bi-exclamation-diamond-fill"></i>
+                                            <p>${usuario.numeroReporte}</p>
+                                        </div>
+
+                                        <div>
+                                            <i class="bi bi-heart-fill"></i>
+                                            <p>${usuario.numeroLike}</p>
+                                        </div>
+                                    </div>
+
                                 </div>
-                            </div>
-
+                                <form action="verPerfilUsuario" class="d-block d-xl-none">
+                                    <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
+                                    <input type="hidden" name="UsuSelec" value="${usuario}" />
+                                </form>
+                            </article>
                         </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
+                    </c:if>                    
+                </c:forEach>
 
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
-                                </div>
-
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
-                                </div>
-
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
-                                </div>
-
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
-                                </div>
-
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                            <form action="" class="d-none d-xl-block">
-                                <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <h5>Fecha Creación Cuenta</h5>
-                            <p>11/12/2023</p>
-
-                            <div class="d-flex justify-content-around text-center">
-                                <div>
-                                    <i class="bi bi-exclamation-diamond-fill"></i>
-                                    <p>1</p>
-                                </div>
-
-                                <div>
-                                    <i class="bi bi-heart-fill"></i>
-                                    <p>360</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <form action="" class="d-block d-xl-none">
-                            <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
-                        </form>
-                    </article>
-                </div>
             </section>
 
         </main>        

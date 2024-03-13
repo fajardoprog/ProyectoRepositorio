@@ -40,6 +40,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findByGenero", query = "SELECT u FROM Usuario u WHERE u.genero = :genero"),
     @NamedQuery(name = "Usuario.findByFoto", query = "SELECT u FROM Usuario u WHERE u.foto = :foto"),
     @NamedQuery(name = "Usuario.findByFechaNacimiento", query = "SELECT u FROM Usuario u WHERE u.fechaNacimiento = :fechaNacimiento"),
+    @NamedQuery(name = "Usuario.findByNumeroReporte", query = "SELECT u FROM Usuario u WHERE u.numeroReporte = :numeroReporte"),
+    @NamedQuery(name = "Usuario.findByNumeroLike", query = "SELECT u FROM Usuario u WHERE u.numeroLike = :numeroLike"),
     @NamedQuery(name = "Usuario.findByAdmin", query = "SELECT u FROM Usuario u WHERE u.admin = :admin"),
     @NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
     @NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
@@ -101,6 +103,10 @@ public class Usuario implements Serializable {
     @Column(name = "fecha_nacimiento")
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
+    @Column(name = "numero_Reporte")
+    private Integer numeroReporte;
+    @Column(name = "numero_Like")
+    private Integer numeroLike;
     @Basic(optional = false)
     @NotNull
     @Column(name = "admin")
@@ -124,6 +130,22 @@ public class Usuario implements Serializable {
         this.genero = genero;
         this.foto = foto;
         this.fechaNacimiento = fechaNacimiento;
+        this.admin = admin;
+    }
+
+    public Usuario(String nombreUsuario, String passwordUsuario, String nombreCompleto, String primerApellido, String segundoApellido, String correo, String descripcion, String genero, String foto, Date fechaNacimiento, Integer numeroReporte, Integer numeroLike, boolean admin) {
+        this.nombreUsuario = nombreUsuario;
+        this.passwordUsuario = passwordUsuario;
+        this.nombreCompleto = nombreCompleto;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;        
+        this.correo = correo;
+        this.descripcion = descripcion;
+        this.genero = genero;
+        this.foto = foto;
+        this.fechaNacimiento = fechaNacimiento;
+        this.numeroReporte = numeroReporte;
+        this.numeroLike = numeroLike;
         this.admin = admin;
     }
 
@@ -213,6 +235,22 @@ public class Usuario implements Serializable {
 
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Integer getNumeroReporte() {
+        return numeroReporte;
+    }
+
+    public void setNumeroReporte(Integer numeroReporte) {
+        this.numeroReporte = numeroReporte;
+    }
+
+    public Integer getNumeroLike() {
+        return numeroLike;
+    }
+
+    public void setNumeroLike(Integer numeroLike) {
+        this.numeroLike = numeroLike;
     }
 
     public boolean getAdmin() {
