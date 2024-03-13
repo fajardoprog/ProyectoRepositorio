@@ -12,3 +12,5 @@ Queda por hacer:
 --Subir Opiniones
 --Busquedas(Admin)
 --Busquedas(Usuario)
+--Dar permisos para ver otro repositorios
+--Boton en "miEspacio" para que el usuario acepte las peticiones para ver sus repositorios
