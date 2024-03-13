@@ -15,6 +15,8 @@ CREATE OR REPLACE TABLE Usuario (
     genero VARCHAR(25) NOT NULL,
     foto VARCHAR(50) NOT NULL,
     fecha_nacimiento DATE NOT NULL,
+    numero_Reporte INT DEFAULT 0,
+    numero_Like INT DEFAULT 0,
     admin BOOLEAN NOT NULL
 );
 
