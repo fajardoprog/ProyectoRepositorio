@@ -34,19 +34,19 @@ public class ColaboradorJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Colaborador colaboradores) throws PreexistingEntityException, Exception {
-        if (colaboradores.getColaboradoresPK() == null) {
-            colaboradores.setColaboradoresPK(new ColaboradorPK());
+    public void create(Colaborador colaborador) throws PreexistingEntityException, Exception {
+        if (colaborador.getColaboradorPK() == null) {
+            colaborador.setColaboradorPK(new ColaboradorPK());
         }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            em.persist(colaboradores);
+            em.persist(colaborador);
             em.getTransaction().commit();
         } catch (Exception ex) {
-            if (findColaboradores(colaboradores.getColaboradoresPK()) != null) {
-                throw new PreexistingEntityException("Colaboradores " + colaboradores + " already exists.", ex);
+            if (findColaborador(colaborador.getColaboradorPK()) != null) {
+                throw new PreexistingEntityException("Colaborador " + colaborador + " already exists.", ex);
             }
             throw ex;
         } finally {
@@ -56,19 +56,19 @@ public class ColaboradorJpaController implements Serializable {
         }
     }
 
-    public void edit(Colaborador colaboradores) throws NonexistentEntityException, Exception {
+    public void edit(Colaborador colaborador) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            colaboradores = em.merge(colaboradores);
+            colaborador = em.merge(colaborador);
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                ColaboradorPK id = colaboradores.getColaboradoresPK();
-                if (findColaboradores(id) == null) {
-                    throw new NonexistentEntityException("The colaboradores with id " + id + " no longer exists.");
+                ColaboradorPK id = colaborador.getColaboradorPK();
+                if (findColaborador(id) == null) {
+                    throw new NonexistentEntityException("The colaborador with id " + id + " no longer exists.");
                 }
             }
             throw ex;
@@ -84,14 +84,14 @@ public class ColaboradorJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Colaborador colaboradores;
+            Colaborador colaborador;
             try {
-                colaboradores = em.getReference(Colaborador.class, id);
-                colaboradores.getColaboradoresPK();
+                colaborador = em.getReference(Colaborador.class, id);
+                colaborador.getColaboradorPK();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The colaboradores with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The colaborador with id " + id + " no longer exists.", enfe);
             }
-            em.remove(colaboradores);
+            em.remove(colaborador);
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -100,15 +100,15 @@ public class ColaboradorJpaController implements Serializable {
         }
     }
 
-    public List<Colaborador> findColaboradoresEntities() {
-        return findColaboradoresEntities(true, -1, -1);
+    public List<Colaborador> findColaboradorEntities() {
+        return findColaboradorEntities(true, -1, -1);
     }
 
-    public List<Colaborador> findColaboradoresEntities(int maxResults, int firstResult) {
-        return findColaboradoresEntities(false, maxResults, firstResult);
+    public List<Colaborador> findColaboradorEntities(int maxResults, int firstResult) {
+        return findColaboradorEntities(false, maxResults, firstResult);
     }
 
-    private List<Colaborador> findColaboradoresEntities(boolean all, int maxResults, int firstResult) {
+    private List<Colaborador> findColaboradorEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
@@ -124,7 +124,7 @@ public class ColaboradorJpaController implements Serializable {
         }
     }
 
-    public Colaborador findColaboradores(ColaboradorPK id) {
+    public Colaborador findColaborador(ColaboradorPK id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Colaborador.class, id);
@@ -133,7 +133,7 @@ public class ColaboradorJpaController implements Serializable {
         }
     }
 
-    public int getColaboradoresCount() {
+    public int getColaboradorCount() {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();

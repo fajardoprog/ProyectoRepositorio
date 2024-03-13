@@ -98,7 +98,7 @@ public class ColaboradorPK implements Serializable {
 
     @Override
     public String toString() {
-        return "com.daw.fipository.DTO.ColaboradoresPK[ nombreUsuarioColaborador=" + nombreUsuarioColaborador + ", nombreUsuarioColaborado=" + nombreUsuarioColaborado + ", nombreRepositorioColaborado=" + nombreRepositorioColaborado + " ]";
+        return "com.daw.fipository.DTO.ColaboradorPK[ nombreUsuarioColaborador=" + nombreUsuarioColaborador + ", nombreUsuarioColaborado=" + nombreUsuarioColaborado + ", nombreRepositorioColaborado=" + nombreRepositorioColaborado + " ]";
     }
     
 }

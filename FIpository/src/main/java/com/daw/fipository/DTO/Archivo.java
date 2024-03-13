@@ -58,21 +58,12 @@ public class Archivo implements Serializable {
     private Integer numArchivos;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "peso")
-    private double peso;
+    private Double peso;
     @Size(max = 20)
     @Column(name = "color")
     private String color;
 
     public Archivo() {
-    }
-
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, double peso, String color) {
-        this.archivoPK = archivoPK;
-        this.fechaCreacion = fechaCreacion;
-        this.carpeta = carpeta;
-        this.numArchivos = numArchivos;
-        this.peso = peso;
-        this.color = color;
     }
 
     public Archivo(ArchivoPK archivoPK) {
@@ -83,6 +74,10 @@ public class Archivo implements Serializable {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
+    }
+
+    public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
+        this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
     }
 
     public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, double peso) {
@@ -99,13 +94,9 @@ public class Archivo implements Serializable {
         this.numArchivos = numArchivos;
         this.color = color;
     }
+
     
     
-
-    public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
-        this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
-    }
-
     public ArchivoPK getArchivoPK() {
         return archivoPK;
     }

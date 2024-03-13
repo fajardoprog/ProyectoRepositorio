@@ -21,39 +21,39 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "colaboradores")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Colaboradores.findAll", query = "SELECT c FROM Colaboradores c"),
-    @NamedQuery(name = "Colaboradores.findByNombreUsuarioColaborador", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreUsuarioColaborador = :nombreUsuarioColaborador"),
-    @NamedQuery(name = "Colaboradores.findByNombreUsuarioColaborado", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreUsuarioColaborado = :nombreUsuarioColaborado"),
-    @NamedQuery(name = "Colaboradores.findByNombreRepositorioColaborado", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreRepositorioColaborado = :nombreRepositorioColaborado")})
+    @NamedQuery(name = "Colaborador.findAll", query = "SELECT c FROM Colaborador c"),
+    @NamedQuery(name = "Colaborador.findByNombreUsuarioColaborador", query = "SELECT c FROM Colaborador c WHERE c.colaboradorPK.nombreUsuarioColaborador = :nombreUsuarioColaborador"),
+    @NamedQuery(name = "Colaborador.findByNombreUsuarioColaborado", query = "SELECT c FROM Colaborador c WHERE c.colaboradorPK.nombreUsuarioColaborado = :nombreUsuarioColaborado"),
+    @NamedQuery(name = "Colaborador.findByNombreRepositorioColaborado", query = "SELECT c FROM Colaborador c WHERE c.colaboradorPK.nombreRepositorioColaborado = :nombreRepositorioColaborado")})
 public class Colaborador implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
-    protected ColaboradorPK colaboradoresPK;
+    protected ColaboradorPK colaboradorPK;
 
     public Colaborador() {
     }
 
-    public Colaborador(ColaboradorPK colaboradoresPK) {
-        this.colaboradoresPK = colaboradoresPK;
+    public Colaborador(ColaboradorPK colaboradorPK) {
+        this.colaboradorPK = colaboradorPK;
     }
 
     public Colaborador(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
-        this.colaboradoresPK = new ColaboradorPK(nombreUsuarioColaborador, nombreUsuarioColaborado, nombreRepositorioColaborado);
+        this.colaboradorPK = new ColaboradorPK(nombreUsuarioColaborador, nombreUsuarioColaborado, nombreRepositorioColaborado);
     }
 
-    public ColaboradorPK getColaboradoresPK() {
-        return colaboradoresPK;
+    public ColaboradorPK getColaboradorPK() {
+        return colaboradorPK;
     }
 
-    public void setColaboradoresPK(ColaboradorPK colaboradoresPK) {
-        this.colaboradoresPK = colaboradoresPK;
+    public void setColaboradorPK(ColaboradorPK colaboradorPK) {
+        this.colaboradorPK = colaboradorPK;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (colaboradoresPK != null ? colaboradoresPK.hashCode() : 0);
+        hash += (colaboradorPK != null ? colaboradorPK.hashCode() : 0);
         return hash;
     }
 
@@ -64,7 +64,7 @@ public class Colaborador implements Serializable {
             return false;
         }
         Colaborador other = (Colaborador) object;
-        if ((this.colaboradoresPK == null && other.colaboradoresPK != null) || (this.colaboradoresPK != null && !this.colaboradoresPK.equals(other.colaboradoresPK))) {
+        if ((this.colaboradorPK == null && other.colaboradorPK != null) || (this.colaboradorPK != null && !this.colaboradorPK.equals(other.colaboradorPK))) {
             return false;
         }
         return true;
@@ -72,7 +72,7 @@ public class Colaborador implements Serializable {
 
     @Override
     public String toString() {
-        return "com.daw.fipository.DTO.Colaboradores[ colaboradoresPK=" + colaboradoresPK + " ]";
+        return "com.daw.fipository.DTO.Colaborador[ colaboradorPK=" + colaboradorPK + " ]";
     }
     
 }

@@ -47,7 +47,7 @@ public class CargaDatosRepositorio extends HttpServlet {
         List<Colaborador> repositariosColaborados = ctrColab.listaRepositoriosColaboradores(u.getNombreUsuario());
         ArrayList<AuxiliarUsuarioRepositorio> listaRepositoriosCompartidos = new ArrayList();
         for (Colaborador rC : repositariosColaborados) {
-            RepositorioPK rPk = new RepositorioPK(rC.getColaboradoresPK().getNombreUsuarioColaborado(), rC.getColaboradoresPK().getNombreRepositorioColaborado());
+            RepositorioPK rPk = new RepositorioPK(rC.getColaboradorPK().getNombreUsuarioColaborado(), rC.getColaboradorPK().getNombreRepositorioColaborado());
             listaRepositoriosCompartidos.add(new AuxiliarUsuarioRepositorio(ctrRepo.findRepositorio(rPk), u));
         }
         request.setAttribute("repositoriosCompartidos", listaRepositoriosCompartidos);

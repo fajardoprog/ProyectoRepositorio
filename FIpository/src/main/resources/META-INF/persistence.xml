@@ -16,6 +16,7 @@
     <class>com.daw.fipository.DTO.Accionsobrearchivo</class>
     <class>com.daw.fipository.DTO.Accionsobreusuario</class>
     <class>com.daw.fipository.DTO.Accionsobrerepositorio</class>
+    <class>com.daw.fipository.DTO.Colaboradores</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/fipository?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
