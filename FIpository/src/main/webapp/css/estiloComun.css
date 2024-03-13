@@ -33,9 +33,7 @@ body {
     justify-content: space-between;
 }
 
-aside{
-
-}
+aside {}
 
 nav .container-fluid img {
     width: 5vw;
@@ -50,7 +48,7 @@ header .navbar {
     font-size: 5.5vmin;
 }
 
-.navbar .navbar-nav .nav-item a.nav-link i{
+.navbar .navbar-nav .nav-item a.nav-link i {
     font-size: 5.5vmin;
 }
 
@@ -81,9 +79,9 @@ header .navbar {
     border-color: white;
 }
 
-#breadcrumbs ol li a{
-    color:black;
-    text-decoration: none;    
+#breadcrumbs ol li a {
+    color: black;
+    text-decoration: none;
 }
 
 
@@ -120,6 +118,7 @@ i {
 #enlInciarSesion:hover #iniSesi {
     color: rgb(192, 192, 192);
 }
+
 /*Esta parte se encuentra en Iniciar sesion y recuperar Contraseña*/
 .formu {
     /*background-color: #429644;*/
@@ -132,12 +131,12 @@ i {
     color: black
 }
 
-.formu a{
-    color:black;
+.formu a {
+    color: black;
     transition: 0.5s all;
 }
 
-.formu a:hover{
+.formu a:hover {
     color: #0d6efd;
 }
 
@@ -160,53 +159,60 @@ footer ul li:last-child {
 
 /*Cambios Index dia 27/02*/
 
-input[type="submit"],.btn{
+input[type="submit"],
+.btn {
     font-size: 6.5vmin;
 }
 
-h1{
+h1 {
     font-size: 11vmin;
 }
-h2{
+
+h2 {
     font-size: 7vmin;
     margin: 1rem;
 }
 
 /*Bloque imagen de perfil usuario con nombre en la cabecera*/
-#perfilUsuario{
+#perfilUsuario {
     color: white;
     text-decoration: none;
 }
+
 /*Imagen de la cabecera*/
-#imgUsuario{
+#imgUsuario {
     width: 50px;
     border-radius: 500px;
 }
 
-#submenuLog{
+#submenuLog {
     left: -35%;
 }
 
-#submenuLog li a,#submenuLog li a i{
-    font-size: 1.1rem;    
+#submenuLog li a,
+#submenuLog li a i {
+    font-size: 1.1rem;
 }
 
 /*Oculatr imagen de impresion*/
-#imagenCabecera{
+#imagenCabecera {
     display: none;
 }
 
 @media screen and (min-width:576px) {
+
     /*Resolución tablet*/
-    input[type="submit"],.btn{
+    input[type="submit"],
+    .btn {
         font-size: 4vmin;
     }
 
-    h1{
+    h1 {
         font-size: 8vmin;
     }
-    h2{
-        font-size: 5vmin;        
+
+    h2 {
+        font-size: 5vmin;
     }
 
     .navbar .navbar-nav .nav-item a.nav-link {
@@ -222,27 +228,31 @@ h2{
         font-size: 3vmin;
     }
 
-    #submenuLog{
-        left: -20%;    
+    #submenuLog {
+        left: -20%;
     }
 
-    #submenuLog li a,#submenuLog li a i{
-        font-size: 1.5rem;    
+    #submenuLog li a,
+    #submenuLog li a i {
+        font-size: 1.5rem;
     }
 
 }
 
 @media screen and (min-width:992px) {
+
     /*Resolución Ordenador*/
-    input[type="submit"],.btn{
+    input[type="submit"],
+    .btn {
         font-size: 6.5vmin;
     }
 
-    h1{
+    h1 {
         font-size: 8vmin;
     }
-    h2{
-        font-size: 6vmin;        
+
+    h2 {
+        font-size: 6vmin;
     }
 
     .navbar .navbar-nav .nav-item a.nav-link {
@@ -250,15 +260,15 @@ h2{
         font-size: 2.5vmin;
     }
 
-    .navbar .navbar-nav .nav-item a.nav-link i{
+    .navbar .navbar-nav .nav-item a.nav-link i {
         font-size: 2.5vmin;
     }
 
-    .navbar input[type="submit"]{
+    .navbar input[type="submit"] {
         font-size: 2.5vmin;
     }
 
-    nav:first-child li:first-child  {
+    nav:first-child li:first-child {
         width: auto !important;
     }
 
@@ -266,12 +276,13 @@ h2{
         font-size: 2.5vmin;
     }
 
-    #submenuLog{
-        left: -10%;    
+    #submenuLog {
+        left: -10%;
     }
 
-    #submenuLog li a,#submenuLog li a i{
-        font-size: 1.1rem;    
+    #submenuLog li a,
+    #submenuLog li a i {
+        font-size: 1.1rem;
     }
 
 }
