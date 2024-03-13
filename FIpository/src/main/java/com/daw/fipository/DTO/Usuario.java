@@ -243,5 +243,5 @@ public class Usuario implements Serializable {
     public String toString() {
         return "com.daw.fipository.DTO.Usuario[ nombreUsuario=" + nombreUsuario + " ]";
     }
-    
+
 }

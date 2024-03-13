@@ -1,0 +1,22 @@
+querys personalizadas:
+-- Repositorio
+@NamedQuery(name = "Repositorio.ordenadosPorFecha", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.fechaCreacion"),
+@NamedQuery(name = "Repositorio.ordenadosPorNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.repositorioPK.nombreRepositorio"),
+@NamedQuery(name = "Repositorio.ordenadosPorNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r"),
+
+-- Usuario
+@NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
+@NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
+@NamedQuery(name = "Usuario.ordenadorPorNombre", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
+
+-- Archivo
+@NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta"),	
+
+    public List<Archivo> listaCarpetasUsuarioRepositorio(String usuario, String repositorio) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Archivo.carpetasUsuario", Archivo.class);
+        tq.setParameter("nombreUsuario", usuario);
+        tq.setParameter("nombreRepositorio", repositorio);
+        List l = tq.getResultList();
+        return l;
+    }

@@ -45,8 +45,8 @@
         <servlet-class>com.daw.fipository.logica.ModificaPerfil</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>BusquedaPorUsuario</servlet-name>
-        <servlet-class>com.daw.fipository.logica.BusquedaPorUsuario</servlet-class>
+        <servlet-name>Busquedas</servlet-name>
+        <servlet-class>com.daw.fipository.logica.Busquedas</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
@@ -93,8 +93,8 @@
         <url-pattern>/ModificaPerfil</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>BusquedaPorUsuario</servlet-name>
-        <url-pattern>/BusquedaPorUsuario</url-pattern>
+        <servlet-name>Busquedas</servlet-name>
+        <url-pattern>/Busquedas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

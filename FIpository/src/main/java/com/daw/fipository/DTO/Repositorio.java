@@ -75,8 +75,6 @@ public class Repositorio implements Serializable {
         this.fechaCreacion = fechaCreacion;
         this.visibilidad = visibilidad;
     }
-    
-    
 
     public RepositorioPK getRepositorioPK() {
         return repositorioPK;
@@ -134,5 +132,5 @@ public class Repositorio implements Serializable {
     public String toString() {
         return "com.daw.fipository.DTO.Repositorio[ repositorioPK=" + repositorioPK + " ]";
     }
-    
+
 }
