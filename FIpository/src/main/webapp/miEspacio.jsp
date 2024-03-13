@@ -58,13 +58,13 @@
                             <c:forEach items="${requestScope.misRepositorios}" var="repo">
                                 <article>
                                     <img class="avatar-repositorio" src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="">
-                                    <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="repositorio.jsp">
+                                    <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="repositorio.jsp" >
                                         ${sessionScope.usuarioActual.nombreUsuario}/${repo.repositorioPK.nombreRepositorio}
                                         <c:if test="${repo.visibilidad == 0}">
-                                            <i class="ms-2 bi bi-eye-fill"></i>
+                                            <i class="ms-2  bi bi-eye-slash-fill"></i>
                                         </c:if>
                                         <c:if test="${repo.visibilidad == 1}">
-                                            <i class="ms-2 bi bi-eye-slash-fill"></i>
+                                            <i class="ms-2 bi bi-eye-fill"></i>
                                         </c:if>
                                         <i class="ms-2 bi bi-arrow-right"></i>
                                     </a>
