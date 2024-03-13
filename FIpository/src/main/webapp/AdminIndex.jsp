@@ -60,7 +60,9 @@
                                     <!--Imagenes estrellas-->
                                     <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
                                     <!---------------------->
-                                    <img src="imgPerfilUsuario/${usuario.foto}" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                                    <!--Foto Perfil Usuario-->
+                                    <div style="background: url(imgPerfilUsuario/${usuario.foto}) no-repeat;width: 100px;height: 100px;background-size: contain;border-radius: 100px;background-position: center;"></div>                                    
+                                    <!---->
                                     <h5>${usuario.nombreUsuario}</h5>
                                     <form action="verPerfilUsuario" class="d-none d-xl-block">
                                         <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />

@@ -8,7 +8,7 @@ package com.daw.fipository.logica;
 import com.daw.fipository.DAO.UsuarioJpaController;
 import com.daw.fipository.DTO.Usuario;
 import java.io.File;
-import java.util.Date;
+/*import java.util.Date;*/
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
@@ -21,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
+import java.sql.Date;
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.MultipartConfig;
 
@@ -58,7 +59,8 @@ public class Registro extends HttpServlet {
         String otroGenero = request.getParameter("otroGenero");
         String descripcionUsu = request.getParameter("descripcionUsu");
 
-        Date fechaNacimiento = new Date(fechaNacimientoUsuario);
+        //Date fechaNacimiento = new Date(fechaNacimientoUsuario);
+        Date fechaNacimiento = Date.valueOf(fechaNacimientoUsuario);
         if (generoUsuario.equalsIgnoreCase("Otro")) {
             generoUsuario = otroGenero;
         }
