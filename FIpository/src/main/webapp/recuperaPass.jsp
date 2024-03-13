@@ -54,7 +54,7 @@
             
             <!--Bloque formulario Recuperar contraseña-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form class="text-center  border border-black rounded col-md-8 formu p-4">
+                <form action="CorreoPeticionNuevaPass" class="text-center  border border-black rounded col-md-8 formu p-4">
 
                     <h1 class="h3 mb-3 fw-normal m-3">Recuperar Contraseña</h1>
 
@@ -71,32 +71,6 @@
                                 <label for="floatingInput">Correo Usuario</label>
                             </div>
                         </div>
-
-
-                        <div class="col-11 d-flex just ify-content-between align-items-center">
-                            <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">password</span>
-                            </div>
-
-                            <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10" id="floatingPassword1"
-                                       placeholder="Password" name="NuevacontraUsu">
-                                <label for="floatingPassword1">Contraseña</label>
-                            </div>
-                        </div>
-
-                        <div class="col-11 d-flex just ify-content-between align-items-center">
-                            <div class="d-flex col-2 justify-content-around align-items-center">
-                                <span class="material-symbols-outlined">refresh password</span>
-                            </div>
-
-                            <div class="form-floating m-2 align-items-center col-10">
-                                <input type="password" class="form-control col-10" id="floatingPassword2"
-                                       placeholder="Password" name="NuevacontraUsuRepe">
-                                <label for="floatingPassword2">Repetir Contraseña</label>
-                            </div>
-                        </div>
-
                     </div>
 
                     <button type="submit" class="btn btn-primary w-30 p-2 m-2 col-5">Cambiar Contraseña</button>
