@@ -64,7 +64,7 @@
                                     <div style="background: url(imgPerfilUsuario/${usuario.foto}) no-repeat;width: 100px;height: 100px;background-size: contain;border-radius: 100px;background-position: center;"></div>                                    
                                     <!---->
                                     <h5>${usuario.nombreUsuario}</h5>
-                                    <form action="verPerfilUsuario" class="d-none d-xl-block">
+                                    <form action="PerfilOtroUsu.jsp" class="d-none d-xl-block">
                                         <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
                                         <input type="hidden" name="UsuSelec" value="${usuario}" />
                                     </form>
@@ -87,7 +87,7 @@
                                     </div>
 
                                 </div>
-                                <form action="verPerfilUsuario" class="d-block d-xl-none">
+                                <form action="PerfilOtroUsu.jsp" class="d-block d-xl-none">
                                     <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
                                     <input type="hidden" name="UsuSelec" value="${usuario}" />
                                 </form>
