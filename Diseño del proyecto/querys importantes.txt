@@ -28,4 +28,12 @@ querys personalizadas:
         List l = tq.getResultList();
         return l;
     }
-
+-- Colaborador
+    public List<Colaborador> listaRepositoriosColaboradores(String usuario) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Colaborador.findByNombreUsuarioColaborador", Colaborador.class);
+        tq.setParameter("nombreUsuarioColaborador", usuario);
+        List l = tq.getResultList();
+        return l;
+    }
+    
