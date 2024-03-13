@@ -14,7 +14,6 @@
     <class>com.daw.fipository.DTO.Usuario</class>
     <class>com.daw.fipository.DTO.Colaborador</class>
     <class>com.daw.fipository.DTO.Accionsobrearchivo</class>
-    <class>com.daw.fipository.DTO.Colaboradores</class>
     <class>com.daw.fipository.DTO.Accionsobreusuario</class>
     <class>com.daw.fipository.DTO.Accionsobrerepositorio</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>

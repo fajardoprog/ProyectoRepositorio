@@ -25,28 +25,28 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Colaboradores.findByNombreUsuarioColaborador", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreUsuarioColaborador = :nombreUsuarioColaborador"),
     @NamedQuery(name = "Colaboradores.findByNombreUsuarioColaborado", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreUsuarioColaborado = :nombreUsuarioColaborado"),
     @NamedQuery(name = "Colaboradores.findByNombreRepositorioColaborado", query = "SELECT c FROM Colaboradores c WHERE c.colaboradoresPK.nombreRepositorioColaborado = :nombreRepositorioColaborado")})
-public class Colaboradores implements Serializable {
+public class Colaborador implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
-    protected ColaboradoresPK colaboradoresPK;
+    protected ColaboradorPK colaboradoresPK;
 
-    public Colaboradores() {
+    public Colaborador() {
     }
 
-    public Colaboradores(ColaboradoresPK colaboradoresPK) {
+    public Colaborador(ColaboradorPK colaboradoresPK) {
         this.colaboradoresPK = colaboradoresPK;
     }
 
-    public Colaboradores(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
-        this.colaboradoresPK = new ColaboradoresPK(nombreUsuarioColaborador, nombreUsuarioColaborado, nombreRepositorioColaborado);
+    public Colaborador(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
+        this.colaboradoresPK = new ColaboradorPK(nombreUsuarioColaborador, nombreUsuarioColaborado, nombreRepositorioColaborado);
     }
 
-    public ColaboradoresPK getColaboradoresPK() {
+    public ColaboradorPK getColaboradoresPK() {
         return colaboradoresPK;
     }
 
-    public void setColaboradoresPK(ColaboradoresPK colaboradoresPK) {
+    public void setColaboradoresPK(ColaboradorPK colaboradoresPK) {
         this.colaboradoresPK = colaboradoresPK;
     }
 
@@ -60,10 +60,10 @@ public class Colaboradores implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Colaboradores)) {
+        if (!(object instanceof Colaborador)) {
             return false;
         }
-        Colaboradores other = (Colaboradores) object;
+        Colaborador other = (Colaborador) object;
         if ((this.colaboradoresPK == null && other.colaboradoresPK != null) || (this.colaboradoresPK != null && !this.colaboradoresPK.equals(other.colaboradoresPK))) {
             return false;
         }

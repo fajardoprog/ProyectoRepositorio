@@ -58,7 +58,7 @@ public class Archivo implements Serializable {
     private Integer numArchivos;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "peso")
-    private BigDecimal peso;
+    private double peso;
     @Size(max = 20)
     @Column(name = "color")
     private String color;
@@ -66,7 +66,7 @@ public class Archivo implements Serializable {
     public Archivo() {
     }
 
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, BigDecimal peso, String color) {
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, double peso, String color) {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
@@ -85,13 +85,22 @@ public class Archivo implements Serializable {
         this.carpeta = carpeta;
     }
 
-    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, BigDecimal peso, String color) {
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, double peso) {
         this.archivoPK = archivoPK;
         this.fechaCreacion = fechaCreacion;
         this.carpeta = carpeta;
         this.peso = peso;
+    }
+
+    public Archivo(ArchivoPK archivoPK, Date fechaCreacion, boolean carpeta, Integer numArchivos, String color) {
+        this.archivoPK = archivoPK;
+        this.fechaCreacion = fechaCreacion;
+        this.carpeta = carpeta;
+        this.numArchivos = numArchivos;
         this.color = color;
     }
+    
+    
 
     public Archivo(String nombreArchivo, String nombreUsuario, String nombreRepositorio) {
         this.archivoPK = new ArchivoPK(nombreArchivo, nombreUsuario, nombreRepositorio);
@@ -129,11 +138,11 @@ public class Archivo implements Serializable {
         this.numArchivos = numArchivos;
     }
 
-    public BigDecimal getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(BigDecimal peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 

@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
  * @author IsmaelJJL
  */
 @Embeddable
-public class ColaboradoresPK implements Serializable {
+public class ColaboradorPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
@@ -35,10 +35,10 @@ public class ColaboradoresPK implements Serializable {
     @Column(name = "nombre_repositorio_colaborado")
     private String nombreRepositorioColaborado;
 
-    public ColaboradoresPK() {
+    public ColaboradorPK() {
     }
 
-    public ColaboradoresPK(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
+    public ColaboradorPK(String nombreUsuarioColaborador, String nombreUsuarioColaborado, String nombreRepositorioColaborado) {
         this.nombreUsuarioColaborador = nombreUsuarioColaborador;
         this.nombreUsuarioColaborado = nombreUsuarioColaborado;
         this.nombreRepositorioColaborado = nombreRepositorioColaborado;
@@ -80,10 +80,10 @@ public class ColaboradoresPK implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ColaboradoresPK)) {
+        if (!(object instanceof ColaboradorPK)) {
             return false;
         }
-        ColaboradoresPK other = (ColaboradoresPK) object;
+        ColaboradorPK other = (ColaboradorPK) object;
         if ((this.nombreUsuarioColaborador == null && other.nombreUsuarioColaborador != null) || (this.nombreUsuarioColaborador != null && !this.nombreUsuarioColaborador.equals(other.nombreUsuarioColaborador))) {
             return false;
         }
