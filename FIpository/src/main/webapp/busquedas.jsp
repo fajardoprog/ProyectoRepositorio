@@ -15,9 +15,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista usuarios</title>
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Lista usuarios</title>      
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-icons.css">
@@ -197,17 +195,17 @@
                                 </div>
                             </div>
                             <div class="stats d-flex justify-content-around pt-2 text-center align-items-stretch">
-                                <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado" >
+                                <p class="p-2 border rounded-pill text-white badgeCentrado" >
                                     repositorio/s
                                     <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
 
-                                <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado">
+                                <p class="p-2 border rounded-pill text-white badgeCentrado">
                                     seguidor/es
                                     <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
 
-                                 <p class="p-2 border bg-primary rounded-pill text-white badgeCentrado">
+                                 <p class="p-2 border rounded-pill text-white badgeCentrado">
                                     punto/s de reputación
                                     <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>

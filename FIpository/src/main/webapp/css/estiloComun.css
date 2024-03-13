@@ -179,7 +179,8 @@ h2{
 }
 /*Imagen de la cabecera*/
 #imgUsuario{
-    width: 5vmin;
+    width: 50px;
+    border-radius: 500px;
 }
 
 #submenuLog{
