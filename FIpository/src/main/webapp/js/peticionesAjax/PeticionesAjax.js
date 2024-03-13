@@ -7,7 +7,7 @@ function recuperarCarpetasRepositorio(repositorio) {
                     repositorio: repositorio
                 },
                 success: function (carpetas) {
-                    console.log("arrecogios")
+                    console.log("arrecogios");
                     for (let carpeta in carpetas) {
                         let carpetaActual = JSON.parse(carpetas[carpeta]);
                         nombreCarpeta = carpetaActual.archivoPK.nombreArchivo;
@@ -20,7 +20,8 @@ function recuperarCarpetasRepositorio(repositorio) {
                             value: nombreCarpeta
                         })).addClass("container-carpetas-fichero").append($("<label>").attr({
                             class: "btn btn-outline-success",
-                            for : nombreCarpeta
+                            for : nombreCarpeta,
+                            style:"color:"+carpetaActual.color+";border: 1px solid "+carpetaActual.color+";"
                         }).append("<span>").text(nombreCarpeta)));
                         
                     }

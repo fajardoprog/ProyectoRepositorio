@@ -13,19 +13,30 @@ main {
 }
 
 .container-input-texto label{
-    background: #999999;
+    background: var(--bs-primary);
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     font-size: 6vmin;
     border-radius: 30px 0px 0px 30px;
+    color: white;
 }
 
 .container-input-texto input{
     width: 100%;
+    padding-left: 1rem;
     border: none;
     transition: 0.5s all;
+        border-radius: 0px 30px 30px 0px;
 }
+
+.container-carpetas-fichero input{
+    position: absolute;
+    left: -2000px;
+}
+
+.container-carpetas-fichero label{}
 
 .container-input-texto input:focus{
     outline: none;
@@ -80,6 +91,7 @@ h2{
 
 main h3{
     padding: 0.5rem 1rem;
+    margin: 2rem;
     border-radius: 30px;
 }
 
@@ -109,14 +121,107 @@ main h3{
     overflow-y: scroll;
     border-radius: 20px;
     border: 2px solid white;
+    background: white;
+}
+
+#ficheros, #carpetas {
+    width: 95%;
+    margin: auto;
+}
+
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+[type="file"] + label {
+    text-align: center;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: inherit;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+    border-radius: 30px;
+
+    &.btn-3 {
+        background-color: var(--bs-primary);
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+            height: 100%;
+            font-size: 6vmin;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        &::before {
+            color: #fff;
+            content: "\F603";
+            font-family: "bootstrap-icons";
+            font-size: 2rem;
+            height: 100%;
+            left: 0;
+            font-size: 6vmin;
+            position: absolute;
+            top: -180%;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        &.btn-3:hover {
+            background-color:  rgb(66, 150, 68);
+
+            span {
+                transform: translateY(300%);
+            }
+
+            &::before {
+                top: 0;
+            }
+        }
+    }
+}
+
+#ficheros form{
+    display: flex;
+    flex-direction: column;
+}
+
+.submit{
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    background: none;
+    font-size: 6vmin;
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: auto;
+    width: 90%;
+    transition: 0.5s all;
+}
+
+.submit:hover{
+    color: white;
+    background: var(--bs-primary);
+
 }
 
 /* Track */
 .container-archivos::-webkit-scrollbar-track {
     background: none;
 }
-
-
 
 .progress {
     height: 5px;
@@ -147,6 +252,17 @@ main h3{
         font-size: 4vmin;
     }
 
+    #ficheros, #carpetas{
+        width: 75%;
+    }
+
+    [type="file"] + label {
+        &.btn-3 {
+            span {
+                font-size: 4vmin;
+            }
+        }
+    }
 }
 
 
@@ -167,6 +283,18 @@ main h3{
     .container-archivos{
         height: 200px;
         overflow-y: scroll
+    }
+    #ficheros, #carpetas{
+        width: 60%;
+    }
+
+    [type="file"] + label {
+        &.btn-3 {
+            span {
+                font-size: 3vmin;
+            }
+        }
+
     }
 
 }

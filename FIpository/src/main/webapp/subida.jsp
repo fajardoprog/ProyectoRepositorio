@@ -53,6 +53,20 @@
                     }
                 });
 
+//                $("#paso2fichero").on("change", "input[name='carpetaElegida']", function (ev) {
+//                    if (!$("#"+ev.target.id+ "+label").hasClass("carpeta-elegida")) {
+//                        let color = $(this)[0].style.color;
+//                       $("#"+ev.target.id+ "+label").attr("style", "color: white;background:" + color + ";");
+//                        $("input[name='carpetaElegida']+label").removeClass("carpeta-elegida").attr("style", "color:"+color+";background:"+color+";");
+//                        $(ev.target).siblings("label").addClass("carpeta-elegida");
+//                    } else {
+//                        let color = $(this+"+label")[0].style.color;
+//                        console.log(color);
+//                        $(this + "+label").attr();
+//                    }
+
+//                });
+
                 $("#paso1fichero").on("blur", "input", function () {
                     if (validarCampo($(this))) {
                         if (!$("#paso1fichero h3").hasClass("valido")) {
@@ -105,7 +119,7 @@
                         $("#container-carpetas").empty();
                         $("#container-carpetas").append($("<div>").append($("<input>").attr({
                             type: "radio",
-                            class: "btn-check",
+                            class: "btn-check carpeta-elegida",
                             name: "carpetaElegida",
                             id: "raiz",
                             autocomplete: "off"
@@ -147,7 +161,7 @@
                 </ol>
             </nav>
         </header>
-        <main >
+        <main>
             <h1>Subida de archivos</h1>
             <div class="container-botones">
                 <div role="group" aria-label="Cambiar entre subir fichero y carpeta">
@@ -159,122 +173,104 @@
             </div>
 
             <div id="ficheros">
-                <div>
-                    <div>
-                        <h2>Subida de ficheros</h2>
+                <h2>Subida de ficheros</h2>
 
-                        <div class="barra-progresion position-relative m-4">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar"></div>
-                            </div>
-                            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
-                            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill" >2</button>
-                            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
-                        </div>
-
-                        <form action="SubidaArchivos" method="post" enctype="multipart/form-data">
-                            <article id="paso1fichero">
-                                <h3>1. Selecciona el repositorio</h3>
-                                <div class="container-input-texto">
-                                    <label for="elegirRepoFichero"><span>Buscar</span></label>
-                                    <input list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
-                                </div>
-                                <datalist id="opcionesDatalist">
-                                    <c:forEach items="${requestScope.listaDirectorios}" var="directorio">
-                                        <option value="${directorio}"></option>
-                                    </c:forEach>
-                                </datalist>
-                            </article>
-                            <hr class="hr" />
-                            <article id="paso2fichero">
-                                <h3 class="my-3">2. Selecciona la carpeta</h3>
-                                <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-3 container-archivos" id="container-carpetas">
-                                    <div class="container-carpetas-fichero">
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
-                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
-                                    </div>
-                                    <div class="container-carpetas-fichero">
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
-                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
-                                    </div>
-                                    <div class="container-carpetas-fichero">
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
-                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
-                                    </div>
-                                    <div class="container-carpetas-fichero">
-                                        <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
-                                        <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
-                                    </div>
-
-                                </section>
-                            </article>
-                            <hr class="hr" />
-                            <article id="paso3fichero">
-                                <h3 class="my-3">3. Selecciona el fichero</h3>
-                                <input type="file" class="form-control" name="elegirFicheroFichero" id="elegirFicheroFichero" placeholder=""
-                                       aria-describedby="fileHelpId" />
-                            </article>
-                            <hr class="hr" />
-                            <input value="Subir fichero" type="submit" class="btn btn-primary my-3 align-items-center"/>
-                        </form>
+                <div class="barra-progresion position-relative m-4">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar"></div>
                     </div>
+                    <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
+                    <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill" >2</button>
+                    <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
                 </div>
+
+                <form action="SubidaArchivos" method="post" enctype="multipart/form-data">
+                    <article id="paso1fichero">
+                        <h3>1. Selecciona el repositorio</h3>
+                        <div class="container-input-texto">
+                            <label for="elegirRepoFichero"><span>Buscar</span></label>
+                            <input list="opcionesDatalist" id="elegirRepoFichero" name="elegirRepoFichero">
+                        </div>
+                        <datalist id="opcionesDatalist">
+                            <c:forEach items="${requestScope.listaDirectorios}" var="directorio">
+                                <option value="${directorio}"></option>
+                            </c:forEach>
+                        </datalist>
+                    </article>
+                    <hr class="hr" />
+                    <article id="paso2fichero">
+                        <h3>2. Selecciona la carpeta</h3>
+                        <section class="container-archivos" id="container-carpetas">
+                            <div class="container-carpetas-fichero">
+                                <input type="radio" name="carpetaElegida"  autocomplete="off" checked>
+                                <label class="carpeta-seleccionar" for="success-outlined"><span>Checked success radio</span></label>
+                            </div>
+                        </section>
+                    </article>
+                    <hr class="hr" />
+                    <article id="paso3fichero">
+                        <h3>3. Selecciona el fichero</h3>
+                        <input type="file" id="file"  name="elegirFicheroFichero" id="elegirFicheroFichero" placeholder=""
+                               aria-describedby="fileHelpId" />
+                        <label for="file" class="btn-3">
+                            <span>Selecciona un archivo</span>
+                        </label>
+                    </article>
+                    <hr class="hr" />
+                    <input value="Subir fichero" type="submit" class="submit"/>
+                </form>
             </div>
 
-            <div class="container" id="carpetas">
-                <div class="row">
-                    <div class="offset-lg-2 col-lg-8">
-                        <h2 class="text-center">Subida de carpeta</h2>
+            <div id="carpetas">
+                <h2>Subida de carpeta</h2>
+                <div class="barra-progresion position-relative m-4">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar"></div>
+                    </div>
+                    <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
+                    <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill">2</button>
+                    <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
+                </div>
 
-                        <div class="barra-progresion position-relative m-4">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar"></div>
-                            </div>
-                            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill">1</button>
-                            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill">2</button>
-                            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill">3</button>
+                <form action="SubidaCarpetas" method="post" enctype="multipart/form-data">
+                    <article id="paso1carpeta">
+                        <h3>1. Selecciona el repositorio</h3>
+                        <div class="container-input-texto">
+                            <label for="elegirRepoCarpeta">Buscar</label>
+                            <input list="opcionesDatalist" id="elegirRepoCarpeta" name="elegirRepoCarpeta">
+                        </div>
+                    </article>
+                    <hr class="hr" />
+                    <section id="paso2carpeta">
+                        <article>
+                            <h3 >2. Nombra tu carpeta</h3>
+                            <section class="container-input-texto">
+                                <!--                                        <div>
+                                                                            <input type="file" multiple="multiple" class="form-control" name="carpetaSeleccionada" id="carpetaSeleccionada" placeholder=""
+                                                                                   webkitdirectory mozdirectory msdirectory odirectory directory>
+                                                                            onchange="selectFolder(event);"
+                                                                        </div>-->
+                                <label for="nombreCarpeta">Introducir nombre</label>
+                                <input type=" search" placeholder="Nombre de la carpeta"
+                                       aria-label="Nombre de la carpeta" id="nombreCarpeta" name="nombreCarpeta" />
+                            </section>
+
+                        </article>
+                    </section>
+                    <hr class="hr" />
+                    <article id="paso3carpeta">
+                        <h3>3. Elige el color de tu carpeta</h3>
+                        <div class="container-input-texto">
+                            <label for="colorCarpeta">Elige el color de la carpeta</label>
+                            <input type="color" id="colorCarpeta" value="#000000"
+                                   title="Selecciona el color" name="colorCarpeta">
                         </div>
 
-                        <form action="SubidaCarpetas" class="d-flex flex-column d-md-block" method="post" enctype="multipart/form-data">
-                            <article id="paso1carpeta">
-                                <h3 class="my-2">1. Selecciona el repositorio</h3>
-                                <div class="input-group">
-                                    <label for="elegirRepoCarpeta" class="input-group-text">Buscar</label>
-                                    <input class="form-control" list="opcionesDatalist" id="elegirRepoCarpeta" name="elegirRepoCarpeta">
-                                </div>
-                            </article>
-                            <hr class="hr" />
-                            <section id="paso2carpeta">
-                                <article>
-                                    <h3 class="my-2">2. Sube tu carpeta o crea tu carpeta</h3>
-                                    <section class="row row-cols-1 row-cols-sm-2">
-                                        <div>
-                                            <input type="file" multiple="multiple" class="form-control" name="carpetaSeleccionada" id="carpetaSeleccionada" placeholder=""
-                                                   webkitdirectory mozdirectory msdirectory odirectory directory>
-                                            <!--onchange="selectFolder(event);"-->
-                                        </div>
-                                        <div>
-                                            <input class="form-control" type=" search" placeholder="Nombre de la carpeta"
-                                                   aria-label="Nombre de la carpeta" id="nombreCarpeta" name="nombreCarpeta" />
-                                        </div>
-                                    </section>
+                    </article>
+                    <hr class="hr" />
+                    <button type="submit" class="submit">Crear carpeta</button>
+                </form>
 
-                                </article>
-                            </section>
-                            <hr class="hr" />
-                            <article id="paso3carpeta">
-                                <h3 class="my-2">3. Elige el color de tu carpeta</h3>
-                                <label for="colorCarpeta" class="form-label">Elige el color de la carpeta</label>
-                                <input type="color" class="form-control form-control-color m-2" id="colorCarpeta" value="#000000"
-                                       title="Selecciona el color" name="colorCarpeta">
-                            </article>
-                            <hr class="hr" />
-                            <button type="submit" class="btn btn-primary mb-3 align-items-center">Crear carpeta</button>
-                        </form>
-                    </div>
-
-
-                </div>
             </div>
         </main>
         <jsp:include page="pie.jsp"/>
