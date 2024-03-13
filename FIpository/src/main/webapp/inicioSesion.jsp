@@ -291,6 +291,7 @@
                         </div>
                 </form>
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
+                                
             </article>
             <!--Fin Bloque formulario Registrar-->
 

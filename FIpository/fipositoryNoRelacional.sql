@@ -104,3 +104,7 @@ CREATE OR REPLACE TABLE Realiza (
     tipo_accion VARCHAR(25),
     PRIMARY KEY (nombre_usuario, codigo_accion, fecha_realizacion)
 );
+
+-- INSERT INTO `usuario` (`nombre_usuario`, `password_usuario`, `nombre_completo`, `primer_apellido`, `segundo_apellido`, `reputacion`, `correo`, `descripcion`, `genero`, `foto`, `fecha_nacimiento`, `admin`) VALUES ('pedro', 'pedro', 'Pedro Manuel', 'Torres', 'Luján', '0', 'edro@kike.com', 'Hola, me llamo Pedro, me encanta la piscina, la informática y beber, aunque ya no mucho', 'Mobiliario', 'pedro.png', '1000-03-01', '1');
+
+-- INSERT INTO `usuario` (`nombre_usuario`, `password_usuario`, `nombre_completo`, `primer_apellido`, `segundo_apellido`, `reputacion`, `correo`, `descripcion`, `genero`, `foto`, `fecha_nacimiento`, `admin`) VALUES ('jesus', 'jesus', 'Jesús Con Tomate', 'Rosado', 'Rosa Rosae', '0', 'jesus@enp.com', 'Hola me llamo Jesús, me encantan las bicicletas, las mujeres, y las bicicletas y la semana santa y las mujeres y las bicicletas y la fiesta', 'Achus', 'jesus.png', '2004-06-08', '0');
