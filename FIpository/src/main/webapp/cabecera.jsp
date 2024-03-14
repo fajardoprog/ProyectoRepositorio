@@ -3,7 +3,7 @@
 
 <c:choose>
     <c:when test="${sessionScope.invitado}">
-        <nav class="navbar navbar-expand-lg navbar-dark" id="barraNavegacion">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="barraNavegacion" role="navigation">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#barraNavPrincipal" aria-controls="barraNavPrincipal" aria-expanded="false"

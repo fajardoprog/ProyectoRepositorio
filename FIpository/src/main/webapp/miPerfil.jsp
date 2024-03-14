@@ -47,9 +47,9 @@
                 <form action="ModificaPerfil" enctype="multipart/form-data" class="d-flex flex-column align-items-center" method="post" >
 
                     <div>
-                        <input type="file" name="ImgUsuario" id="imgUsu"/>
+                        <input type="file" name="ImgUsuario" id="imgUsu" title="Imagen del usuario"/>
 
-                        <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="FotoPerfilUsu" id="fotoPer" class="w-40" for="imgUsu">
+                        <img src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="Foto Perfil del Usuario" id="fotoPer" class="w-40" for="imgUsu">
 
                         <div id="cambiaImage">
                             <label class="material-symbols-outlined" for="imgUsu" id="labelImg"><i class="bi bi-plus-circle-fill"></i></label>

@@ -63,7 +63,7 @@
                 <div class="toast-header">
                     <strong class="me-auto">¡Me gusta!</strong>
                     <small>hace un momento</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar" title="Cerrar Ventana notificacion"></button>
                 </div>
                 <div class="toast-body">
                     ¡Le has dado me gusta a este repositorio!
@@ -83,11 +83,11 @@
                     <div class="modal-footer">
                         <form action="" class="d-flex justify-content-around w-100">
                             <div>
-                                <input type="submit" class="btn btn-primary" value="Sí"/>
+                                <input type="submit" class="btn btn-primary" value="Sí" title="Aceptar y enviar peticion para ver el repositorio"/>
                             </div>
 
                             <div>
-                                <input type="submit" class="btn btn-secondary" value="No"/>
+                                <input type="submit" class="btn btn-secondary" value="No" title="Rechazar y cerrar ventana"/>
                             </div>
                         </form>                                       
                     </div>
@@ -126,7 +126,7 @@
 
         <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
-                <h3 class="p-0">Respositorios de: Juanma</h3>
+                <h2 class="p-0 fs-3">Respositorios de: Juanma</h2>
 
                 <article>
                     <form  class="form-floating mb-3">
@@ -134,22 +134,18 @@
                                placeholder="" />
                         <label for="busqueda-repositorios">Buscar repositorio</label>
                     </form>
-
                 </article>
 
                 <section class="d-flex flex-column container-repositorios">
                     <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="imagen del usuario">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#" data-bs-toggle="modal" data-bs-target="#peticion">Juanma/1 DAW
-                            <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
-                            </i>
+                            <i class="bi bi-arrow-right"><i class="bi bi-lock-fill"></i></i>
                         </a>
-
-
                     </article>
 
                     <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="imagen del usuario">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">Juanma/1 DAW
                             <i class="bi bi-arrow-right"> 
                             </i>
@@ -157,7 +153,7 @@
                     </article>
 
                     <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <img class="avatar-repositorio" src="img/MiFoto.png"alt="imagen del usuario">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">Juanma/Visibilidad
                             <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
                             </i>
@@ -166,7 +162,7 @@
                     </article>
 
                     <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="imagen del usuario">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">Juanma/ApuntesDise
                             <i class="bi bi-arrow-right">
                             </i>
@@ -174,7 +170,7 @@
                     </article>
 
                     <article>
-                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
+                        <img class="avatar-repositorio" src="img/MiFoto.png" alt="imagen del usuario">
                         <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">Juanma/Examenes
                             <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
                             </i>
@@ -185,12 +181,12 @@
             </aside>
 
             <main class="offset-lg-1 col-lg-7">
-                <h4>Información del repositorio</h4>
+                  <h2 class="fs-4">Información del repositorio</h2>
 
                 <article class="card card-repositorio">
                     <header class="card-header d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-content-lg-center px-3 px-md-3">
                         <div class="titulo-accion ps-3 justify-content-center">
-                            <h5>IsmaelJ/Apuntes Lola</h5>
+                            <h3 class="fs-5">IsmaelJ/Apuntes Lola</h3>
                             <p>Ultima modificación: Hace 7 horas</p>
                         </div>
 
@@ -223,15 +219,15 @@
                         <div class="datos-opiniones d-flex flex-column">
                             <div class="datos-opiniones-numeros d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h5>Media opiniones</h5>
+                                    <h3 class="fs-5">Media opiniones</h3>
                                     <p>4.25/5</p>
                                 </div>
 
                                 <form action="opiniones.jsp" class="d-flex justify-content-end me-3">
-                                    <input type="submit" class="btn btn-primary botonOpiniones" value="Ver Opiniones"/>
+                                    <input type="submit" class="btn btn-primary botonOpiniones" value="Ver Opiniones" title="Ver Opiniones de ese repositorio"/>
                                 </form>
                             </div>
-                            <img class="img-fluid" src="img/4estrella.png" alt="nEstrellas"/>
+                            <img class="img-fluid" src="img/4estrella.png" alt="numero de Estrellas:4 estrellas"/>
                         </div>
                     </div>
                 </article>

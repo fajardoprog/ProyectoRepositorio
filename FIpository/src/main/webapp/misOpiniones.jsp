@@ -37,7 +37,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -46,7 +46,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -58,7 +58,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -67,29 +67,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -102,7 +80,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -111,7 +89,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -124,7 +102,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -133,7 +111,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -146,7 +124,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -155,7 +133,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -168,7 +146,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -177,7 +155,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -190,7 +168,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -199,7 +177,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -212,7 +190,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -221,7 +199,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -234,7 +212,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -243,7 +221,7 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -256,7 +234,7 @@
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
@@ -265,7 +243,29 @@
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
+                            <h5>Comentario</h5>
+                            <p>"Me gusta mucho este Repositorio"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>11/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
+                            <div>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                            </div>
+                            <form action="repositorio.jsp" >
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
+                            </form>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>

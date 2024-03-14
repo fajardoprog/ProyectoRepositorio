@@ -44,13 +44,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto del Usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -62,13 +62,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto de perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -80,13 +80,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -98,13 +98,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -116,13 +116,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -134,13 +134,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -152,13 +152,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -170,13 +170,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail" alt="Foto perfil del Usuario"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -188,13 +188,13 @@
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
                         <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
+                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
+                            <img src="img/MiFoto.png" alt="mi foto perfil del usuario" class="rounded-circle img-thumbnail"/>
                             <h5>EricCartman21</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid" alt="Numero de Estrellas"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
