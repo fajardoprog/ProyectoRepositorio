@@ -8,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ver perfil de Juanma</title>
+        <title>Ver perfil de petorluj</title>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -50,12 +50,12 @@
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item"><a href="miEspacio.jsp">Mi espacio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Perfil de: Juanma</li>
+                    <li class="breadcrumb-item active" aria-current="page">Perfil de: petorluj</li>
                 </ol>
             </nav>
         </header>
 
-        <h1 class="m-4">Espacio de: Juanma</h1>
+        <h1 class="m-4">Espacio de: petorluj</h1>
 
         <!--Toast me gusta -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastMG">
@@ -126,7 +126,7 @@
 
         <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
-                <h3 class="p-0">Respositorios de: Juanma</h3>
+                <h3 class="p-0">Respositorios de: petorluj</h3>
 
                 <article>
                     <form  class="form-floating mb-3">
@@ -140,7 +140,7 @@
                 <section class="d-flex flex-column container-repositorios">
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#" data-bs-toggle="modal" data-bs-target="#peticion">Juanma/1 DAW
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#" data-bs-toggle="modal" data-bs-target="#peticion">petorluj/1 DAW
                             <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
                             </i>
                         </a>
@@ -150,7 +150,7 @@
 
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">Juanma/1 DAW
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">petorluj/1 DAW
                             <i class="bi bi-arrow-right"> 
                             </i>
                         </a>
@@ -158,7 +158,7 @@
 
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">Juanma/Visibilidad
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">petorluj/Visibilidad
                             <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
                             </i>
                         </a>
@@ -167,7 +167,7 @@
 
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">Juanma/ApuntesDise
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#">petorluj/ApuntesDise
                             <i class="bi bi-arrow-right">
                             </i>
                         </a>
@@ -175,7 +175,7 @@
 
                     <article>
                         <img class="avatar-repositorio" src="img/MiFoto.png" alt="">
-                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">Juanma/Examenes
+                        <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="#"  data-bs-toggle="modal" data-bs-target="#peticion">petorluj/Examenes
                             <i class="bi bi-arrow-right"> <i class="bi bi-lock-fill"></i>
                             </i>
                         </a>
@@ -190,7 +190,7 @@
                 <article class="card card-repositorio">
                     <header class="card-header d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-content-lg-center px-3 px-md-3">
                         <div class="titulo-accion ps-3 justify-content-center">
-                            <h5>IsmaelJ/Apuntes Lola</h5>
+                            <h5>petorluj/Apuntes Lola</h5>
                             <p>Ultima modificación: Hace 7 horas</p>
                         </div>
 
@@ -201,7 +201,7 @@
                         </div> 
                         <!-- fin boton -->
 
-                        <form class="d-flex align-items-center ">
+                        <form class="d-flex align-items-center " action="repositorio.jsp">
                             <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                         </form>
                     </header>
@@ -210,7 +210,7 @@
                             <div class="datos-repositorio text-truncate">
                                 <div class="d-flex">
                                     <p class="text-truncate d-inline mw-100">
-                                        IsmaelJ/Apuntes Lola Casa Servidor casa lola casa lola casa lola juanma
+                                        petorluj/Apuntes Lola Casa Servidor casa lola casa lola casa lola juanma
                                     </p>
                                     <i class="mx-2 bi bi-lock-fill"></i>
                                 </div>

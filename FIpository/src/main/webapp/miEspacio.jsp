@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                             <form class="my-2 ms-sm-5" action="PerfilOtroUsu.jsp">
-                                <input type="submit" value="Comenzar a seguir" class="btn btn-primary w-100"/>
+                                <input type="submit" value="Ver perfil" class="btn btn-primary w-100"/>
                             </form>
                         </article>
                         <div class="stats d-flex flex-column flex-md-row justify-content-around pt-2 text-center">

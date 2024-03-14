@@ -43,14 +43,14 @@
 
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-between p-3">
+                            <img src="img/images.jfif" alt="Puntuación de 1,5 estrella o estrellas" class="d-block d-xl-none img-fluid"/>
+                            <img src="img/MiFoto.png" alt="Foto de FajardoProg" class="rounded-circle img-thumbnail"/>
+                            <h5>FajardoProg</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif"  alt="Puntuación de 1,5 estrella o estrellas" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
                             <p>"Me gusta mucho este Repositorio"</p>
                             <h5>Fecha de la opinión</h5>
@@ -58,153 +58,84 @@
                         </div>
                     </article>
                 </div>
-                
+
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-between p-3">
+                            <img src="img/images.jfif" alt="Puntuación de 1,5 estrella o estrellas" class="d-block d-xl-none img-fluid"/>
+                            <img src="img/ismael3.JPG" alt="Foto de Ismael" class="rounded-circle img-thumbnail"/>
+                            <h5>Ismael</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif"  alt="Puntuación de 1,5 estrella o estrellas" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"Me gusta mucho entre 0 y nada"</p>
                             <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
+                            <p>12/12/2023</p>
                         </div>
                     </article>
                 </div>
-                
+
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-between p-3">
+                            <img src="img/images.jfif" alt="Puntuación de 1,5 estrella o estrellas" class="d-block d-xl-none img-fluid"/>
+                            <img src="img/juanma.JPG" alt="Foto de Juanma" class="rounded-circle img-thumbnail"/>
+                            <h5>Juanma</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif"  alt="Puntuación de 1,5 estrella o estrellas" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"Este proyecto está pepino, os voy a tener que poner un 10"</p>
                             <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
+                            <p>14/12/2023</p>
                         </div>
                     </article>
                 </div>
-                
+
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-between p-3">
+                            <img src="img/images.jfif" alt="Puntuación de 1,5 estrella o estrellas" class="d-block d-xl-none img-fluid"/>
+                            <img src="img/pedro.JPG" alt="Foto de petorluj" class="rounded-circle img-thumbnail"/>
+                            <h5>petorluj</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif"  alt="Puntuación de 1,5 estrella o estrellas" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"Bah, no habéis implementado AJAX"</p>
                             <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
+                            <p>15/12/2023</p>
                         </div>
                     </article>
                 </div>
-                
+
                 <div>
                     <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
+                        <div class="d-flex flex-column align-items-center justify-content-between p-3">
+                            <img src="img/images.jfif" alt="Puntuación de 1,5 estrella o estrellas" class="d-block d-xl-none img-fluid"/>
+                            <img src="img/lola.JPG" alt="Foto de LaLola" class="rounded-circle img-thumbnail"/>
+                            <h5>LaLola</h5>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <img src="img/images.jfif"  alt="Puntuación de 1,5 estrella o estrellas" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"Ahorrad energías"</p>
                             <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
+                            <p>16/12/2023</p>
                         </div>
                     </article>
                 </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                        </div>
 
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                        </div>
 
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-                
-                <div>
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column align-items-center justify-content-between">
-                            <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                            <img src="img/MiFoto.png" alt="miFoto" class="rounded-circle img-thumbnail"/>
-                            <h5>EricCartman21</h5>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-                
             </section>
-
+            <form action="miEspacio.jsp" class="text-center row g-0">               
+                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8" value="Volver al Inicio" title="Volver a tu perfil del usuario"/>
+            </form>
         </main>        
         <jsp:include page="pie.jsp"/>
     </body>

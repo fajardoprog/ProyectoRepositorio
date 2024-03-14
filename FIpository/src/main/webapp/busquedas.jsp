@@ -172,7 +172,7 @@
                                         <p>Última vez conectado: Hace 7 horas</p>
                                     </div>
                                 </div>
-                                <form>
+                                <form action="PerfilOtroUsu.jsp">
                                     <input type="submit" value="Visitar perfil" class="btn btn-primary w-100"/>
                                 </form>
                             </header>
@@ -209,7 +209,7 @@
                                     <h5>IsmaelJ/Apuntes Lola</h5>
                                     <p>Ultima modificación: Hace 7 horas</p>
                                 </div>
-                                <form class="d-flex align-items-center ">
+                                <form class="d-flex align-items-center " action="repositorio.jsp">
                                     <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                                 </form>
                             </header>

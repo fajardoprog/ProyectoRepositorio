@@ -41,7 +41,7 @@
                                 <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
                             </div>
                             <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio" title="visitar el repositorio de FajardoProg llamado Desarrollo Web en entorno Servidor"/>
                             </form>
                         </div>
 
@@ -59,17 +59,83 @@
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
                                 <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                                <h5>FajardoProg/Desarrollo Web en entorno Cliente</h5>
                             </div>
                             <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"  title="visitar el repositorio de FajardoProg llamado Desarrollo Web en entorno Cliente"/>
                             </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
                             <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"No me gusta mucho este Repositorio, es penoso"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>13/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
+                            <div>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <h5>FajardoProg/Proyecto Integrado, banco de España</h5>
+                            </div>
+                            <form action="repositorio.jsp" >
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"  title="visitar el repositorio de FajardoProg llamado Proyecto Integrado, banco de España"/>
+                            </form>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Esta página es lamentable, pero los que la hicieron son demasiado guapos"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>14/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
+                            <div>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <h5>FajardoProg/Empresa e Iniciativa Emprendedora</h5>
+                            </div>
+                            <form action="repositorio.jsp" >
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"  title="visitar el repositorio de FajardoProg llamado Empresa e Iniciativa Emprendedora"/>
+                            </form>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"La vida es una lenteja, o la tomas o la dejas"</p>
+                            <h5>Fecha de la opinión</h5>
+                            <p>16/12/2023</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="d-flex">
+                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
+                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
+                            <div>
+                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
+                                <h5>IsmaeloteElMalote/Apuntes serios</h5>
+                            </div>
+                            <form action="repositorio.jsp" >
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"  title="visitar el repositorio de IsmaeloteElMalote llamado Apuntes serios"/>
+                            </form>
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-around">
+                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
+                            <h5>Comentario</h5>
+                            <p>"Una experiencia sumamente gratificante"</p>
                             <h5>Fecha de la opinión</h5>
                             <p>11/12/2023</p>
                         </div>
@@ -81,204 +147,27 @@
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
                             <div>
                                 <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
+                                <h5>FajardoProg/Desarrollo Web en entorno Inglés</h5>
                             </div>
                             <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
+                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"  title="visitar el repositorio de FajardoProg llamado Desarrollo Web en entorno Inglés"/>
                             </form>
                         </div>
 
                         <div class="d-flex flex-column justify-content-around">
                             <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
                             <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
+                            <p>"I love this!"</p>
                             <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
+                            <p>1/12/2023</p>
                         </div>
                     </article>
                 </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="d-flex">
-                    <article class="card flex-column flex-xl-row py-2 px-4 justify-content-between align-items-xl-center shadow bg-body-tertiary rounded">
-                        <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center h-100 pe-xl-3">
-                            <div>
-                                <img src="img/images.jfif" class="d-block d-xl-none img-fluid"/>
-                                <h5>FajardoProg/Desarrollo Web en entorno Servidor</h5>
-                            </div>
-                            <form action="repositorio.jsp" >
-                                <input type="submit" class="btn btn-primary w-100" value="Ver repositorio"/>
-                            </form>
-                        </div>
-
-                        <div class="d-flex flex-column justify-content-around">
-                            <img src="img/images.jfif" class="d-none d-xl-block img-fluid"/>
-                            <h5>Comentario</h5>
-                            <p>"Me gusta mucho este Repositorio"</p>
-                            <h5>Fecha de la opinión</h5>
-                            <p>11/12/2023</p>
-                        </div>
-                    </article>
-                </div>
-
 
             </section>
 
             <form action="miEspacio.jsp" class="text-center row g-0">               
-                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8 offset-xl-3 col-xl-6" value="Volver al Inicio"/>
+                <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8 offset-xl-3 col-xl-6" value="Volver al Inicio" title="Volver a tu perfil del usuario"/>
             </form>
 
         </main>        
