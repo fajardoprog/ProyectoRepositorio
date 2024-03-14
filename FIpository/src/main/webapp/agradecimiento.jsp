@@ -44,7 +44,7 @@
             <h1 class="m-4">¡Muchas Gracias!</h1>
             <p>Espere pacientemente un administrador verá su solicitud y le enviaremos un correo con el camio de contraseña (Revise su correo)</p>
             <form action="index.jsp" class="d-flex justify-content-center" >                
-                <input type="submit" value="Volver" class="btn btn-success m-3 col-6">
+                <input type="submit" value="Volver" class="btn btn-success m-3 col-6" title="Volver al index">
             </form>            
         </main>
         <jsp:include page="pie.jsp"/>

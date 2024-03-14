@@ -33,7 +33,7 @@
     <body>
         <header>
             <jsp:include page="cabecera.jsp" />
-            <nav aria-label="breadcrumb" id="breadcrumbs">
+            <nav aria-label="breadcrumb" id="breadcrumbs" role="navigation">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Búsquedas</li>
@@ -45,36 +45,36 @@
 
                 <aside class="d-none d-lg-flex flex-column col-4 p-4">
                     <section>
-                        <h3>Filtrar por</h3>
+                        <h1 class="fs-3">Filtrar por</h1>
                         <ul class="list-group list-group-flush lista-filtro">
                             <li class="list-group-item bg-transparent">
-                                <button type="button" class="btn btn-primary"  aria-current="true">
+                                <button type="button" class="btn btn-primary"  aria-current="true" title="Filtrar por Repositorio">
                                     Por repositorio
                                 </button>
                             </li>
                             <li class="list-group-item bg-transparent">
-                                <button type="button" class="btn btn-primary">Por usuario</button>                              
+                                <button type="button" class="btn btn-primary" title="Filtrar por usuario">Por usuario</button>                              
                             </li>
                         </ul>
                     </section>
                     <section>
-                        <h3>Ordenar por</h3>
+                        <h2 class="fs-3">Ordenar por</h2>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="reputacion">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="reputacion" title="Ordenar por Reputacion">
                                     <label class="form-check-label mx-2" for="reputacion">Reputación</label>
                                 </div>
                             </li>
                             <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="nVisitas">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="nVisitas" title="Ordenar por numero de Visitas">
                                     <label class="form-check-label mx-2" for="nVisitas">Nº de visitas</label>
                                 </div>
                             </li>
                             <li class="list-group-item bg-transparent">
                                 <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" role="switch" id="nArchivos">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="nArchivos" title="Ordenar por numero de archivos">
                                     <label class="form-check-label mx-2" for="nArchivos">Nº de archivos</label>
                                 </div>
                             </li>
@@ -83,7 +83,7 @@
                 </aside>
 
                 <main class="offset-lg-1 col-lg-7">
-                    <h1>Búsquedas</h1>
+                    <h2 class="fs-1">Búsquedas</h2>
                     <section class="filtros d-flex flex-column justify-content-around">
                         <div class="d-flex flex-column flex-sm-row row-cols-sm-2 d-lg-none justify-content-around">
 
@@ -115,7 +115,7 @@
 
                                     <form>
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Ordenar por</h1>
+                                            <h2 class="modal-title fs-5" id="exampleModalLabel">Ordenar por</h2>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -166,14 +166,14 @@
                         <article class="card card-usuario">
                             <header class="card-header d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center justify-content-lg-between">
                                 <div class="d-flex align-items-center">
-                                    <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                                    <img class="avatar-repositorio" src="img/LogoFi.png" alt="Logo de la pagina we FIpository">
                                     <div class="titulo-accion ps-md-3 p-3 p-md-1 ">
                                         <h5>petorluj</h5>
                                         <p>Última vez conectado: Hace 7 horas</p>
                                     </div>
                                 </div>
                                 <form action="PerfilOtroUsu.jsp">
-                                    <input type="submit" value="Visitar perfil" class="btn btn-primary w-100"/>
+                                    <input type="submit" value="Visitar perfil" class="btn btn-primary w-100"  title="Visitar Perfil del usuario"/>
                                 </form>
                             </header>
 

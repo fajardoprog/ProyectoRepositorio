@@ -51,7 +51,7 @@
                         <c:when test="${not empty requestScope.misRepositorios}">
                             <c:forEach items="${requestScope.misRepositorios}" var="repo">
                                 <article>
-                                    <img class="avatar-repositorio" src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="">
+                                    <img class="avatar-repositorio" src="imgPerfilUsuario/${sessionScope.usuarioActual.foto}" alt="Avatar del Usuario">
                                     <a class="enlace-repositorio m-2 my-1 icon-link icon-link-hover" href="repositorio.jsp" >
                                         ${sessionScope.usuarioActual.nombreUsuario}/${repo.repositorioPK.nombreRepositorio}
                                         <c:if test="${repo.privado == 0}">
@@ -81,7 +81,7 @@
                             <c:when test="${not empty requestScope.repositoriosCompartidos}">
                                 <c:forEach items="${requestScope.repositoriosCompartidos}" var="repoCompartido">
                                     <article>
-                                        <img class="avatar-repositorio" src="imgPerfilUsuario/${repoCompartido.usuario.foto}" alt="">
+                                        <img class="avatar-repositorio" src="imgPerfilUsuario/${repoCompartido.usuario.foto}" alt="Avatar del Usuario">
                                         <a class="enlace-repositorio m-2 my-1" href="#">
                                             ${repoCompartido.repositorio.repositorioPK.nombreUsuario}/${repoCompartido.repositorio.repositorioPK.nombreRepositorio}
                                             <i class="bi bi-arrow-right">
@@ -103,7 +103,7 @@
                     </header>
                     <article class="card carta-actividad">
                         <header class="card-header d-flex align-items-center">
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="Logotipo pagina web FIpository">
                             <div class="titulo-accion ps-3">
                                 <h5>IsmaelJ creó un repositorio</h5>
                                 <p>Hace 7 horas</p>
@@ -122,7 +122,7 @@
 
                     <article class="card carta-actividad">
                         <header class="card-header d-flex align-items-center">
-                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                            <img class="avatar-repositorio" src="img/LogoFi.png" alt="Logo pagina web Fipository">
                             <div class="titulo-accion ps-3">
                                 <h5>IsmaelJ ha empezado a seguir a alguien</h5>
                                 <p>Hace 7 horas</p>
@@ -132,7 +132,7 @@
                         <article class="contenedor-afectado-repositorio d-flex flex-column flex-sm-row align-items-stretch justify-content-between container-fluid py-2">
                             <div class="datos-repositorio d-flex flex-column text-truncate w-100">
                                 <div class="d-flex align-content-center align-items-center">
-                                    <img class="avatar-repositorio" src="img/LogoFi.png" alt="">
+                                    <img class="avatar-repositorio" src="img/LogoFi.png" alt="Logo pagina web Fipository">
                                     <div class="usuario-completo d-flex flex-column text-truncate ps-3">
                                         <p>petorluj</p>
                                         <p class="text-truncate">Pedro Manuel Torres Luján</p>

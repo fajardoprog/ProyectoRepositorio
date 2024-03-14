@@ -201,7 +201,7 @@
                     <section class="row  d-flex d-lg-none row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto perfil usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -228,7 +228,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -255,7 +255,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto Perfil usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -282,7 +282,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -309,7 +309,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -336,7 +336,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/fichero.png" alt="Card image">
+                                <img class="card-img-top" src="img/fichero.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">Virus.word</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -363,7 +363,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/MiFoto.png" alt="Card image">
+                                <img class="card-img-top" src="img/MiFoto.png" alt="Foto PErfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">FotoOrla.png</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>
@@ -390,7 +390,7 @@
 
                         <div class="container-carta">
                             <article class="card">
-                                <img class="card-img-top" src="img/carpeta.png" alt="Card image">
+                                <img class="card-img-top" src="img/carpeta.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">Fotos viaje Asturias</h4>
                                     <p class="card-text">Última modificación: hace 3 días</p>

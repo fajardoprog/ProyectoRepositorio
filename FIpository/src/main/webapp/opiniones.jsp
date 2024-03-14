@@ -130,8 +130,6 @@
                         </div>
                     </article>
                 </div>
-
-
             </section>
             <form action="miEspacio.jsp" class="text-center row g-0">               
                 <input type="submit" class="btn btn-primary offset-1 col-10 offset-sm-2 col-sm-8" value="Volver al Inicio" title="Volver a tu perfil del usuario"/>
