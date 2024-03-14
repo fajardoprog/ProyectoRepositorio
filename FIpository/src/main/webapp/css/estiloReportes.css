@@ -1,0 +1,201 @@
+h1{
+    font-size: 8vmin;
+}
+
+h2{
+    font-size: 6vmin;
+}
+
+.contenedor-reportes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.contenedor-reportes main section{
+    padding: 2rem;
+    overflow-x: scroll;
+}
+
+.contenedor-reportes main section::-webkit-scrollbar {
+    width: 10px;
+}
+
+.contenedor-reportes main section::-webkit-scrollbar-thumb {
+    background: rgb(66, 150, 68);
+    border-radius: 15px;
+}
+
+.contenedor-reportes main section::-webkit-scrollbar-track {
+    background: none;
+}
+
+.contenedor-reportes main section::-webkit-scrollbar-thumb:hover {
+    background: none;
+}
+.contenedor-reportes main section::-webkit-scrollbar {
+    
+}
+
+table{
+    background: var(--bs-light);
+    border-radius: 15px;
+    width: 100%;
+
+}
+
+table th:first-of-type{
+    border-radius: 15px 0 0 0; 
+}
+
+table th{
+    padding: 1rem;
+}
+
+table th:nth-child(odd){
+    background: var(--bs-primary);
+    color: white;
+}
+
+table td:nth-child(even){
+    border-top: 1px dotted var(--bs-primary);
+}
+
+table td{
+    vertical-align: middle;
+    padding: 0.5rem;
+}
+
+table td:nth-child(odd){
+    background: var(--bs-primary);
+    border-top: 1px dotted var(--bs-light);
+    color: white;
+}
+
+table tbody tr:last-of-type td:first-of-type{
+    border-radius: 0 0 0 15px;  
+}
+
+.contenedor-reportes main article{
+    padding: 2rem;
+}
+
+.contenedor-reportes .contenedor-botones{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-reportes button {
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: var(--bs-danger);
+    border: 1px solid var(--bs-danger);
+    background: none;
+    font-size: 4.5vmin;
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.5s all;
+    width: 100%;
+}
+
+.contenedor-reportes button.aviso{
+    color: black;
+    border: 1px solid black;
+}
+
+.contenedor-reportes button.ban:hover {
+    background: var(--bs-danger);
+    color: white;
+}
+
+.contenedor-reportes button.aviso:hover {
+    background: var(--bs-warning);
+}
+
+.contenedor-reportes aside{
+    display: none;
+}
+
+.contenedor-reportes aside figure{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.contenedor-reportes aside img{
+    width: 80%;
+    margin: auto;
+}
+
+.contenedor-reportes figcaption{
+    font-weight: bold;
+    text-align: center;
+}
+
+.contenedor-reportes aside article{
+    background: var(--bs-light);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.contenedor-botones div{
+    padding: 1rem;
+}
+
+@media screen and (min-width:576px) {
+    h1{
+        font-size: 6vmin;
+    }
+
+    h2{
+        font-size: 4vmin;
+    }
+
+    .contenedor-reportes aside img{
+        width: 60%;
+    }
+
+    .contenedor-reportes aside{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+    .contenedor-reportes{
+        flex-direction: row;
+    }
+
+    .contenedor-reportes aside{
+        width: 40%;
+    }
+
+    .contenedor-reportes main {
+        width: 60%;
+    }
+
+    .contenedor-reportes .contenedor-botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contenedor-reportes .contenedor-botones div{
+        padding: 1rem;
+    }
+
+    .contenedor-reportes button {
+        font-size: 2.5vmin;
+    }
+
+    .contenedor-reportes main section{
+        overflow: visible;
+    }
+}
