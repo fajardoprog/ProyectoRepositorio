@@ -69,12 +69,12 @@
         </div>
 
         <!--Toast me gusta -->
-        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastMG">
+        <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastMG" role="contentinfo">
             <div id="liveToastMG" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="me-auto">¡Me gusta!</strong>
                     <small>hace un momento</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" title="Boton aceptar noitificación"></button>
                 </div>
                 <div class="toast-body">
                     ¡Le has dado me gusta a este repositorio!
@@ -84,21 +84,21 @@
         <!-- Fin Toast me gusta-->
 
         <!-- Modal -->
-        <div class="modal fade" id="peticion" tabindex="-1" aria-labelledby="ventana Peticion" aria-hidden="true">
+        <div class="modal fade" id="peticion" tabindex="-1" aria-labelledby="ventana Peticion" aria-hidden="true" role="contentinfo">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" class="tituloModal">¿Quieres enviar una petición para ver el repositorio?</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Boton cerrar ventana emergente"></button>
                     </div>
                     <div class="modal-footer">
                         <form action="" class="d-flex justify-content-around w-100">
                             <div>
-                                <input type="submit" class="btn btn-primary" value="Sí"/>
+                                <input type="submit" class="btn btn-primary" value="Sí" title="Aceptar y enviar peticion para ver el repositorio"/>
                             </div>
 
                             <div>
-                                <input type="submit" class="btn btn-secondary" value="No"/>
+                                <input type="submit" class="btn btn-secondary" value="No" title="Rechazar y volver"/>
                             </div>
                         </form>                                       
                     </div>
@@ -196,12 +196,12 @@
             </aside>
 
             <main class="offset-lg-1 col-lg-7">
-                <h4>Información del repositorio</h4>
+                <h2 class="fs-4">Información del repositorio</h2>
 
                 <article class="card card-repositorio">
                     <header class="card-header d-flex flex-column flex-lg-row justify-content-between align-items-stretch align-content-lg-center px-3 px-md-3">
                         <div class="titulo-accion ps-3 justify-content-center">
-                            <h5>IsmaelJ/Apuntes Lola</h5>
+                            <h3 class="fs-5">IsmaelJ/Apuntes Lola</h3>
                             <p>Ultima modificación: Hace 7 horas</p>
                         </div>
 
@@ -234,7 +234,7 @@
                         <div class="datos-opiniones d-flex flex-column">
                             <div class="datos-opiniones-numeros d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h5>Media opiniones</h5>
+                                    <h4 class="fs-5">Media opiniones</h4>
                                     <p>4.25/5</p>
                                 </div>
 
@@ -249,7 +249,7 @@
 
                 <section id="intereses">
                     <header>
-                        <h3>Quizá te interese basado en tus búsquedas</h3>
+                        <h3 class="fs-3">Quizá te interese basado en tus búsquedas</h3>
                     </header>
                     <!--TODO: Colocar artículos basados en tus búsquedas-->
                 </section>

@@ -39,8 +39,8 @@
 
             <form action="AdminIndex.jsp" class="container-fluid">
                 <div class="input-group mb-3 p-xl-3 ">
-                    <input type="text" class="form-control" placeholder="Búsquedas" aria-label="Búsquedas" aria-describedby="Búsquedas de usuarios o repositorios">
-                    <button class="btn btn-success d-flex align-items-center justify-content-around" type="submit" id="botonBusquedaAdmin"><i class="bi bi-search me-2"></i> Buscar</button>
+                    <input type="text" class="form-control" placeholder="Búsquedas" aria-label="Apartado Búsquedas" aria-describedby="Búsquedas de usuarios o repositorios">
+                    <button class="btn btn-success d-flex align-items-center justify-content-around" type="submit" id="botonBusquedaAdmin" title="Boton Buscar repositorio o usuario"><i class="bi bi-search me-2"></i> Buscar</button>
                 </div>
             </form>
 
@@ -58,15 +58,15 @@
                                     <!--Foto Perfil Usuario-->
                                     <div style="background: url(imgPerfilUsuario/${usuario.foto}) no-repeat;width: 100px;height: 100px;background-size: contain;border-radius: 100px;background-position: center;"></div>                                    
                                     <!---->
-                                    <h5>${usuario.nombreUsuario}</h5>
+                                    <h2 class="fs-5">${usuario.nombreUsuario}</h2>
                                     <form action="PerfilOtroUsu.jsp" class="d-none d-xl-block">
-                                        <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
+                                        <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" title="Ver el perfil del usuario: ${usuario}" />
                                         <input type="hidden" name="UsuSelec" value="${usuario}" />
                                     </form>
                                 </div>
 
                                 <div class="d-flex flex-column justify-content-around">
-                                    <h5>Fecha Nacimiento</h5>
+                                    <h2 class="fs-5">Fecha Nacimiento</h2>
                                     <p><fmt:formatDate pattern = "yyyy-MM-dd"  value = "${usuario.fechaNacimiento}" /></p>
 
                                     <div class="d-flex justify-content-around text-center">
@@ -83,7 +83,7 @@
 
                                 </div>
                                 <form action="PerfilOtroUsu.jsp" class="d-block d-xl-none">
-                                    <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" />
+                                    <input type="submit" class="btn btn-primary w-100" value="Ver Perfil" title="Ver el perfil del usuario: ${usuario}" />
                                     <input type="hidden" name="UsuSelec" value="${usuario}" />
                                 </form>
                             </article>
