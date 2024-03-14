@@ -62,6 +62,19 @@
                         }
                     });
                 });
+                //------------------------------------------------------------
+                $("#aviso").on("click", function () {
+                    Swal.fire({
+                        title: "Escriba el mensaje que quieras enviar al usuario",
+                        input: "textarea",
+                        inputAttributes: {
+                            autocapitalize: "off"
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: "Enviar",
+                        showLoaderOnConfirm: true,                        
+                    });
+                });
             });
         </script>
 
@@ -81,18 +94,19 @@
             </nav>
         </header>
         <div class="contenedor-reportes">
+
             <main>
                 <h1>Reportes de Juanma</h1>
                 <article>
                     <h2>Operaciones sobre Juanma</h2>
                     <div class="contenedor-botones">
                         <div>
-                            <button class="ban" id="ban">
+                            <button class="ban" id="ban" title="Baneo al usuario">
                                 Banear (prohibir entrada)
                             </button>
                         </div>
                         <div>
-                            <button class="aviso" id="aviso">
+                            <button class="aviso" id="aviso" title="mandar mensaje al usuario">
                                 Mandar correo de aviso
                             </button>
                         </div>
