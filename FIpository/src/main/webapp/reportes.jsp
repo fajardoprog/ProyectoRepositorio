@@ -28,11 +28,10 @@
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <!--Asignar enlaces una vez hecha la parte admin-->                
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Administrador</li>
-                    <li class="breadcrumb-item" aria-current="page">Gestión de usuarios</li>
-                    <li class="breadcrumb-item" aria-current="page">Administración de un perfil</li>
-                    <li class="breadcrumb-item active" aria-current="page">Registro de usuario</li>
+                       <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="AdminIndex.jsp">Panel Control Administrador</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="GestionPerfilUsuAdmin.jsp">Administración de Juanma</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reportes de Juanma</li>
                 </ol>
             </nav>
         </header>

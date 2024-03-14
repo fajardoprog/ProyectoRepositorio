@@ -76,7 +76,7 @@
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="inicioSesion.jsp">Iniciar Sesión / Registro</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="inicioSesion.jsp">Iniciar Sesión/Registro</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Recuperar contraseña</li>
                 </ol>
             </nav>

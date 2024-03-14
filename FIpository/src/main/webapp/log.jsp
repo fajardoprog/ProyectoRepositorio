@@ -30,10 +30,9 @@
                 <!--Asignar enlaces una vez hecha la parte admin-->                
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="#">Administrador</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="#">Gestión de usuarios</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="#">Administración de un perfil</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Registro de usuario</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="AdminIndex.jsp">Panel Control Administrador</a></li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="GestionPerfilUsuAdmin.jsp">Administración de Juanma</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Registro de Juanma</li>
                 </ol>
             </nav>
         </header>

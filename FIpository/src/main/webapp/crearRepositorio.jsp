@@ -39,7 +39,7 @@
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
                     <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>                    
-                    <li class="breadcrumb-item active" aria-current="page">Subida de archivos</li>
+                    <li class="breadcrumb-item active" aria-current="page">Crear repositorio</li>
                 </ol>
             </nav>
         </header>
