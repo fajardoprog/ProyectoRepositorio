@@ -162,10 +162,11 @@
             </main>
             <aside>
                 <section>
-                    <h2>Publicidad</h2>
+                    <h2>Publicidad de la apliacion</h2>
                     <article>
                         <header>
-                            <h3>Compra Inca Kola</h3>
+                            <a href="#" class="text-center d-block">Añadir pulicidad a la aplicacion <i class="bi bi-cloud-plus-fill p-1"></i></a>
+                            <h3 class="text-center">Compra Inca Kola</h3>
                         </header>
                         <figure>
                             <img src="img/inkacola.jpg" alt="foto de inka cola"/>

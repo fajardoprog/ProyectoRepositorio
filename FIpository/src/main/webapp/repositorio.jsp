@@ -389,7 +389,7 @@
                         </div>
 
                         <div class="container-carta">
-                            <article class="card">
+                            <article class="card container-fluid">
                                 <img class="card-img-top" src="img/carpeta.png" alt="Foto Perfil Usuario">
                                 <div class="card-body">
                                     <h4 class="card-title">Fotos viaje Asturias</h4>

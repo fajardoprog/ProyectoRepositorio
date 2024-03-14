@@ -192,7 +192,7 @@
                         </div>
 
                         <!--boton reporte y like-->
-                        <div class="text-end m-2">
+                        <div class="text-end m-2 text-center">
                             <span class="me-1" id="meGusta"><i class="bi bi-heart"></i></span>
                             <span class="ms-1 me-2" id="warninBtn" data-bs-toggle="modal" data-bs-target="#warningRep"><i class="bi bi-exclamation-triangle-fill"></i></span>
                         </div> 
