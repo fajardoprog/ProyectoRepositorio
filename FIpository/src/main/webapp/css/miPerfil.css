@@ -25,3 +25,84 @@ and open the template in the editor.
     cursor: pointer;
     margin-left: 50px;
 }
+
+
+body{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cotenedorForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+form div:first-child{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+}
+
+#cambiaImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
+
+.separadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px dotted black;
+    width: 100%;
+    margin: 20px;   
+}
+
+#boton{
+    font-size: 20px;
+    background-color: #198754;
+    color: white;
+    padding: 2%;
+    margin: 2%;
+    border-color: #198754;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+#boton:hover{    
+    background-color: #26a96c;
+    color: white;          
+}
+
+.inputForm{
+    width: 100%; 
+    border-radius: 10px;
+    background-clip: padding-box;
+    color: #212529;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    font-size: 1rem;    
+    line-height: 1.5;
+}
+
+.labelFormPer{
+    margin: 10px;
+}
+
+@media screen and (min-width:576px) {}
+
+@media screen and (min-width:992px) {}
