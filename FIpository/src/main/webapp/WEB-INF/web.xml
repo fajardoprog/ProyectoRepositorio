@@ -52,6 +52,10 @@
         <servlet-name>PeticionCambioPass</servlet-name>
         <servlet-class>com.daw.fipository.logica.PeticionCambioPass</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ComprobacionInvitado</servlet-name>
+        <servlet-class>com.daw.fipository.logica.ComprobacionInvitado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>PeticionCambioPass</servlet-name>
         <url-pattern>/PeticionCambioPass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComprobacionInvitado</servlet-name>
+        <url-pattern>/ComprobacionInvitado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : recuperaPass
-    Created on : 24 feb. 2024, 16:04:48
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -14,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fipository</title>
+        <title>Recuperar contraseña</title>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -55,7 +49,7 @@
             <!--Bloque formulario Recuperar contraseña-->
             <div class="d-flex flex-column align-items-md-center" id="formularioIniciarSesi">
                 
-                <h1 class="text-danger">${sessionScope.error}</h1>
+                <p class="text-danger">${sessionScope.error}</p>
                 
                 <form action="PeticionCambioPass" class="text-center  border border-black rounded col-md-8 formu p-4">
 

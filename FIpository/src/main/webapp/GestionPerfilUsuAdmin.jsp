@@ -1,9 +1,3 @@
-<%-- 
-    Document   : miPerfil
-    Created on : 24 feb. 2024, 16:04:27
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -60,7 +54,7 @@
             </nav>
         </header>
 
-            <h1>Espacio de: <span></span></h1>
+            <h1 class="m-4">Espacio de: <span></span></h1>
         
         <div class="row row-cols-3 g-0 justify-content-around">
             <form action="" class="p-3">

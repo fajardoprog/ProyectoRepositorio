@@ -1,8 +1,3 @@
-<%-- 
-    Document   : miEspacio
-    Created on : 24 feb. 2024, 16:04:22
-    Author     : José Antonio Fajardo Naranjo
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -39,11 +34,10 @@
                 </ol>
             </nav>
         </header>
-        <h1>Mi espacio</h1>
+        <h1 class="m-4">Mi espacio</h1>
         <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
-                <h3 class="p-0">Mis repositorios</h3>
-
+                <h3 class="m-4">Mis repositorios</h3>
                 <article>
                     <form  class="form-floating mb-3">
                         <input type="text" class="form-control" name="busqueda-repositorios" id="busqueda-repositorios"
@@ -105,7 +99,7 @@
                 </section>
                 <section id="actividad-reciente" class="my-lg-3">
                     <header>
-                        <h3>Actividad reciente</h3>
+                        <h3 >Actividad reciente</h3>
                     </header>
                     <article class="card carta-actividad">
                         <header class="card-header d-flex align-items-center">
@@ -120,7 +114,7 @@
                                 <p>IsmaelJ/Apuntes Lola<i class="mx-2 bi bi-lock-fill"></i></p>
                                 <p class="text-truncate">Apuntes para las asignaturas de Despliegue de Aplicaciones Web y Desarrollo Web en Entorno Servidor</p>
                             </div>
-                            <form class="my-2 ms-sm-5">
+                            <form class="my-2 ms-sm-5" action="repositorio.jsp">
                                 <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
                             </form>
                         </article>
@@ -146,7 +140,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="my-2 ms-sm-5">
+                            <form class="my-2 ms-sm-5" action="PerfilOtroUsu.jsp">
                                 <input type="submit" value="Comenzar a seguir" class="btn btn-primary w-100"/>
                             </form>
                         </article>

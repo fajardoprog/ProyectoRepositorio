@@ -1,9 +1,3 @@
-<%-- 
-    Document   : cabecera
-    Created on : 26 feb. 2024, 15:53:49
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -23,11 +17,6 @@
                 FIpository
             </a>
 
-            <!-- Cambiar esta estructura por 
-            <form>
-                submit
-            </form>
-            -->
             <a href="inicioSesion.jsp"
                class="order-lg-1 d-flex flex-column align-items-center text-decoration-none mx-3"
                id="enlInciarSesion">

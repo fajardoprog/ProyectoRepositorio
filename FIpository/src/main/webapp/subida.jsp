@@ -1,9 +1,3 @@
-<%-- 
-    Document   : subida
-    Created on : 24 feb. 2024, 16:05:15
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -14,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Subida de ficheros</title>
+        <title>Subida de archivos</title>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -116,22 +110,25 @@
                         //                                <input type="radio" class="btn-check" name="carpetaElegida" id="success-outlined" autocomplete="off" checked>
                         //                                <label class="btn btn-outline-success" for="success-outlined"><span>Checked success radio</span></label>
                         //                          </div>
+
+//                        $("#container-carpetas").append($("<div>").append($("<input>").attr({
+//                            type: "radio",
+//                            class: "btn-check carpeta-elegida",
+//                            name: "carpetaElegida",
+//                            id: "raiz",
+//                            autocomplete: "off"
+//                        })).addClass("container-carpetas-fichero").append($("<label>").attr({
+//                            class: "btn btn-dark",
+//                            for : "raiz"
+//                        }).append("<span>").text("/")));
                         $("#container-carpetas").empty();
-                        $("#container-carpetas").append($("<div>").append($("<input>").attr({
-                            type: "radio",
-                            class: "btn-check carpeta-elegida",
-                            name: "carpetaElegida",
-                            id: "raiz",
-                            autocomplete: "off"
-                        })).addClass("container-carpetas-fichero").append($("<label>").attr({
-                            class: "btn btn-outline-success",
-                            for : "raiz"
-                        }).append("<span>").text("/")));
                         recuperarCarpetasRepositorio($(this)[0].value);
                     } else {
                         console.log("el nombre no se encuentra en la lista");
                     }
                 });
+                
+                 $("#container-carpetas").append($("<p>").text("Selecciona el repositorio para que aparezcan las carpetas").addClass("text-center fs-3 fw-bold"));
             });
 
             function validarCampo(campo) {
@@ -162,7 +159,7 @@
             </nav>
         </header>
         <main>
-            <h1>Subida de archivos</h1>
+            <h1 class="m-4">Subida de archivos</h1>
             <div class="container-botones">
                 <div role="group" aria-label="Cambiar entre subir fichero y carpeta">
                     <input type="radio" name="elegirArchivo" id="subirFichero" autocomplete="off" checked>
@@ -201,10 +198,6 @@
                     <article id="paso2fichero">
                         <h3>2. Selecciona la carpeta</h3>
                         <section class="container-archivos" id="container-carpetas">
-                            <div class="container-carpetas-fichero">
-                                <input type="radio" name="carpetaElegida"  autocomplete="off" checked>
-                                <label class="carpeta-seleccionar" for="success-outlined"><span>Checked success radio</span></label>
-                            </div>
                         </section>
                     </article>
                     <hr class="hr" />
@@ -244,7 +237,7 @@
                     <section id="paso2carpeta">
                         <article>
                             <h3 >2. Nombra tu carpeta</h3>
-                            <section class="container-input-texto">
+                            <section class="container-input-texto container-especial">
                                 <!--                                        <div>
                                                                             <input type="file" multiple="multiple" class="form-control" name="carpetaSeleccionada" id="carpetaSeleccionada" placeholder=""
                                                                                    webkitdirectory mozdirectory msdirectory odirectory directory>
@@ -260,7 +253,7 @@
                     <hr class="hr" />
                     <article id="paso3carpeta">
                         <h3>3. Elige el color de tu carpeta</h3>
-                        <div class="container-input-texto">
+                        <div class="container-input-texto container-especial">
                             <label for="colorCarpeta">Elige el color de la carpeta</label>
                             <input type="color" id="colorCarpeta" value="#000000"
                                    title="Selecciona el color" name="colorCarpeta">
@@ -268,7 +261,9 @@
 
                     </article>
                     <hr class="hr" />
-                    <button type="submit" class="submit">Crear carpeta</button>
+                    <div class="enviar-formu">
+                           <button type="submit" class="submit">Crear carpeta</button>
+                    </div>
                 </form>
 
             </div>
