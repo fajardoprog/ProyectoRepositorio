@@ -1,9 +1,3 @@
-<%-- 
-    Document   : inicioSesion
-    Created on : 24 feb. 2024, 16:03:42
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -14,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fipository</title>       
+        <title>Inicio de sesión o registro</title>       
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/estiloIndex.css">
@@ -30,10 +24,12 @@
                 $("input[name='tipoFormulario']").on("change", function () {
                     if ($("#formularioIniciarSesi").css("display") === "flex") {
                         $("#formularioIniciarSesi").fadeToggle(function () {
+                            $("#titulo-pagina").text("Registrarse");
                             $("#registrarseForm").fadeToggle().css("display", "flex");
                         });
                     } else {
                         $("#registrarseForm").fadeToggle(function () {
+                            $("#titulo-pagina").text("Inicio de sesión");
                             $("#formularioIniciarSesi").fadeToggle().css("display", "flex");
                         });
                     }
@@ -68,7 +64,7 @@
 
         <!--Parte main-->
         <main class="container-fluid">
-
+            <h1 class="m-3 text-center" id="titulo-pagina">Inicio de sesión</h1>
             <!--Seleccion de formulario-->
             <div class="container mb-4">
                 <div class="row row-cols-2" role="group" aria-label="Basic radio toggle button group">
@@ -85,7 +81,7 @@
             <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
                 <form action="InicioSesion" class="text-center  border border-black rounded col-md-6 formu">
 
-                    <h1 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h1>
+                    <h2 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h2>
 
                     <div class="d-flex flex-column justify-content-around align-items-center">
 
@@ -130,10 +126,10 @@
 
             <!--Bloque formulario Registrar-->
             <article class=" flex-column align-items-lg-center" id="registrarseForm">
-                <h1>${requestScope.mensajeError}</h1>
+                <p>${requestScope.mensajeError}</p>
                 <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu" enctype="multipart/form-data">
 
-                    <h1 class="h3 mb-3 fw-normal m-3">Registrarse</h1>
+                    <h2 class="h3 mb-3 fw-normal m-3">Registrarse</h2>
 
                     <div class="d-flex flex-column justify-content-around align-items-center">
 
@@ -282,7 +278,7 @@
                             
                             <div class="form-floating g-1 col-10">
                                 <textarea class="form-control" placeholder="pequeña Descrición tuya..." name="descripcionUsu" id="descripcion"></textarea>
-                                <label for="descripcion">Pequeña descrición tuya...</label>
+                                <label for="descripcion">Pequeña descripción tuya...</label>
                             </div>
                         </div>
 

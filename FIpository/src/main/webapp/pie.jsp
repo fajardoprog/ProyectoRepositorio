@@ -1,9 +1,3 @@
-<%-- 
-    Document   : pie
-    Created on : 26 feb. 2024, 17:02:08
-    Author     : IsmaelJJL
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="now" class="java.util.Date"/> 

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : subida
-    Created on : 24 feb. 2024, 16:05:15
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -14,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Subida de ficheros</title>
+        <title>Creación de repositorios</title>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -54,7 +48,7 @@
             </c:if>
                
         <main>
-            <h1>Creación de repositorios</h1>
+            <h1 class="m-4">Creación de repositorios</h1>
             <div class="container" id="reposiotrio">
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">

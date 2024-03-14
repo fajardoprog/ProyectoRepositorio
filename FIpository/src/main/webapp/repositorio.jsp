@@ -1,9 +1,3 @@
-<%-- 
-    Document   : repositorio
-    Created on : 24 feb. 2024, 16:05:03
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -126,7 +120,7 @@
             </div>
 
             <div class="container-fluid">
-                <table class="table tabla-repositorio table-responsive table-striped bg-light">
+                <table class="d-none d-lg-block table tabla-repositorio table-responsive table-striped bg-light">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -204,8 +198,7 @@
                     </tbody>
                 </table>
                 <div class="container">
-                    <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
-
+                    <section class="row  d-flex d-lg-none row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0">
                         <div class="container-carta">
                             <article class="card">
                                 <img class="card-img-top" src="img/MiFoto.png" alt="Card image">

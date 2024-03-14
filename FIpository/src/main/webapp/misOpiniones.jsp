@@ -1,9 +1,3 @@
-<%-- 
-    Document   : misOpiniones
-    Created on : 26 feb. 2024, 18:44:49
-    Author     : IsmaelJJL
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -36,7 +30,7 @@
         </header>
         <main>
 
-            <h1>Mis opiniones</h1>
+            <h1 class="m-4">Mis opiniones</h1>
             <section class="container-opiniones row row-cols-1 row-cols-md-2 row-cols-xl-3 row container-fluid justify-content-center g-0 ">
                 <!--Aquí van las opiniones-->
                 <div class="d-flex">

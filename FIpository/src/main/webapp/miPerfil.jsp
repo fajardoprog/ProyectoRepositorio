@@ -1,9 +1,3 @@
-<%-- 
-    Document   : miPerfil
-    Created on : 24 feb. 2024, 16:04:27
-    Author     : José Antonio Fajardo Naranjo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -20,7 +14,6 @@
         <link rel="stylesheet" href="css/bootstrap-icons.css">
         <link rel="stylesheet" href="css/estiloComun.css">
         <link rel="stylesheet" href="css/miPerfil.css">
-
 
         <script src="js/jquery-3.7.1.min.js"></script>
         <script>
