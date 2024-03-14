@@ -100,6 +100,7 @@ public class Registro extends HttpServlet {
         }
 
         s.setAttribute("usuarioActual", u);
+        s.setAttribute("invitado", false);
         response.sendRedirect("miEspacio.jsp");
 
     }

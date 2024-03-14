@@ -6,7 +6,7 @@
 package com.daw.fipository.logica;
 
 import com.daw.fipository.DAO.RepositorioJpaController;
-import com.daw.fipository.DAO.UsuarioJpaController;
+import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -39,10 +39,9 @@ public class ComprobacionInvitado extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
                ServletContext sc = request.getSession().getServletContext();
         HttpSession s = request.getSession();
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
-        RepositorioJpaController ctrRepo = new RepositorioJpaController(emf);
-        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
-        ArrayList<String> listaDirectorios = new ArrayList<>();
+        if (s.getAttribute("usuarioActual") == null){
+            s.setAttribute("invitado", true);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

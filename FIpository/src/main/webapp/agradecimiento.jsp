@@ -30,7 +30,15 @@
 
     <body class="d-flex flex-column justify-content-between">
         <header>
-            <jsp:include page="cabecera.jsp" />           
+            <jsp:include page="cabecera.jsp" /> 
+            <nav aria-label="breadcrumb" id="breadcrumbs">
+                <ol class="breadcrumb p-4">
+                    <li class="breadcrumb-item"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item"><a href="miEspacio.jsp">Inicio sesión/Registro</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Recuperar contraseña</a></li>
+                </ol>
+            </nav>
+            
         </header>
         <main class="container-fluid col-10">
             <h1 class="m-4">¡Muchas Gracias!</h1>

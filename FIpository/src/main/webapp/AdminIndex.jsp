@@ -28,7 +28,8 @@
             <jsp:include page="CargaListaUsu" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="index.jsp">Panel Control Admin</a></li>
+                    <li class="breadcrumb-item" ><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Panel Control Admin</a></li>
                 </ol>
             </nav>
         </header>

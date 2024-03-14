@@ -46,10 +46,12 @@ public class InicioSesion extends HttpServlet {
         if (u != null) {
             if (u.getAdmin()) {
                 s.setAttribute("usuarioActual", u);
+                s.setAttribute("invitado", false);
                 response.sendRedirect("AdminIndex.jsp");
             } else {
                 if (u.getPasswordUsuario().equalsIgnoreCase(password)) {
                     s.setAttribute("usuarioActual", u);
+                    s.setAttribute("invitado", false);
                     response.sendRedirect("miEspacio.jsp");
                 } else {
                     response.sendRedirect("inicioSesion.jsp");

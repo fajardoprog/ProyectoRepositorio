@@ -48,8 +48,8 @@
             <!--Ver donde manda al pulsar Inicio-->
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
-                    <li class="breadcrumb-item" aria-current="page"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="miEspacio.jsp">Mi espacio</a></li>
+                    <li class="breadcrumb-item"><a href="index.jsp">Bienvenida</a></li>
+                    <li class="breadcrumb-item"><a href="miEspacio.jsp">Mi espacio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Perfil de: Juanma</li>
                 </ol>
             </nav>

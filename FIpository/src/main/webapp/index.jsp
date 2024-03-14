@@ -21,7 +21,8 @@
         </script>
     </head>
     <body class="d-flex flex-column justify-content-between">
-        <header>            
+        <header>     
+            <jsp:include page="ComprobacionInvitado"/>
             <jsp:include page="cabecera.jsp" />
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
