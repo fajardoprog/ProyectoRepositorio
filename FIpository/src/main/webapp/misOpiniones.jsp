@@ -125,7 +125,7 @@
                         <div class="d-flex flex-column justify-content-between justify-content-between justify-content-xl-center pe-xl-3 m-2 m-md-auto w-100">
                             <div>
                                 <img src="img/images.jfif" class="d-block d-xl-none img-fluid" alt="Numero de Estrellas"/>
-                                <h5>Ismaelote/Apuntes serios</h5>
+                                <h5>Ismael/Apuntes serios</h5>
                             </div>
                             <form action="repositorio.jsp" >
                                 <input type="submit" class="btn btn-primary col-12" value="Ver repositorio"  title="visitar el repositorio de IsmaeloteElMalote llamado Apuntes serios"/>
