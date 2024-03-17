@@ -38,7 +38,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Archivo.findByNumArchivos", query = "SELECT a FROM Archivo a WHERE a.numArchivos = :numArchivos"),
     @NamedQuery(name = "Archivo.findByPeso", query = "SELECT a FROM Archivo a WHERE a.peso = :peso"),
     @NamedQuery(name = "Archivo.findByColor", query = "SELECT a FROM Archivo a WHERE a.color = :color"),
-    @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.carpeta")
+     @NamedQuery(name = "Archivo.archivosUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario ORDER BY a.archivoPK.nombreArchivo"),
+    @NamedQuery(name = "Archivo.carpetasUsuario", query = "SELECT a FROM Archivo a WHERE a.archivoPK.nombreRepositorio = :nombreRepositorio AND a.archivoPK.nombreUsuario = :nombreUsuario AND a.carpeta = true ORDER BY a.archivoPK.nombreArchivo")
 })
 public class Archivo implements Serializable {
 

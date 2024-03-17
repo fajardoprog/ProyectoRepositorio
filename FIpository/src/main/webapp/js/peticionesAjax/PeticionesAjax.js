@@ -92,6 +92,7 @@ function busqueda($filtro, desc, criterio) {
                                                 .append($("<div>").addClass("titulo-accion ps-3 justify-content-center")
                                                         .append($("<h5>").text(repositorioActual.nombrerepositorio)))
                                                 .append($("<form>").addClass("d-flex align-items-center").attr("action", "repositorio.jsp")
+                                                        .append($("<input>").attr({type: "hidden", value: repositorioActual.nombrerepositorio, name: "repositorio"}))
                                                         .append($("<input>").attr({type: "submit", value: "Ir al repositorio", "class": "btn btn-primary w-100", title: "Visitar el repositorio " + repositorioActual.nombrerepositorio})))
                                                 )
                                         .append($("<article>").addClass("contenedor-afectado-repositorio d-flex align-items-center justify-content-between container-fluid py-2")
@@ -128,4 +129,89 @@ function ordenarArrayObjetos(resultado, desc, criterio) {
         resultado[clave] = objetoDesordenado[clave];
     }
     return resultado;
+}
+
+function recuperarArchivosRepositorio(repositorio) {
+    $.ajax(
+            {
+                url: "CargaRepositorio",
+                method: "POST",
+                data: {
+                    repositorio: repositorio
+                },
+                success: function (archivos) {
+                    console.log(archivos);
+                    if (Object.keys(archivos).length !== 0) {
+                        for (let archivo in archivos) {
+                            let archivoActual = JSON.parse(archivos[archivo]);
+                            let tipo = "";
+                            let imagen = "";
+                            let fecha = new Date(archivoActual.fechaCreacion);
+                            if (archivoActual.carpeta) {
+                                tipo = "Carpeta";
+                                imagen = "img/carpeta.png";
+                            } else {
+                                let longitud = archivoActual.archivoPK.nombreArchivo.split(".").length;
+                                tipo =  archivoActual.archivoPK.nombreArchivo.split(".")[longitud-1];
+                                if (tipo === "png" || tipo === "PNG" || tipo === "jpg" || tipo === "JPG") {
+                                    let foto = archivoActual.archivoPK.nombreArchivo.split("/")[1];
+                                    imagen = "imgPerfilUsuario/" + foto;
+                                } else {
+                                    imagen = "img/fichero.png";
+                                }
+                            }
+                            console.log(archivoActual);
+                            $("#formato-tabla").append($("<tr>")
+                                    .append($("<td>").text(archivoActual.archivoPK.nombreArchivo))
+                                    .append($("<td>").text(tipo))
+                                    .append($("<td>").text(fecha.toLocaleString()))
+                                    .append($("<td>")
+                                            .append($("<div>").addClass("d-flex justify-content-between align-items-center")
+                                                    .append($("<span>").text(archivoActual.archivoPK.nombreUsuario))
+                                                    .append($("<form>"))))
+                                    );
+                            $("#formato-cartas section").append($("<div>").addClass("container-carta")
+                                    .append($("<article>").addClass("card")
+                                            .append($("<img>").addClass("card-img-top").attr({src: imagen}))
+                                            .append($("<div>").addClass("card-body")
+                                                    .append($("<h4>").addClass("card-title").text(archivoActual.archivoPK.nombreArchivo))
+                                                    .append($("<form>").addClass("d-flex justify-content-between align-items-end")))))
+
+                        }
+                        $("table tr td:last-child form, #formato-cartas article.card form").append(
+                                $("<button>").attr({
+                            type: "button",
+                            "data-bs-toggle": "tooltip",
+                            "data-bs-placement": "bottom",
+                            "data-bs-custom-class": "boton-tooltip",
+                            "data-bs-title": "Descargar"
+                        }).addClass("btn").append("<i>").addClass("bi bi-download")
+                                ).append(
+                                $("<button>").attr({
+                            type: "button",
+                            "data-bs-toggle": "tooltip",
+                            "data-bs-placement": "bottom",
+                            "data-bs-custom-class": "boton-tooltip",
+                            "data-bs-title": "Cambiar nombre"
+                        }).addClass("btn").append("<i>").addClass("bi bi-pencil-square")).append($("<button>").attr({
+                            type: "button",
+                            "data-bs-toggle": "tooltip",
+                            "data-bs-placement": "bottom",
+                            "data-bs-custom-class": "boton-tooltip",
+                            "data-bs-title": "Borrar archivo"
+                        }).addClass("btn").append("<i>").addClass("bi bi-trash-fill"));
+
+                        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+                        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                            new bootstrap.Tooltip(tooltipTriggerEl);
+                        });
+
+                    }
+                }
+                ,
+                error: function (result, status, xhr) {
+                    alert("Error-->" + status + "<br>" + xhr.responseText);
+                }
+            }
+    );
 }

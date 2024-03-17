@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.daw.fipository.logica;
+package com.daw.fipository.ajax;
 
 import com.daw.fipository.DAO.RepositorioJpaController;
 import com.daw.fipository.DAO.UsuarioJpaController;
@@ -11,26 +11,45 @@ import com.daw.fipository.DTO.Repositorio;
 import com.daw.fipository.DTO.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.json.JSONObject;
 
 /**
  *
  * @author José Antonio Fajardo Naranjo
  */
-public class Busquedas extends HttpServlet {
+public class ValidacionUsuario extends HttpServlet {
+
+    static JSONObject arrayObj, salida;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        request.setAttribute("mostrarBusqueda", true);
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+        HttpSession s = request.getSession();
+        String usuario = request.getParameter("usuario");
+        String password = request.getParameter("password");
 
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
+        UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
+
+        salida = new JSONObject();
+        boolean existente = false;
+        Usuario u = ctrUsu.findUsuario(usuario);
+        if (u != null) {
+            if (u.getPasswordUsuario().equals(password)) {
+                existente = true;
+            }
+        }
+        salida.put("existente", existente);
+        out.println(salida);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

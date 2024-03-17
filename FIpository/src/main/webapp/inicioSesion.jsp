@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
         <link rel="stylesheet" href="css/estiloInicioSesion.css">
 
         <script>
@@ -33,6 +34,35 @@
                             $("#formularioIniciarSesi").fadeToggle().css("display", "flex");
                         });
                     }
+
+                    $("#form-iniciar-sesion").validate({
+                        rules: {
+                            nombreUsuario: {
+                                required: true
+                            },
+                            password: {
+                                required: true,
+                                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/
+                            }
+                        },
+                        messages: {
+                            nombreUsuario: {
+                                required: "El campo nombre de usuario es obligatorio"
+                            },
+                            password: {
+                                required: "El campo contraseña es obligatorio",
+                                pattern: "Debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
+                            }
+                        },
+                        submitHandler: function (form) {
+                            form.submit();
+                        }
+                    });
+                    $("#form-iniciar-sesion").on("click", function () {
+                        ev.preventDefault();
+                        $("#form-iniciar-sesion").valid();
+                    });
+
 
                 });
 
@@ -79,7 +109,7 @@
 
             <!--Bloque formulario Iniciar Sesión-->
             <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
-                <form action="InicioSesion" class="text-center  border border-black rounded col-md-6 formu">
+                <form action="InicioSesion" id="form-iniciar-sesion" class="text-center  border border-black rounded col-md-6 formu">
 
                     <h2 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h2>
 
@@ -87,7 +117,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                               <i class="bi bi-person-fill"></i>
+                                <i class="bi bi-person-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -144,7 +174,7 @@
 
                         <div class="col-11 d-flex justify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                               <i class="bi bi-file-person-fill"></i>
+                                <i class="bi bi-file-person-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 col-10">
@@ -196,7 +226,7 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                               <i class="bi bi-key-fill"></i>
+                                <i class="bi bi-key-fill"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -208,8 +238,8 @@
 
                         <div class="col-11 d-flex just ify-content-between align-items-center">
                             <div class="d-flex col-2 justify-content-around align-items-center">
-                               <i class="bi bi-key-fill"></i>
-                               <i class="bi bi-arrow-clockwise"></i>
+                                <i class="bi bi-key-fill"></i>
+                                <i class="bi bi-arrow-clockwise"></i>
                             </div>
 
                             <div class="form-floating m-2 align-items-center col-10">
@@ -275,7 +305,7 @@
                             <div class="d-flex align-items-center col-2 justify-content-center">
                                 <i class="bi bi-info-circle"></i>
                             </div>
-                            
+
                             <div class="form-floating g-1 col-10">
                                 <textarea class="form-control" placeholder="pequeña Descrición tuya..." name="descripcionUsu" id="descripcion"></textarea>
                                 <label for="descripcion">Pequeña descripción tuya...</label>
@@ -287,7 +317,7 @@
                         </div>
                 </form>
                 <p class="mt-5 mb-3 text-body-secondary">© FIpository</p>
-                                
+
             </article>
             <!--Fin Bloque formulario Registrar-->
 

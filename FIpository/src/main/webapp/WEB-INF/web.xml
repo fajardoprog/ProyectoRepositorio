@@ -60,6 +60,14 @@
         <servlet-name>Busqueda</servlet-name>
         <servlet-class>com.daw.fipository.ajax.Busqueda</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ValidacionUsuario</servlet-name>
+        <servlet-class>com.daw.fipository.ajax.ValidacionUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CargaRepositorio</servlet-name>
+        <servlet-class>com.daw.fipository.ajax.CargaRepositorio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -119,6 +127,14 @@
     <servlet-mapping>
         <servlet-name>Busqueda</servlet-name>
         <url-pattern>/Busqueda</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValidacionUsuario</servlet-name>
+        <url-pattern>/ValidacionUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CargaRepositorio</servlet-name>
+        <url-pattern>/CargaRepositorio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

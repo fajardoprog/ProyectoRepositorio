@@ -145,11 +145,22 @@ public class ArchivoJpaController implements Serializable {
             em.close();
         }
     }
+
     public List<Archivo> listaCarpetasUsuarioRepositorio(String usuario, String repositorio) {
         EntityManager em = getEntityManager();
         TypedQuery tq = em.createNamedQuery("Archivo.carpetasUsuario", Archivo.class);
         tq.setParameter("nombreUsuario", usuario);
         tq.setParameter("nombreRepositorio", repositorio);
+        List l = tq.getResultList();
+        return l;
+    }
+
+    public List<Archivo> listaArchivosUsuario(String repositorio) {
+        EntityManager em = getEntityManager();
+        TypedQuery tq = em.createNamedQuery("Archivo.archivosUsuario", Archivo.class);
+        String[] parametros = repositorio.split("/");
+        tq.setParameter("nombreUsuario", parametros[0]);
+        tq.setParameter("nombreRepositorio", parametros[1]);
         List l = tq.getResultList();
         return l;
     }
