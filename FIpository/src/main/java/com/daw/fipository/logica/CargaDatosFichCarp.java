@@ -33,7 +33,7 @@ public class CargaDatosFichCarp extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        request.setCharacterEncoding("UTF-8");
         ServletContext sc = request.getSession().getServletContext();
         HttpSession s = request.getSession();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
@@ -41,7 +41,7 @@ public class CargaDatosFichCarp extends HttpServlet {
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         ArrayList<String> listaDirectorios = new ArrayList<>();
 
-          Usuario u = (Usuario) s.getAttribute("usuarioActual");//si no estás registrado c.getValue da error por null pointer
+        Usuario u = (Usuario) s.getAttribute("usuarioActual");//si no estás registrado c.getValue da error por null pointer
         if (u != null) {
             File raizUsuario = new File(sc.getRealPath("/repositorios/" + u.getNombreUsuario()));
             if (raizUsuario.exists()) {

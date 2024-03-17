@@ -36,6 +36,7 @@ public class InicioSesion extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         HttpSession s = request.getSession();

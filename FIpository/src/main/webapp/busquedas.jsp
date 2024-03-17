@@ -14,18 +14,38 @@
         <link rel="stylesheet" href="css/estiloComun.css">
         <link rel="stylesheet" href="css/estiloBusquedas.css">
         <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/peticionesAjax/PeticionesAjax.js"></script>
         <script>
             $(function () {
                 $(".lista-filtro button").on("click", function () {
                     cambiarFiltroBase($(this));
                 });
-            }
-            );
+
+                $(".boton-filtro").on("click", function () {
+                    $("#cartas").empty();
+                    busqueda($(this), true);
+                });
+
+                $("#filtro-busqueda").on("click", function () {
+                    let $filtroElegido;
+                    $(".boton-filtro").each(function () {
+                        if ($(this).find("i")[0] !== undefined){
+                            $filtroElegido = $(this);
+                        }
+                    });
+                    $("#cartas").empty();
+                    busqueda($filtroElegido, true);
+                });
+            });
+
+
             function cambiarFiltroBase($btn) {
                 $(".lista-filtro button").find("i").remove();
                 $("#filtro-base").text($btn.text());
                 $btn.prepend($("<i>").addClass("bi bi-check-circle-fill mx-2"));
             }
+
+
         </script>
 
     </head>
@@ -48,12 +68,12 @@
                         <h1 class="fs-3">Filtrar por</h1>
                         <ul class="list-group list-group-flush lista-filtro">
                             <li class="list-group-item bg-transparent">
-                                <button type="button" class="btn btn-primary"  aria-current="true" title="Filtrar por Repositorio">
+                                <button type="button" class="btn btn-primary boton-filtro" id="boton-repositorio"  aria-current="true" title="Filtrar por Repositorio">
                                     Por repositorio
                                 </button>
                             </li>
                             <li class="list-group-item bg-transparent">
-                                <button type="button" class="btn btn-primary" title="Filtrar por usuario">Por usuario</button>                              
+                                <button type="button" class="btn btn-primary boton-filtro" id="boton-usuario" title="Filtrar por usuario">Por usuario</button>                              
                             </li>
                         </ul>
                     </section>
@@ -94,8 +114,8 @@
                                         Por repositorio
                                     </button>
                                     <ul class="dropdown-menu lista-filtro">
-                                        <li><button class="dropdown-item" href="#">Por repositorio</button></li>
-                                        <li><button class="dropdown-item" href="#">Por usuario</button></li>
+                                        <li><button class="dropdown-item boton-filtro" id="dropdown-repositorio" href="#">Por repositorio</button></li>
+                                        <li><button class="dropdown-item boton-filtro" id="dropdown-usuario" href="#">Por usuario</button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -154,15 +174,15 @@
                         <div class="input-group form-floating my-3">
                             <i class="input-group-text bi bi-search"></i>
                             <div class="form-floating col">
-                                <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-                                <label for="floatingInputGroup1" >Buscar que contengan</label>
+                                <input type="text" class="form-control" id="busquedas-input" placeholder="Username">
+                                <label for="busquedas-input" >Buscar que contengan</label>
                             </div>
-                            <input type="submit" class="btn btn-primary" value="Buscar">
+                            <button type="search" id="filtro-busqueda" class="btn btn-primary">Buscar</button>
                         </div>
 
                     </section>
 
-                    <section class="container cartas">
+                    <section class="container cartas" id="cartas">
                         <article class="card card-usuario">
                             <header class="card-header d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center justify-content-lg-between">
                                 <div class="d-flex align-items-center">
@@ -197,7 +217,7 @@
                                     <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>
 
-                                 <p class="p-2 border rounded-pill text-white badgeCentrado">
+                                <p class="p-2 border rounded-pill text-white badgeCentrado">
                                     punto/s de reputación
                                     <span class="badge text-white bg-success ms-2">33</span>                                    
                                 </p>

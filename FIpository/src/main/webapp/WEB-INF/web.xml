@@ -56,6 +56,10 @@
         <servlet-name>ComprobacionInvitado</servlet-name>
         <servlet-class>com.daw.fipository.logica.ComprobacionInvitado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Busqueda</servlet-name>
+        <servlet-class>com.daw.fipository.ajax.Busqueda</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>ComprobacionInvitado</servlet-name>
         <url-pattern>/ComprobacionInvitado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Busqueda</servlet-name>
+        <url-pattern>/Busqueda</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

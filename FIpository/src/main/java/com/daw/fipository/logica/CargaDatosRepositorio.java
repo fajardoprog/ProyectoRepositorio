@@ -33,6 +33,7 @@ public class CargaDatosRepositorio extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("fipositoryJPU");
@@ -42,7 +43,7 @@ public class CargaDatosRepositorio extends HttpServlet {
         
         HttpSession s = request.getSession();
         Usuario u = (Usuario) s.getAttribute("usuarioActual");
-        List<Repositorio> listaRepositorios = ctrRepo.listaCarpetasUsuarioRepositorio(u.getNombreUsuario());
+        List<Repositorio> listaRepositorios = ctrRepo.repositoriosDeUsuario(u.getNombreUsuario());
         request.setAttribute("misRepositorios", listaRepositorios);
         List<Colaborador> repositariosColaborados = ctrColab.listaRepositoriosColaboradores(u.getNombreUsuario());
         ArrayList<AuxiliarUsuarioRepositorio> listaRepositoriosCompartidos = new ArrayList();

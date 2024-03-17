@@ -35,9 +35,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Repositorio.findByFechaCreacion", query = "SELECT r FROM Repositorio r WHERE r.fechaCreacion = :fechaCreacion"),
     @NamedQuery(name = "Repositorio.findByPrivado", query = "SELECT r FROM Repositorio r WHERE r.privado = :privado"),
     @NamedQuery(name = "Repositorio.findByNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.numeroVisitas = :numeroVisitas"),
-    @NamedQuery(name = "Repositorio.ordenadosPorFecha", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.fechaCreacion"),
-    @NamedQuery(name = "Repositorio.ordenadosPorNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r.repositorioPK.nombreRepositorio"),
-    @NamedQuery(name = "Repositorio.ordenadosPorNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE '%:nombreRepositorio%' ORDER BY r")
+    @NamedQuery(name = "Repositorio.ordenadosPorFecha", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE :nombreRepositorio ORDER BY r.fechaCreacion ASC"),
+    @NamedQuery(name = "Repositorio.ordenadosPorNombreRepositorio", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE :nombreRepositorio ORDER BY r.repositorioPK.nombreRepositorio ASC"),
+    @NamedQuery(name = "Repositorio.ordenadosPorNumeroVisitas", query = "SELECT r FROM Repositorio r WHERE r.repositorioPK.nombreRepositorio LIKE :nombreRepositorio ORDER BY r.numeroVisitas ASC")
 })
 public class Repositorio implements Serializable {
 

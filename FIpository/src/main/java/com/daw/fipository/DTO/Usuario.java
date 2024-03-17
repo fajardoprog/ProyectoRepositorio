@@ -43,9 +43,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Usuario.findByNumeroReporte", query = "SELECT u FROM Usuario u WHERE u.numeroReporte = :numeroReporte"),
     @NamedQuery(name = "Usuario.findByNumeroLike", query = "SELECT u FROM Usuario u WHERE u.numeroLike = :numeroLike"),
     @NamedQuery(name = "Usuario.findByAdmin", query = "SELECT u FROM Usuario u WHERE u.admin = :admin"),
-    @NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
-    @NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'"),
-    @NamedQuery(name = "Usuario.ordenadorPorNombre", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE '%:nombreUsuario%'")
+    @NamedQuery(name = "Usuario.ordenadosPorReputacion", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE :nombreUsuario AND u.admin = false ORDER BY u.reputacion ASC"),
+    @NamedQuery(name = "Usuario.ordenadorPorEdad", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE :nombreUsuario  AND u.admin = false ORDER BY u.fechaNacimiento ASC"),
+    @NamedQuery(name = "Usuario.ordenadorPorNombre", query = "SELECT u FROM Usuario u WHERE u.nombreUsuario LIKE :nombreUsuario  AND u.admin = false ORDER BY u.nombreUsuario DESC")
 })
 public class Usuario implements Serializable {
 
