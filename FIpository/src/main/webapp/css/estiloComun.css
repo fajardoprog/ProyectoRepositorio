@@ -198,7 +198,6 @@ h2 {
 #imagenCabecera {
     display: none;
 }
-
 @media screen and (min-width:576px) {
 
     /*Resolución tablet*/

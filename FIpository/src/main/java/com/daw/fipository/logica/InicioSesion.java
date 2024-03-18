@@ -38,7 +38,7 @@ public class InicioSesion extends HttpServlet {
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         HttpSession s = request.getSession();
         String nombre = request.getParameter("nombreUsuario");
-        String password = request.getParameter("password");
+        String password = request.getParameter("passwordUsu");
         Usuario u = ctrUsu.findUsuario(nombre);
         if (u != null) {
             if (u.getPasswordUsuario().equalsIgnoreCase(password)) {

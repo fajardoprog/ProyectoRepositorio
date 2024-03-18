@@ -22,6 +22,9 @@
 
         <script>
             $(function () {
+
+                let errorMostrado = false;
+
                 $("input[name='tipoFormulario']").on("change", function () {
                     if ($("#formularioIniciarSesi").css("display") === "flex") {
                         $("#formularioIniciarSesi").fadeToggle(function () {
@@ -34,36 +37,6 @@
                             $("#formularioIniciarSesi").fadeToggle().css("display", "flex");
                         });
                     }
-
-                    $("#form-iniciar-sesion").validate({
-                        rules: {
-                            nombreUsuario: {
-                                required: true
-                            },
-                            password: {
-                                required: true,
-                                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/
-                            }
-                        },
-                        messages: {
-                            nombreUsuario: {
-                                required: "El campo nombre de usuario es obligatorio"
-                            },
-                            password: {
-                                required: "El campo contraseña es obligatorio",
-                                pattern: "Debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
-                            }
-                        },
-                        submitHandler: function (form) {
-                            form.submit();
-                        }
-                    });
-                    $("#form-iniciar-sesion").on("click", function () {
-                        ev.preventDefault();
-                        $("#form-iniciar-sesion").valid();
-                    });
-
-
                 });
 
 
@@ -75,6 +48,109 @@
                         $("#otroG").css("display", "none");
                     }
                 });
+
+
+
+                $("#form-iniciar-sesion").validate({
+                    rules: {
+                        nombreUsuario: {
+                            required: true
+                        },
+                        passwordUsu: {
+                            required: true,
+                            /*pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/*/
+                            passWordValida: true
+                        }
+                    },
+                    messages: {
+                        nombreUsuario: {
+                            required: "El campo nombre de usuario es obligatorio"
+                        },
+                        passwordUsu: {
+                            required: "El campo contraseña es obligatorio",
+                            passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
+                        }
+                    },
+                    submitHandler: function (form) {
+                        form.submit();
+                    },
+                    errorElement: "span",
+                    errorPlacement: function (error, element) {
+                        var existingError = element.next("span.error");
+                        if (!existingError.length) {
+                            error.insertAfter(element);
+                        }
+                        element.next("span.error").addClass("text-danger");
+                    },
+                    success: function (label, element) {
+                        $(element).next("span.error").remove();
+                    }
+                });
+
+                $("#form-iniciar-sesion").on("submit", function (ev) {
+                    ev.preventDefault();
+                    $(this).valid();
+                });
+
+
+                $.validator.addMethod("passWordValida", function (value) {
+                    let correcto = false;
+                    let formato = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
+                    if (formato.test(value))
+                        return true;
+                }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco");
+
+
+                /*Formulario registrar*/
+
+                /*Implementar cambios*/
+                $("#formuRegistro").validate({
+                    rules: {
+                        nombreUsuario: {
+                            required: true
+                        },
+                        passwordUsu: {
+                            required: true,                           
+                            passWordValida: true
+                        }
+                    },
+                    messages: {
+                        nombreUsuario: {
+                            required: "El campo nombre de usuario es obligatorio"
+                        },
+                        passwordUsu: {
+                            required: "El campo contraseña es obligatorio",
+                            passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
+                        }
+                    },
+                    submitHandler: function (form) {
+                        form.submit();
+                    },
+                    errorElement: "span",
+                    errorPlacement: function (error, element) {
+                        var existingError = element.next("span.error");
+                        if (!existingError.length) {
+                            error.insertAfter(element);
+                        }
+                        element.next("span.error").addClass("text-danger");
+                    },
+                    success: function (label, element) {
+                        $(element).next("span.error").remove();
+                    }
+                });
+
+                $("#form-iniciar-sesion").on("submit", function (ev) {
+                    ev.preventDefault();
+                    $(this).valid();
+                });
+
+
+                $.validator.addMethod("passWordValida", function (value) {
+                    let correcto = false;
+                    let formato = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
+                    if (formato.test(value))
+                        return true;
+                }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco");
 
             });
         </script>
@@ -109,6 +185,9 @@
 
             <!--Bloque formulario Iniciar Sesión-->
             <article class="flex-column align-items-md-center" id="formularioIniciarSesi">
+
+                <div id="mensaje-error" class="text-danger m-2 fs-3"></div>
+
                 <form action="InicioSesion" id="form-iniciar-sesion" class="text-center  border border-black rounded col-md-6 formu">
 
                     <h2 class="h3 mb-3 fw-normal m-3">Inicio Sesión</h2>
@@ -122,7 +201,7 @@
 
                             <div class="form-floating m-2 col-10">
                                 <input type="text" class="form-control col-11" id="floatingInput" placeholder="Usuario"
-                                       name="nombreUsuario">
+                                       name="nombreUsuario" required="true">
                                 <label for="floatingInput">Nombre Usuario</label>
                             </div>
                         </div>
@@ -135,7 +214,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-11" id="floatingPassword"
-                                       placeholder="Password" name="password">
+                                       placeholder="Password" name="passwordUsu" required="true" >                             
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                         </div>
@@ -157,7 +236,7 @@
             <!--Bloque formulario Registrar-->
             <article class=" flex-column align-items-lg-center" id="registrarseForm">
                 <p>${requestScope.mensajeError}</p>
-                <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu" enctype="multipart/form-data">
+                <form action="Registro" method="post" class="text-center  border border-black rounded col-lg-6 formu" enctype="multipart/form-data" id="formuRegistro">
 
                     <h2 class="h3 mb-3 fw-normal m-3">Registrarse</h2>
 
