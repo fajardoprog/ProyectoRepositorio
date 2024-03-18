@@ -48,24 +48,26 @@
             <nav aria-label="breadcrumb" id="breadcrumbs">
                 <ol class="breadcrumb p-4">
                     <li class="breadcrumb-item"><a href="index.jsp">Bienvenida</a></li>
-                    <li class="breadcrumb-item"><a href="GestionPerfilUsuAdmin.jsp">Gestión de usuarios</a></li>
+                    <li class="breadcrumb-item"><a href="AdminIndex.jsp">Gestión de usuarios</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Perfil de: Juanma</li>
                 </ol>
             </nav>
         </header>
 
-            <h1 class="m-4">Espacio de: <span></span></h1>
-        
+        <h1 class="m-4">Espacio de: <span>${param.UsuSelec}</span></h1>
+
         <div class="row row-cols-3 g-0 justify-content-around">
-            <form action="" class="p-3">
-                <input type="submit" class="btn btn-primary btnOperacion w-100" value="Ver Log"/>
-            </form>
-            <form action="" class="p-3">
-                <input type="submit" class="btn btn-danger btnOperacion w-100" value="Banear"/>
-            </form>
-            <form action="" class="p-3">
-                <input type="submit" class="btn btn-warning btnOperacion w-100" value="Ver Reportes"/>
-            </form>
+            <div class="p-3">
+                <button type="button" class="btn btn-primary btnOperacion w-100">Ver Log</button>
+            </div>
+            <div action="" class="p-3">
+                <button type="button" class="btn btn-danger btnOperacion w-100" >Banear</button>
+            </div>
+            <div action="" class="p-3">
+                <form action="reportes.jsp">
+                    <button type="submit" class="btn btn-warning btnOperacion w-100">Ver Reportes</button>    
+                </form>
+            </div>
         </div>
 
         <!--Toast me gusta -->
@@ -137,7 +139,7 @@
 
         <div class="container-fluid m-0 p-3 px-lg-5 d-lg-flex">
             <aside  id="mis-repositorios"  class="col-lg-4 p-4">
-                <h3 class="p-0">Respositorios de: Juanma</h3>
+                <h3 class="p-0">Respositorios de: ${param.UsuSelec}</h3>
 
                 <article>
                     <form  class="form-floating mb-3">
@@ -212,8 +214,9 @@
                         </div> 
                         <!-- fin boton -->
 
-                        <form class="d-flex align-items-center ">
+                        <form class="d-flex align-items-center" action="repositorio.jsp">
                             <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
+                            <input type="hidden" value="pedro/Pan con manteca" name="repositorio"/>
                         </form>
                     </header>
                     <div class="d-flex flex-column">

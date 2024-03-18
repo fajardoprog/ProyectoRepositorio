@@ -156,6 +156,7 @@ function recuperarArchivosRepositorio(repositorio) {
                                 if (tipo === "png" || tipo === "PNG" || tipo === "jpg" || tipo === "JPG") {
                                     let foto = archivoActual.archivoPK.nombreArchivo.split("/")[1];
                                     imagen = "imgPerfilUsuario/" + foto;
+                                    // Coger la imagen desde el repositorio, no desde la carpeta fija imgPerfilUsuario
                                 } else {
                                     imagen = "img/fichero.png";
                                 }

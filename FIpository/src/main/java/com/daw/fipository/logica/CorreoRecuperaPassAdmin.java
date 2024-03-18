@@ -63,7 +63,7 @@ public class CorreoRecuperaPassAdmin extends HttpServlet {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("fipository@gmail.com", "taxlpfoujdgwqmwv");/*Camiar codigo si no envia el correo o no se recibe*/
+                return new PasswordAuthentication("fipository@gmail.com", "ozmbxcbianjshfmn");/*Camiar codigo si no envia el correo o no se recibe*/
             }
         });
 

@@ -116,6 +116,7 @@
                             </div>
                             <form class="my-2 ms-sm-5" action="repositorio.jsp">
                                 <input type="submit" value="Ir al repositorio" class="btn btn-primary w-100"/>
+                                <input type="hidden" value="pedro/Pan con manteca" name="repositorio"/>
                             </form>
                         </article>
                     </article>

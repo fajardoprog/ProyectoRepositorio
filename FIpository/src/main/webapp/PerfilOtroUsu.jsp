@@ -84,6 +84,7 @@
                         <form action="" class="d-flex justify-content-around w-100">
                             <div>
                                 <input type="submit" class="btn btn-primary" value="Sí" title="Aceptar y enviar peticion para ver el repositorio"/>
+                                <input type="hidden" value="pedro/Pan con manteca" name="repositorio"/>
                             </div>
 
                             <div>
