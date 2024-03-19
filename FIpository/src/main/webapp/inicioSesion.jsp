@@ -110,8 +110,17 @@
                             required: true
                         },
                         passwordUsu: {
-                            required: true,                           
+                            required: true,
                             passWordValida: true
+                        },
+                        passwordUsuarioRepetida: {
+                            required: true,
+                            equalTo: "#pass"
+                        },
+                        fechaNacimientoUsuario: {
+                            required: true,
+                            dateISO: true,
+                            edadMinima: true
                         }
                     },
                     messages: {
@@ -121,6 +130,15 @@
                         passwordUsu: {
                             required: "El campo contraseña es obligatorio",
                             passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
+                        },
+                        passwordUsuarioRepetida: {
+                            required: "Este campo es obligatorio",
+                            equalTo: "Las contraseñas no coinciden"
+                        },
+                        fechaNacimiento: {
+                            required: "Por favor ingrese su fecha de nacimiento",
+                            dateISO: "Por favor ingrese una fecha de nacimiento válida",
+                            edadMinima: "Debe ser mayor de edad para registrarse"
                         }
                     },
                     submitHandler: function (form) {
@@ -151,6 +169,20 @@
                     if (formato.test(value))
                         return true;
                 }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco");
+
+                $.validator.addMethod("edadMinima", function (value, element) {
+                    var fechaNacimiento = new Date(value);
+                    var hoy = new Date();
+                    var edadMinima = 18;
+
+                    var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+                    var mes = hoy.getMonth() - fechaNacimiento.getMonth();
+                    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+                        edad--;
+                    }
+
+                    return edad >= edadMinima;
+                }, "Debe ser mayor de edad para registrarse");
 
             });
         </script>
@@ -310,7 +342,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-1" 
-                                       placeholder="Password" name="passwordUsuario">
+                                       placeholder="Password" name="passwordUsuario" id="pass">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                         </div>
@@ -323,7 +355,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-11" 
-                                       placeholder="Password" name="passwordUsuarioRepetida">
+                                       placeholder="Password" name="passwordUsuarioRepetida" id="passwordUsuarioRepetida">
                                 <label for="floatingPassword">Repetir Contraseña</label>
                             </div>
                         </div>
