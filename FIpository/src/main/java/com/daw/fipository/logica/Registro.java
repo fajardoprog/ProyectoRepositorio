@@ -50,7 +50,7 @@ public class Registro extends HttpServlet {
         UsuarioJpaController ctrUsu = new UsuarioJpaController(emf);
         HttpSession s = request.getSession();
         String nombre = request.getParameter("nombreUsuario");
-        String password = request.getParameter("passwordUsuario");
+        String password = request.getParameter("passwordUsuarioRegis");
         String nombreCompleto = request.getParameter("nombreCompleto");
         String primerApellidoUsuario = request.getParameter("primerApellidoUsuario");
         String segundoApellidoUsuario = request.getParameter("segundoApellidoUsuario");

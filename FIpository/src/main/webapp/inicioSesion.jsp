@@ -109,7 +109,7 @@
                         nombreUsuario: {
                             required: true
                         },
-                        passwordUsu: {
+                        passwordUsuarioRegis: {
                             required: true,
                             passWordValida: true
                         },
@@ -127,7 +127,7 @@
                         nombreUsuario: {
                             required: "El campo nombre de usuario es obligatorio"
                         },
-                        passwordUsu: {
+                        passwordUsuarioRegis: {
                             required: "El campo contraseña es obligatorio",
                             passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
                         },
@@ -165,9 +165,11 @@
 
                 $.validator.addMethod("passWordValida", function (value) {
                     let correcto = false;
-                    let formato = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
-                    if (formato.test(value))
+                    let formato = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\w\d\s])(?!.*\s).{8,}$/;
+                    if (formato.test(value)) {
                         return true;
+                    }
+                    return false;
                 }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco");
 
                 $.validator.addMethod("edadMinima", function (value, element) {
@@ -342,7 +344,7 @@
 
                             <div class="form-floating m-2 align-items-center col-10">
                                 <input type="password" class="form-control col-1" 
-                                       placeholder="Password" name="passwordUsuario" id="pass">
+                                       placeholder="Password" name="passwordUsuarioRegis" id="pass">
                                 <label for="floatingPassword">Contraseña</label>
                             </div>
                         </div>
