@@ -68,7 +68,7 @@
                         },
                         passwordUsu: {
                             required: "El campo contraseña es obligatorio",
-                            passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco"
+                            passWordValida: "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco y minimo 8 caracteres"
                         }
                     },
                     submitHandler: function (form) {
@@ -98,7 +98,7 @@
                     let formato = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
                     if (formato.test(value))
                         return true;
-                }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco");
+                }, "La contraseña debe cumplir el formato adecuado: 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y sin espacios en blanco y minimo 8 caracteres");
 
 
                 /*Formulario registrar*/
